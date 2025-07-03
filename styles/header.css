@@ -1,0 +1,122 @@
+/* styles/header.css */
+.modern-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-area img {
+  height: 36px;
+}
+
+.brand-name {
+  font-weight: bold;
+  color: #002244;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-nav a,
+.dropdown > span {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 1.8rem;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown-content a {
+  padding: 0.25rem 0.75rem;
+  white-space: nowrap;
+  color: #007bc1;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.actions select {
+  padding: 0.4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.signup-btn {
+  background: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.demo-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .modern-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+}
