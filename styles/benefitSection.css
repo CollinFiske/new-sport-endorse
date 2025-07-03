@@ -1,0 +1,102 @@
+.benefit-section {
+  display: flex;
+  justify-content: space-between;
+  background: #e8f2fd;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 50px auto 50px auto;
+}
+
+.benefit-left {
+  flex: 1 1 50%;
+  max-width: 500px;
+}
+
+.benefit-right {
+  flex: 1 1 40%;
+  text-align: center;
+}
+.benefit-right img{
+  height: 100px;
+}
+
+.benefit-label {
+  color: #008cfa;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.benefit-left h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.benefit-left p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.benefit-left ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.benefit-left li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.benefit-button {
+  background: #008cfa;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.demo-button {
+  background: white;
+  color: #008cfa;
+  border: 2px solid #008cfa;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 768px) {
+  .benefit-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .benefit-left, .benefit-right {
+    flex: 1 1 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .demo-button, .benefit-button {
+    width: 100%;
+  }
+}

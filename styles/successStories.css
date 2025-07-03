@@ -1,0 +1,68 @@
+.success-stories {
+  background: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.success-stories h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.success-stories p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.stories-scroll {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.success-card {
+  background: #f9f9f9;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.success-card.featured {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.success-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.success-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.success-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.success-text {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.read-more {
+  display: block;
+  margin-top: 0.5rem;
+  color: #008cfa;
+  font-weight: 500;
+  text-decoration: none;
+}

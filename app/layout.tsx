@@ -1,4 +1,4 @@
-/*import "../styles/base.css";
+import "../styles/base.css";
 import "../styles/header.css";
 import "../styles/footer.css";
 import { LanguageProvider } from "../context/LanguageContext";
@@ -13,27 +13,20 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="UTF-8"></meta>
+        <meta name="description" content="SportEndorse"></meta>
+        <meta name="keywords" content="SportEndorse, Talent, Brands"></meta>
+        <meta name="author" content="SportEndorse"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      </head>
       <body>
         <LanguageProvider>
           <Header />
-          <main>{children}</main>
-          <Footer />
+          <main style={{ paddingTop: "80px" }}>{children}</main>
+          <Footer /> 
         </LanguageProvider>
       </body>
     </html>
   );
-}
-
-*/
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  )
 }

@@ -1,22 +1,22 @@
 "use client"
 import Statistics from "@/components/Statistics";
-import "../../styles/talent.css";
+import "../../styles/agency.css";
 import Image from 'next/image';
+import BusinessSubscription from "@/components/BusinessSubscription";
 
-export default function TalentPage() {
+export default function AgencyPage() {
   return (
     <>
     <section className="heroSection">
       <div className="container">
         <div className="content">
           <div className="badge">
-            ⦿ FOR ATHLETES
+            ⦿ FOR AGENCIES
           </div>
           
           <h1 className="title">
-            Boost your{' '}
-            <span className="gradientText">personal</span>{' '}
-            brand
+            Book sports {' '}
+            <span className="gradientText">celebrities</span>
           </h1>
           
           <p className="description">
@@ -31,7 +31,7 @@ export default function TalentPage() {
         
         <div className="imageContainer">
           <Image 
-            src="/images/athleteHero.png" 
+            src="/images/placeholder.png" 
             alt="Athlete in action"
             width={600}
             height={500}
@@ -41,6 +41,8 @@ export default function TalentPage() {
         </div>
       </div>
     </section>
+
+    <BusinessSubscription />
 
     <Statistics 
       athletes={6500}

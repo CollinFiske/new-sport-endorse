@@ -1,0 +1,11 @@
+a{
+    display: flex;
+    align-items: center;
+}
+img{
+    height: 50px;
+}
+h3{
+    margin: 0;
+    padding: 0;
+}

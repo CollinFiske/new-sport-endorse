@@ -1,19 +1,19 @@
 const translations = {
   en: {
-    welcome: "Welcome to Sport Endorse",
-    description: "Connecting elite athletes with top global brands.",
+    welcome: "Unlock the power of <span class='highlight-blue'>sports</span> ambassador <span class='gradientText'>marketing</span>",
+    description: "Platform for sports marketing, linking brands with elite athletes and sports influencers for sponsorship management and authentic partnerships.",
   },
   es: {
-    welcome: "Bienvenido a Sport Endorse",
-    description: "Conectando atletas de élite con las principales marcas globales.",
+    welcome: "Desbloquea el poder del <span class='gradientText'> mercado </span> de embajadores <span class='highlight-blue'>deportivos</span>",
+    description: "Plataforma de marketing deportivo que vincula marcas con atletas de élite e influencers deportivos para la gestión de patrocinios y asociaciones auténticas.",
   },
   fr: {
-    welcome: "Bienvenue chez Sport Endorse",
-    description: "Relier les athlètes d'élite aux grandes marques mondiales.",
+    welcome: "Libérez la puissance du <span class='gradientText'> marché </span> des ambassadeurs <span class='highlight-blue'>sportifs</span>",
+    description: "Plateforme de marketing sportif, reliant les marques aux athlètes d'élite et aux influenceurs sportifs pour la gestion du sponsoring et des partenariats authentiques.",
   },
   de: {
-    welcome: "Willkommen bei Sport Endorse",
-    description: "Verbindung von Spitzensportlern mit globalen Top-Marken.",
+    welcome: "Entfesseln Sie die Macht des <span class='highlight-blue'>Sportbotschafter-</span>-<span class='gradientText'>Marketings</span>",
+    description: "Plattform für Sportmarketing, die Marken mit Spitzensportlern und Sport-Influencern für Sponsoringmanagement und authentische Partnerschaften verbindet.",
   },
 };
 

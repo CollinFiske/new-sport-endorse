@@ -1,0 +1,277 @@
+.sub-subscriptionSection {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.sub-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.sub-leftContent {
+    padding-top: 20px;
+}
+
+.sub-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.sub-1;
+    margin-bottom: 24px;
+    color: #1f2937;
+    letter-spacing: -0.sub-02em;
+}
+
+.sub-description {
+    font-size: 1.sub-125rem;
+    line-height: 1.sub-7;
+    color: #6b7280;
+    margin-bottom: 48px;
+    max-width: 400px;
+}
+
+.sub-consultationSection {
+    margin-bottom: 24px;
+}
+
+.sub-consultationText h3 {
+    font-size: 0.sub-875rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 4px;
+    letter-spacing: 0.sub-5px;
+}
+
+.sub-consultationText p {
+    font-size: 0.sub-875rem;
+    color: #6b7280;
+    line-height: 1.sub-5;
+}
+
+.sub-scheduleButton {
+    background: #f59e0b;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.sub-875rem;
+    font-weight: 600;
+    letter-spacing: 0.sub-5px;
+    cursor: pointer;
+    transition: all 0.sub-2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sub-scheduleButton:hover {
+    background: #d97706;
+    transform: translateY(-1px);
+}
+
+.sub-pricingCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.sub-pricingCard {
+    background: white;
+    border-radius: 12px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.sub-08);
+    border: 1px solid #e5e7eb;
+    position: relative;
+}
+
+.sub-popularCard {
+    border: 2px solid #3b82f6;
+}
+
+.sub-freeTrialCard {
+    border: 2px solid #10b981;
+}
+
+.sub-popularBadge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: #3b82f6;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 16px;
+    font-size: 0.sub-75rem;
+    font-weight: 600;
+}
+
+.sub-freeBadge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: #10b981;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 16px;
+    font-size: 0.sub-75rem;
+    font-weight: 600;
+}
+
+.sub-cardHeader {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.sub-planType {
+    font-size: 0.sub-875rem;
+    font-weight: 600;
+    color: #3b82f6;
+    letter-spacing: 0.sub-5px;
+    margin-bottom: 12px;
+}
+
+.sub-freeTrialPlanType {
+    font-size: 0.sub-875rem;
+    font-weight: 600;
+    color: #10b981;
+    letter-spacing: 0.sub-5px;
+    margin-bottom: 12px;
+}
+
+.sub-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.sub-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1f2937;
+}
+
+.sub-freeAmount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #10b981;
+}
+
+.sub-period {
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.sub-billing {
+    font-size: 0.sub-875rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.sub-trialButton {
+    width: 100%;
+    background: #3b82f6;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.sub-875rem;
+    font-weight: 600;
+    letter-spacing: 0.sub-5px;
+    cursor: pointer;
+    transition: all 0.sub-2s ease;
+    margin-bottom: 24px;
+}
+
+.sub-trialButton:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+.sub-freeTrialButton {
+    width: 100%;
+    background: #10b981;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.sub-875rem;
+    font-weight: 600;
+    letter-spacing: 0.sub-5px;
+    cursor: pointer;
+    transition: all 0.sub-2s ease;
+    margin-bottom: 24px;
+}
+
+.sub-freeTrialButton:hover {
+    background: #059669;
+    transform: translateY(-1px);
+}
+
+.sub-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 0.sub-875rem;
+    line-height: 1.sub-5;
+    color: #4b5563;
+}
+
+.sub-features li::before {
+    content: '✓';
+    color: #10b981;
+    font-weight: 600;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.sub-features li:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .sub-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    }
+    .sub-pricingCards {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+    }
+    .sub-title {
+    font-size: 2.sub-5rem;
+    }
+    .sub-pricingCard {
+    padding: 24px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sub-subscriptionSection {
+    padding: 60px 0;
+    }
+    .sub-title {
+    font-size: 2rem;
+    }
+    .sub-description {
+    font-size: 1rem;
+    }
+    .sub-pricingCards {
+    gap: 16px;
+    }
+}

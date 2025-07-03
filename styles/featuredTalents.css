@@ -1,0 +1,73 @@
+.featured-talents{
+  background: #eaf5ff;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+}
+
+.featured-talents .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.featured-talents .header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.featured-talents .header p {
+  color: #666;
+  font-size: 0.95rem;
+  max-width: 600px;
+}
+
+.scrollTalents {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  /*box-shadow: inset -100px 0 100px -50px black;*/
+}
+
+.talent-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+  width: 220px;
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+.talent-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.talent-info {
+  padding: 1rem;
+}
+
+
+.talent-tags p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+
+.all-social-logos {
+  display: flex;
+  gap: 10px;
+  height: 40px; /* Controls vertical height */
+}
+.social-logo {
+  max-height: 30px;
+  max-width: 60px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
