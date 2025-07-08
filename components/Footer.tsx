@@ -2,6 +2,7 @@
 import Link from "next/link";
 import "../styles/footer.css";
 import MainLogo from "./MainLogo";
+import AppStores from "./AppStores";
 
 export default function Footer() {
   return (
@@ -21,10 +22,10 @@ export default function Footer() {
               I agree to Sport Endorse's <a href="#">Privacy policy</a> and <a href="#">Terms and Conditions.</a>
             </label>
             <div className="all-social-logos">
-              <span><img src="/images/facebookLogo.webp" alt="tiktok logo" className="social-logo"></img></span>
-              <span><img src="/images/instagramLogo.webp" alt="instagram logo" className="social-logo"></img></span>
-              <span><img src="/images/tiktokLogo.webp" alt="tiktok logo" className="social-logo"></img></span>
-              <span><img src="/images/linkedinLogo.webp" alt="tiktok logo" className="social-logo"></img></span>
+              <span><a target="_blank" href="https://www.facebook.com/SportEndorseLtd/"><img src="/images/facebookLogo.webp" alt="facebook logo" className="social-logo"></img></a></span>
+              <span><a target="_blank" href="https://www.instagram.com/sport_endorse/"><img src="/images/instagramLogo.webp" alt="instagram logo" className="social-logo"></img></a></span>
+              <span><a target="_blank" href="https://www.linkedin.com/company/sportendorse/"><img src="/images/tiktokLogo.webp" alt="tiktok logo" className="social-logo"></img></a></span>
+              <span><a target="_blank" href="https://www.tiktok.com/@sportendorse"><img src="/images/linkedinLogo.webp" alt="linkedin logo" className="social-logo"></img></a></span>
             </div>
             <p>✆ +353 1 546 1103</p>
             <p>✉ hello@sportendorse.com</p>
@@ -43,10 +44,7 @@ export default function Footer() {
               <p>07] <a href="#">Podcast<img src="/images/yellowArrow.svg" alt="yellow arrow svg"></img></a></p>
               <p>08] <a href="#">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg"></img></a></p>
             </div>
-            <div className="store-badges">
-              <img src="/images/appleStore.png" alt="App Store" />
-              <img src="/images/googlePlay.png" alt="Google Play" />
-            </div>
+            <AppStores />
           </div>
         </div>
 

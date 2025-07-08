@@ -36,7 +36,7 @@ export default function Header() {
           <option value="fr">🇫🇷</option>
           <option value="de">🇩🇪</option>
         </select>
-        <button className="signup-btn">SIGN UP</button>
+        <a target="_blank" href="https://platform.sportendorse.com/signup/talent"><button className="signup-btn">SIGN UP</button></a>
         <button className="demo-btn">DEMO FOR BUSINESS</button>
       </div>
     </header>

@@ -45,9 +45,11 @@ export default function BusinessSubscription() {
               <p className="sub-billing">1 month free trial<br /><br /></p>
             </div>
             
-            <button className="sub-freeTrialButton">
-              START FREE TRIAL
-            </button>
+            <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=trial">
+              <button className="sub-freeTrialButton">
+                START FREE TRIAL
+              </button>
+            </a>
             
             <ul className="sub-features">
               <li>Full access to all features</li>
@@ -69,9 +71,11 @@ export default function BusinessSubscription() {
               <p className="sub-billing">*Paid every 3 months,<br />+VAT</p>
             </div>
             
-            <button className="sub-trialButton">
-              START SUBSCRIPTION
-            </button>
+            <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=quarterly">
+              <button className="sub-trialButton">
+                START SUBSCRIPTION
+              </button>
+            </a>
             
             <ul className="sub-features">
               <li>A Comprehensive set of tools and filters to assist you in your search</li>
@@ -97,9 +101,11 @@ export default function BusinessSubscription() {
               <p className="sub-billing">*Paid every 12 months,<br />+VAT</p>
             </div>
             
-            <button className="sub-trialButton">
-              START SUBSCRIPTION
-            </button>
+            <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=annual">
+              <button className="sub-trialButton">
+                START SUBSCRIPTION
+              </button>
+            </a>
             
             <ul className="sub-features">
               <li>A Comprehensive set of tools and filters to assist you in your search</li>
