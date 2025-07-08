@@ -22,10 +22,10 @@ export default function Page() {
     <main className="home-section">
       <div className="home-left">
         <h1 className="title"
-          dangerouslySetInnerHTML={{ __html: t.welcome }}
+          dangerouslySetInnerHTML={{ __html: t.home.welcome }}
         />
         <p>
-          {t.description}
+          {t.home.description}
         </p>
         <AppStores />
         <br/>
@@ -40,7 +40,7 @@ export default function Page() {
 
     </main>
 
-     <p style={{color:"grey"}}>JOIN 50+ BRANDS & ELITE ATHLETES IN AUTHENTIC SPORTS PARTNERSHIPS</p><br /><br />
+     <p style={{color:"grey"}}>{t.home.tableHeader}</p><br /><br />
      <div>
         <table>
           <tbody>
@@ -82,7 +82,7 @@ export default function Page() {
               <td><img src="/images/homePageTable/SuperValu.webp" alt="SuperValu logo" /></td>
               <td><img src="/images/homePageTable/Tula.webp" alt="Tula logo" /></td>
               <td><img src="/images/homePageTable/VHI_Logo_Slider.webp" alt="VHI logo" /></td>
-              <td style={{backgroundColor:"#007bff"}}  onClick={() => { window.location.href = '/'; }}/* this would eventually link to the brand sign up page */>
+              <td style={{backgroundColor:"#007bff"}}  onClick={() => { window.location.href = 'https://platform.sportendorse.com/signup/brand'; }}>
                 <img src="/images/whiteSportEndorseLogo.webp" alt="sport endorse logo" />
               </td>
             </tr>
@@ -98,27 +98,36 @@ export default function Page() {
       />
 
       <BenefitSection
-        title="Boost your personal brand"
-        subtitle="Content dedicated to target audience. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        title={t.home.benefitSection.athlete.title}
+        subtitle={t.home.benefitSection.athlete.subtitle}
         image="/images/placeholder.png"
-        label="FOR ATHLETES"
+        label={t.home.benefitSection.athlete.label}
         background="#e8f2fd"
+        item1={t.home.benefitSection.athlete.bullet1}
+        item2={t.home.benefitSection.athlete.bullet2}
+        item3={t.home.benefitSection.athlete.bullet3}
       />
 
       <BenefitSection
-        title="Connect with global sports stars"
-        subtitle="Content dedicated to target audience. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        title={t.home.benefitSection.brand.title}
+        subtitle={t.home.benefitSection.brand.subtitle}
         image="/images/placeholder.png"
-        label="FOR BRANDS"
+        label={t.home.benefitSection.brand.label} 
         background="#ffffb3"
+        item1={t.home.benefitSection.brand.bullet1}
+        item2={t.home.benefitSection.brand.bullet2}
+        item3={t.home.benefitSection.brand.bullet3}
       />
 
       <BenefitSection
-        title="Book sport brand ambassadors"
-        subtitle="Content dedicated to target audience. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        title={t.home.benefitSection.agency.title}
+        subtitle={t.home.benefitSection.agency.subtitle}
         image="/images/placeholder.png"
-        label="FOR AGENCIES"
+        label={t.home.benefitSection.agency.label}
         background="#c6ffb3"
+        item1={t.home.benefitSection.agency.bullet1}
+        item2={t.home.benefitSection.agency.bullet2}
+        item3={t.home.benefitSection.agency.bullet3}
       />
 
       <BenefitSection

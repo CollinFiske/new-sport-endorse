@@ -5,9 +5,11 @@ import { useLanguage } from "../context/LanguageContext";
 import type { Language } from "../context/LanguageContext";
 import "../styles/header.css";
 import MainLogo from "./MainLogo";
+import translations from "@/utils/translations";
 
 export default function Header() {
   const { language, changeLanguage } = useLanguage();
+  const t = translations[language];
 
   return (
     <header className="modern-header">
@@ -15,17 +17,17 @@ export default function Header() {
         <MainLogo/>
       </div>
       <nav className="main-nav">
-        <Link href="/talent">Talent</Link>
-        <Link href="/brands">Brands</Link>
-        <Link href="/agency">Agencies</Link>
-        <Link href="#">Subscription</Link>
+        <Link href="/talent">{t.header.talent}</Link>
+        <Link href="/brands">{t.header.brands}</Link>
+        <Link href="/agency">{t.header.agencies}</Link>
+        <Link href="#">{t.header.subscription}</Link>
         <div className="dropdown">
-          <span>Resources ▾</span>
+          <span>{t.header.resources} ▾</span>
           <div className="dropdown-content">
-            <Link href="#">Blog</Link>
-            <Link href="#">Guides</Link>
-            <Link href="#">Podcast</Link>
-            <Link href="#">About Us</Link>
+            <Link href="#">{t.header.blog}</Link>
+            <Link href="#">{t.header.guides}</Link>
+            <Link href="#">{t.header.podcast}</Link>
+            <Link href="#">{t.header.aboutUs}</Link>
           </div>
         </div>
       </nav>
@@ -36,8 +38,8 @@ export default function Header() {
           <option value="fr">🇫🇷</option>
           <option value="de">🇩🇪</option>
         </select>
-        <a target="_blank" href="https://platform.sportendorse.com/signup/talent"><button className="signup-btn">SIGN UP</button></a>
-        <button className="demo-btn">DEMO FOR BUSINESS</button>
+        <a target="_blank" href="https://platform.sportendorse.com/signup/talent"><button className="signup-btn">{t.header.signUpBtn}</button></a>
+        <button className="demo-btn">{t.header.demoBtn}</button>
       </div>
     </header>
   );
