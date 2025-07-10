@@ -1,6 +1,6 @@
 /* styles/statistics.css */
 .statistics-section {
-  background: #e8f2fd;
+  background: #E5F1FF;
   border-radius: 20px;
   padding: 2rem;
   max-width: 1000px;
@@ -61,7 +61,7 @@
   max-width: 220px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
 }
@@ -77,21 +77,24 @@
 }
 
 .stat-content img{
-  background-color: lightblue;
-  padding: 8px; /* adjust as needed */
+  padding: 10px; /* adjust as needed */
   border-radius: 50%;
 }
 
 .stat-box h3 {
   margin: 0;
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.stats-bar{
+  margin: 10px 0;
+  border-top: solid 1px #E5E5E5;
 }
 
 .stat-box p {
-  margin-top: 0.8rem;
   font-size: 0.9rem;
-  color: #333;
+  color: #838383;
 }
 
 @media (max-width: 768px) {

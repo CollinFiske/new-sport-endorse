@@ -1,6 +1,5 @@
 .heroSection {
-  padding: 80px 0;
-  min-height: 100vh;
+  padding: 40px 0;
   display: flex;
   align-items: center;
 }
@@ -20,19 +19,16 @@
 }
 
 .badge {
-  display: inline-block;
-  color: #3b82f6;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  margin-bottom: 24px;
+  color: #008cfa;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin: 24px 0;
   color: #1f2937;
   letter-spacing: -0.02em;
 }

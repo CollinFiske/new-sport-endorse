@@ -3,7 +3,7 @@
   justify-content: space-between;
   background: #e8f2fd;
   border-radius: 20px;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
   margin: 3rem 0;
   flex-wrap: wrap;
   max-width: 1000px;
@@ -11,42 +11,51 @@
 }
 
 .benefit-left {
-  flex: 1 1 50%;
+  flex: 1 1 40%;
   max-width: 500px;
 }
 
 .benefit-right {
-  flex: 1 1 40%;
+  flex: 1 1 35%;
   text-align: center;
+  margin: 0 20px;
+  padding: 10px 0;
 }
 .benefit-right img{
-  height: 100px;
+  height: 100%;
+  width: 100%;
+  /*image-rendering: pixelated - maybe??? */ 
 }
 
 .benefit-label {
-  color: #008cfa;
   font-size: 0.85rem;
   font-weight: 500;
 }
 
 .benefit-left h2 {
-  font-size: 2rem;
-  margin: 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 800;  
+  line-height: 1.1;
+  color: #1f2937;
+  letter-spacing: -0.02em;
+  
+  margin: 1rem 0 1.5rem;
 }
 
 .benefit-left p {
   margin-bottom: 1rem;
-  color: #555;
+  color: #838383;
 }
 
 .benefit-left ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  color: #838383;
 }
 
 .benefit-left li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-size: 0.95rem;
 }
 
@@ -77,9 +86,6 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  
-}
 
 @media (max-width: 768px) {
   .benefit-section {

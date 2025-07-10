@@ -3,6 +3,8 @@ import Statistics from "@/components/Statistics";
 import "../../styles/agency.css";
 import Image from 'next/image';
 import BusinessSubscription from "@/components/BusinessSubscription";
+import BenefitSection from "@/components/BenefitSection";
+import AgencyHowItWorks from "@/components/AgencyHowItWorks";
 
 export default function AgencyPage() {
   return (
@@ -26,8 +28,6 @@ export default function AgencyPage() {
             sponsorships, connecting with influential brands worldwide.
           </p>
         </div>
-          
-          
         
         <div className="imageContainer">
           <Image 
@@ -42,14 +42,30 @@ export default function AgencyPage() {
       </div>
     </section>
 
-    <BusinessSubscription />
-
     <Statistics 
       athletes={6500}
       brands={650}
       sports={3282}
       nationalities={201}
     />
+
+    <BenefitSection 
+      title="Book Iconic Sports Ambassadors for Your Clients"
+      subtitle="Our user-friendly platform seamlessly connects agencies with top global athletes and ambassadors, reducing the steps to secure exceptional sponsorship deals and amplify your clients' marketing campaigns."
+      image="/images/agencyPhonePic.png"
+      label=""
+      background="white"
+      item1="Managing multiple sponsorship deals efficiently"
+      item2="Finding the right athletes or influencers for specific campaigns"
+      item3="Ensuring authentic brand-athlete alignment"
+      color="#F6B014"
+    />
+
+    <AgencyHowItWorks />
+
+    <BusinessSubscription />
+
+    
     </>
   );
 }

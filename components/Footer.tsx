@@ -29,6 +29,7 @@ export default function Footer() {
             </div>
             <p>✆ +353 1 546 1103</p>
             <p>✉ hello@sportendorse.com</p>
+            <p>🏠︎ 10 Fitzwilliam Street Upper, Dublin 2, D02 T024, Ireland</p>
           </div>
 
           <div className="footer-links">

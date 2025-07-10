@@ -69,7 +69,7 @@
 .dropdown-content a {
   padding: 0.25rem 0.75rem;
   white-space: nowrap;
-  color: #007bc1;
+  color: #18A0FB;
 }
 
 .actions {
@@ -86,7 +86,7 @@
 }
 
 .signup-btn {
-  background: #007bff;
+  background: #18A0FB;
   color: white;
   padding: 0.5rem 1rem;
   border: none;

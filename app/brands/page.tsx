@@ -43,14 +43,15 @@ export default function BrandsPage() {
       </div>
     </section>
 
-    <BusinessSubscription />
-
     <Statistics 
       athletes={6500}
       brands={650}
       sports={3282}
       nationalities={201}
     />
+
+    <BusinessSubscription />
+
     </>
   );
 }

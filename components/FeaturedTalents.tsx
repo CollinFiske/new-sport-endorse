@@ -6,7 +6,7 @@ export default function FeaturedTalents() {
     <section className="featured-talents">
       <div className="header">
         <div>
-          <h2>Our featured talents</h2>
+          <h2>Our Featured Talents</h2>
           <p>Descriptional text dedicated to talents.</p>
         </div>
         <button className="view-all">VIEW ALL (203)</button>

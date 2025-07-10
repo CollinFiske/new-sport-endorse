@@ -15,9 +15,9 @@ const translations = {
       demoBtn:"DEMO FOR BUISNESS",
     },
     home:{
-      welcome: "Unlock the power of <span class='highlight-blue'>sports</span> ambassador <span class='gradientText'>marketing</span>",
+      welcome: "Unlock the power of <span class='highlight-blue'>sports</span> brand ambassador <span class='gradientText'>marketing</span>",
       description: "Platform for sports marketing, linking brands with elite athletes and sports influencers for sponsorship management and authentic partnerships.",
-      tableHeader:"JOIN 50+ BRANDS & ELITE ATHLETES IN AUTHENTIC SPORTS PARTNERSHIPS",
+      tableHeader:"JOIN 650+ BRANDS & ELITE ATHLETES IN AUTHENTIC SPORTS PARTNERSHIPS",
       benefitSection:{
         athlete:{
           label:"FOR ATHLETES",
@@ -63,7 +63,7 @@ const translations = {
     home:{
       welcome: "Desbloquea el poder del <span class='gradientText'> mercado </span> de embajadores <span class='highlight-blue'>deportivos</span>",
       description: "Plataforma de marketing deportivo que vincula marcas con atletas de élite e influencers deportivos para la gestión de patrocinios y asociaciones auténticas.",
-      tableHeader: "ÚNETE A MÁS DE 50 MARCAS Y ATLETAS DE ÉLITE EN ALIANZAS DEPORTIVAS AUTÉNTICAS",
+      tableHeader: "ÚNETE A MÁS DE 650 MARCAS Y ATLETAS DE ÉLITE EN ALIANZAS DEPORTIVAS AUTÉNTICAS",
       benefitSection: {
         athlete: {
           label: "PARA ATLETAS",
@@ -109,7 +109,7 @@ const translations = {
     home:{
       welcome: "Libérez la puissance du <span class='gradientText'> marché </span> des ambassadeurs <span class='highlight-blue'>sportifs</span>",
       description: "Plateforme de marketing sportif, reliant les marques aux athlètes d'élite et aux influenceurs sportifs pour la gestion du sponsoring et des partenariats authentiques.",
-      tableHeader: "REJOIGNEZ PLUS DE 50 MARQUES ET ATHLÈTES D'ÉLITE DANS DES PARTENARIATS SPORTIFS AUTHENTIQUES",
+      tableHeader: "REJOIGNEZ PLUS DE 650 MARQUES ET ATHLÈTES D'ÉLITE DANS DES PARTENARIATS SPORTIFS AUTHENTIQUES",
       benefitSection: {
         athlete: {
           label: "POUR LES ATHLÈTES",
@@ -117,12 +117,12 @@ const translations = {
           subtitle: "Commencez à créer votre marque et à monétiser votre talent en rejoignant notre équipe diversifiée d'athlètes d'élite, passionnés par l'évolution de leur carrière et la connexion avec des marques influentes à travers le monde",
           bullet1: "Monétisez votre carrière sportive",
           bullet2: "Connectez-vous directement avec des marques et des agences de relations publiques",
-          bullet3: "Inscrivez-vous en tant qu’athlète vérifié pour des opportunités de sponsoring incroyables",
+          bullet3: "Inscrivez-vous en tant qu'athlète vérifié pour des opportunités de sponsoring incroyables",
         },
         brand: {
           label: "POUR LES MARQUES",
           title: "Connectez-vous avec des stars du sport mondial",
-          subtitle: "Trouver un ambassadeur de marque qui correspond aux valeurs de votre entreprise n’a jamais été aussi simple.",
+          subtitle: "Trouver un ambassadeur de marque qui correspond aux valeurs de votre entreprise n'a jamais été aussi simple.",
           bullet1: "Quels que soient vos besoins, nos athlètes sont là pour vous",
           bullet2: "Annoncez facilement des opportunités marketing",
           bullet3: "Connectez-vous instantanément avec des stars du sport",
@@ -133,7 +133,7 @@ const translations = {
           subtitle: "Connecter les agences avec des athlètes et ambassadeurs de renommée mondiale garantit de faire passer les campagnes marketing de vos clients au niveau supérieur",
           bullet1: "Connectez-vous instantanément avec des athlètes d'élite",
           bullet2: "Accédez à une base de talents diversifiée",
-          bullet3: "Ciblez les ambassadeurs selon le sport, la localisation, le genre, le nombre d’abonnés et plus encore",
+          bullet3: "Ciblez les ambassadeurs selon le sport, la localisation, le genre, le nombre d'abonnés et plus encore",
         },
       },
     },    
@@ -155,7 +155,7 @@ const translations = {
     home:{
       welcome: "Entfesseln Sie die Macht des <span class='highlight-blue'>Sportbotschafter-</span>-<span class='gradientText'>Marketings</span>",
       description: "Plattform für Sportmarketing, die Marken mit Spitzensportlern und Sport-Influencern für Sponsoringmanagement und authentische Partnerschaften verbindet.",
-      tableHeader: "SCHLIESSEN SIE SICH ÜBER 50 MARKEN UND ELITE-ATHLETEN IN AUTHENTISCHEN SPORTPARTNERSCHAFTEN AN",
+      tableHeader: "SCHLIESSEN SIE SICH ÜBER 650 MARKEN UND ELITE-ATHLETEN IN AUTHENTISCHEN SPORTPARTNERSCHAFTEN AN",
       benefitSection: {
         athlete: {
           label: "FÜR ATHLETEN",

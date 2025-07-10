@@ -4,7 +4,7 @@ import "../styles/successStories.css";
 export default function SuccessStories() {
   return (
     <section className="success-stories">
-      <h2>Success <span className="highlight">stories</span></h2>
+      <h2>Success Stories</h2>
       <p>Learn how brands and athletes have been winning together</p>
       <div className="stories-scroll">
         {[...Array(3)].map((_, i) => (

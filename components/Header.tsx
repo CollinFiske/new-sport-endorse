@@ -18,7 +18,7 @@ export default function Header() {
       </div>
       <nav className="main-nav">
         <Link href="/talent">{t.header.talent}</Link>
-        <Link href="/brands">{t.header.brands}</Link>
+        <Link href="/brands">{t.header.brand}</Link>
         <Link href="/agency">{t.header.agencies}</Link>
         <Link href="#">{t.header.subscription}</Link>
         <div className="dropdown">

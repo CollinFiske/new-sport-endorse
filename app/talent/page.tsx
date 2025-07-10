@@ -2,6 +2,7 @@
 import Statistics from "@/components/Statistics";
 import "../../styles/talent.css";
 import Image from 'next/image';
+import AppStores from "@/components/AppStores";
 
 export default function TalentPage() {
   return (
@@ -9,9 +10,9 @@ export default function TalentPage() {
     <section className="heroSection">
       <div className="container">
         <div className="content">
-          <div className="badge">
+          <span className="badge">
             ⦿ FOR ATHLETES
-          </div>
+          </span>
           
           <h1 className="title">
             Boost your{' '}
@@ -25,10 +26,11 @@ export default function TalentPage() {
             in-person appearances, social media promotions, and branded 
             sponsorships, connecting with influential brands worldwide.
           </p>
+          
+          <AppStores />
+
         </div>
-          
-          
-        
+           
         <div className="imageContainer">
           <Image 
             src="/images/athleteHero.png" 
@@ -40,6 +42,7 @@ export default function TalentPage() {
           />
         </div>
       </div>
+      
     </section>
 
     <Statistics 
