@@ -133,14 +133,6 @@ export default function Page() {
       color="#83BF24"
     />
 
-    <BenefitSection
-      title="Book a Demo to get more insights"
-      subtitle=""
-      image="/images/placeholder.png"
-      label=""
-      background="#3b82f6"
-    />
-
     <BusinessSubscription />
 
     <FeaturedTalents />

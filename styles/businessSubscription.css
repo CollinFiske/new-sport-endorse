@@ -1,16 +1,31 @@
-.sub-subscriptionSection {
-    padding: 80px 0;
-    background: #f8fafc;
+.sub-subscription-section {
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto 50px;
 }
 
 .sub-container {
     max-width: none;
     margin: 0 auto;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     align-items: flex-start;
+}
+
+/* Add this for vertical stacking */
+.sub-container.sub-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adjust pricing cards to be full width on vertical layout */
+.sub-container.sub-vertical .sub-pricingCards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
 }
 
 .sub-leftContent {
@@ -20,83 +35,79 @@
 .sub-title {
     font-size: 2rem;
     font-weight: 800;
-    line-height: 1.sub-1;
     margin-bottom: 24px;
     color: #1f2937;
-    letter-spacing: -0.sub-02em;
 }
 
 .sub-description {
-    font-size: 1.sub-125rem;
-    line-height: 1.sub-7;
     color: #6b7280;
-    margin-bottom: 48px;
-    max-width: 400px;
 }
 
-.sub-consultationSection {
+.sub-consultation-section {
     margin-bottom: 24px;
 }
 
-.sub-consultationText h3 {
-    font-size: 0.sub-875rem;
+.sub-consultation-text h3 {
+    font-size: 0.875rem;
     font-weight: 700;
     color: #1f2937;
     margin-bottom: 4px;
-    letter-spacing: 0.sub-5px;
+    letter-spacing: 0.5px;
 }
 
-.sub-consultationText p {
-    font-size: 0.sub-875rem;
+.sub-consultation-text p {
+    font-size: 0.875rem;
     color: #6b7280;
-    line-height: 1.sub-5;
+    line-height: 1.5;
 }
 
-.sub-scheduleButton {
+.sub-schedule-button {
     background: #f59e0b;
     color: white;
     padding: 12px 24px;
     border: none;
     border-radius: 6px;
-    font-size: 0.sub-875rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    letter-spacing: 0.sub-5px;
+    letter-spacing: 0.5px;
     cursor: pointer;
-    transition: all 0.sub-2s ease;
+    transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    margin-left: auto;
 }
 
-.sub-scheduleButton:hover {
+.sub-schedule-button:hover {
     background: #d97706;
     transform: translateY(-1px);
 }
 
-.sub-pricingCards {
+.sub-pricing-cards {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
 }
 
-.sub-pricingCard {
+.sub-pricing-card {
     background: white;
     border-radius: 12px;
     padding: 32px 24px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.sub-08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid #e5e7eb;
     position: relative;
 }
 
-.sub-popularCard {
+.sub-popular-card {
     border: 2px solid #3b82f6;
 }
 
-.sub-freeTrialCard {
+.sub-free-trial-card {
     border: 2px solid #10b981;
 }
 
-.sub-popularBadge {
+.sub-popular-badge {
     position: absolute;
     top: -12px;
     right: 24px;
@@ -104,11 +115,11 @@
     color: white;
     padding: 6px 16px;
     border-radius: 16px;
-    font-size: 0.sub-75rem;
+    font-size: 0.75rem;
     font-weight: 600;
 }
 
-.sub-freeBadge {
+.sub-free-badge {
     position: absolute;
     top: -12px;
     right: 24px;
@@ -116,28 +127,28 @@
     color: white;
     padding: 6px 16px;
     border-radius: 16px;
-    font-size: 0.sub-75rem;
+    font-size: 0.75rem;
     font-weight: 600;
 }
 
-.sub-cardHeader {
+.sub-card-header {
     text-align: center;
     margin-bottom: 24px;
 }
 
-.sub-planType {
-    font-size: 0.sub-875rem;
+.sub-plan-type {
+    font-size: 0.875rem;
     font-weight: 600;
     color: #3b82f6;
-    letter-spacing: 0.sub-5px;
+    letter-spacing: 0.5px;
     margin-bottom: 12px;
 }
 
-.sub-freeTrialPlanType {
-    font-size: 0.sub-875rem;
+.sub-free-trial-plan-type {
+    font-size: 0.875rem;
     font-weight: 600;
     color: #10b981;
-    letter-spacing: 0.sub-5px;
+    letter-spacing: 0.5px;
     margin-bottom: 12px;
 }
 
@@ -155,7 +166,7 @@
     color: #1f2937;
 }
 
-.sub-freeAmount {
+.sub-free-amount {
     font-size: 2rem;
     font-weight: 800;
     color: #10b981;
@@ -168,47 +179,47 @@
 }
 
 .sub-billing {
-    font-size: 0.sub-875rem;
+    font-size: 0.875rem;
     color: #6b7280;
     margin: 0;
 }
 
-.sub-trialButton {
+.sub-trial-button {
     width: 100%;
     background: #3b82f6;
     color: white;
     padding: 14px 24px;
     border: none;
     border-radius: 8px;
-    font-size: 0.sub-875rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    letter-spacing: 0.sub-5px;
+    letter-spacing: 0.5px;
     cursor: pointer;
-    transition: all 0.sub-2s ease;
+    transition: all 0.2s ease;
     margin-bottom: 24px;
 }
 
-.sub-trialButton:hover {
+.sub-trial-button:hover {
     background: #2563eb;
     transform: translateY(-1px);
 }
 
-.sub-freeTrialButton {
+.sub-free-trial-button {
     width: 100%;
     background: #10b981;
     color: white;
     padding: 14px 24px;
     border: none;
     border-radius: 8px;
-    font-size: 0.sub-875rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    letter-spacing: 0.sub-5px;
+    letter-spacing: 0.5px;
     cursor: pointer;
-    transition: all 0.sub-2s ease;
+    transition: all 0.2s ease;
     margin-bottom: 24px;
 }
 
-.sub-freeTrialButton:hover {
+.sub-free-trial-button:hover {
     background: #059669;
     transform: translateY(-1px);
 }
@@ -223,9 +234,9 @@
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    margin-bottom: 16px;
-    font-size: 0.sub-875rem;
-    line-height: 1.sub-5;
+    margin-bottom: 12px;
+    font-size: 0.875rem;
+    line-height: 1.5;
     color: #4b5563;
 }
 
@@ -242,36 +253,51 @@
     margin-bottom: 0;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .sub-container {
-    grid-template-columns: 1fr;
-    gap: 60px;
-    }
-    .sub-pricingCards {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    margin: 0 auto;
-    }
-    .sub-title {
-    font-size: 2.sub-5rem;
-    }
-    .sub-pricingCard {
-    padding: 24px 20px;
-    }
+.sub-top-content-row {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 40px;
+  margin-bottom: 5px;
 }
 
-@media (max-width: 480px) {
-    .sub-subscriptionSection {
-    padding: 60px 0;
-    }
-    .sub-title {
-    font-size: 2rem;
-    }
-    .sub-description {
-    font-size: 1rem;
-    }
-    .sub-pricingCards {
+.sub-top-left {
+  flex: 1 1 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sub-top-right {
+  margin-top: 15px;
+  flex: 1 1 0;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .sub-top-content-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .sub-top-left,
+  .sub-top-right {
+    margin-top: 0;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .sub-schedule-button{
+    margin-left: 0;
+  }
+  .sub-top-right .sub-consultation-text {
+    text-align: left;
+  }
+}
+
+@media (max-width: 700px) {
+  .sub-pricing-cards {
+    grid-template-columns: 1fr !important;
+    max-width: 100%;
     gap: 16px;
-    }
+  }
 }

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import BusinessSubscription from "@/components/BusinessSubscription";
 import BenefitSection from "@/components/BenefitSection";
 import AgencyHowItWorks from "@/components/AgencyHowItWorks";
+import SuccessStories from "@/components/SuccessStories";
+import FAQs from "@/components/FAQs";
 
 export default function AgencyPage() {
   return (
@@ -65,6 +67,15 @@ export default function AgencyPage() {
 
     <BusinessSubscription />
 
+    <SuccessStories />
+
+    <br/>
+    <br/>
+    <p style={{textAlign:"center"}}>maybe podcast bit here???</p>
+    <br/>
+    <br/>
+
+    <FAQs />
     
     </>
   );

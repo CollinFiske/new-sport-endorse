@@ -1,50 +1,15 @@
 "use client"
 
 import { useState } from "react";
+import "../../styles/policies.css";
 
 export default function PrivacyPolicyPage() {
-  // State for each section
+
   const [showPrivacy, setShowPrivacy] = useState(true);
   const [showCookie, setShowCookie] = useState(false);
 
   return (
     <>
-      <style jsx>{`
-        div.section {
-          margin: 24px auto;
-          max-width: 1200px;
-          padding: 32px 24px;
-          background: #fff;
-          border-radius: 8px;
-          font-family: 'Segoe UI', Arial, sans-serif;
-          color: #222;
-          box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-          margin-bottom: 2rem;
-        }
-        h2 {
-          color: #005fa3;
-          margin-bottom: 1.5rem;
-          cursor: pointer;
-          user-select: none;
-        }
-        p {
-          margin-bottom: 1.5rem;
-          margin-left: 2rem;
-          line-height: 1.7;
-        }
-        .hidden {
-          display: none;
-        }
-        @media (max-width: 600px) {
-          div.section {
-            margin: 10px;
-            padding: 10px;
-          }
-          p {
-            margin-left: 1rem;
-          }
-        }
-      `}</style>
       <main>
         <div className="section">
           <h2 onClick={() => setShowPrivacy((v) => !v)}>

@@ -20,7 +20,7 @@ export default function Header() {
         <Link href="/talent">{t.header.talent}</Link>
         <Link href="/brands">{t.header.brand}</Link>
         <Link href="/agency">{t.header.agencies}</Link>
-        <Link href="#">{t.header.subscription}</Link>
+        <Link href="/subscription">{t.header.subscription}</Link>
         <div className="dropdown">
           <span>{t.header.resources} ▾</span>
           <div className="dropdown-content">
@@ -38,8 +38,12 @@ export default function Header() {
           <option value="fr">🇫🇷</option>
           <option value="de">🇩🇪</option>
         </select>
-        <a target="_blank" href="https://platform.sportendorse.com/signup/talent"><button className="signup-btn">{t.header.signUpBtn}</button></a>
-        <button className="demo-btn">{t.header.demoBtn}</button>
+        <a target="_blank" href="https://platform.sportendorse.com/signup/talent">
+          <button className="signup-btn">{t.header.signUpBtn}</button>
+        </a>
+        <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
+          <button className="demo-btn">{t.header.demoBtn}</button>
+        </a>
       </div>
     </header>
   );

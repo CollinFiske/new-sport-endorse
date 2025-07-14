@@ -1,38 +1,9 @@
 "use client"
+import "../../styles/policies.css";
 
 export default function TermsAndConditions() {
   return (
     <>
-    <style jsx>{`
-        main {
-          margin: 24px auto;
-          max-width: 1200px;
-          padding: 32px 24px;
-          background: #fff;
-          border-radius: 8px;
-          font-family: 'Segoe UI', Arial, sans-serif;
-          color: #222;
-          box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-        }
-        h2 {
-          color: #005fa3;
-          margin-bottom: 1.5rem;
-        }
-        p {
-          margin-bottom: 1.5rem;
-          margin-left: 2rem;
-          line-height: 1.7;
-        }
-        @media (max-width: 600px) {
-          main {
-            margin: 10px;
-            padding: 10px;
-          }
-          p {
-            margin-left: 1rem;
-          }
-        }
-    `}</style>
     <main>
     <h2>Sport Endorse Limited Terms And Conditions</h2>
     <p>
@@ -121,7 +92,7 @@ export default function TermsAndConditions() {
 
         6.1 Sport Endorse Intellectual Property. Users acknowledge that the Service and all software, images, text, graphics, illustrations, logos, patents, trademarks, service marks, copyrights, photographs and other content within the Service (“Sport Endorse Content”), and all intellectual property rights in the foregoing, are the exclusive property of Sport Endorse and its licensors. Except as expressly provided herein, nothing in these Terms shall be deemed to create a license to use Sport Endorse Content. Use of Sport Endorse Content for any purpose not expressly permitted by these Terms is prohibited.
 
-        6.2 Intellectual Property Rights. Users acknowledge and agree that Sport Endorse and/or its licensors own all Information and Intellectual Property Rights in the Service. Except as expressly stated herein, this agreement does not grant User you any rights to, under or in, any patents, copyright, database right, trade secrets, trade names, trade marks (whether registered or unregistered), or any other rights or licences in respect of the Service. To the extent that any modifications or improvements to the Service are carried out under or in connection with this Agreement, whether by Sport Endorse alone or jointly with User, and whether based on User ideas or suggestions, all Intellectual Property Rights to such underlying ideas and in any resulting improvement or modifications shall be assigned to and shall vest with and be solely owned by Sport Endorse and/or its licensors.
+        6.2 Intellectual Property Rights. Users acknowledge and agree that Sport Endorse and/or its licensors own all Information and Intellectual Property Rights in the Service. Except as expressly stated herein, this agreement does not grant User you any rights to, under or in, any patents, copyright, database right, trade secrets, trade names, trademarks (whether registered or unregistered), or any other rights or licences in respect of the Service. To the extent that any modifications or improvements to the Service are carried out under or in connection with this Agreement, whether by Sport Endorse alone or jointly with User, and whether based on User ideas or suggestions, all Intellectual Property Rights to such underlying ideas and in any resulting improvement or modifications shall be assigned to and shall vest with and be solely owned by Sport Endorse and/or its licensors.
         
         6.3 Non Exclusive Licence to Sports Endorse. If User post Content or submit material to Sport Endorse, and unless otherwise indicated, User grants Sport Endorse a non-exclusive, royalty-free and fully sub-licensable and transferable rights to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display the content throughout the world in any media.
 

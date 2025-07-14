@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import "../styles/benefitSection.css";
 
 interface BenefitProps {
@@ -28,7 +27,9 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
         </ul>
         <div className="button-group">
           <a href="/talent"><button className="benefit-button">LEARN MORE</button></a>
-          <a href="/"><button className="demo-button">DEMO FOR BUSINESS</button></a>
+          <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
+            <button className="demo-button">DEMO FOR BUSINESS</button>
+          </a>
         </div>
       </div>
       <div className="benefit-right">
