@@ -1,5 +1,5 @@
 .modern-header {
-  position: fixed; /* Changed from sticky */
+  position: fixed; 
   top: 0;
   left: 0;
   right: 0;
@@ -51,7 +51,7 @@
 
 .dropdown-content {
   position: absolute;
-  top: 1.8rem;
+  top: 1.2rem;
   left: 0;
   background: white;
   border: 1px solid #ddd;

@@ -19,7 +19,7 @@ export default function Footer() {
             </form>
             <label className="terms">
               <input type="checkbox" defaultChecked />
-              I agree to Sport Endorse's <a href="#">Privacy policy</a> and <a href="#">Terms and Conditions.</a>
+              I agree to Sport Endorse's <a href="/privacy-policy">Privacy policy</a> and <a href="/terms-and-conditions">Terms and Conditions.</a>
             </label>
             <div className="all-social-logos">
               <span><a target="_blank" href="https://www.facebook.com/SportEndorseLtd/"><img src="/images/facebookLogo.webp" alt="facebook logo" className="social-logo"></img></a></span>
@@ -53,8 +53,8 @@ export default function Footer() {
           <div className="footer-bottom-left">
             <p>©Copyright 2025 Sport Endorse. All Rights Reserved</p>
             <div className="footer-meta">
-              <a href="#">Privacy Centre</a>
-              <a href="#">Terms and Conditions</a>
+              <a href="/privacy-policy">Privacy Centre</a>
+              <a href="/terms-and-conditions">Terms and Conditions</a>
             </div>
           </div>
           <div className="footer-bottom-right">

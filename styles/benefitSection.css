@@ -3,10 +3,10 @@
   justify-content: space-between;
   background: #e8f2fd;
   border-radius: 20px;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 2rem .25rem;
   margin: 3rem 0;
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 50px auto 50px auto;
 }
 
@@ -19,7 +19,7 @@
   flex: 1 1 35%;
   text-align: center;
   margin: 0 20px;
-  padding: 10px 0;
+  padding: 0 0 10px;
 }
 .benefit-right img{
   height: 100%;
