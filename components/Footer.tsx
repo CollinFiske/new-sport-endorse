@@ -60,9 +60,9 @@ export default function Footer() {
               <h2><span className="footer-number">04]</span><Link href="/subscription">Subscription<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
             </div>
             <div>
-              <h2><span className="footer-number">05]</span><a href="#">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
+              <h2><span className="footer-number">05]</span><a href="/wp/blog">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
               <h2><span className="footer-number">06]</span><a href="#">Guides<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
-              <h2><span className="footer-number">07]</span><a href="#">Podcast<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
+              <h2><span className="footer-number">07]</span><a href="/wp/podcasts">Podcast<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
               <h2><span className="footer-number">08]</span><a href="#">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
             </div>
             <span style={{marginLeft:"auto"}}>

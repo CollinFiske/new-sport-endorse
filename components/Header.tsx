@@ -24,9 +24,9 @@ export default function Header() {
         <div className="dropdown">
           <span>{t.header.resources} ▾</span>
           <div className="dropdown-content">
-            <Link href="#">{t.header.blog}</Link>{/* switch to  */}
+            <Link href="/wp/blog">{t.header.blog}</Link>{/* switch to  */}
             <Link href="#">{t.header.guides}</Link>
-            <Link href="#">{t.header.podcast}</Link>
+            <Link href="/wp/podcasts">{t.header.podcast}</Link>
             <Link href="#">{t.header.aboutUs}</Link>
           </div>
         </div>
