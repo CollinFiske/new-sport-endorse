@@ -3,6 +3,8 @@ import Statistics from "@/components/Statistics";
 import "../../styles/brands.css";
 import Image from 'next/image';
 import BusinessSubscription from "@/components/BusinessSubscription";
+import FAQs from "@/components/FAQs";
+import SuccessStories from "@/components/SuccessStories";
 
 export default function BrandsPage() {
   return (
@@ -50,7 +52,15 @@ export default function BrandsPage() {
       nationalities={201}
     />
 
+    <p style={{textAlign:"center", margin:"200px"}}>1 2 3 4 steps here</p>
+
     <BusinessSubscription />
+    
+    <SuccessStories />
+
+    <p style={{textAlign:"center", margin:"200px"}}>podcast ep here - brand focus</p>
+
+    <FAQs />
 
     </>
   );

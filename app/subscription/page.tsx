@@ -2,6 +2,8 @@
 
 import BusinessSubscription from "@/components/BusinessSubscription";
 import CalendlyDemo from "@/components/CalendlyDemo";
+import FAQs from "@/components/FAQs";
+import SuccessStories from "@/components/SuccessStories";
 
 
 export default function Subscription(){
@@ -17,6 +19,11 @@ export default function Subscription(){
             </p>
             <CalendlyDemo />
         </div>
+
+        <SuccessStories />
+
+        <FAQs />
+        
         </main>
     );
     

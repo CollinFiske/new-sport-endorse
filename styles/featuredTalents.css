@@ -1,7 +1,9 @@
 .featured-talents{
   background: #eaf5ff;
-  padding: 3rem 1rem;
+  padding: 2rem;
   border-radius: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .featured-talents .header {
@@ -20,7 +22,8 @@
 .featured-talents .header p {
   color: #666;
   font-size: 0.95rem;
-  max-width: 600px;
+  max-width: 500px;
+  margin-top: 10px;
 }
 
 .scrollTalents {

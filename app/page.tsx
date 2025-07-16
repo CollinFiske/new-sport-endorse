@@ -60,7 +60,7 @@ export default function Page() {
             <td><img src="/images/homePageTable/FutureProofPro.webp" alt="FutureProofPro logo" /></td>
             <td><img src="/images/homePageTable/Kelloggs_Logo_Slider.webp" alt="Kellogg's logo" /></td>
             <td><img src="/images/homePageTable/Lovable.webp" alt="Lovable logo" /></td>
-            <td><img src="/images/homePageTable/Millennium_Communications.webp" alt="Millennium Communications logo" /></td>
+            <td><img src="/images/homePageTable/Optimum_Nutrition_Logo.png" alt="Optimum Nutrition logo" /></td>
             <td><img src="/images/homePageTable/National-Dairy-Council.webp" alt="National Dairy Council logo" /></td>
             <td><img src="/images/homePageTable/Pure_Pharmacy.webp" alt="Pure Pharmacy logo" /></td>
           </tr>
@@ -69,8 +69,8 @@ export default function Page() {
             <td><img src="/images/homePageTable/PricewaterhouseCoopers_Logo.webp" alt="PricewaterhouseCoopers logo" /></td>
             <td><img src="/images/homePageTable/ptsb-logo-1.webp" alt="PTSB logo" /></td>
             <td><img src="/images/homePageTable/puma.webp" alt="Puma logo" /></td>
-            <td><img src="/images/homePageTable/Red_Bull.webp" alt="Red Bull logo" /></td>
-            <td><img src="/images/homePageTable/RemusUomo.webp" alt="Remus Uomo logo" /></td>
+            <td><img src="/images/homePageTable/Pringles-Logo.png" alt="Pringles logo" /></td>
+            <td><img src="/images/homePageTable/whoop_logo.png" alt="Whoop logo" /></td>
             <td><img src="/images/homePageTable/Shokz.webp" alt="Shokz logo" /></td>
             <td><img src="/images/homePageTable/Hard_Rock_Cafe.webp" alt="Hard Rock Cafe logo" /></td>
           </tr>
@@ -100,7 +100,7 @@ export default function Page() {
     <BenefitSection
       title={t.home.benefitSection.athlete.title}
       subtitle={t.home.benefitSection.athlete.subtitle}
-      image="/images/talentBenefitPic.webp"
+      image="/images/talentBenefitPic.png"
       label={t.home.benefitSection.athlete.label}
       background="#E5F1FF"
       item1={t.home.benefitSection.athlete.bullet1}
@@ -112,7 +112,7 @@ export default function Page() {
     <BenefitSection
       title={t.home.benefitSection.brand.title}
       subtitle={t.home.benefitSection.brand.subtitle}
-      image="/images/brandBenefitPic.webp"
+      image="/images/Screenshot 2025-07-16 140629.png"
       label={t.home.benefitSection.brand.label} 
       background="#FFFBBC"
       item1={t.home.benefitSection.brand.bullet1}
@@ -121,7 +121,7 @@ export default function Page() {
       color="#F6B014"
     />
 
-    <BenefitSection
+    {/*<BenefitSection
       title={t.home.benefitSection.agency.title}
       subtitle={t.home.benefitSection.agency.subtitle}
       image="/images/agencyBenefitPic.webp"
@@ -131,7 +131,7 @@ export default function Page() {
       item2={t.home.benefitSection.agency.bullet2}
       item3={t.home.benefitSection.agency.bullet3}
       color="#83BF24"
-    />
+    />*/}
 
     <BusinessSubscription />
 

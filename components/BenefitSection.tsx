@@ -1,4 +1,5 @@
 "use client";
+import { Underline } from "lucide-react";
 import "../styles/benefitSection.css";
 
 interface BenefitProps {
@@ -15,7 +16,7 @@ interface BenefitProps {
 
 export default function BenefitSection({ title, subtitle, image, label, background = "#e8f2fd", item1="item1", item2="item2", item3="item3", color="#008cfa" }: BenefitProps) {
   return (
-    <section className="benefit-section" style={{ background }}>
+    <section className="benefit-section" style={{ background, paddingBottom: label === "FOR BRANDS" ? "40px" : undefined }}>
       <div className="benefit-left">
         {label && <span className="benefit-label" style={{ color }}>◉ {label}</span>}
         <h2 style={label ? undefined: { marginTop: 0 }}>{title}</h2>

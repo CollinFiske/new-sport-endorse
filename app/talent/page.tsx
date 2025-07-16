@@ -3,6 +3,8 @@ import Statistics from "@/components/Statistics";
 import "../../styles/talent.css";
 import Image from 'next/image';
 import AppStores from "@/components/AppStores";
+import SuccessStories from "@/components/SuccessStories";
+import FeaturedTalents from "@/components/FeaturedTalents";
 
 export default function TalentPage() {
   return (
@@ -51,6 +53,16 @@ export default function TalentPage() {
       sports={3282}
       nationalities={201}
     />
+
+    <p style={{textAlign:"center", margin:"200px"}}>1 2 3 4 steps here</p>
+
+    <SuccessStories />
+
+    <FeaturedTalents />
+
+    <p style={{textAlign:"center", margin:"200px"}}>podcast ep here - athlete focus</p>
+
+    
     </>
   );
 }

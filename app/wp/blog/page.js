@@ -41,7 +41,7 @@ export default async function BlogPage() {
                 <div className="blog-post-content">
                   <h3 className="blog-post-title">
                     <Link
-                      href={`/wordpress/blog/${post.slug}`}
+                      href={`/wp/blog/${post.slug}`}
                       className="blog-post-link"
                     >
                       {post.title.rendered}

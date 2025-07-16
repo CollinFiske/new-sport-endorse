@@ -13,24 +13,27 @@ export default function Header() {
 
   return (
     <header className="modern-header">
+
       <div className="logo-area">
         <MainLogo/>
       </div>
+
       <nav className="main-nav">
-        <Link href="/talent">{t.header.talent}</Link>
-        <Link href="/brands">{t.header.brand}</Link>
-        <Link href="/agency">{t.header.agencies}</Link>
-        <Link href="/subscription">{t.header.subscription}</Link>
+        <Link href="/talent">Talent</Link>
+        <Link href="/brands">Brands</Link>
+        {/*<Link href="/agency">{t.header.agencies}</Link>*/}
+        <Link href="/wp/successStories">Success Stories</Link>
         <div className="dropdown">
-          <span>{t.header.resources} ▾</span>
+          <span>Resources ▾</span>
           <div className="dropdown-content">
-            <Link href="/wp/blog">{t.header.blog}</Link>{/* switch to  */}
-            <Link href="#">{t.header.guides}</Link>
-            <Link href="/wp/podcasts">{t.header.podcast}</Link>
-            <Link href="#">{t.header.aboutUs}</Link>
+            <Link href="/wp/blog">Blog</Link>
+            <Link href="/subscription">Subscription</Link>
+            <Link href="/wp/podcasts">Podcast</Link>
+            <Link href="/aboutUs">About Us</Link>
           </div>
         </div>
       </nav>
+
       <div className="actions">
         <select value={language} onChange={(e) => changeLanguage(e.target.value as Language)}>
           <option value="en">🇺🇸</option>
@@ -45,6 +48,7 @@ export default function Header() {
           <button className="demo-btn">{t.header.demoBtn}</button>
         </a>
       </div>
+
     </header>
   );
 }

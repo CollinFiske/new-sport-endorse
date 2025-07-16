@@ -13,7 +13,7 @@ export default function StatisticsSection({ athletes, brands, sports, nationalit
   return (
     <section className="statistics-section">
       <div className="statistics-header">
-        <h2>Statistics</h2>
+        <h2>Community</h2>
         <p style={{width:"50%"}}>
           Unlock actionable insights with our advanced analytics, empowering you to optimize your sports marketing strategies.
         </p>

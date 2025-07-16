@@ -7,9 +7,9 @@ export default function FeaturedTalents() {
       <div className="header">
         <div>
           <h2>Our Featured Talents</h2>
-          <p>Descriptional text dedicated to talents.</p>
+          <p>We work with a diverse selection of more than 7,000 global athletes (competing and retired), from more than 250 sporting disciplines.</p>
         </div>
-        <button className="view-all">VIEW ALL (203)</button>
+        {/*<button className="view-all">VIEW ALL (203)</button>*/}
       </div>
       
       <div className="scrollTalents">
