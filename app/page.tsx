@@ -107,6 +107,7 @@ export default function Page() {
       item2={t.home.benefitSection.athlete.bullet2}
       item3={t.home.benefitSection.athlete.bullet3}
       color="#008cfa"
+      learnMoreLink="/talent"
     />
 
     <BenefitSection
@@ -119,6 +120,7 @@ export default function Page() {
       item2={t.home.benefitSection.brand.bullet2}
       item3={t.home.benefitSection.brand.bullet3}
       color="#F6B014"
+      learnMoreLink="/brands"
     />
 
     {/*<BenefitSection

@@ -12,9 +12,10 @@ interface BenefitProps {
   item2?: string;
   item3?: string;
   color?: string;
+  learnMoreLink?: string;
 }
 
-export default function BenefitSection({ title, subtitle, image, label, background = "#e8f2fd", item1="item1", item2="item2", item3="item3", color="#008cfa" }: BenefitProps) {
+export default function BenefitSection({ title, subtitle, image, label, background = "#e8f2fd", item1="item1", item2="item2", item3="item3", color="#008cfa", learnMoreLink = "/talent" }: BenefitProps) {
   return (
     <section className="benefit-section" style={{ background, paddingBottom: label === "FOR BRANDS" ? "40px" : undefined }}>
       <div className="benefit-left">
@@ -27,7 +28,7 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
           <li>⭐ {item3}</li>
         </ul>
         <div className="button-group">
-          <a href="/talent"><button className="benefit-button">LEARN MORE</button></a>
+          <a href={learnMoreLink}><button className="benefit-button">LEARN MORE</button></a>
           <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
             <button className="demo-button">DEMO FOR BUSINESS</button>
           </a>

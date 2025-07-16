@@ -5,6 +5,8 @@ import Image from 'next/image';
 import BusinessSubscription from "@/components/BusinessSubscription";
 import FAQs from "@/components/FAQs";
 import SuccessStories from "@/components/SuccessStories";
+import BenefitSection from "@/components/BenefitSection";
+import BrandHowItWorks from "@/components/BrandHowItWorks";
 
 export default function BrandsPage() {
   return (
@@ -29,8 +31,6 @@ export default function BrandsPage() {
             sponsorships, connecting with influential brands worldwide.
           </p>
         </div>
-          
-          
         
         <div className="imageContainer">
           <Image 
@@ -52,13 +52,36 @@ export default function BrandsPage() {
       nationalities={201}
     />
 
-    <p style={{textAlign:"center", margin:"200px"}}>1 2 3 4 steps here</p>
+    <BenefitSection 
+      title="Book Iconic Sports Ambassadors"
+      subtitle="Our user-friendly platform seamlessly connects agencies with top global athletes and ambassadors, reducing the steps to secure exceptional sponsorship deals and amplify your clients' marketing campaigns."
+      image="/images/agencyPhonePic.png"
+      label=""
+      background="white"
+      item1="Managing multiple sponsorship deals efficiently"
+      item2="Finding the right athletes or influencers for specific campaigns"
+      item3="Ensuring authentic brand-athlete alignment"
+      color="#F6B014"
+      learnMoreLink="/wp/successStories"
+    />
+
+    <BrandHowItWorks />
 
     <BusinessSubscription />
     
     <SuccessStories />
 
-    <p style={{textAlign:"center", margin:"200px"}}>podcast ep here - brand focus</p>
+    <div style={{ textAlign: 'left', margin: '0 auto 40px', maxWidth: '570px', backgroundColor:"#E5F1FF", padding:"2rem", borderRadius: "20px" }}>
+      <p><strong>The Sitdown with Sport Endorse</strong></p>
+      <br />
+      <h2>Lorna Danaher</h2>
+      <p style={{color:"#414a4c"}}>Sponsorship Manager at Energia</p>
+      <br />
+      <iframe src="https://www.podomatic.com/embed/html5/episode/10536784?style=normal&width=504&height=208" width="504" height="208" frameBorder="0" allow="encrypted-media" style={{backgroundColor:"#FBFAF5"}}></iframe>
+      <p style={{marginTop:"15px"}}>
+        For the first episode in a series where we explore the collaboration between brands and sport and what best practice looks like, we were delighted to have Lorna Danaher, Sponsorship Manager for Energia, as our guest.
+      </p>
+    </div>
 
     <FAQs />
 

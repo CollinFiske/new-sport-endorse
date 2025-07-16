@@ -60,8 +60,17 @@ export default function TalentPage() {
 
     <FeaturedTalents />
 
-    <p style={{textAlign:"center", margin:"200px"}}>podcast ep here - athlete focus</p>
-
+    <div style={{ textAlign: 'left', margin: '3rem auto', maxWidth: '570px', backgroundColor:"#E5F1FF", padding:"2rem", borderRadius: "20px" }}>
+      <p><strong>The Sitdown with Sport Endorse</strong></p>
+      <br />
+      <h2>Lorna Danaher</h2>
+      <p style={{color:"#414a4c"}}>Sponsorship Manager at Energia</p>
+      <br />
+      <iframe src="https://podomatic.com/embed/html5/episode/10764959" width="504" height="208" frameBorder="0" allow="encrypted-media" style={{backgroundColor:"#FBFAF5"}}></iframe>
+      <p style={{marginTop:"15px"}}>
+        For the first episode in a series where we explore the collaboration between brands and sport and what best practice looks like, we were delighted to have Lorna Danaher, Sponsorship Manager for Energia, as our guest.
+      </p>
+    </div>
     
     </>
   );

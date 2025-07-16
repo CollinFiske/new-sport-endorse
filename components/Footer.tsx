@@ -79,18 +79,6 @@ export default function Footer() {
 
 
           <div className="footer-links">
-            <style jsx>{`
-              .footer-links h2 {
-                display: flex;
-                align-items: center;
-                margin: 0 0 12px 0;
-              }
-              .footer-links h2 span.footer-number {
-                font-size: 12px;
-                margin-right: 8px;
-                color: #ccc;
-              }
-            `}</style>
             <div>
               <h2><span className="footer-number">01]</span><Link href="/talent">Athletes<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">02]</span><Link href="/brands">Brands<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
@@ -104,7 +92,7 @@ export default function Footer() {
               <h2><span className="footer-number">07]</span><a href="/aboutUs">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
             </div>
 
-            <span style={{marginLeft:"auto"}}>
+            <span className="footer-app-store-logos">
               <AppStores />
             </span>
           </div>
