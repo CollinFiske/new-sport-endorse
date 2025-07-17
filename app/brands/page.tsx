@@ -33,7 +33,7 @@ export default function BrandsPage() {
         </div>
         
         <div className="imageContainer">
-          <Image 
+          <Image  // have featured brands scrolled thru in the image here instead - would match the talent one but with brands, not athletes
             src="/images/brandHero.png" 
             alt="Athlete in action"
             width={600}

@@ -5,6 +5,9 @@ import Image from 'next/image';
 import AppStores from "@/components/AppStores";
 import SuccessStories from "@/components/SuccessStories";
 import FeaturedTalents from "@/components/FeaturedTalents";
+import LetsTalk from "@/components/LetsTalk";
+import BrandHowItWorks from "@/components/BrandHowItWorks";
+import BenefitSection from "@/components/BenefitSection";
 
 export default function TalentPage() {
   return (
@@ -54,11 +57,28 @@ export default function TalentPage() {
       nationalities={201}
     />
 
-    <p style={{textAlign:"center", margin:"200px"}}>1 2 3 4 steps here</p>
+    {/*<p style={{textAlign:"center", margin:"200px"}}>1 2 3 4 steps here</p>*/}
+    <BenefitSection 
+      title="Join our Talented Team of Athletes"
+      subtitle="Start curating your brand and monetizing your talent by joining our diverse team of elite student-athletes, passionate about furthering their career and connecting with influential brands around the world."
+      image="/images/phone-talent-benefit-pic.png"
+      label=""
+      background="white"
+      item1="Create a stand-out user profile"
+      item2="Motivate your fans with inspiring public appearances"
+      item3="Use our built-in chat messenger to communicate with brands"
+      color="#F6B014"
+      learnMoreLink="/wp/successStories"
+    />
+
+    <p>the how it works is currently copied from the brand version</p>
+    <BrandHowItWorks />
 
     <SuccessStories />
 
-    <FeaturedTalents />
+    <LetsTalk />
+
+    <FeaturedTalents /> {/* maybe instead have it so that the featured talents are scrolled thru in the home hero picture */}
 
     <div style={{ textAlign: 'left', margin: '3rem auto', maxWidth: '570px', backgroundColor:"#E5F1FF", padding:"2rem", borderRadius: "20px" }}>
       <p><strong>The Sitdown with Sport Endorse</strong></p>
