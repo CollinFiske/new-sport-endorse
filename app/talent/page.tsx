@@ -6,7 +6,7 @@ import AppStores from "@/components/AppStores";
 import SuccessStories from "@/components/SuccessStories";
 import FeaturedTalents from "@/components/FeaturedTalents";
 import LetsTalk from "@/components/LetsTalk";
-import BrandHowItWorks from "@/components/BrandHowItWorks";
+import AgencyHowItWorks from "@/components/AgencyHowItWorks";
 import BenefitSection from "@/components/BenefitSection";
 
 export default function TalentPage() {
@@ -70,9 +70,6 @@ export default function TalentPage() {
       color="#F6B014"
       learnMoreLink="/wp/successStories"
     />
-
-    <p>the how it works is currently copied from the brand version</p>
-    <BrandHowItWorks />
 
     <SuccessStories />
 

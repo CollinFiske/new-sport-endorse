@@ -26,9 +26,10 @@ export default function Header() {
         <div className="dropdown">
           <span>Resources ▾</span>
           <div className="dropdown-content">
-            <Link href="/wp/blog">Blog</Link>
+            <Link href="/agency">Agencies</Link>
             <Link href="/subscription">Subscription</Link>
-            <Link href="/wp/podcasts">Podcast</Link>
+            <Link href="/wp/blog">Blog</Link>
+            <Link href="/wp/podcasts">Podcasts</Link>
             <Link href="/aboutUs">About Us</Link>
           </div>
         </div>

@@ -6,7 +6,7 @@ import BusinessSubscription from "@/components/BusinessSubscription";
 import FAQs from "@/components/FAQs";
 import SuccessStories from "@/components/SuccessStories";
 import BenefitSection from "@/components/BenefitSection";
-import BrandHowItWorks from "@/components/BrandHowItWorks";
+import AgencyHowItWorks from "@/components/AgencyHowItWorks";
 
 export default function BrandsPage() {
   return (
@@ -65,7 +65,7 @@ export default function BrandsPage() {
       learnMoreLink="/wp/successStories"
     />
 
-    <BrandHowItWorks />
+    <AgencyHowItWorks />
 
     <BusinessSubscription />
     

@@ -1,8 +1,8 @@
 "use client"
-import '../styles/BrandHowItWorks.css';
+import '../styles/agencyHowItWorks.css';
 
 
-export default function BrandHowItWorks() {
+export default function AgencyHowItWorks() {
     const steps = [
         {
         icon: "🗓️",

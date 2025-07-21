@@ -8,6 +8,34 @@ export const metadata = {
   description: 'Latest insights on athlete sponsorship and sports marketing'
 }
 
+// Function to decode HTML entities
+function decodeHtmlEntities(text) {
+  if (!text) return text;
+  
+  const entities = {
+    '&#038;': '&',
+    '&#8217;': "'",
+    '&#8216;': "'",
+    '&#8220;': '"',
+    '&#8221;': '"',
+    '&#8211;': '–',
+    '&#8212;': '—',
+    '&amp;': '&',
+    '&quot;': '"',
+    '&apos;': "'",
+    '&lt;': '<',
+    '&gt;': '>',
+    '&nbsp;': ' '
+  };
+  
+  let decodedText = text;
+  for (const [entity, replacement] of Object.entries(entities)) {
+    decodedText = decodedText.replace(new RegExp(entity, 'g'), replacement);
+  }
+  
+  return decodedText;
+}
+
 export default async function BlogPage() {
   const posts = await getAllPosts()
   
@@ -44,14 +72,14 @@ export default async function BlogPage() {
                       href={`/wp/blog/${post.slug}`}
                       className="blog-post-link"
                     >
-                      {post.title.rendered}
+                      {decodeHtmlEntities(post.title.rendered)}
                     </Link>
                   </h3>
                             
                   <div
                     className="blog-post-excerpt"
                     dangerouslySetInnerHTML={{
-                      __html: post.excerpt.rendered
+                      __html: decodeHtmlEntities(post.excerpt.rendered)
                     }}
                   />
                             

@@ -82,14 +82,14 @@ export default function Footer() {
             <div>
               <h2><span className="footer-number">01]</span><Link href="/talent">Athletes<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">02]</span><Link href="/brands">Brands<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              {/*<h2><span className="footer-number">03]</span><Link href="/agency">Agencies<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>*/}
               <h2><span className="footer-number">03]</span><Link href="/wp/successStories">Success Stories<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">04]</span><a href="/wp/blog">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
+              <h2><span className="footer-number">04]</span><Link href="/agency">Agencies<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
             </div>
             <div>
-              <h2><span className="footer-number">05]</span><Link href="/subscription">Subscription<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">06]</span><a href="/wp/podcasts">Podcast<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
-              <h2><span className="footer-number">07]</span><a href="/aboutUs">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
+              <h2><span className="footer-number">05]</span><a href="/wp/blog">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
+              <h2><span className="footer-number">06]</span><Link href="/subscription">Subscription<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">07]</span><a href="/wp/podcasts">Podcasts<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
+              <h2><span className="footer-number">08]</span><a href="/aboutUs">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
             </div>
 
             <span className="footer-app-store-logos">

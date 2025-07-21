@@ -8,6 +8,34 @@ export const metadata = {
   description: 'Inspiring success stories from our athlete and brand partnerships',
 };
 
+// Function to decode HTML entities
+function decodeHtmlEntities(text) {
+  if (!text) return text;
+  
+  const entities = {
+    '&#038;': '&',
+    '&#8217;': "'",
+    '&#8216;': "'",
+    '&#8220;': '"',
+    '&#8221;': '"',
+    '&#8211;': '–',
+    '&#8212;': '—',
+    '&amp;': '&',
+    '&quot;': '"',
+    '&apos;': "'",
+    '&lt;': '<',
+    '&gt;': '>',
+    '&nbsp;': ' '
+  };
+  
+  let decodedText = text;
+  for (const [entity, replacement] of Object.entries(entities)) {
+    decodedText = decodedText.replace(new RegExp(entity, 'g'), replacement);
+  }
+  
+  return decodedText;
+}
+
 export default async function SuccessStoriesPage() {
   const stories = await getAllSuccessStories();
 
@@ -36,11 +64,11 @@ export default async function SuccessStoriesPage() {
 
                 <div className="blog-post-content">
                   <h3 className="blog-post-title">
-                    {story.title.rendered}
+                    {decodeHtmlEntities(story.title.rendered)}
                   </h3>
 
                   <p className="blog-post-excerpt">
-                    {story.yoast_head_json?.description || 'No summary available.'}
+                    {decodeHtmlEntities(story.yoast_head_json?.description) || 'No summary available.'}
                   </p>
 
                   <time className="blog-post-date">

@@ -29,9 +29,9 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
         </ul>
         <div className="button-group">
           <a href={learnMoreLink}><button className="benefit-button">LEARN MORE</button></a>
-          <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
+          {title && title !== "Join our Talented Team of Athletes" && <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
             <button className="demo-button">DEMO FOR BUSINESS</button>
-          </a>
+          </a>}
         </div>
       </div>
       <div className="benefit-right">
