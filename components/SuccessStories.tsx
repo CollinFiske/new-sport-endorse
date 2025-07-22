@@ -1,26 +1,116 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import "../styles/successStories.css";
 
-export default function SuccessStories() {
+function decodeHtmlEntities(text: string) {
+  if (!text) return text;
+  const entities: Record<string, string> = {
+    "&#038;": "&",
+    "&#8217;": "'",
+    "&#8216;": "'",
+    "&#8220;": '"',
+    "&#8221;": '"',
+    "&#8211;": "–",
+    "&#8212;": "—",
+    "&amp;": "&",
+    "&quot;": '"',
+    "&apos;": "'",
+    "&lt;": "<",
+    "&gt;": ">",
+    "&nbsp;": " "
+  };
+  let decodedText = text;
+  for (const [entity, replacement] of Object.entries(entities)) {
+    decodedText = decodedText.replace(new RegExp(entity, "g"), replacement);
+  }
+  return decodedText;
+}
+
+const VISIBLE_COUNT = 3;
+
+export default function SuccessStories({ stories: initialStories, serverError }: { stories?: any[], serverError?: string }) {
+  const [stories, setStories] = useState<any[]>(initialStories || []);
+  const [loading, setLoading] = useState(!initialStories);
+  const [startIdx, setStartIdx] = useState(0);
+
+  useEffect(() => {
+    if (initialStories) return; // Don't fetch if stories are provided
+    async function fetchStories() {
+      try {
+        const res = await fetch(
+          `https://www.sportendorse.com/wp-json/wp/v2/success_stories?_embed&per_page=10&page=1`
+        );
+        if (!res.ok) throw new Error("Failed to fetch success stories");
+        const data = await res.json();
+        setStories(data || []);
+      } catch (e) {
+        setStories([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchStories();
+  }, [initialStories]);
+
+  const handlePrev = () => {
+    setStartIdx((prev) => Math.max(0, prev - 1));
+  };
+  const handleNext = () => {
+    setStartIdx((prev) => Math.min(stories.length - VISIBLE_COUNT, prev + 1));
+  };
+
+  const visibleStories = stories.slice(startIdx, startIdx + VISIBLE_COUNT);
+
   return (
     <section className="success-stories">
       <h2>Success Stories</h2>
       <p>Learn how brands and athletes have been winning together</p>
-      <div className="stories-scroll">
-        {[...Array(3)].map((_, i) => (
-          <div className={`success-card ${i === 1 ? "active" : "faded"}`} key={i}>
-            <img src="/images/placeholder.png" alt="success story image"></img>
-            {i >= 0 && (
-              <div className="success-info">
-                <p className="success-title">POPEYE'S SUPPLEMENTS IN CANADA WAS LOOKING TO</p>
-                <p className="success-text">
-                  align with a well known ice hockey player to promote their products and used the Sport Endorse Platform.
-                </p>
-                <a className="read-more" href="#">READ MORE →</a>
+      {serverError && (
+        <div className="success-error">{serverError}</div>
+      )}
+      <div className="stories-carousel-container">
+        <button
+          className="carousel-arrow left"
+          onClick={handlePrev}
+          disabled={startIdx === 0}
+          aria-label="Previous stories"
+        >
+          &#8592;
+        </button>
+        <div className="stories-scroll">
+          {loading ? (
+            <div>Loading...</div>
+          ) : stories.length === 0 ? (
+            <div>No stories found.</div>
+          ) : (
+            visibleStories.map((story, i) => (
+              <div className={`success-card${i === 1 ? " active" : " faded"}`} key={story.id}>
+                {story.yoast_head_json?.og_image?.[0]?.url && (
+                  <img
+                    src={story.yoast_head_json.og_image[0].url}
+                    alt={story.title.rendered}
+                    loading="lazy"
+                  />
+                )}
+                <div className="success-info">
+                  <p className="success-title">{decodeHtmlEntities(story.title.rendered)}</p>
+                  <p className="success-text">
+                    {decodeHtmlEntities(story.yoast_head_json?.description) || "No summary available."}
+                  </p>
+                  <a className="read-more" href={story.link} target="_blank" rel="noopener noreferrer">READ MORE →</a>
+                </div>
               </div>
-            )}
-          </div>
-        ))}
+            ))
+          )}
+        </div>
+        <button
+          className="carousel-arrow right"
+          onClick={handleNext}
+          disabled={startIdx >= Math.max(0, stories.length - VISIBLE_COUNT)}
+          aria-label="Next stories"
+        >
+          &#8594;
+        </button>
       </div>
     </section>
   );

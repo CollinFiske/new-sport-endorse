@@ -4,6 +4,7 @@ import "../styles/footer.css";
 import { LanguageProvider } from "../context/LanguageContext";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ChatbotWrapper from "@/components/ChatbotWrapper";
 
 export const metadata = {
   title: "Sport Endorse",
@@ -21,11 +22,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </head>
       <body>
-        <LanguageProvider>
-          <Header />
-          <main style={{ padding: "80px 20px 0 20px" /* for space for header and on sides */}}>{children}</main>
-          <Footer /> 
-        </LanguageProvider>
+        <ChatbotWrapper>
+          <LanguageProvider>
+            <Header />
+            <main style={{ padding: "80px 20px 0 20px" /* for space for header and on sides */}}>{children}</main>
+            <Footer /> 
+          </LanguageProvider>
+        </ChatbotWrapper>
       </body>
     </html>
   );

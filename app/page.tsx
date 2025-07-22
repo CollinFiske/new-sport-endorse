@@ -5,13 +5,12 @@ import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
 import "../styles/home.css";
 import "../styles/benefitSection.css";
-import "../styles/successStories.css";
 import "../styles/featuredTalents.css";
 import Statistics from "../components/Statistics";
 import FeaturedTalents from "@/components/FeaturedTalents";
-import SuccessStories from "@/components/SuccessStories";
 import BusinessSubscription from "@/components/BusinessSubscription";
 import AppStores from "@/components/AppStores";
+import ServerSuccessStories from "@/components/ServerSuccessStories";
 
 export default function Page() {
   const { language } = useLanguage();
@@ -139,7 +138,7 @@ export default function Page() {
 
     <FeaturedTalents />
     
-    <SuccessStories />
+    <ServerSuccessStories />
 
 
     </>

@@ -6,7 +6,6 @@ import AppStores from "@/components/AppStores";
 import SuccessStories from "@/components/SuccessStories";
 import FeaturedTalents from "@/components/FeaturedTalents";
 import LetsTalk from "@/components/LetsTalk";
-import AgencyHowItWorks from "@/components/AgencyHowItWorks";
 import BenefitSection from "@/components/BenefitSection";
 
 export default function TalentPage() {

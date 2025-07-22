@@ -4,7 +4,7 @@ import "../../styles/brands.css";
 import Image from 'next/image';
 import BusinessSubscription from "@/components/BusinessSubscription";
 import FAQs from "@/components/FAQs";
-import SuccessStories from "@/components/SuccessStories";
+import ServerSuccessStories from "@/components/ServerSuccessStories";
 import BenefitSection from "@/components/BenefitSection";
 import AgencyHowItWorks from "@/components/AgencyHowItWorks";
 
@@ -69,7 +69,7 @@ export default function BrandsPage() {
 
     <BusinessSubscription />
     
-    <SuccessStories />
+    <ServerSuccessStories />
 
     <div style={{ textAlign: 'left', margin: '0 auto 40px', maxWidth: '570px', backgroundColor:"#E5F1FF", padding:"2rem", borderRadius: "20px" }}>
       <p><strong>The Sitdown with Sport Endorse</strong></p>

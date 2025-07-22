@@ -5,7 +5,7 @@ import Image from 'next/image';
 import BusinessSubscription from "@/components/BusinessSubscription";
 import BenefitSection from "@/components/BenefitSection";
 import AgencyHowItWorks from "@/components/AgencyHowItWorks";
-import SuccessStories from "@/components/SuccessStories";
+import ServerSuccessStories from "@/components/ServerSuccessStories";
 import FAQs from "@/components/FAQs";
 
 export default function AgencyPage() {
@@ -67,7 +67,7 @@ export default function AgencyPage() {
 
     <BusinessSubscription />
 
-    <SuccessStories />
+    <ServerSuccessStories />
 
     <div style={{ textAlign: 'left', margin: '0 auto 40px', maxWidth: '570px', backgroundColor:"#E5F1FF", padding:"2rem", borderRadius: "20px" }}>
       <p><strong>The Sitdown with Sport Endorse</strong></p>
