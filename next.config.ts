@@ -24,9 +24,6 @@ const config: NextConfig = {
     
     return config;
   },
-  experimental: {
-    optimizeCss: true,
-  },
 };
 
 export default config;
