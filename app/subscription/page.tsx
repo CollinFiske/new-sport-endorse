@@ -3,7 +3,7 @@
 import BusinessSubscription from "@/components/BusinessSubscription";
 import CalendlyDemo from "@/components/CalendlyDemo";
 import FAQs from "@/components/FAQs";
-import ServerSuccessStories from "@/components/ServerSuccessStories";
+import SuccessStories from "@/components/SuccessStories";
 
 
 export default function Subscription(){
@@ -20,7 +20,7 @@ export default function Subscription(){
                 <CalendlyDemo />
             </div>
 
-            <ServerSuccessStories />
+            <SuccessStories />
 
             <FAQs />
         

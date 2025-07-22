@@ -1,0 +1,85 @@
+.brandsGridWrapper {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.label {
+  color: grey;
+  text-align: left;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.brandsTable {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.brandsTable td {
+  border: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+  max-width: 120px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: #fafbfc;
+}
+
+.brandsTable td:last-child {
+  border-right: none;
+}
+
+.brandsTable tr:last-child td {
+  border-bottom: none;
+}
+
+.brandsTable img {
+  max-width: 100%;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.ctaButton {
+  background: #18A0FB;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ctaButton:hover {
+  background: #0074c2;
+}
+
+@media (max-width: 900px) {
+  .brandsTable td {
+    padding: 10px;
+  }
+  .brandsTable img {
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .brandsTable {
+    font-size: 0.8rem;
+  }
+  .brandsTable td {
+    padding: 4px;
+  }
+  .brandsTable img {
+    max-height: 28px;
+  }
+} 

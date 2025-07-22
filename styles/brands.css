@@ -1,5 +1,5 @@
 .heroSection {
-  padding: 40px 0;
+  padding: 40px 0 20px;
   display: flex;
   align-items: center;
 }
@@ -7,15 +7,15 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 0 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 10px;
   align-items: center;
 }
 
 .content {
-  padding-right: 20px;
+  padding-right: 0;
 }
 
 .badge {

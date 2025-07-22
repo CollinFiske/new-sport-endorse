@@ -33,16 +33,14 @@ type Story = {
   title: { rendered: string };
   yoast_head_json?: { og_image?: { url: string }[]; description?: string };
   link: string;
-  // ...other fields
 };
 
-export default function SuccessStories({ stories: initialStories, serverError }: { stories?: Story[], serverError?: string }) {
-  const [stories, setStories] = useState<Story[]>(initialStories || []);
-  const [loading, setLoading] = useState(!initialStories);
+export default function SuccessStories() {
+  const [stories, setStories] = useState<Story[]>([]);
+  const [loading, setLoading] = useState(true);
   const [startIdx, setStartIdx] = useState(0);
 
   useEffect(() => {
-    if (initialStories) return; // Don't fetch if stories are provided
     async function fetchStories() {
       try {
         const res = await fetch(
@@ -58,7 +56,7 @@ export default function SuccessStories({ stories: initialStories, serverError }:
       }
     }
     fetchStories();
-  }, [initialStories]);
+  }, []);
 
   const handlePrev = () => {
     setStartIdx((prev) => Math.max(0, prev - 1));
@@ -73,9 +71,6 @@ export default function SuccessStories({ stories: initialStories, serverError }:
     <section className="success-stories">
       <h2>Success Stories</h2>
       <p>Learn how brands and athletes have been winning together</p>
-      {serverError && (
-        <div className="success-error">{serverError}</div>
-      )}
       <div className="stories-carousel-container">
         <button
           className="carousel-arrow left"

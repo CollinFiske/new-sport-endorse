@@ -10,7 +10,8 @@ import Statistics from "../components/Statistics";
 import FeaturedTalents from "@/components/FeaturedTalents";
 import BusinessSubscription from "@/components/BusinessSubscription";
 import AppStores from "@/components/AppStores";
-import ServerSuccessStories from "@/components/ServerSuccessStories";
+import SuccessStories from "@/components/SuccessStories";
+import BrandsGrid from "@/components/BrandsGrid";
 
 export default function Page() {
   const { language } = useLanguage();
@@ -39,55 +40,7 @@ export default function Page() {
 
     </main>
 
-    <p style={{color:"grey"}}>{t.home.tableHeader}</p><br /><br />
-    <div>
-      <table>
-        <tbody>
-          <tr>
-            <td><img src="/images/homePageTable/Alpro_Logo_Slider.webp" alt="Alpro logo" /></td>
-            <td><img src="/images/homePageTable/bunq.webp" alt="Bunq logo" /></td>
-            <td><img src="/images/homePageTable/Energia.webp" alt="Energia logo" /></td>
-            <td><img src="/images/homePageTable/Factor.webp" alt="Factor logo" /></td>
-            <td><img src="/images/homePageTable/GrantThornton.webp" alt="Grant Thornton logo" /></td>
-            <td><img src="/images/homePageTable/Green_Isle_Foods.webp" alt="Green Isle Foods logo" /></td>
-            <td><img src="/images/homePageTable/INDI_Supplements.webp" alt="INDI Supplements logo" /></td>
-            <td><img src="/images/homePageTable/LIERAC.webp" alt="LIERAC logo" /></td>
-          </tr>
-          <tr>
-            <td><img src="/images/homePageTable/Irish_Citylink.webp" alt="Irish Citylink logo" /></td>
-            <td><img src="/images/homePageTable/JTM_logo.webp" alt="JTM logo" /></td>
-            <td><img src="/images/homePageTable/FutureProofPro.webp" alt="FutureProofPro logo" /></td>
-            <td><img src="/images/homePageTable/Kelloggs_Logo_Slider.webp" alt="Kellogg's logo" /></td>
-            <td><img src="/images/homePageTable/Lovable.webp" alt="Lovable logo" /></td>
-            <td><img src="/images/homePageTable/Optimum_Nutrition_Logo.png" alt="Optimum Nutrition logo" /></td>
-            <td><img src="/images/homePageTable/National-Dairy-Council.webp" alt="National Dairy Council logo" /></td>
-            <td><img src="/images/homePageTable/Pure_Pharmacy.webp" alt="Pure Pharmacy logo" /></td>
-          </tr>
-          <tr>
-            <td><img src="/images/homePageTable/Popeyes_Supplements.webp" alt="Popeyes Supplements logo" /></td>
-            <td><img src="/images/homePageTable/PricewaterhouseCoopers_Logo.webp" alt="PricewaterhouseCoopers logo" /></td>
-            <td><img src="/images/homePageTable/ptsb-logo-1.webp" alt="PTSB logo" /></td>
-            <td><img src="/images/homePageTable/puma.webp" alt="Puma logo" /></td>
-            <td><img src="/images/homePageTable/Pringles-Logo.png" alt="Pringles logo" /></td>
-            <td><img src="/images/homePageTable/whoop_logo.png" alt="Whoop logo" /></td>
-            <td><img src="/images/homePageTable/Shokz.webp" alt="Shokz logo" /></td>
-            <td><img src="/images/homePageTable/Hard_Rock_Cafe.webp" alt="Hard Rock Cafe logo" /></td>
-          </tr>
-          <tr>
-            <td><img src="/images/homePageTable/shuzgroup.webp" alt="Shuz Group logo" /></td>
-            <td><img src="/images/homePageTable/skechers.webp" alt="Skechers logo" /></td>
-            <td><img src="/images/homePageTable/Specsaver.webp" alt="Specsavers logo" /></td>
-            <td><img src="/images/homePageTable/Sports-Direct_Logo_Slider.webp" alt="Sports Direct logo" /></td>
-            <td><img src="/images/homePageTable/SuperValu.webp" alt="SuperValu logo" /></td>
-            <td><img src="/images/homePageTable/Tula.webp" alt="Tula logo" /></td>
-            <td><img src="/images/homePageTable/VHI_Logo_Slider.webp" alt="VHI logo" /></td>
-            <td style={{backgroundColor:"#18A0FB"}}  onClick={() => { window.location.href = 'https://platform.sportendorse.com/signup/brand'; }}>
-              <img src="/images/whiteSportEndorseLogo.webp" alt="sport endorse logo" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <BrandsGrid variant="8x4" label={t.home.tableHeader} />
 
     <Statistics 
       athletes={6500}
@@ -137,10 +90,10 @@ export default function Page() {
     <BusinessSubscription />
 
     <FeaturedTalents />
+
+    <SuccessStories />
+
     
-    <ServerSuccessStories />
-
-
     </>
   );
 }

@@ -1,12 +1,12 @@
 "use client"
 import Statistics from "@/components/Statistics";
 import "../../styles/brands.css";
-import Image from 'next/image';
 import BusinessSubscription from "@/components/BusinessSubscription";
 import FAQs from "@/components/FAQs";
-import ServerSuccessStories from "@/components/ServerSuccessStories";
+import SuccessStories from "@/components/SuccessStories";
 import BenefitSection from "@/components/BenefitSection";
 import AgencyHowItWorks from "@/components/AgencyHowItWorks";
+import BrandsGrid from "@/components/BrandsGrid";
 
 export default function BrandsPage() {
   return (
@@ -33,14 +33,7 @@ export default function BrandsPage() {
         </div>
         
         <div className="imageContainer">
-          <Image  // have featured brands scrolled thru in the image here instead - would match the talent one but with brands, not athletes
-            src="/images/brandHero.png" 
-            alt="Athlete in action"
-            width={600}
-            height={500}
-            className="heroImage"
-            priority
-          />
+          <BrandsGrid variant="4x4" label="Check out our Featured Brands!" />
         </div>
       </div>
     </section>
@@ -69,7 +62,7 @@ export default function BrandsPage() {
 
     <BusinessSubscription />
     
-    <ServerSuccessStories />
+    <SuccessStories />
 
     <div style={{ textAlign: 'left', margin: '0 auto 40px', maxWidth: '570px', backgroundColor:"#E5F1FF", padding:"2rem", borderRadius: "20px" }}>
       <p><strong>The Sitdown with Sport Endorse</strong></p>
