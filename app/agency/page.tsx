@@ -77,7 +77,7 @@ export default function AgencyPage() {
       <br />
       <iframe src="https://www.podomatic.com/embed/html5/episode/10593667?style=normal&width=504&height=208" width="504" height="208" frameBorder="0" allow="encrypted-media" style={{backgroundColor:"#FBFAF5"}}></iframe>
       <p style={{marginTop:"15px"}}>
-        Ever considered launching a pro-baseball team, trying to build rapidly while maximizing the positive impact of the team and its stadium for the community and sponsors? In this episode of 'The Sitdown with Sport Endorse', our guest is Kevin Brown, Director of Business Development and Sponsorship for Staten Island Entertainment, a dynamic firm that is bringing Pro baseball, concerts, and community entertainment to Staten Island in New York. 
+        Ever considered launching a pro-baseball team, trying to build rapidly while maximizing the positive impact of the team and its stadium for the community and sponsors? In this episode of &apos;The Sitdown with Sport Endorse&apos;, our guest is Kevin Brown, Director of Business Development and Sponsorship for Staten Island Entertainment, a dynamic firm that is bringing Pro baseball, concerts, and community entertainment to Staten Island in New York. 
       </p>
     </div>
 

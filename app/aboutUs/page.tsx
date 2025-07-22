@@ -1,5 +1,4 @@
 "use client"
-import { Play } from 'lucide-react';
 import '../../styles/aboutUs.css';
 
 export default function AboutUs() {
@@ -17,7 +16,7 @@ export default function AboutUs() {
     {
       icon: "III",
       title: "Transparency", 
-      description: "At Sport Endorse, we pride ourselves on our transparency. This means open and honest communication about everything. It saves time, removes stress and leads to better relationships all round. You can be sure we will always do what is appropriate, so transparency follows with ease. You've guessed it, it's another must for us!"
+      description: "At Sport Endorse, we pride ourselves on our transparency. This means open and honest communication about everything. It saves time, removes stress and leads to better relationships all round. You&apos;ve guessed it, it&apos;s another must for us!"
     },
     {
       icon: "IV",
@@ -167,7 +166,7 @@ export default function AboutUs() {
                     As a valued partner of Sport Endorse, <strong>add-victor</strong> is at the forefront of connecting high-performing athletes & military individuals with exceptional career opportunities. With a growing talent pool of over 5,500 individuals, spanning from Olympians, Paralympians, and Student-Athletes to Military Veterans, add-victor plays a pivotal role in bridging the gap between sporting experience, military expertise, and the corporate world – elevating organisations culture & performance.
                   </p>
                   <p className="about-us-partner-description-secondary">
-                    add-victor's mission aligns with Sport Endorse commitment to excellence, empowering individuals to find their ideal career paths and assisting brands in discovering top-tier talent that can excel, both in marketing campaigns and within their organisations. Together with Sport Endorse, we're reshaping the future of talent acquisition and career advancement.
+                    add-victor&apos;s mission aligns with Sport Endorse commitment to excellence, empowering individuals to find their ideal career paths and assisting brands in discovering top-tier talent that can excel, both in marketing campaigns and within their organisations. Together with Sport Endorse, we&apos;re reshaping the future of talent acquisition and career advancement.
                   </p>
                 </div>
               </div>

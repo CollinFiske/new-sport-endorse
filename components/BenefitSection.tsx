@@ -1,5 +1,4 @@
 "use client";
-import { Underline } from "lucide-react";
 import "../styles/benefitSection.css";
 
 interface BenefitProps {

@@ -11,7 +11,7 @@ export default function LetsTalk() {
     message: ''
   });
 
-  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleInputChange = (e: { target: { name: string; value: string; }; }) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -54,7 +54,7 @@ export default function LetsTalk() {
           <div className="lets-talk-left-column">
             <div className="lets-talk-header">
               <h1 className="lets-talk-title">Lets Talk!</h1>
-              <p className="lets-talk-subtitle">If you have any questions, or want to talk about your next big project, we'd love to help you out!</p>
+              <p className="lets-talk-subtitle">If you have any questions, or want to talk about your next big project, we&apos;d love to help you out!</p>
             </div>
 
             <div className="lets-talk-form-group">

@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
           <div className={showPrivacy ? "" : "hidden"}>
             <p>
               <strong>Privacy Policy - Overview</strong><br />
-              Sport Endorse Ltd. takes data privacy seriously and we are committed to protecting and respecting your privacy. This privacy notice describes how and why we, as data controller, obtain, store and process personal data. For the purpose of this Privacy Notice, we'll just call them our “Services”. Personal data is information relating to you that enables us to identify you, for example, your name, email address, payment details and information about your access to this website.
+              Sport Endorse Ltd. takes data privacy seriously and we are committed to protecting and respecting your privacy. This privacy notice describes how and why we, as data controller, obtain, store and process personal data. For the purpose of this Privacy Notice, we&apos;ll just call them our “Services”. Personal data is information relating to you that enables us to identify you, for example, your name, email address, payment details and information about your access to this website.
               <br /><br />
               We will process your personal data fairly, lawfully and transparently. This privacy notice describes the personal data we are collecting about you and how it is used. We will only collect and use your personal data for the following purposes, to:
               <br />· provide our services
@@ -31,14 +31,14 @@ export default function PrivacyPolicyPage() {
               Please do not hesitate to contact us if you have questions in addition to the information provided in this notice - info@sportendorse.com
               <br /><br />
               <strong>Who Are We?</strong><br />
-              When we refer to 'we' (or 'our' or 'us'), that means Sport Endorse Ltd. Our headquarters are in Dublin, Ireland.
+              When we refer to &apos;we&apos;(or &apos;our&apos;or &apos;us&apos;), that means Sport Endorse Ltd. Our headquarters are in Dublin, Ireland.
               <br /><br />
               For more information about who we are and what we do, visit the Sport Endorse Ltd. website.
               <br /><br />
               <strong>Your Rights & Our Commitment to You</strong><br />
-              Canada's Personal Information Protection and Electronic Documents Act (PIPEDA)
+              Canada&apos;s Personal Information Protection and Electronic Documents Act (PIPEDA)
               <br /><br />
-              Under Canada's Personal Information Protection and Electronic Documents Act (PIPEDA) your rights include, with certain legal restrictions, the below:
+              Under Canada&apos;s Personal Information Protection and Electronic Documents Act (PIPEDA) your rights include, with certain legal restrictions, the below:
               <br /><br />
               Right of Access or Rectification: you have the right to ask us for copies of the personal data we hold about you. You are also entitled to have your personal data corrected or updated if it is inaccurate.
               <br /><br />
@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
               <br /><br />
               To complain to the relevant supervisory authority: should you have any concerns or complaints regarding the way in which we process your data, you also have the right to make a complaint to the relevant European Supervisory Authority. We would, however, appreciate the chance to deal with your concerns before you approach a Supervisory Authority, so please do contact us in the first instance on info@sportendorse.com. The contact details of European Supervisory Authorities can be found here: https://edpb.europa.eu/about-edpb/about-edpb/members_en#member-lv
               <br /><br />
-              <strong>Cookie Preferences:</strong> you can accept or reject cookies by navigating to the 'Cookie Preferences' Area in our Privacy Center on our website. You can also do so by adjusting your web browser controls.
+              <strong>Cookie Preferences:</strong> you can accept or reject cookies by navigating to the &apos;Cookie Preferences&apos;Area in our Privacy Center on our website. You can also do so by adjusting your web browser controls.
               <br /><br />
               Please consult our Cookie Policy for more information about our use of cookies on the website and how to accept and reject them.
               <br /><br />
@@ -77,10 +77,10 @@ export default function PrivacyPolicyPage() {
               <strong>When you use our Services:</strong>
               <br />· Usage information - we keep track of user activity in relation to the types of Services our customers and their users use, the configuration of their computers, and performance metrics related to their use of our Services.
               <br />· Log information - we log information about our customers and their users when you use one of our Services including Internet Protocol (“IP”) address.
-              <br />· Information collected by cookies and other similar technologies - we use various technologies to collect information which may include saving cookies to users' computers.
+              <br />· Information collected by cookies and other similar technologies - we use various technologies to collect information which may include saving cookies to users&apos;computers.
               <br />· Customer Feedback - While using our Services, you may be asked to provide feedback (e.g. in the software directly or after receiving help from our support team). Providing this feedback is entirely optional.
               <br /><br />
-              <strong>When you use the Website:</strong> When you visit the Website, we collect certain information related to your device, such as your device's IP address, referring website, what pages your device visited, and the time that your device visited our Website.
+              <strong>When you use the Website:</strong> When you visit the Website, we collect certain information related to your device, such as your device&apos;s IP address, referring website, what pages your device visited, and the time that your device visited our Website.
               <br /><br />
               <strong>How We Collect Your Data</strong><br />
               We may collect your personal data in one of the following ways:
@@ -93,7 +93,7 @@ export default function PrivacyPolicyPage() {
               <br /><br />
               <strong>Data from Third parties</strong><br />
               We may also receive personal data about you from various third parties, including:
-              <br />· Technical Data from third parties, including analytics providers such as Google. Please see further information in the section entitled 'Marketing preferences, adverts and cookies' below.
+              <br />· Technical Data from third parties, including analytics providers such as Google. Please see further information in the section entitled &apos;Marketing preferences, adverts and cookies&apos;below.
               <br />· Technical Data from affiliate networks through whom you have accessed our website.
               <br />· Identity and Contact Data from social media platforms when you log in to our website using such social media platforms.
               <br />· Contact, Financial and Transaction Data from providers of technical, payment and delivery services.
@@ -111,7 +111,7 @@ export default function PrivacyPolicyPage() {
               <br />· Set up a user account
               <br />· Provide, operate and maintain our services
               <br />· Process and complete transactions, and send related information, including transaction confirmations and invoices
-              <br />· Manage our customers' use of our services, respond to enquiries and comments and provide customer service and support;
+              <br />· Manage our customers&apos;use of our services, respond to enquiries and comments and provide customer service and support;
               <br />· Send customers technical alerts, updates, security notifications, and administrative communications
               <br />· Investigate and prevent fraudulent activities, unauthorised access to our services, and other illegal activities; and
               <br />· For any other purposes about which we notify customers and users.
@@ -136,12 +136,12 @@ export default function PrivacyPolicyPage() {
               <br />· if you have created an account with us or subscribed to our services, and you have not opted out of receiving marketing (in accordance with your preferences, as explained below);
               <br />· by email if you have signed up for email newsletters;
               <br /><br />
-              We may use your personal data (as outlined in the 'Personal Data We Collect' section) to form a view on what we think you may like, or what may be of interest to you, and to send you details of services which may be relevant for you.
+              We may use your personal data (as outlined in the &apos;Personal Data We Collect&apos;section) to form a view on what we think you may like, or what may be of interest to you, and to send you details of services which may be relevant for you.
               <br /><br />
               We will ask you for your preferences in relation to receiving marketing communications by email, and other communication channels.
               <br /><br />
               You will always have full control of your marketing preferences. If you do not wish to continue receiving marketing information from us (or any third party, if applicable) at any time:
-              <br />· you can unsubscribe or 'opt-out' by using the unsubscribe button and following the link included in the footer of any marketing email; or
+              <br />· you can unsubscribe or &apos;opt-out&apos;by using the unsubscribe button and following the link included in the footer of any marketing email; or
               <br />· account holders may withdraw their consent by simply logging in to the Sport Endorse Ltd. Privacy Centre and managing their preferences.
               <br /><br />
               We will process all opt-out requests as soon as possible, but please note that due to the nature of our IT systems and servers it may take a few days for any opt-out request to be implemented.
@@ -165,7 +165,7 @@ export default function PrivacyPolicyPage() {
               We use Google Calendar integration on our platform solely to enhance user-facing features and improve functionality. This ensures a seamless and efficient user experience, allowing you to better manage your schedule and optimise platform interactions.
               <br /><br />
               <strong>2) Non-Use of Google User Data</strong><br />
-              We strictly adhere to Google's data usage policies and do not use Google user data for the following purposes:
+              We strictly adhere to Google&apos;s data usage policies and do not use Google user data for the following purposes:
               <br />Targeted advertising
               <br />Selling to data brokers
               <br />Providing data to information resellers Determining creditworthiness
@@ -176,7 +176,7 @@ export default function PrivacyPolicyPage() {
               <br />Interest-based advertisements
               <br />Creating databases
               <br />Training AI models
-              <br />We are committed to protecting your data and ensuring it is used only to improve your experience on our platform in compliance with Google's guidelines.
+              <br />We are committed to protecting your data and ensuring it is used only to improve your experience on our platform in compliance with Google&apos;s guidelines.
               <br /><br />
               <strong>Storing, Securing and Retaining Your Data</strong><br /><br/>
               <strong>Storing your data</strong><br />
@@ -196,9 +196,9 @@ export default function PrivacyPolicyPage() {
               <strong>Retaining your data</strong><br />
               Your personal data will be deleted when it is no longer reasonably required for the provision of the Services described above or when you withdraw your consent (where applicable) and we are not legally required or otherwise permitted to continue storing such data.
               <br /><br />
-              The length of time we keep your personal data depends on what it is and whether we have an ongoing business need to retain it (for example, to provide you with a service you've requested or to comply with applicable legal or regulatory requirements).
+              The length of time we keep your personal data depends on what it is and whether we have an ongoing business need to retain it (for example, to provide you with a service you&apos;ve requested or to comply with applicable legal or regulatory requirements).
               <br /><br />
-              We'll retain your personal data for as long as we have a relationship with you and for a period of time afterwards where we have an ongoing business need to retain it, in accordance with our data retention policies and practices. For example, where you ask to be unsubscribed from marketing communications, we may keep a record of your email address and the fact that you have unsubscribed to ensure that you are not sent any further emails in the future.
+              We&apos;ll retain your personal data for as long as we have a relationship with you and for a period of time afterwards where we have an ongoing business need to retain it, in accordance with our data retention policies and practices. For example, where you ask to be unsubscribed from marketing communications, we may keep a record of your email address and the fact that you have unsubscribed to ensure that you are not sent any further emails in the future.
               <br /><br />
               <strong>Age Restriction</strong><br />
               No person under 16 maybe a User and Brands must use best endeavours to ensure that no personal information in respect of a person who is under the age of 16 years is submitted to Sport Endorse. We will not knowingly accept any data from a Brand or Agency in respect of a person who is under the age of 16 years
@@ -208,7 +208,7 @@ export default function PrivacyPolicyPage() {
               <br /><br />
               When oﬀering services to its Merchants, Sport Endorse Ltd. acts as a “service provider” under the CCPA and our receipt and collection of any consumer Personal Information is completed on behalf of our Merchants in order for us to provide the Service. Please direct any requests for access or deletion of your Personal Information under the CCPA to the Member with whom you have a direct relationship.
               <br /><br />
-              Consistent with California law, if you choose to exercise your applicable CCPA rights, we won't charge you diﬀerent prices or provide you a diﬀerent quality of services. If we ever oﬀer a financial incentive or product enhancement that is contingent upon you providing your Personal Information, we will not do so unless the benefits to you are reasonably related to the value of the Personal Information that you provide to us.
+              Consistent with California law, if you choose to exercise your applicable CCPA rights, we won&apos;t charge you diﬀerent prices or provide you a diﬀerent quality of services. If we ever oﬀer a financial incentive or product enhancement that is contingent upon you providing your Personal Information, we will not do so unless the benefits to you are reasonably related to the value of the Personal Information that you provide to us.
               <br /><br />
               <strong>Changes to This Privacy Notice</strong><br />
               From time to time we may change this privacy notice. If there are any significant changes we will post updates on our website, applications or let you know by email at info@sportendorse.com
@@ -232,10 +232,10 @@ export default function PrivacyPolicyPage() {
           <div className={showCookie ? "" : "hidden"}>
             <p>
               <strong>Overview of Cookie Notice</strong><br />
-              To make this website work properly, we sometimes place small data files called cookies on your device. Most big websites do this too. This notice describes what information cookies on our website gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored, however this may downgrade or limit certain elements of the website's functionality.
+              To make this website work properly, we sometimes place small data files called cookies on your device. Most big websites do this too. This notice describes what information cookies on our website gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored, however this may downgrade or limit certain elements of the website&apos;s functionality.
               <br /><br />
               <strong>What are cookies?</strong><br />
-              A cookie is a small text file that a website saves on your device such as desktop, mobile or tablet when you visit the website. It enables the website to remember your actions and preferences (such as login, language, font size and other display preferences) for a period of time, so you don't have to keep re-entering them whenever you come back to the site or browse from one page to another.
+              A cookie is a small text file that a website saves on your device such as desktop, mobile or tablet when you visit the website. It enables the website to remember your actions and preferences (such as login, language, font size and other display preferences) for a period of time, so you don&apos;t have to keep re-entering them whenever you come back to the site or browse from one page to another.
               <br /><br />
               When you browse and accept this cookie notice, pieces of code will be stored on your device(s).
               <br /><br />
@@ -249,7 +249,7 @@ export default function PrivacyPolicyPage() {
               <br /><br />
               Preference Cookies: these cookies enable our website to remember information that changes the way the website behaves or looks, like the region that you are in.
               <br /><br />
-              Statistic Cookies: these cookies help us, as website owners, to understand how visitors interact with our website by collecting and reporting information anonymously. For example, visitors' IP addresses are collected by Google Analytics who then provide general statistical reporting to us, to allows us to better understand the geographical breakdown of our customers and how they are interacting with our website.
+              Statistic Cookies: these cookies help us, as website owners, to understand how visitors interact with our website by collecting and reporting information anonymously. For example, visitors&apos;IP addresses are collected by Google Analytics who then provide general statistical reporting to us, to allows us to better understand the geographical breakdown of our customers and how they are interacting with our website.
               <br /><br />
               Marketing Cookies: these cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for the individual user and thereby more valuable for publishers and third party advertisers.
               <br /><br />

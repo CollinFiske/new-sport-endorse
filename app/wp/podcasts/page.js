@@ -21,9 +21,8 @@ function ErrorMessage({ message }) {
 function PodcastCard({ podcast }) {
   const title = stripHtml(podcast.title.rendered);
   const excerpt = createExcerpt(podcast.excerpt.rendered);
-  const date = formatDate(podcast.date);
-  const slug = podcast.slug;
-
+  const date = formatDate(podcast.date); 
+  
   return (
     <article style={{ backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', transition: 'box-shadow 0.3s ease', overflow: 'hidden', marginBottom: '1.5rem' }}
     onMouseEnter={(e) => {

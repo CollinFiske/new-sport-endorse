@@ -59,7 +59,7 @@ export default function Footer() {
                 style={{ flex: "0 0 auto", marginTop: "2px" }}
               />
               <span style={{ flex: "1 1 0", minWidth: 0 }}>
-                By signing up, I agree to Sport Endorse's
+                By signing up, I agree to Sport Endorse&apos;s
                 <a target="_blank" href="/privacy-policy">Privacy policy</a> and
                 <a target="_blank" href="/terms-and-conditions">Terms and Conditions.</a>
               </span>
@@ -86,10 +86,10 @@ export default function Footer() {
               <h2><span className="footer-number">04]</span><Link href="/agency">Agencies<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
             </div>
             <div>
-              <h2><span className="footer-number">05]</span><a href="/wp/blog">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
+              <h2><span className="footer-number">05]</span><Link href="/wp/blog">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">06]</span><Link href="/subscription">Subscription<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">07]</span><a href="/wp/podcasts">Podcasts<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
-              <h2><span className="footer-number">08]</span><a href="/aboutUs">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></a></h2>
+              <h2><span className="footer-number">07]</span><Link href="/wp/podcasts">Podcasts<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">08]</span><Link href="/aboutUs">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
             </div>
 
             <span className="footer-app-store-logos">

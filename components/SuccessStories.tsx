@@ -28,8 +28,16 @@ function decodeHtmlEntities(text: string) {
 
 const VISIBLE_COUNT = 3;
 
-export default function SuccessStories({ stories: initialStories, serverError }: { stories?: any[], serverError?: string }) {
-  const [stories, setStories] = useState<any[]>(initialStories || []);
+type Story = {
+  id: number;
+  title: { rendered: string };
+  yoast_head_json?: { og_image?: { url: string }[]; description?: string };
+  link: string;
+  // ...other fields
+};
+
+export default function SuccessStories({ stories: initialStories, serverError }: { stories?: Story[], serverError?: string }) {
+  const [stories, setStories] = useState<Story[]>(initialStories || []);
   const [loading, setLoading] = useState(!initialStories);
   const [startIdx, setStartIdx] = useState(0);
 
@@ -43,7 +51,7 @@ export default function SuccessStories({ stories: initialStories, serverError }:
         if (!res.ok) throw new Error("Failed to fetch success stories");
         const data = await res.json();
         setStories(data || []);
-      } catch (e) {
+      } catch {
         setStories([]);
       } finally {
         setLoading(false);
@@ -95,7 +103,7 @@ export default function SuccessStories({ stories: initialStories, serverError }:
                 <div className="success-info">
                   <p className="success-title">{decodeHtmlEntities(story.title.rendered)}</p>
                   <p className="success-text">
-                    {decodeHtmlEntities(story.yoast_head_json?.description) || "No summary available."}
+                    {decodeHtmlEntities(story.yoast_head_json?.description ?? "") || "No summary available."}
                   </p>
                   <a className="read-more" href={story.link} target="_blank" rel="noopener noreferrer">READ MORE →</a>
                 </div>
