@@ -7,10 +7,10 @@
 .sub-container {
     max-width: none;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: .5rem;
     align-items: flex-start;
 }
 
@@ -79,73 +79,81 @@
     color: #ca8a04;
 }
 
-.sub-pricing-cards {
+/* Pivot Table Styles */
+.sub-pivot-table {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
-}
-
-.sub-pricing-card {
     background: white;
     border-radius: 12px;
-    padding: 32px 24px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid #e5e7eb;
+    overflow: visible;
+    margin-top: 20px;
+}
+
+.sub-pivot-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.sub-pivot-feature-header {
+    padding: 24px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1f2937;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+}
+
+.sub-pivot-plan-header {
+    padding: 16px;
+    text-align: center;
+    border-right: 1px solid #e5e7eb;
     position: relative;
 }
 
-.sub-popular-card {
-    border: 2px solid #3b82f6;
+.sub-pivot-plan-header:last-child {
+    border-right: none;
 }
 
-.sub-free-trial-card {
-    border: 2px solid #10b981;
+.sub-trial-header {
+    background: #f0fdf4;
 }
 
-.sub-popular-badge {
+.sub-annual-header {
+    background: #eff6ff;
+}
+
+.sub-plan-badge {
     position: absolute;
-    top: -12px;
-    right: 24px;
-    background: #3b82f6;
-    color: white;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 6px 16px;
-    border-radius: 16px;
+    border-radius: 12px;
     font-size: 0.75rem;
     font-weight: 600;
+    color: white;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.sub-free-badge {
-    position: absolute;
-    top: -12px;
-    right: 24px;
+.sub-trial-badge {
     background: #10b981;
-    color: white;
-    padding: 6px 16px;
-    border-radius: 16px;
-    font-size: 0.75rem;
-    font-weight: 600;
 }
 
-.sub-card-header {
-    text-align: center;
-    margin-bottom: 24px;
+.sub-annual-badge {
+    background: #3b82f6;
 }
 
-.sub-plan-type {
+.sub-pivot-plan-header h3 {
     font-size: 0.875rem;
     font-weight: 600;
-    color: #3b82f6;
+    color: #1f2937;
+    margin: 8px 0;
     letter-spacing: 0.5px;
-    margin-bottom: 12px;
-}
-
-.sub-free-trial-plan-type {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #10b981;
-    letter-spacing: 0.5px;
-    margin-bottom: 12px;
 }
 
 .sub-price {
@@ -153,100 +161,180 @@
     align-items: baseline;
     justify-content: center;
     gap: 4px;
-    margin-bottom: 8px;
+    margin: 8px 0;
 }
 
 .sub-amount {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: #1f2937;
 }
 
-.sub-free-amount {
-    font-size: 2rem;
+.sub-amount-trial {
+    font-size: 1.5rem;
     font-weight: 800;
     color: #10b981;
 }
 
 .sub-period {
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: #6b7280;
     font-weight: 500;
 }
 
 .sub-billing {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: #6b7280;
-    margin: 0;
+    margin: 4px 0 8px 0;
+    line-height: 1.3;
+}
+
+.sub-pivot-button {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 0;
 }
 
 .sub-trial-button {
-    width: 100%;
-    background: #3b82f6;
+    background: #10b981;
     color: white;
-    padding: 14px 24px;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    margin-bottom: 24px;
 }
 
 .sub-trial-button:hover {
-    background: #2563eb;
-    transform: translateY(-1px);
-}
-
-.sub-free-trial-button {
-    width: 100%;
-    background: #10b981;
-    color: white;
-    padding: 14px 24px;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    margin-bottom: 24px;
-}
-
-.sub-free-trial-button:hover {
     background: #059669;
-    transform: translateY(-1px);
 }
 
-.sub-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.sub-quarterly-button {
+    background: #3b82f6;
+    color: white;
 }
 
-.sub-features li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 12px;
+.sub-quarterly-button:hover {
+    background: #2563eb;
+}
+
+.sub-annual-button {
+    background: #3b82f6;
+    color: white;
+}
+
+.sub-annual-button:hover {
+    background: #2563eb;
+}
+
+.sub-pivot-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.sub-pivot-row:hover {
+    background: #f9fafb;
+}
+
+.sub-pivot-feature {
+    padding: 16px 24px;
     font-size: 0.875rem;
-    line-height: 1.5;
     color: #4b5563;
+    border-right: 1px solid #f3f4f6;
+    display: flex;
+    align-items: center;
 }
 
-.sub-features li::before {
-    content: '✓';
-    color: #10b981;
+.sub-pivot-cell {
+    padding: 16px;
+    text-align: center;
+    border-right: 1px solid #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-pivot-cell:last-child {
+    border-right: none;
+}
+
+.sub-checkmark {
+    font-size: 1.2rem;
     font-weight: 600;
-    font-size: 1rem;
-    flex-shrink: 0;
-    margin-top: 1px;
 }
 
-.sub-features li:last-child {
-    margin-bottom: 0;
+.sub-trial-check {
+    color: #10b981;
+}
+
+.sub-quarterly-check {
+    color: #3b82f6;
+}
+
+.sub-annual-check {
+    color: #3b82f6;
+}
+
+.sub-cross {
+    color: #ef4444;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .sub-pivot-header {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+    
+    .sub-pivot-row {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+    
+    .sub-pivot-feature {
+        padding: 12px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .sub-pivot-plan-header {
+        padding: 16px 8px;
+    }
+    
+    .sub-amount, .sub-amount-trial {
+        font-size: 1.2rem;
+    }
+    
+    .sub-pivot-button {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 700px) {
+    .sub-pivot-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .sub-pivot-header,
+    .sub-pivot-row {
+        display: flex;
+        min-width: 600px;
+    }
+    
+    .sub-pivot-feature-header,
+    .sub-pivot-feature {
+        flex: 2;
+        min-width: 200px;
+    }
+    
+    .sub-pivot-plan-header,
+    .sub-pivot-cell {
+        flex: 1;
+        min-width: 120px;
+    }
 }
 
 .sub-top-content-row {

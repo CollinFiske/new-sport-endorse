@@ -2,6 +2,20 @@
 import "../styles/businessSubscription.css";
 
 export default function BusinessSubscription() {
+  const features = [
+    { name: "Access to Sport Endorse platform", trial: true, quarterly: true, annual: true },
+    { name: "Suite of tools and filters to support your search", trial: true, quarterly: true, annual: true },
+    { name: "Talent ID verification included", trial: true, quarterly: true, annual: true },
+    { name: "Built-in instant messaging feature", trial: true, quarterly: true, annual: true },
+    { name: "Dedicated onboarding support", trial: true, quarterly: true, annual: true },
+    { name: "Target unlimited countries", trial: false, quarterly: true, annual: true },
+    { name: "Access unlimited athletes' profiles", trial: false, quarterly: true, annual: true },
+    { name: "Share opportunities with all talent in any market", trial: false, quarterly: true, annual: true },
+    //{ name: "Post unlimited number of opportunities", trial: false, quarterly: true, annual: true },
+    { name: "Full access to advanced tools and search filters", trial: false, quarterly: true, annual: true },
+    { name: "Monthly check-ins with Dedicated Customer Success Manager", trial: false, quarterly: false, annual: true }
+  ];
+
   return (
     <section className="sub-subscription-section">
       <div className="sub-container sub-vertical">
@@ -11,7 +25,7 @@ export default function BusinessSubscription() {
               Business Subscription
             </h2>
             <p className="sub-description">
-              Get sorted and harness the power of collaboration with elite athletes that are all about performance. Pay easily and automatically either every quarterly, or annually. Simply subscribe below!
+              Get sorted and harness the power of collaboration with elite athletes that are all about performance. Pay easily and automatically either every quarterly, or annually. Subscribe below!
             </p>
           </div>
           <div className="sub-top-right">
@@ -31,94 +45,63 @@ export default function BusinessSubscription() {
             </a>
           </div>
         </div>
-        <div className="sub-pricing-cards">
-          <div className="sub-pricing-card sub-free-trial-card">
-            <div className="sub-free-badge">
-              Free Trial
-            </div>
-            <div className="sub-card-header">
-              <h3 className="sub-free-trial-plan-type">FREE TRIAL</h3>
+
+        <div className="sub-pivot-table">
+          {/* Header Row */}
+          <div className="sub-pivot-header">
+            <div className="sub-pivot-feature-header">Features</div>
+            <div className="sub-pivot-plan-header sub-trial-header">
+              <div className="sub-plan-badge sub-trial-badge">Free Trial</div>
+              <h3>FREE TRIAL</h3>
               <div className="sub-price">
-                <span className="sub-free-amount">$0</span>
+                <span className="sub-amount-trial">$0</span>
                 <span className="sub-period">/month</span>
               </div>
-              <p className="sub-billing">1 month free trial<br /><br /></p>
+              <p className="sub-billing">1 month free trial</p>
+              <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=trial">
+                <button className="sub-pivot-button sub-trial-button">START FREE TRIAL</button>
+              </a>
             </div>
-            <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=trial">
-              <button className="sub-free-trial-button">
-                START FREE TRIAL
-              </button>
-            </a>
-            <ul className="sub-features">
-              <li>A month&apos;s access to Sport Endorse</li>
-              <li>Suite of tools and filters to support your search</li>
-              <li>Talent ID verification included</li>
-              <li>Built-in instant messaging feature</li>
-              <li>Target one country of your choice</li>
-              <li>Share your opportunities with all talent in that market</li>
-              <li>Easily advertise your marketing opportunity</li>
-              <li>Access up to 50 athletes&apos; profiles</li>
-              <li>Post at least 1 opportunity</li>
-              <li>Dedicated onboarding support</li>
-            </ul>
-          </div>
-          <div className="sub-pricing-card">
-            <div className="sub-card-header">
-              <h3 className="sub-plan-type">QUARTERLY RATE</h3>
+            <div className="sub-pivot-plan-header">
+              <h3>QUARTERLY RATE</h3>
               <div className="sub-price">
                 <span className="sub-amount">$700</span>
                 <span className="sub-period">/quarter*</span>
               </div>
-              <p className="sub-billing">*Paid every 3 months,<br />+VAT</p>
+              <p className="sub-billing">*Paid every 3 months, +VAT</p>
+              <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=quarterly">
+                <button className="sub-pivot-button sub-quarterly-button">START SUBSCRIPTION</button>
+              </a>
             </div>
-            <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=quarterly">
-              <button className="sub-trial-button">
-                START SUBSCRIPTION
-              </button>
-            </a>
-            <ul className="sub-features">
-              <li>Three month&apos;s access to Sport Endorse</li>
-              <li>Full access to advanced tools and search filters</li>
-              <li>Talent ID verification included</li>
-              <li>Built-in instant messaging feature</li>
-              <li>Target unlimited countries</li>
-              <li>Share opportunities with all talent in any market</li>
-              <li>Easily advertise your marketing opportunity</li>
-              <li>Unlimited access to athletes&apos; profiles</li>
-              <li>Post an unlimited number of opportunities</li>
-              <li>Personalized Onboarding support</li>
-            </ul>
-          </div>
-          <div className="sub-pricing-card sub-popular-card">
-            <div className="sub-popular-badge">
-              Save 35%
-            </div>
-            <div className="sub-card-header">
-              <h3 className="sub-plan-type">ANNUAL RATE</h3>
+            <div className="sub-pivot-plan-header sub-annual-header">
+              <div className="sub-plan-badge sub-annual-badge">Save 35%</div>
+              <h3>ANNUAL RATE</h3>
               <div className="sub-price">
                 <span className="sub-amount">$1,799</span>
                 <span className="sub-period">/year*</span>
               </div>
-              <p className="sub-billing">*Paid every 12 months,<br />+VAT</p>
+              <p className="sub-billing">*Paid every 12 months, +VAT</p>
+              <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=annual">
+                <button className="sub-pivot-button sub-annual-button">START SUBSCRIPTION</button>
+              </a>
             </div>
-            <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=annual">
-              <button className="sub-trial-button">
-                START SUBSCRIPTION
-              </button>
-            </a>
-            <ul className="sub-features">
-              <li>A year&apos;s access to Sport Endorse</li>
-              <li>Full access to advanced tools and search filters</li>
-              <li>Talent ID verification included</li>
-              <li>Built-in instant messaging feature</li>
-              <li>Target unlimited countries</li>
-              <li>Share opportunities with all talent in any market</li>
-              <li>Easily advertise your marketing opportunity</li>
-              <li>Unlimited access to athletes&apos; profiles</li>
-              <li>Post an unlimited number of opportunities</li>
-              <li><i>Personal onboarding support and monthly check-ins with your dedicated Customer Success Manager</i></li>
-            </ul>
           </div>
+
+          {/* Feature Rows */}
+          {features.map((feature, index) => (
+            <div key={index} className="sub-pivot-row">
+              <div className="sub-pivot-feature">{feature.name}</div>
+              <div className="sub-pivot-cell">
+                {feature.trial ? <span className="sub-checkmark sub-trial-check">✓</span> : <span>-</span>}
+              </div>
+              <div className="sub-pivot-cell">
+                {feature.quarterly ? <span className="sub-checkmark sub-quarterly-check">✓</span> : <span>-</span>}
+              </div>
+              <div className="sub-pivot-cell">
+                {feature.annual ? <span className="sub-checkmark sub-annual-check">✓</span> : <span>-</span>}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
