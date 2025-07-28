@@ -1,5 +1,6 @@
 "use client";
 import "../styles/benefitSection.css";
+import AppStores from "./AppStores";
 
 interface BenefitProps {
   title: string;
@@ -18,7 +19,7 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
   return (
     <section className="benefit-section" style={{ background, paddingBottom: label === "FOR BRANDS" ? "40px" : undefined }}>
       <div className="benefit-left">
-        {label && <span className="benefit-label" style={{ color }}>◉ {label}</span>}
+        {label && <a href={learnMoreLink}><span className="benefit-label" style={{ color }}>◉ {label}</span></a>}
         <h2 style={label ? undefined: { marginTop: 0 }}>{title}</h2>
         <p>{subtitle}</p>
         <ul>
@@ -27,10 +28,16 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
           <li>⭐ {item3}</li>
         </ul>
         <div className="button-group">
-          <a href={learnMoreLink}><button className="benefit-button">LEARN MORE</button></a>
-          {title && title !== "Join our Talented Team of Athletes" && <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
-            <button className="demo-button">DEMO FOR BUSINESS</button>
-          </a>}
+          {title && (title !== "Join our Talented Team of Athletes" && title !== "Boost your personal brand") ? (
+            <>
+              <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=trial"><button className="benefit-button">START FREE TRIAL</button></a>
+              <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
+          <button className="demo-button">DEMO FOR BUSINESS</button>
+              </a>
+            </>
+          ) : (
+            <div><AppStores /></div>
+          )}
         </div>
       </div>
       <div className="benefit-right">

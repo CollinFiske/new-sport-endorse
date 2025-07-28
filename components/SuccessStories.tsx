@@ -100,7 +100,7 @@ export default function SuccessStories() {
                   <p className="success-text">
                     {decodeHtmlEntities(story.yoast_head_json?.description ?? "") || "No summary available."}
                   </p>
-                  <a className="read-more" href={story.link} target="_blank" rel="noopener noreferrer">READ MORE →</a>
+                  <a className="read-more" href="wp/succcessStories" >READ MORE →</a>
                 </div>
               </div>
             ))

@@ -6,7 +6,7 @@ import translations from "../utils/translations";
 import "../styles/home.css";
 import "../styles/benefitSection.css";
 import "../styles/featuredTalents.css";
-import Statistics from "../components/Statistics";
+import Community from "../components/Community";
 import FeaturedTalents from "@/components/FeaturedTalents";
 import BusinessSubscription from "@/components/BusinessSubscription";
 import AppStores from "@/components/AppStores";
@@ -30,8 +30,8 @@ export default function Page() {
         <AppStores />
         <br/>
         <div style={{display:"flex"}}>
-          <div className="rating">⭐⭐⭐⭐⭐ 4.9</div>
-          <img style={{marginLeft:200}} src="/images/appforathletes.png" alt="app for athletes text" />
+          <div className="rating">⭐⭐⭐⭐⭐4.9</div>
+          <img style={{marginLeft:200, width:"230px", height:"auto"}} src="/images/appforathletes.png" alt="app for athletes text" />
         </div>
       </div>
       <div className="home-right">
@@ -42,12 +42,7 @@ export default function Page() {
 
     <BrandsGrid variant="8x4" label={t.home.tableHeader} />
 
-    <Statistics 
-      athletes={6500}
-      brands={650}
-      sports={250}
-      nationalities={85}
-    />
+    <Community />
 
     <BenefitSection
       title={t.home.benefitSection.athlete.title}

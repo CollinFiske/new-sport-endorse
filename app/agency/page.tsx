@@ -1,5 +1,5 @@
 "use client"
-import Statistics from "@/components/Statistics";
+import Community from "@/components/Community";
 import "../../styles/agency.css";
 import Image from 'next/image';
 import BusinessSubscription from "@/components/BusinessSubscription";
@@ -24,10 +24,9 @@ export default function AgencyPage() {
           </h1>
           
           <p className="description">
-            Join our diverse team of elite student-athletes to curate your 
-            brand and monetize your talent. Grow your influence through 
-            in-person appearances, social media promotions, and branded 
-            sponsorships, connecting with influential brands worldwide.
+            Our cutting-edge technological solutions reduce the steps needed to score sensational sponsorship deals for athletes.
+            Sport Endorse is a simple, user-friendly platform connecting agencies with top global athletes and ambassadors
+            guaranteed to take your client's marketing campaigns to the next level.
           </p>
         </div>
         
@@ -44,12 +43,7 @@ export default function AgencyPage() {
       </div>
     </section>
 
-    <Statistics 
-      athletes={6500}
-      brands={650}
-      sports={3282}
-      nationalities={201}
-    />
+    <Community />
 
     <BenefitSection 
       title="Book Iconic Sports Ambassadors for Your Clients"
@@ -69,6 +63,7 @@ export default function AgencyPage() {
 
     <SuccessStories />
 
+    {/* removing the featured podcast part per Liam's feedback in doc 7/28
     <div style={{ textAlign: 'left', margin: '0 auto 40px', maxWidth: '570px', backgroundColor:"#E5F1FF", padding:"2rem", borderRadius: "20px" }}>
       <p><strong>The Sitdown with Sport Endorse</strong></p>
       <br />
@@ -80,6 +75,7 @@ export default function AgencyPage() {
         Ever considered launching a pro-baseball team, trying to build rapidly while maximizing the positive impact of the team and its stadium for the community and sponsors? In this episode of &apos;The Sitdown with Sport Endorse&apos;, our guest is Kevin Brown, Director of Business Development and Sponsorship for Staten Island Entertainment, a dynamic firm that is bringing Pro baseball, concerts, and community entertainment to Staten Island in New York. 
       </p>
     </div>
+    */}
 
     <FAQs />
     

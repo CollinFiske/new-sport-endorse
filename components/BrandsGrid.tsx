@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/brandsGrid.module.css";
 
 interface BrandsGridProps {
-  variant?: "8x4" | "4x4";
+  variant?: "8x4" | "5x4";
   label?: string;
 }
 

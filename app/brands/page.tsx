@@ -1,5 +1,5 @@
 "use client"
-import Statistics from "@/components/Statistics";
+import Community from "@/components/Community";
 import "../../styles/brands.css";
 import BusinessSubscription from "@/components/BusinessSubscription";
 import FAQs from "@/components/FAQs";
@@ -19,30 +19,26 @@ export default function BrandsPage() {
           </div>
           
           <h1 className="title">
-            Get the highest{' '}
-            <span className="gradientText">talent </span> to boost{' '}
+            Get the best{' '}
+            talent to<span className="gradientText"> boost</span>{' '}
             your brand
           </h1>
           
           <p className="description">
-            Join our diverse team of elite student-athletes to curate your 
-            brand and monetize your talent. Grow your influence through 
-            in-person appearances, social media promotions, and branded 
-            sponsorships, connecting with influential brands worldwide.
+            Whatever your needs, our athletes have you covered.
+            We work with over 7000 sporting heroes from over 90 disciplines, all with different passions, interests and beliefs.
+            Whether you need someone passionate about mental health, coffee or nutrition, Sport Endorse's user-friendly platform
+            makes it easy to find the perfect fit for your next event, guest speaker, or marketing campaign.
           </p>
         </div>
         
         <div className="imageContainer">
-          <BrandsGrid variant="4x4" label="Check out our Featured Brands!" />
+          <BrandsGrid variant="5x4" label="Check out our Featured Brands!" />
         </div>
       </div>
     </section>
 
-    <Statistics 
-      athletes={6500}
-      brands={650}
-      sports={3282}
-      nationalities={201}
+    <Community
     />
 
     <BenefitSection 
@@ -64,6 +60,7 @@ export default function BrandsPage() {
     
     <SuccessStories />
 
+    {/* removing the featured podcast part per Liam's feedback in doc 7/28
     <div style={{ textAlign: 'left', margin: '0 auto 40px', maxWidth: '570px', backgroundColor:"#E5F1FF", padding:"2rem", borderRadius: "20px" }}>
       <p><strong>The Sitdown with Sport Endorse</strong></p>
       <br />
@@ -75,6 +72,7 @@ export default function BrandsPage() {
         For the first episode in a series where we explore the collaboration between brands and sport and what best practice looks like, we were delighted to have Lorna Danaher, Sponsorship Manager for Energia, as our guest.
       </p>
     </div>
+    */}
 
     <FAQs />
 

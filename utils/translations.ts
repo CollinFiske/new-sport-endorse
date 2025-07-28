@@ -30,7 +30,7 @@ const translations = {
         brand:{
           label:"FOR BRANDS",
           title:"Connect with global sports stars",
-          subtitle:"Finding a brand ambassador that aligns with your brand's values has never been easier.",
+          subtitle:"Finding athletes and influencers that align with your brand's values has never been easier.",
           bullet1:"Whatever your needs, our athletes have you covered.",
           bullet2:"Easily advertise marketing opportunities",
           bullet3:"Connect instantly with sports stars",

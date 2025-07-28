@@ -1,22 +1,21 @@
 
 "use client";
-import "../styles/statistics.css";
+import "../styles/community.css";
 
-interface StatisticsProps {
-  athletes: number;
-  brands: number;
-  sports: number;
-  nationalities: number;
-}
+export default function Community() {
+  // Hard-coded values
+  const athletes = 7000;
+  const brands = 650;
+  const sports = 250;
+  const nationalities = 85;
 
-export default function StatisticsSection({ athletes, brands, sports, nationalities }: StatisticsProps) {
   return (
     <section className="statistics-section">
       <div className="statistics-header">
-        <h2>Community</h2>
-        <p style={{width:"50%"}}>
+        <h2>Our Growing Community</h2>
+        {/*<p style={{width:"50%"}}>
           Unlock actionable insights with our advanced analytics, empowering you to optimize your sports marketing strategies.
-        </p>
+        </p>*/}
         <div className="live-badge">
           <span className="dot"></span> Live
         </div>
