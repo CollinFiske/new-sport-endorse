@@ -27,7 +27,7 @@ export default function AgencyPage() {
           <p className="description">
             Our cutting-edge technological solutions reduce the steps needed to score sensational sponsorship deals for athletes.
             Sport Endorse is a simple, user-friendly platform connecting agencies with top global athletes and ambassadors
-            guaranteed to take your client's marketing campaigns to the next level.
+            guaranteed to take your client&apos;s marketing campaigns to the next level.
           </p>
         </div>
         

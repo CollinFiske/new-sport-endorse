@@ -4,10 +4,10 @@ import "../styles/community.css";
 
 export default function Community() {
   // Hard-coded values
-  const athletes = 7000;
-  const brands = 650;
-  const sports = 250;
-  const nationalities = 85;
+  const athletes = 6520;
+  const brands = 633;
+  const sports = 160;
+  const nationalities = 98;
 
   return (
     <section className="statistics-section">

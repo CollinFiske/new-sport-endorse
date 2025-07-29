@@ -64,13 +64,82 @@
 
 .all-social-logos {
   display: flex;
-  gap: 10px;
-  height: 40px; /* Controls vertical height */
+  gap: 15px;
+  align-items: center;
+  margin: 0.5rem 0;
 }
+
+.social-platform {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .social-logo {
-  max-height: 30px;
-  max-width: 60px;
+  max-height: 20px;
+  max-width: 20px;
   height: auto;
   width: auto;
   object-fit: contain;
+}
+
+.follower-count {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: flex-start;
+}
+
+.tags span {
+  font-size: 0.8rem;
+  color: #555;
+  background: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  display: block;
+}
+
+.cta-card {
+  background: #18A0FB;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+  width: 220px;
+  min-width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  padding: 2rem 1rem;
+  color: white;
+  text-align: center;
+}
+
+.cta-card:hover {
+  background: #0074c2;
+}
+
+.cta-card img {
+  max-width: 240px;
+  max-height: 120px;
+  margin-bottom: 1rem;
+}
+
+.cta-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }

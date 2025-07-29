@@ -12,7 +12,7 @@ const translations = {
       podcast:"Podcast",
       aboutUs:"About Us",
       signUpBtn:"SIGN UP",
-      demoBtn:"DEMO FOR BUISNESS",
+      demoBtn:"DEMO FOR BUSINESS",
     },
     home:{
       welcome: "Unlock the power of <span class='highlight-blue'>sports</span> brand ambassador <span class='gradientText'>marketing</span>",

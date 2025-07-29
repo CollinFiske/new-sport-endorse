@@ -1,5 +1,5 @@
 .heroSection {
-  padding: 40px 0;
+  padding: 10px 0 40px;
   display: flex;
   align-items: center;
 }
@@ -45,7 +45,7 @@
   font-size: 1.125rem;
   line-height: 1.7;
   color: #6b7280;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   max-width: 480px;
 }
 

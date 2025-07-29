@@ -28,7 +28,7 @@ export default function BrandsPage() {
           <p className="description">
             Whatever your needs, our athletes have you covered.
             We work with over 7000 sporting heroes from over 90 disciplines, all with different passions, interests and beliefs.
-            Whether you need someone passionate about mental health, coffee or nutrition, Sport Endorse's user-friendly platform
+            Whether you need someone passionate about mental health, coffee or nutrition, Sport Endorse&apos;s user-friendly platform
             makes it easy to find the perfect fit for your next event, guest speaker, or marketing campaign.
           </p>
         </div>
