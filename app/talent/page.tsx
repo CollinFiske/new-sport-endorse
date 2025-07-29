@@ -72,7 +72,7 @@ export default function TalentPage() {
         </div>
         <div style={{ flex: '1', minWidth: '300px', textAlign: 'left' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#333', marginBottom: '20px', lineHeight: '1.2' }}>
-            <span style={{ color: '#f39c12' }}>FREE</span> To Sign Up
+            <span style={{ color: '#18A0FB' }}>FREE</span> To Sign Up
           </h2>
           <p style={{ fontSize: '1.2rem', color: '#666', lineHeight: '1.6', marginBottom: '30px' }}>
             Athletes can join Sport Endorse for free! Just create an account and start working with globally recognized brands to start earning!

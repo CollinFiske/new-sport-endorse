@@ -80,7 +80,7 @@
 }
 
 .lets-talk-input:focus {
-  border-color: #f39c12;
+  border-color: #18A0FB;
   background-color: white;
 }
 
@@ -100,7 +100,7 @@
 .lets-talk-radio {
   width: 18px;
   height: 18px;
-  accent-color: #f39c12;
+  accent-color: #18A0FB;
 }
 
 .lets-talk-radio-label {
@@ -123,12 +123,12 @@
 }
 
 .lets-talk-textarea:focus {
-  border-color: #f39c12;
+  border-color: #18A0FB;
   background-color: white;
 }
 
 .lets-talk-button {
-  background-color: #f39c12;
+  background-color: #18A0FB;
   color: white;
   border: none;
   padding: 14px 28px;

@@ -211,7 +211,7 @@ export default function FeaturedTalents() {
         ))}
         
         {/* CTA Card */}
-        <a href="/signup" className="cta-card">
+        <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="cta-card">
           <img src="/images/whiteSportEndorseLogo.webp" alt="Sport Endorse logo" />
           <h3>Sign up to view more!</h3>
         </a>
