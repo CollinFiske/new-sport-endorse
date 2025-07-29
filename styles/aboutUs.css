@@ -163,7 +163,7 @@ margin-bottom: 24px;
 }
 
 .about-us-section-title-span {
-color: #2563eb;
+color: #18A0FB;
 }
 
 .about-us-section-subtitle {
@@ -328,7 +328,7 @@ justify-content: center;
 .about-us-play-button {
 width: 64px;
 height: 64px;
-background-color: #2563eb;
+background-color: #18A0FB;
 border-radius: 50%;
 display: flex;
 align-items: center;
@@ -407,7 +407,7 @@ gap: 32px;
   flex-shrink: 0;
   width: 160px;
   height: 160px;
-  /* background: linear-gradient(135deg, #2563eb, #9333ea); */
+  /* background: linear-gradient(135deg, #18A0FB, #9333ea); */
   border-radius: 16px;
   display: flex;
   align-items: center;
