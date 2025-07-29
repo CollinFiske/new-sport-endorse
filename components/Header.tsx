@@ -1,6 +1,7 @@
 // components/Header.tsx
 "use client";
 import Link from "next/link";
+import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import type { Language } from "../context/LanguageContext";
 import "../styles/header.css";
@@ -10,31 +11,37 @@ import translations from "@/utils/translations";
 export default function Header() {
   const { language, changeLanguage } = useLanguage();
   const t = translations[language];
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="modern-header">
-
       <div className="logo-area">
-        <MainLogo/>
+        <MainLogo />
       </div>
-
-      <nav className="main-nav">
-        <Link href="/talent">Talent</Link>
-        <Link href="/brands">Brands</Link>
-        {/*<Link href="/agency">{t.header.agencies}</Link>*/}
-        <Link href="/wp/successStories">Success Stories</Link>
+      <button
+        className="mobile-menu-icon"
+        aria-label="Open menu"
+        onClick={() => setMobileMenuOpen((open) => !open)}
+      >
+        <span className="menu-bar" />
+        <span className="menu-bar" />
+        <span className="menu-bar" />
+      </button>
+      <nav className={`main-nav${mobileMenuOpen ? " open" : ""}`}>
+        <Link href="/talent" onClick={() => setMobileMenuOpen(false)}>Talent</Link>
+        <Link href="/brands" onClick={() => setMobileMenuOpen(false)}>Brands</Link>
+        <Link href="/wp/successStories" onClick={() => setMobileMenuOpen(false)}>Success Stories</Link>
         <div className="dropdown">
           <span>Resources ▾</span>
           <div className="dropdown-content">
-            <Link href="/agency">Agencies</Link>
-            <Link href="/subscription">Subscription</Link>
-            <Link href="/wp/blog">Blog</Link>
-            <Link href="/wp/podcasts">Podcasts</Link>
-            <Link href="/aboutUs">About Us</Link>
+            <Link href="/agency" onClick={() => setMobileMenuOpen(false)}>Agencies</Link>
+            <Link href="/subscription" onClick={() => setMobileMenuOpen(false)}>Subscription</Link>
+            <Link href="/wp/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+            <Link href="/wp/podcasts" onClick={() => setMobileMenuOpen(false)}>Podcasts</Link>
+            <Link href="/aboutUs" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
           </div>
         </div>
       </nav>
-
       <div className="actions">
         <select value={language} onChange={(e) => changeLanguage(e.target.value as Language)}>
           <option value="en">🇺🇸</option>
@@ -49,7 +56,7 @@ export default function Header() {
           <button className="demo-btn">{t.header.demoBtn}</button>
         </a>
       </div>
-
+      
     </header>
   );
 }

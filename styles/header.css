@@ -35,12 +35,13 @@
   gap: 1.5rem;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .main-nav a,
 .dropdown > span {
   text-decoration: none;
-  color: #222;
+  color: #18A0FB;
   font-weight: 500;
   cursor: pointer;
 }
@@ -77,6 +78,8 @@
   gap: 0.75rem;
   align-items: center;
   flex-wrap: wrap;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .actions select {
@@ -104,22 +107,81 @@
   cursor: pointer;
 }
 
+.mobile-menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  margin-left: 0.5rem;
+}
+.menu-bar {
+  width: 28px;
+  height: 3px;
+  background: #222;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
 /* Responsive tweaks */
-@media (max-width: 768px) {
+@media (max-width: 1010px) {
   .modern-header {
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
   }
-
-  .main-nav {
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: 1rem;
+  .logo-area {
+    flex: 1;
   }
-
   .actions {
+    margin-left: 0;
+    margin-right: 0;
+    flex: none;
+    order: 2;
+  }
+  .mobile-menu-icon {
+    display: flex;
+    margin-left: 0.5rem;
+    margin-right: 0;
+    order: 3;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: white;
     flex-direction: column;
-    align-items: flex-start;
-    margin-top: 1rem;
+    align-items: flex-end;
+    padding: 1.5rem 2rem 2rem 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    z-index: 1050;
+    gap: .5rem;
+  }
+  .main-nav.open {
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+  }
+  .main-nav.open a,
+  .main-nav.open .dropdown > span {
+    text-align: right;
+    width: 100%;
+    display: block;
+  }
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding: 0 0 0 1rem;
+    background: none;
+  }
+  .dropdown {
+    width: 100%;
   }
 }

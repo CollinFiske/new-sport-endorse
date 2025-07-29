@@ -1,7 +1,6 @@
 "use client"
 // page.js - Main podcasts page component
 import { fetchPodcasts, stripHtml, formatDate, createExcerpt, } from './wordpress.js';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 // Error component
@@ -42,20 +41,7 @@ function PodcastCard({ podcast }) {
         </div>
         
         <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.75rem', lineHeight: '1.4', transition: 'color 0.3s ease' }}>
-          <Link 
-            href={podcast.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{ textDecoration: 'none', color: 'inherit' }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = '#2563eb';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = '#111827';
-            }}
-          >
-            {title}
-          </Link>
+          
         </h2>
         
         <p style={{ color: '#6b7280', marginBottom: '1rem', lineHeight: '1.6' }}>
@@ -66,23 +52,7 @@ function PodcastCard({ podcast }) {
         <p>iframe goes here!</p>
         
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Link 
-            href={podcast.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: 'inline-flex', alignItems: 'center', color: '#2563eb', fontWeight: '500', textDecoration: 'none', transition: 'color 0.3s ease' }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = '#1d4ed8';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = '#2563eb';
-            }}
-          >
-            Listen Now
-            <svg style={{ width: '1rem', height: '1rem', marginLeft: '0.25rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </Link>
+          
           
           <button 
             onClick={() => navigator.share?.({ 
