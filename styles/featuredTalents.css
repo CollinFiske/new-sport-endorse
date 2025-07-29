@@ -83,6 +83,15 @@
   object-fit: contain;
 }
 
+.tag-icon {
+  max-height: 20px;
+  max-width: 20px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
 .follower-count {
   font-size: 0.85rem;
   color: #666;
@@ -92,17 +101,16 @@
 .tags {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: .8rem;
   align-items: flex-start;
 }
 
 .tags span {
   font-size: 0.8rem;
   color: #555;
-  background: #f0f0f0;
-  padding: 0.2rem 0.5rem;
   border-radius: 0.3rem;
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .cta-card {

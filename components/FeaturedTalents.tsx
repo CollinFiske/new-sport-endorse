@@ -5,193 +5,172 @@ export default function FeaturedTalents() {
   const talents = [
     {
       name: "Fabian Pecher",
-      image: "/images/placeholder.png",
+      image: "/images/featuredTalent/fabian pecher.png",
       followingInstagram: "257k",
       followingTiktok: "643k",
-      sport: "⚽ Freestyle Football",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Augsburg"
-    },
-    {
-      name: "Emily Cole",
-      image: "/images/placeholder.png",
-      followingInstagram: "18.4k",
-      followingTiktok: "316.9k",
-      sport: "🏃 Athletics",
-      teamOrCollege: "🎯 Duke & Team USA",
-      location: "📍 North Carolina, USA"
+      sport: "Freestyle Football",
+      location: "Augsburg"
     },
     {
       name: "Abby Berner",
-      image: "/images/placeholder.png",
-      followingInstagram: "1.9M+",
+      image: "/images/featuredTalent/abby berner.png",
+      followingInstagram: "2.6M",
       followingTiktok: "6M",
-      sport: "💪 Fitness",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Kansas, USA"
+      sport: "Fitness",
+      location: "Kansas, USA"
     },
     {
       name: "Amir Abedzadeh",
-      image: "/images/placeholder.png",
-      followingInstagram: "869k",
+      image: "/images/featuredTalent/amir abedzadeh.png",
+      followingInstagram: "874k",
       followingTiktok: null,
-      sport: "⚽ Football",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Valencia"
+      sport: "Football",
+      location: "Valencia"
+    },
+    {
+      name: "Emily Cole",
+      image: "/images/featuredTalent/emily cole.webp",
+      followingInstagram: "183k",
+      followingTiktok: "328k",
+      sport: "Athletics",
+      location: "North Carolina, USA"
     },
     {
       name: "Sergio Sanchez",
-      image: "/images/placeholder.png",
-      followingInstagram: "104k",
+      image: "/images/featuredTalent/sergio sanchez.png",
+      followingInstagram: "137k",
       followingTiktok: "146.2k",
-      sport: "⚽ Football",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Barcelona"
+      sport: "Football",
+      location: "Barcelona"
     },
     {
       name: "Jordi Garcia",
-      image: "/images/placeholder.png",
+      image: "/images/featuredTalent/jordi garcia.png",
       followingInstagram: "10.5k",
       followingTiktok: null,
-      sport: "🏊 Triathlon",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Barcelona"
+      sport: "Triathlon",
+      location: "Barcelona"
     },
     {
       name: "Tyler Sandoval",
-      image: "/images/placeholder.png",
-      followingInstagram: "45.4k",
+      image: "/images/featuredTalent/tyler sandoval.webp",
+      followingInstagram: "300k",
       followingTiktok: "294.4k",
-      sport: "🥍 Lacrosse",
-      teamOrCollege: "🎯 Princeton",
-      location: "📍 New Jersey, USA"
+      sport: "Lacrosse",
+      location: "New Jersey, USA"
     },
     {
       name: "John Dawe",
-      image: "/images/placeholder.png",
+      image: "/images/featuredTalent/john dawe.png",
       followingInstagram: "1.4k",
       followingTiktok: null,
-      sport: "🏉 Rugby 7s",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Heidelberg"
+      sport: "Rugby 7s",
+      location: "Heidelberg"
     },
     {
       name: "Kayden McDonald",
-      image: "/images/placeholder.png",
-      followingInstagram: "8.2k",
+      image: "/images/featuredTalent/kayden mcdonald.png",
+      followingInstagram: "14.7k",
       followingTiktok: null,
-      sport: "🏈 Football",
-      teamOrCollege: "🎯 Ohio State",
-      location: "📍 Ohio, USA"
+      sport: "Football",
+      location: "Ohio, USA"
     },
     {
       name: "Roman Alegre",
-      image: "/images/placeholder.png",
+      image: "/images/featuredTalent/roman alegre.png",
       followingInstagram: "18.4k",
       followingTiktok: null,
-      sport: "⚽ Football",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Barcelona"
+      sport: "Football",
+      location: "Barcelona"
     },
     {
       name: "Peter Plavec",
-      image: "/images/placeholder.png",
-      followingInstagram: "10.2k",
+      image: "/images/featuredTalent/peter plavec.png",
+      followingInstagram: "102k",
       followingTiktok: null,
-      sport: "🏊 Ice and Open Water Marathon Swimming",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Vienna"
+      sport: "Ice and Open Water Marathon Swimming",
+      location: "Vienna"
     },
     {
       name: "Noble Johnson",
-      image: "/images/placeholder.png",
-      followingInstagram: "27.4k",
+      image: "/images/featuredTalent/noble johnson.png",
+      followingInstagram: "34k",
       followingTiktok: "12.0k",
-      sport: "🏈 Football",
-      teamOrCollege: "🎯 Clemson",
-      location: "📍 South Carolina, USA"
-    },
-    {
-      name: "Amaya Gainer",
-      image: "/images/placeholder.png",
-      followingInstagram: "9.4k",
-      followingTiktok: null,
-      sport: "⚾ Softball",
-      teamOrCollege: "🎯 Florida A&M",
-      location: "📍 Florida, USA"
+      sport: "Football",
+      location: "South Carolina, USA"
     },
     {
       name: "Javante McCoy",
-      image: "/images/placeholder.png",
+      image: "/images/featuredTalent/javante mccoy.png",
       followingInstagram: "9.3k",
       followingTiktok: null,
-      sport: "🏀 Basketball",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 LA, USA"
-    },
-    {
-      name: "Alex Adams",
-      image: "/images/placeholder.png",
-      followingInstagram: "9.3k",
-      followingTiktok: null,
-      sport: "🏈 Football",
-      teamOrCollege: "🎯 Akron",
-      location: "📍 Ohio, USA"
+      sport: "Basketball",
+      location: "LA, USA"
     },
     {
       name: "Matthias Bühler",
-      image: "/images/placeholder.png",
+      image: "/images/featuredTalent/mattias buhler.png",
       followingInstagram: "130k",
       followingTiktok: null,
-      sport: "🏃 Athletics",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Stuttgart"
-    },
-    {
-      name: "Jose Manuel Ruiz",
-      image: "/images/placeholder.png",
-      followingInstagram: "10.1k",
-      followingTiktok: null,
-      sport: "⛵ Sailing",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Murcia"
+      sport: "Athletics",
+      location: "Stuttgart"
     },
     {
       name: "Greg Gurenlian",
-      image: "/images/placeholder.png",
-      followingInstagram: "225k",
+      image: "/images/featuredTalent/greg gurenlian.png",
+      followingInstagram: "204k",
       followingTiktok: "8.5k",
-      sport: "🥍 Lacrosse",
-      teamOrCollege: "🎯 Influencer",
-      location: "📍 New York, USA"
+      sport: "Lacrosse",
+      location: "New York, USA"
     },
     {
-      name: "Akeem Dent",
-      image: "/images/placeholder.png",
-      followingInstagram: "9.2k",
+      name: "Alex Adams",
+      image: "/images/featuredTalent/alex adams.webp",
+      followingInstagram: "9.3k",
       followingTiktok: null,
-      sport: "🏈 Football",
-      teamOrCollege: "🎯 Florida State University",
-      location: "📍 Florida, USA"
+      sport: "Football",
+      location: "Ohio, USA"
     },
     {
-      name: "Javier Mira",
-      image: "/images/placeholder.png",
-      followingInstagram: "12.7k",
+      name: "Jose Manuel Ruiz",
+      image: "/images/featuredTalent/jose manuel ruiz.png",
+      followingInstagram: "10.1k",
       followingTiktok: null,
-      sport: "🏊 Triathlon",
-      teamOrCollege: "🎯 Professional",
-      location: "📍 Valencia"
+      sport: "Sailing",
+      location: "Murcia"
     },
     {
       name: "Martí Ruiz García",
-      image: "/images/placeholder.png",
+      image: "/images/featuredTalent/marti ruiz garcia.png",
       followingInstagram: "12.5k",
       followingTiktok: "1.5k",
-      sport: "🎪 Event Host",
-      teamOrCollege: "🎯 Barcelona, Spain",
-      location: "📍 Barcelona"
-    }
+      sport: "Event Host",
+      location: "Barcelona"
+    },
+    {
+      name: "Akeem Dent",
+      image: "/images/featuredTalent/akeem dent.webp",
+      followingInstagram: "10.4k",
+      followingTiktok: null,
+      sport: "Football",
+      location: "Florida, USA"
+    },
+    {
+      name: "Amaya Gainer",
+      image: "/images/featuredTalent/amaya gainer.png",
+      followingInstagram: "9.4k",
+      followingTiktok: null,
+      sport: "Softball",
+      location: "Florida, USA"
+    },
+    {
+      name: "Javier Mira",
+      image: "/images/featuredTalent/javier mira.png",
+      followingInstagram: "12.7k",
+      followingTiktok: null,
+      sport: "Triathlon",
+      location: "Valencia"
+    } // 15 talents for the spanish region
   ];
 
   return (
@@ -224,9 +203,8 @@ export default function FeaturedTalents() {
                 )}
               </div>
               <div className="tags">
-                <span>{talent.sport}</span>
-                <span>{talent.teamOrCollege}</span>
-                <span>{talent.location}</span>
+                <span><img src="/images/trophy.png" className="tag-icon"/>{talent.sport}</span>
+                <span><img src="/images/location.png" className="tag-icon"/>{talent.location}</span>
               </div>
             </div>
           </div>
