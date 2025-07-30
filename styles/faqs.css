@@ -1,6 +1,6 @@
 .faq-container {
   max-width: 1200px;
-  margin: 20px auto 50px;
+  margin: 20px auto;
   
   font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
@@ -153,6 +153,6 @@
   }
   
   .faq-container {
-    padding: 1rem;
+    padding: 1rem 1rem 0;
   }
 }

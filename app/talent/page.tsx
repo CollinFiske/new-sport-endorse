@@ -65,7 +65,7 @@ export default function TalentPage() {
       learnMoreLink="/wp/successStories"
     />
 
-    <section style={{ backgroundColor: '#f8f9fa', padding: '2rem', margin: '0 0 10px' }}>
+    <section style={{ backgroundColor: '#f8f9fa', padding: '2rem', margin: '0 0 2rem' }}>
       <div style={{ display: 'flex', maxWidth: '1200px', margin: '0 auto', alignItems: 'center', gap: '60px', flexWrap: 'wrap' }}>
         <div style={{ flex: '1', minWidth: '300px' }}>
           <BrandsGrid variant="5x4" />
