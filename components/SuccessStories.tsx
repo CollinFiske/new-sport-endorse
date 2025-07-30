@@ -26,7 +26,34 @@ function decodeHtmlEntities(text: string) {
   return decodedText;
 }
 
-const VISIBLE_COUNT = 3;
+// Hook to get responsive visible count
+function useVisibleCount() {
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  useEffect(() => {
+    function updateVisibleCount() {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setVisibleCount(1); // Mobile: 1 story
+      } else if (width < 1080) {
+        setVisibleCount(2); // Tablet: 2 stories
+      } else {
+        setVisibleCount(3); // Desktop: 3 stories
+      }
+    }
+
+    // Set initial count
+    updateVisibleCount();
+
+    // Listen for resize events
+    window.addEventListener('resize', updateVisibleCount);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', updateVisibleCount);
+  }, []);
+
+  return visibleCount;
+}
 
 type Story = {
   id: number;
@@ -39,6 +66,7 @@ export default function SuccessStories() {
   const [stories, setStories] = useState<Story[]>([]);
   const [loading, setLoading] = useState(true);
   const [startIdx, setStartIdx] = useState(0);
+  const visibleCount = useVisibleCount();
 
   useEffect(() => {
     async function fetchStories() {
@@ -58,14 +86,22 @@ export default function SuccessStories() {
     fetchStories();
   }, []);
 
+  // Reset startIdx if it's out of bounds when visibleCount changes
+  useEffect(() => {
+    if (startIdx > Math.max(0, stories.length - visibleCount)) {
+      setStartIdx(Math.max(0, stories.length - visibleCount));
+    }
+  }, [visibleCount, stories.length, startIdx]);
+
   const handlePrev = () => {
     setStartIdx((prev) => Math.max(0, prev - 1));
   };
+  
   const handleNext = () => {
-    setStartIdx((prev) => Math.min(stories.length - VISIBLE_COUNT, prev + 1));
+    setStartIdx((prev) => Math.min(stories.length - visibleCount, prev + 1));
   };
 
-  const visibleStories = stories.slice(startIdx, startIdx + VISIBLE_COUNT);
+  const visibleStories = stories.slice(startIdx, startIdx + visibleCount);
 
   return (
     <section className="success-stories">
@@ -87,7 +123,7 @@ export default function SuccessStories() {
             <div>No stories found.</div>
           ) : (
             visibleStories.map((story, i) => (
-              <div className={`success-card${i === 1 ? " active" : " faded"}`} key={story.id}>
+              <div className={`success-card${i === Math.floor(visibleCount / 2) ? " active" : " faded"}`} key={story.id}>
                 {story.yoast_head_json?.og_image?.[0]?.url && (
                   <img
                     src={story.yoast_head_json.og_image[0].url}
@@ -109,7 +145,7 @@ export default function SuccessStories() {
         <button
           className="carousel-arrow right"
           onClick={handleNext}
-          disabled={startIdx >= Math.max(0, stories.length - VISIBLE_COUNT)}
+          disabled={startIdx >= Math.max(0, stories.length - visibleCount)}
           aria-label="Next stories"
         >
           &#8594;

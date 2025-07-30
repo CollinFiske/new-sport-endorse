@@ -111,7 +111,7 @@ export default function Footer() {
               <div className="logo"><img src="/images/image-129.png" alt="Support Logos" /></div>
               <div className="logo"><img src="/images/image-128.png" alt="Support Logos" /></div>
               <div className="logo"><img src="/images/image-127.png" alt="Support Logos" /></div>
-              <div className="logo"><img src="/images/image-126.png" alt="Support Logos" /></div>
+              <div className="logo"><img className="eu-logo" src="/images/image-126.png" alt="Support Logos" /></div>
             </div>
           </div>
 

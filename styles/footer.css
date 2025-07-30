@@ -170,14 +170,28 @@
   width: 100%;
   height: 100%;
 }
+.eu-logo{
+  min-width: 100px;
+}
 .footer-app-store-logos{
   margin-left: auto;
+}
+
+@media (max-width: 1120px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer-app-store-logos{
+    margin-top: 20px;
+  }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .footer-top {
     flex-direction: column;
+    gap: .5rem;
   }
   .newsletter form {
     flex-direction: column;
@@ -195,6 +209,7 @@
   }
   .footer-bottom-right {
     text-align: center;
+    max-height: 100px;
   }
   .logoContainer {
     justify-content: center;
@@ -202,5 +217,11 @@
   .footer-app-store-logos{
     margin-left: 0;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  img{
+    margin-left: 0;
   }
 }
