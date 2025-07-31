@@ -62,11 +62,11 @@ export default function Page() {
       subtitle={t.home.benefitSection.brand.subtitle}
       image="/images/Screenshot 2025-07-16 140629.png"
       label={t.home.benefitSection.brand.label} 
-      background="#FFFBBC"
+      background="#E5F1FF" /* was FFFBBC */
       item1={t.home.benefitSection.brand.bullet1}
       item2={t.home.benefitSection.brand.bullet2}
       item3={t.home.benefitSection.brand.bullet3}
-      color="#F6B014"
+      color="#008cfa" /* was F6B014 */
       learnMoreLink="/brands"
     />
 

@@ -19,7 +19,7 @@
 }
 
 .badge {
-  color: #c6ffb3;
+  color: #008cfa; /* was c6ffb3 */
   font-size: 0.85rem;
   font-weight: 500;
 }

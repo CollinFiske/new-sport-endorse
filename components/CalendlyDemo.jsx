@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 
-// Create a client-only component
+// create a client-only component
 const CalendlyInlineWidget = dynamic(() => {
   return import('react').then(() => {
     const Component = ({ widgetRef }) => {
@@ -19,7 +19,7 @@ const CalendlyInlineWidget = dynamic(() => {
           }
         };
 
-        // Load Calendly script if not already loaded
+        // load Calendly script if not already loaded
         if (!window.Calendly) {
           const script = document.createElement('script');
           script.src = 'https://assets.calendly.com/assets/external/widget.js';
@@ -40,7 +40,7 @@ const CalendlyInlineWidget = dynamic(() => {
     };
     return Component;
   });
-}, { ssr: false }); // This is the key - no server-side rendering
+}, { ssr: false }); // no server-side rendering
 
 export default function CalendlyWidget() {
   const widgetRef = useRef(null);

@@ -33,30 +33,30 @@ export default function AgencyHowItWorks() {
   return (
     <section className='bgGrid'>
         <div className="how-it-works">
-        <h2>How it works</h2>
-        <p className="subtitle">
-            Our innovative platform makes finding the right athlete brand ambassador for your client's marketing campaigns easier than ever before. Here's our simple four-step process to finding the perfect sports star aligning with your client's brand values.
-        </p>
-        <div className="how-it-works-content">
-            <div className="steps-container">
-            {steps.map((step, index) => (
-                <div className="step-card" key={index}>
-                <div className="step-header">
-                    <span className="icon">{step.icon}</span>
-                    <div className="title-row">
-                    <h3 className="step-title">{step.title}</h3>
-                    <span className="step-number">{step.number}</span>
+            <h2>How it works</h2>
+            <p className="subtitle">
+                Our innovative platform makes finding the right athlete brand ambassador for your client's marketing campaigns easier than ever before. Here's our simple four-step process to finding the perfect sports star aligning with your client's brand values.
+            </p>
+            <div className="how-it-works-content">
+                <div className="steps-container">
+                {steps.map((step, index) => (
+                    <div className="step-card" key={index}>
+                    <div className="step-header">
+                        <span className="icon">{step.icon}</span>
+                        <div className="title-row">
+                        <h3 className="step-title">{step.title}</h3>
+                        <span className="step-number">{step.number}</span>
+                        </div>
                     </div>
+                    <hr className="divider" />
+                    <p className="step-description">{step.description}</p>
+                    </div>
+                ))}
                 </div>
-                <hr className="divider" />
-                <p className="step-description">{step.description}</p>
-                </div>
-            ))}
+                <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="start-link">
+                    <button className="start-button">START NOW</button>
+                </a>
             </div>
-            <a href="#start" className="start-link">
-            <button className="start-button">START NOW</button>
-            </a>
-        </div>
         </div>
     </section>
   );
