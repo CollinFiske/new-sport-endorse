@@ -3,7 +3,69 @@
 import { fetchPodcasts, stripHtml, formatDate, createExcerpt, } from './wordpress.js';
 import { useState, useEffect } from 'react';
 
-// Error component
+// function to decode HTML entities
+function decodeHtmlEntities(text) {
+  if (!text) return text;
+  const entities = {
+    "&#038;": "&",
+    "&#8217;": "'",
+    "&#8216;": "'",
+    "&#8220;": '"',
+    "&#8221;": '"',
+    "&#8211;": "–",
+    "&#8212;": "—",
+    "&amp;": "&",
+    "&quot;": '"',
+    "&apos;": "'",
+    "&lt;": "<",
+    "&gt;": ">",
+    "&nbsp;": " "
+  };
+  let decodedText = text;
+  for (const [entity, replacement] of Object.entries(entities)) {
+    decodedText = decodedText.replace(new RegExp(entity, "g"), replacement);
+  }
+  return decodedText;
+}
+
+// podcast iframe URLs list
+const podcastIframes = [
+  'https://podomatic.com/embed/html5/podcast/6266614',
+  'https://podomatic.com/embed/html5/episode/10791101',
+  'https://podomatic.com/embed/html5/episode/10797470',
+  'https://podomatic.com/embed/html5/episode/10784445',
+  'https://podomatic.com/embed/html5/episode/10771515',
+  'https://podomatic.com/embed/html5/episode/10764959',
+  'https://podomatic.com/embed/html5/episode/10757717',
+  'https://podomatic.com/embed/html5/episode/10750287',
+  'https://podomatic.com/embed/html5/episode/10743603',
+  'https://www.podomatic.com/embed/html5/episode/10593667',
+  'https://www.podomatic.com/embed/html5/episode/10571774',
+  'https://www.podomatic.com/embed/html5/episode/10561829',
+  'https://www.podomatic.com/embed/html5/episode/10536784',
+  'https://www.podomatic.com/embed/html5/episode/10535965',
+  'https://www.podomatic.com/embed/html5/episode/10485866',
+  'https://podomatic.com/embed/html5/episode/10470396',
+  'https://podomatic.com/embed/html5/episode/10466181',
+  'https://podomatic.com/embed/html5/episode/10391839',
+  'https://podomatic.com/embed/html5/episode/10289302',
+  'https://podomatic.com/embed/html5/episode/10238169',
+  'https://podomatic.com/embed/html5/episode/10144287',
+  'https://podomatic.com/embed/html5/episode/10089429',
+  'https://podomatic.com/embed/html5/episode/10081744',
+  'https://podomatic.com/embed/html5/episode/10067317',
+  'https://podomatic.com/embed/html5/episode/10061283',
+  'https://podomatic.com/embed/html5/episode/10025277',
+  'https://podomatic.com/embed/html5/episode/10019293',
+  'https://podomatic.com/embed/html5/episode/10013347',
+  'https://podomatic.com/embed/html5/episode/10007910',
+  'https://podomatic.com/embed/html5/episode/10007928',
+  'https://podomatic.com/embed/html5/episode/9956380',
+  'https://podomatic.com/embed/html5/episode/9950355',
+  'https://podomatic.com/embed/html5/episode/9940355'
+];
+
+// error component
 function ErrorMessage({ message }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
@@ -17,10 +79,11 @@ function ErrorMessage({ message }) {
 }
 
 // Individual podcast card component
-function PodcastCard({ podcast }) {
-  const title = stripHtml(podcast.title.rendered);
-  const excerpt = createExcerpt(podcast.excerpt.rendered);
-  const date = formatDate(podcast.date); 
+function PodcastCard({ podcast, index }) {
+  const title = decodeHtmlEntities(stripHtml(podcast.title.rendered));
+  const excerpt = decodeHtmlEntities(createExcerpt(podcast.excerpt.rendered, 250)); // Increased from default 150 to 300 characters
+  const date = formatDate(podcast.date);
+  const iframeUrl = podcastIframes[index] || podcastIframes[0]; // Fallback to first iframe if index exceeds array 
   
   return (
     <article style={{ backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', transition: 'box-shadow 0.3s ease', overflow: 'hidden', marginBottom: '1.5rem' }}
@@ -49,7 +112,18 @@ function PodcastCard({ podcast }) {
         </p>
 
         {/* iframe */}
-        <p>iframe goes here!</p>
+        <iframe 
+          src={iframeUrl} 
+          height='208' 
+          width='100%' 
+          frameBorder='0' 
+          marginHeight='0' 
+          marginWidth='0' 
+          scrolling='no' 
+          loading='lazy'
+          allowFullScreen
+          style={{ marginBottom: '1rem', borderRadius: '8px' }}
+        ></iframe>
         
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           
@@ -116,11 +190,18 @@ export default function PodcastsPage() {
 
   return (
     <div style={{ backgroundColor: '#f9fafb' }}>
+      <style jsx>{`
+        @media (max-width: 850px) {
+          .podcasts-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
       {/* Header */}
       <header style={{ backgroundColor: 'white', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem' }}>
+        <div className='h' style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem' }}>
           <div style={{ textAlign: 'center' }}>
-            <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.5rem' }}>
+            <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '1.25rem' }}>
               The Athlete Sitdown
             </h1>
             <p style={{ fontSize: '1.125rem', color: '#6b7280', maxWidth: '512px', margin: '0 auto' }}>
@@ -176,9 +257,9 @@ export default function PodcastsPage() {
         ) : (
           <>
             {/* Podcasts Grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
-              {podcasts.map((podcast) => (
-                <PodcastCard key={podcast.id} podcast={podcast} />
+            <div className="podcasts-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
+              {podcasts.map((podcast, index) => (
+                <PodcastCard key={podcast.id} podcast={podcast} index={index} />
               ))}
             </div>
           </>
