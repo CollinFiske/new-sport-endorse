@@ -1,9 +1,9 @@
 "use client"
 import { useState } from "react";
 import "../../styles/policies.css";
+
+/*
 import { Metadata } from "next";
-
-
 export const metadata: Metadata = {
   //metadataBase: new URL("put the home url here later"),
   title: "Privacy Policy | Sport Endorse",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     //url:"" to be added later
     siteName:"Sport Endorse"
   },
-};
+};*/
 
 export default function PrivacyPolicyPage() {
 

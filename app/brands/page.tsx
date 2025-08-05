@@ -1,4 +1,3 @@
-"use client"
 import Community from "@/components/Community";
 import "../../styles/brands.css";
 import BusinessSubscription from "@/components/BusinessSubscription";

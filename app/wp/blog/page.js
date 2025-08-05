@@ -4,8 +4,16 @@ import '../../../styles/blog.css'
 
 
 export const metadata = {
-  title: 'Athlete Sponsorship Blog - SportEndorse',
-  description: 'Latest insights on athlete sponsorship and sports marketing'
+  title: "Blogs on Athlete Sponsorship & Sports Marketing | Sport Endorse",
+  description: "Explore expert blogs on athlete sponsorship, sports influencers, and brand ambassadors. Learn how to elevate your sports marketing campaigns with elite athletes.",
+  openGraph:{ // og:title and so on
+    title: "Blogs on Athlete Sponsorship & Sports Marketing | Sport Endorse",
+    description: "Explore expert blogs on athlete sponsorship, sports influencers, and brand ambassadors. Learn how to elevate your sports marketing campaigns with elite athletes.",
+    type:"website",
+    locale:"en_US",
+    //url:"" to be added later
+    siteName:"Sport Endorse"
+  },
 }
 
 // Function to decode HTML entities

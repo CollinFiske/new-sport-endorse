@@ -1,4 +1,3 @@
-"use client"
 import Community from "@/components/Community";
 import "../../styles/talent.css";
 import Image from 'next/image';

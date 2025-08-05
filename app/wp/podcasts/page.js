@@ -3,7 +3,7 @@
 import { fetchPodcasts, stripHtml, formatDate, createExcerpt, } from './wordpress.js';
 import { useState, useEffect } from 'react';
 
-
+/*
 export const metadata = {
   //metadataBase: new URL("put the home url here later"),
   title: "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights | Sport Endorse",
@@ -16,7 +16,7 @@ export const metadata = {
     //url:"" to be added later
     siteName:"Sport Endorse"
   },
-};
+};*/
 
 // function to decode HTML entities
 function decodeHtmlEntities(text) {

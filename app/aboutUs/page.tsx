@@ -1,4 +1,3 @@
-"use client"
 import '../../styles/aboutUs.css';
 import { Metadata } from "next";
 

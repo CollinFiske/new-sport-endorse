@@ -1,4 +1,3 @@
-"use client"
 import BusinessSubscription from "@/components/BusinessSubscription";
 import CalendlyDemo from "@/components/CalendlyDemo";
 import FAQs from "@/components/FAQs";
