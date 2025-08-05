@@ -33,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="keywords" content="SportEndorse, Talent, Brands, Subscription, Agencies, Success Stories"></meta>
         <meta name="author" content="SportEndorse"></meta>
+        <link rel="icon" type="image/ico" href="favicon.ico" />
       </head>
       <body>
         <ChatbotWrapper>
