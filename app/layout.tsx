@@ -8,22 +8,29 @@ import ChatbotWrapper from "@/components/ChatbotWrapper";
 
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Metadata } from "next";
 
 
-export const metadata = {
+export const metadata: Metadata = {
+  //metadataBase: new URL("put the home url here later"),
   title: "Sport Endorse",
   description: "Connecting athletes and brands globally.",
+  openGraph:{ // og:title and so on
+    title: "Sport Endorse",
+    description: "Connecting athletes and brands globally.",
+    type:"website",
+    locale:"en_US",
+    //url:"" to be added later
+    siteName:"Sport Endorse"
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en"> 
       <head>
-        <meta charSet="UTF-8"></meta>
-        <meta name="description" content="SportEndorse"></meta>
-        <meta name="keywords" content="SportEndorse, Talent, Brands"></meta>
-        <meta name="author" content="SportEndorse"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
         <ChatbotWrapper>
@@ -40,3 +47,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
+/*
+
+      <head>
+        <meta charSet="UTF-8"></meta>
+        <meta name="description" content="SportEndorse"></meta>
+        <meta name="keywords" content="SportEndorse, Talent, Brands"></meta>
+        <meta name="author" content="SportEndorse"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      </head>
+*/
