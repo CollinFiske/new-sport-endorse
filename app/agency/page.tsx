@@ -13,11 +13,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   //metadataBase: new URL("put the home url here later"),
-  title: "",
-  description: "",
+  title: "Book sports celebrities | Sport Endorse",
+  description: "Our cutting-edge technological solutions reduce the steps needed to score sensational sponsorship deals for athletes. Sport Endorse is a simple, user-friendly platform connecting agencies with top global athletes and ambassadors guaranteed to take your client's marketing campaigns to the next level.",
   openGraph:{ // og:title and so on
-    title: "",
-    description: "",
+    title: "Book sports celebrities | Sport Endorse",
+    description: "Our cutting-edge technological solutions reduce the steps needed to score sensational sponsorship deals for athletes. Sport Endorse is a simple, user-friendly platform connecting agencies with top global athletes and ambassadors guaranteed to take your client's marketing campaigns to the next level.",
     type:"website",
     locale:"en_US",
     //url:"" to be added later

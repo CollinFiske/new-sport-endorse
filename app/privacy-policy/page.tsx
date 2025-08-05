@@ -6,11 +6,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   //metadataBase: new URL("put the home url here later"),
-  title: "",
-  description: "",
+  title: "Privacy Policy | Sport Endorse",
+  description: "Sport Endorse Privacy Policy Updated: August 2023",
   openGraph:{ // og:title and so on
-    title: "",
-    description: "",
+    title: "Privacy Policy | Sport Endorse",
+    description: "Sport Endorse Privacy Policy Updated: August 2023",
     type:"website",
     locale:"en_US",
     //url:"" to be added later

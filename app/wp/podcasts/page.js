@@ -6,10 +6,10 @@ import { useState, useEffect } from 'react';
 
 export const metadata = {
   //metadataBase: new URL("put the home url here later"),
-  title: "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights",
+  title: "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights | Sport Endorse",
   description: "Listen to the Sport Endorse podcast for insights on athlete sponsorship, sports influencers, and sports marketing strategies. Hear from athletes and industry experts.",
   openGraph:{ // og:title and so on
-    title: "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights",
+    title: "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights | Sport Endorse",
     description: "Listen to the Sport Endorse podcast for insights on athlete sponsorship, sports influencers, and sports marketing strategies. Hear from athletes and industry experts.",
     type:"website",
     locale:"en_US",
