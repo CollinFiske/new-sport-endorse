@@ -3,6 +3,21 @@
 import { fetchPodcasts, stripHtml, formatDate, createExcerpt, } from './wordpress.js';
 import { useState, useEffect } from 'react';
 
+
+export const metadata = {
+  //metadataBase: new URL("put the home url here later"),
+  title: "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights",
+  description: "Listen to the Sport Endorse podcast for insights on athlete sponsorship, sports influencers, and sports marketing strategies. Hear from athletes and industry experts.",
+  openGraph:{ // og:title and so on
+    title: "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights",
+    description: "Listen to the Sport Endorse podcast for insights on athlete sponsorship, sports influencers, and sports marketing strategies. Hear from athletes and industry experts.",
+    type:"website",
+    locale:"en_US",
+    //url:"" to be added later
+    siteName:"Sport Endorse"
+  },
+};
+
 // function to decode HTML entities
 function decodeHtmlEntities(text) {
   if (!text) return text;

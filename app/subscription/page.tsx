@@ -1,9 +1,24 @@
 "use client"
-
 import BusinessSubscription from "@/components/BusinessSubscription";
 import CalendlyDemo from "@/components/CalendlyDemo";
 import FAQs from "@/components/FAQs";
 import SuccessStories from "@/components/SuccessStories";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  //metadataBase: new URL("put the home url here later"),
+  title: "",
+  description: "",
+  openGraph:{ // og:title and so on
+    title: "",
+    description: "",
+    type:"website",
+    locale:"en_US",
+    //url:"" to be added later
+    siteName:"Sport Endorse"
+  },
+};
 
 
 export default function Subscription(){

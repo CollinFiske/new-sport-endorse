@@ -4,8 +4,17 @@ import { getAllSuccessStories } from './wordpress.js';
 import "../../../styles/blog.css"
 
 export const metadata = {
-  title: 'Success Stories - SportEndorse',
-  description: 'Inspiring success stories from our athlete and brand partnerships',
+  //metadataBase: new URL("put the home url here later"),
+  title: "Athlete Sponsorship Success Stories | Sport Endorse",
+  description: "Read success stories of athlete sponsorships, sports influencers, and brand partnerships. Learn how elite athletes have powered impactful sports marketing campaigns.",
+  openGraph:{ // og:title and so on
+    title: "Athlete Sponsorship Success Stories | Sport Endorse",
+    description: "Read success stories of athlete sponsorships, sports influencers, and brand partnerships. Learn how elite athletes have powered impactful sports marketing campaigns.",
+    type:"website",
+    locale:"en_US",
+    //url:"" to be added later
+    siteName:"Sport Endorse"
+  },
 };
 
 // Function to decode HTML entities

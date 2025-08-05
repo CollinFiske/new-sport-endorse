@@ -8,6 +8,22 @@ import BenefitSection from "@/components/BenefitSection";
 import AgencyHowItWorks from "@/components/AgencyHowItWorks";
 import BrandsGrid from "@/components/BrandsGrid";
 import CalendlyDemo from "@/components/CalendlyDemo";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  //metadataBase: new URL("put the home url here later"),
+  title: "Find Elite Athletes & Sports Influencers for Your Brand | Sport Endorse",
+  description: "Discover elite athletes and sports influencers to enhance your brand's visibility. Sport Endorse helps you manage athlete sponsorships and sports marketing campaigns.",
+  openGraph:{ // og:title and so on
+    title: "Find Elite Athletes & Sports Influencers for Your Brand | Sport Endorse",
+    description: "Discover elite athletes and sports influencers to enhance your brand's visibility. Sport Endorse helps you manage athlete sponsorships and sports marketing campaigns.",
+    type:"website",
+    locale:"en_US",
+    //url:"" to be added later
+    siteName:"Sport Endorse"
+  },
+};
 
 export default function BrandsPage() {
   return (

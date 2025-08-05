@@ -1,5 +1,21 @@
 "use client"
 import '../../styles/aboutUs.css';
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  //metadataBase: new URL("put the home url here later"),
+  title: "",
+  description: "",
+  openGraph:{ // og:title and so on
+    title: "",
+    description: "",
+    type:"website",
+    locale:"en_US",
+    //url:"" to be added later
+    siteName:"Sport Endorse"
+  },
+};
 
 export default function AboutUs() {
   const values = [
