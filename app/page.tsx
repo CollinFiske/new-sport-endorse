@@ -88,7 +88,7 @@ export default function Page() {
 
     <br/><br/>
     
-{/** commenersfiesnf t here increasing documentation - goal - added more + did some more work */}
+{/** commenersfiesnf t - adding styles for mobile screen - here increasing documentation - goal - added more + did some more work */}
     <SuccessStories />
 
     
