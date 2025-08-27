@@ -146,3 +146,27 @@
 .lets-talk-button:active {
   transform: translateY(1px);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lets-talk-columns {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .lets-talk-header {
+    margin-bottom: 10px;
+  }
+  
+  .lets-talk-form-wrapper {
+    padding: 20px;
+  }
+  
+  .lets-talk-title {
+    font-size: 2rem;
+  }
+
+  .lets-talk-button{
+    width: 100%;
+  }
+}
