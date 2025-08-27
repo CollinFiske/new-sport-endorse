@@ -47,7 +47,9 @@ export default function TalentPage() {
             sponsorships, connecting with influential brands worldwide.
           </p>
           
+          <div className="talent-apps">
           <AppStores />
+          </div>
         </div>
            
         <div className="imageContainer">

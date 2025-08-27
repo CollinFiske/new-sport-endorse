@@ -10,12 +10,12 @@
   padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 20px;
   align-items: center;
 }
 
 .content {
-  padding-right: 20px;
+  padding-right: 0;
 }
 
 .badge {
@@ -102,6 +102,11 @@
   .content {
     padding-right: 0;
   }
+
+  .talent-apps {
+    display: flex;
+    justify-content: center;
+  }
   
   .downloadButtons {
     justify-content: center;
@@ -110,8 +115,11 @@
 }
 
 @media (max-width: 480px) {
+  .container{
+    padding: 0;
+  }
   .heroSection {
-    padding: 40px 0;
+    padding: 20px 0;
   }
   
   .title {
