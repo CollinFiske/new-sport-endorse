@@ -185,3 +185,15 @@
     width: 100%;
   }
 }
+
+@media (max-width: 660px) {
+  .logo-area h3 {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .actions a .demo-btn {
+    display: none;
+  }
+}

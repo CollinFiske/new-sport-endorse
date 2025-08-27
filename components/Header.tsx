@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import type { Language } from "../context/LanguageContext";
 import "../styles/header.css";
+import "../styles/mainLogo.css";
 import MainLogo from "./MainLogo";
 import translations from "@/utils/translations";
 
@@ -15,7 +16,10 @@ export default function Header() {
   return (
     <header className="modern-header">
       <div className="logo-area">
-        <MainLogo />
+        <Link href="/">
+          <img src="/images/sportEndorseLogo.png" alt="sport endorse logo"></img>
+          <h3>SPORT ENDORSE</h3>
+        </Link>
       </div>
       <button
         className="mobile-menu-icon"

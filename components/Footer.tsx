@@ -100,9 +100,9 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <div className="footer-bottom-left">
-            <p>©Copyright 2025 Sport Endorse. All Rights Reserved</p>
-              <a target="_blank" href="/privacy-policy" style={{display:"inline"}}>Privacy Centre</a><br/>
-              <a target="_blank" href="/terms-and-conditions">Terms and Conditions</a>
+            <p>©Copyright 2025 Sport Endorse. All Rights Reserved</p><br />
+            <a target="_blank" href="/privacy-policy" style={{display:"inline", textDecoration:"underline"}}>Privacy Centre</a><br />
+            <a target="_blank" href="/terms-and-conditions" style={{display:"inline", textDecoration:"underline"}}>Terms and Conditions</a>
           </div>
 
           <div className="footer-bottom-right">

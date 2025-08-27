@@ -207,12 +207,19 @@
     flex-direction: column;
     text-align: center;
   }
+  .footer-bottom-left{
+    margin: 0 auto;
+  }
   .footer-bottom-right {
     text-align: center;
     max-height: 100px;
   }
   .logoContainer {
     justify-content: center;
+  }
+  .logoContainer p {
+    text-align: center;
+    width: 100%;
   }
   .footer-app-store-logos{
     margin-left: 0;
