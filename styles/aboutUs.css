@@ -463,3 +463,59 @@ color: #6b7280;
 line-height: 1.6;
 margin: 0;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .about-us-values-grid {
+    padding: 0;
+  }
+  
+  .about-us-partners-container {
+    padding: 0;
+  }
+  
+  .about-us-partner-card {
+    padding: 24px;
+  }
+  
+  .about-us-team-video-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .about-us-team-grid {
+    padding: 0 16px;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-team-section{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .about-us-values-grid {
+    padding: 0;
+    margin: 0 16px;
+  }
+  
+  .about-us-partners-container {
+    padding: 0;
+  }
+  
+  .about-us-partner-card {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .about-us-team-video-container {
+    max-width: 100%;
+    width: 100vw;
+    margin-left: -16px;
+    border-radius: 8px;
+  }
+  
+  .about-us-team-grid {
+    padding: 0 8px;
+  }
+}
