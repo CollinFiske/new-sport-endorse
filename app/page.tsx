@@ -12,35 +12,52 @@ import BusinessSubscription from "@/components/BusinessSubscription";
 import AppStores from "@/components/AppStores";
 import SuccessStories from "@/components/SuccessStories";
 import BrandsGrid from "@/components/BrandsGrid";
+import { useState, useEffect } from "react";
 
 export default function Page() {
   const { language } = useLanguage();
   const t = translations[language];
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   return (
     <>
-    <main className="home-section">
-      <div className="home-left">
-        <h1 className="title"
-          dangerouslySetInnerHTML={{ __html: t.home.welcome }}
-        />
-        <p>
-          {t.home.description}
-        </p>
-        <AppStores />
-        <br/>
-        <div style={{display:"flex"}}>
-          <div className="rating">⭐⭐⭐⭐⭐4.9</div>
-          <img style={{marginLeft:200, width:"230px", height:"auto"}} src="/images/appforathletes.png" alt="app for athletes text" />
+    <section className="heroSection">
+      <div className="container">
+        <div className="content">
+          <h1 className="title"
+            dangerouslySetInnerHTML={{ __html: t.home.welcome }}
+          />
+          <p className="description">
+            {t.home.description}
+          </p>
+          <div className="home-apps">
+            <AppStores />
+          </div>
+          <br/>
+          <div className="rating-container" style={{display:"flex"}}>
+            <div className="rating">⭐⭐⭐⭐⭐4.9</div>
+            <img className="home-app-for-athletes-img" style={{marginLeft:200, width:"230px", height:"auto"}} src="/images/appforathletes.png" alt="app for athletes text" />
+          </div>
+        </div>
+        
+        <div className="imageContainer">
+          <Image src="/images/homeHero.png" alt="Athlete Hero" width={500} height={500} className="heroImage" />
         </div>
       </div>
-      <div className="home-right">
-        <Image src="/images/homeHero.png" alt="Athlete Hero" width={500} height={500} />
-      </div>
+    </section>
 
-    </main>
-
-    <BrandsGrid variant="8x4" label={t.home.tableHeader} />
+    <BrandsGrid variant={isMobile ? "5x4" : "8x4"} label={t.home.tableHeader} />
 
     <Community />
 

@@ -94,6 +94,11 @@
     gap: 40px;
     text-align: center;
   }
+
+  .description{
+    text-align: center;
+    margin: 0 auto 20px;
+  }
   
   .title {
     font-size: 2.5rem;

@@ -72,6 +72,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .label {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .brandsTable {
     font-size: 0.8rem;

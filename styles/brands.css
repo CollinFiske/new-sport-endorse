@@ -34,10 +34,6 @@
 }
 
 
-
-
-
-
 .gradientText {
   position: relative;
   background: linear-gradient(45deg, #3b82f6 0%, #10b981 50%, #f59e0b 100%);
@@ -96,12 +92,17 @@
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 0;
     text-align: center;
+    padding-top: 1rem;
+  }
+  .description{
+    margin: 0 auto;
   }
   
   .title {
     font-size: 2.5rem;
+    margin: 1rem;
   }
   
   .content {
@@ -115,9 +116,6 @@
 }
 
 @media (max-width: 480px) {
-  .heroSection {
-    padding: 40px 0;
-  }
   
   .title {
     font-size: 2rem;

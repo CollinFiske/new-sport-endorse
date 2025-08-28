@@ -48,7 +48,7 @@ export default function TalentPage() {
           </p>
           
           <div className="talent-apps">
-          <AppStores />
+            <AppStores />
           </div>
         </div>
            
