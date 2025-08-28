@@ -91,6 +91,7 @@
     flex-direction: column;
     text-align: center;
     padding: 1.5rem 1rem;
+    margin: 1.5rem 0;
   }
 
   .benefit-left, .benefit-right {
@@ -102,14 +103,65 @@
     max-width: none;
   }
 
+  .benefit-left h2 {
+    font-size: 2rem;
+    margin: 0.75rem 0 1rem;
+  }
+
+  .benefit-right {
+    margin: 1rem 0 0;
+  }
+  .benefit-label{
+    margin-left: 10px;
+  }
+
   .button-group {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.75rem;
+    margin: 1rem 0 1rem;
   }
 
   .demo-button, .benefit-button {
     width: 100%;
     max-width: 300px;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefit-section {
+    padding: 1rem 0.75rem;
+    margin: 1rem 0.25rem;
+    border-radius: 15px;
+  }
+
+  .benefit-left h2 {
+    font-size: 1.75rem;
+    margin: 0.5rem 0 0.75rem;
+    line-height: 1.2;
+  }
+
+  .benefit-left p, .benefit-left li {
+    font-size: 0.9rem;
+  }
+
+  .benefit-left ul {
+    margin-bottom: 1rem;
+  }
+
+  .benefit-left li {
+    margin-bottom: 0.75rem;
+  }
+
+  .button-group {
+    gap: 0.5rem;
+    margin: 0.75rem 0 0.75rem;
+  }
+
+  .demo-button, .benefit-button {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
   }
 }

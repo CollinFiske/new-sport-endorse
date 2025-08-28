@@ -17,7 +17,7 @@ interface BenefitProps {
 
 export default function BenefitSection({ title, subtitle, image, label, background = "#e8f2fd", item1="item1", item2="item2", item3="item3", color="#008cfa", learnMoreLink = "/talent" }: BenefitProps) {
   return (
-    <section className="benefit-section" style={{ background, paddingBottom: label === "FOR BRANDS" ? "40px" : undefined }}>
+    <section className="benefit-section" style={{ background, paddingBottom: label === "FOR BRANDS" ? "40px !important" : undefined }}>
       <div className="benefit-left">
         {label && <a href={learnMoreLink}><span className="benefit-label" style={{ color }}>◉ {label}</span></a>}
         <h2 style={label ? undefined: { marginTop: 0 }}>{title}</h2>

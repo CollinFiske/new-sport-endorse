@@ -5,7 +5,6 @@ import { useLanguage } from "../context/LanguageContext";
 import type { Language } from "../context/LanguageContext";
 import "../styles/header.css";
 import "../styles/mainLogo.css";
-import MainLogo from "./MainLogo";
 import translations from "@/utils/translations";
 
 export default function Header() {
