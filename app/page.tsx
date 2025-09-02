@@ -46,7 +46,14 @@ export default function Page() {
           </div>
           <br/>
           <div className="rating-container" style={{display:"flex"}}>
-            <div className="rating">⭐⭐⭐⭐⭐4.9</div>
+            <div className="rating">
+              <img src="/images/star_icon.png" alt="star" className="star-icon" /> 
+              <img src="/images/star_icon.png" alt="star" className="star-icon" />
+              <img src="/images/star_icon.png" alt="star" className="star-icon" />
+              <img src="/images/star_icon.png" alt="star" className="star-icon" />
+              <img src="/images/star_icon.png" alt="star" className="star-icon" />
+              <span className="rating-text">5.0</span>
+            </div>
             <img className="home-app-for-athletes-img" style={{marginLeft:200, width:"230px", height:"auto"}} src="/images/appforathletes.png" alt="app for athletes text" />
           </div>
         </div>

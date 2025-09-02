@@ -31,12 +31,12 @@ export default function AboutUs() {
     {
       icon: "III",
       title: "Transparency", 
-      description: "At Sport Endorse, we pride ourselves on our transparency. This means open and honest communication about everything. It saves time, removes stress and leads to better relationships all round. You&apos;ve guessed it, it&apos;s another must for us!"
+      description: "At Sport Endorse, we pride ourselves on our transparency. This means open and honest communication about everything. It saves time, removes stress and leads to better relationships all round. You've guessed it, it's another must for us!"
     },
     {
       icon: "IV",
       title: "Diversity",
-      description: "We take immense pride in the diverse cultures and people we work with daily in Sport Endorse. Our team is geographically dispersed, which brings together individuals from various cultures and diverse backgrounds. We strive to ensure we provide a work environment in which every employee feels valued and included in all decisions, opportunities, and challenges. Diversity is one of our most important values and is a must!"
+      description: "We take immense pride in the diverse cultures and people we work with daily in Sport Endorse. Our team is geographically dispersed, which brings together individuals from various cultures and diverse backgrounds. We strive to ensure we provide a work environment in which every employee feels valued and included in all decisions, opportunities, and challenges."
     }
   ];
 
@@ -153,6 +153,38 @@ export default function AboutUs() {
         </div>
       </section>
 
+      {/* Careers Section */}
+      <section className="about-us-careers-section">
+        <div className="about-us-container">
+          <div className="about-us-section-header">
+            <h2 className="about-us-section-title">
+              <span className="about-us-section-title-span">Careers</span> At Sport Endorse
+            </h2>
+            <p className="about-us-section-subtitle">
+              Are you passionate about sports and want to be part of our growing team? We're always looking for talented individuals who share our values and vision.
+            </p>
+          </div>
+
+          <div className="about-us-careers-container">
+            <div className="about-us-careers-card">
+              <div className="about-us-careers-content">
+                <h3 className="about-us-careers-title">Ready to Make an Impact?</h3>
+                <p className="about-us-careers-description">
+                  At Sport Endorse, we believe in fostering talent and providing opportunities for growth. 
+                  If you're looking for a dynamic environment where you can contribute to connecting athletes 
+                  with brands and make a real difference in the sports industry, we'd love to hear from you.
+                </p>
+                <a href="mailto:hello@sportendorse.com?subject=Career Inquiry&body=Hi Sport Endorse team,%0D%0A%0D%0AI'm interested in exploring career opportunities with your company. Please let me know about any current or upcoming positions that might be a good fit.%0D%0A%0D%0AThank you!">
+                  <button className="about-us-careers-button">
+                    Get in Touch
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Partners Section */}
       <section className="about-us-partners-section">
         <div className="about-us-container">
@@ -178,7 +210,7 @@ export default function AboutUs() {
                     add-victor
                   </h3>
                   <p className="about-us-partner-description">
-                    As a valued partner of Sport Endorse, <strong>add-victor</strong> is at the forefront of connecting high-performing athletes & military individuals with exceptional career opportunities. With a growing talent pool of over 5,500 individuals, spanning from Olympians, Paralympians, and Student-Athletes to Military Veterans, add-victor plays a pivotal role in bridging the gap between sporting experience, military expertise, and the corporate world – elevating organisations culture & performance.
+                    As a valued partner of Sport Endorse, <strong>add-victor</strong> is at the forefront of connecting high-performing athletes & military individuals with exceptional career opportunities. With a growing talent pool of over 5,500 individuals, spanning from Olympians, Paralympians, and Student-Athletes to Military Veterans, add-victor plays a pivotal role in bridging the gap between sporting experience, military expertise, and the corporate world - elevating organisations culture & performance.
                   </p>
                   <p className="about-us-partner-description-secondary">
                     add-victor&apos;s mission aligns with Sport Endorse commitment to excellence, empowering individuals to find their ideal career paths and assisting brands in discovering top-tier talent that can excel, both in marketing campaigns and within their organisations. Together with Sport Endorse, we&apos;re reshaping the future of talent acquisition and career advancement.

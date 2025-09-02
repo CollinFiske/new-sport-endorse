@@ -80,7 +80,7 @@ export default function Footer() {
 
           <div className="footer-links">
             <div>
-              <h2><span className="footer-number">01]</span><Link href="/talent">Athletes<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">01]</span><Link href="/talent">Telent<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">02]</span><Link href="/brands">Brands<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">03]</span><Link href="/wp/successStories">Success Stories<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">04]</span><Link href="/agency">Agencies<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
@@ -111,7 +111,7 @@ export default function Footer() {
               <div className="logo"><img src="/images/image-129.png" alt="Support Logos" /></div>
               <div className="logo"><img src="/images/image-128.png" alt="Support Logos" /></div>
               <div className="logo"><img src="/images/image-127.png" alt="Support Logos" /></div>
-              <div className="logo"><img className="eu-logo" src="/images/image-126.png" alt="Support Logos" /></div>
+              <div className="logo" style={{width:"90px"}}><img src="/images/image-126.png" alt="Support Logos" /></div>
             </div>
           </div>
 

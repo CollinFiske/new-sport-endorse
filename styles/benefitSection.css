@@ -56,6 +56,16 @@
 .benefit-left li {
   margin-bottom: 1rem;
   font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bullet-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .benefit-button {

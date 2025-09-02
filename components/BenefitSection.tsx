@@ -23,9 +23,9 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
         <h2 style={label ? undefined: { marginTop: 0 }}>{title}</h2>
         <p>{subtitle}</p>
         <ul>
-          <li>💛 {item1}</li>
-          <li>🟡 {item2}</li>
-          <li>⭐ {item3}</li>
+          <li><img src="/images/heart_icon.png" alt="heart" className="bullet-icon" /> {item1}</li>
+          <li><img src="/images/division_icon.png" alt="division" className="bullet-icon" /> {item2}</li>
+          <li><img src="/images/star_icon.png" alt="star" className="bullet-icon" /> {item3}</li>
         </ul>
         <div className="button-group">
           {title && (title !== "Join our Talented Team of Athletes" && title !== "Boost your personal brand") ? (

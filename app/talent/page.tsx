@@ -41,7 +41,7 @@ export default function TalentPage() {
           </h1>
           
           <p className="description">
-            Join our diverse team of elite student-athletes to curate your 
+            Join our diverse team of elite athletes to curate your 
             brand and monetize your talent. Grow your influence through 
             in-person appearances, social media promotions, and branded 
             sponsorships, connecting with influential brands worldwide.
