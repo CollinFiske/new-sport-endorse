@@ -161,7 +161,7 @@ export default function AboutUs() {
               <span className="about-us-section-title-span">Careers</span> At Sport Endorse
             </h2>
             <p className="about-us-section-subtitle">
-              Are you passionate about sports and want to be part of our growing team? We're always looking for talented individuals who share our values and vision.
+              Are you passionate about sports and want to be part of our growing team? We&apos;re always looking for talented individuals who share our values and vision.
             </p>
           </div>
 
@@ -171,8 +171,8 @@ export default function AboutUs() {
                 <h3 className="about-us-careers-title">Ready to Make an Impact?</h3>
                 <p className="about-us-careers-description">
                   At Sport Endorse, we believe in fostering talent and providing opportunities for growth. 
-                  If you're looking for a dynamic environment where you can contribute to connecting athletes 
-                  with brands and make a real difference in the sports industry, we'd love to hear from you.
+                  If you&apos;re looking for a dynamic environment where you can contribute to connecting athletes 
+                  with brands and make a real difference in the sports industry, we&apos;d love to hear from you.
                 </p>
                 <a href="mailto:hello@sportendorse.com?subject=Career Inquiry&body=Hi Sport Endorse team,%0D%0A%0D%0AI'm interested in exploring career opportunities with your company. Please let me know about any current or upcoming positions that might be a good fit.%0D%0A%0D%0AThank you!">
                   <button className="about-us-careers-button">
