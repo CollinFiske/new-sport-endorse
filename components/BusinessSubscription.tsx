@@ -18,7 +18,7 @@ export default function BusinessSubscription() {
 
   return (
     <section className="sub-subscription-section">
-      <div className="sub-container sub-vertical">
+      <div className="sub-container sub-vertical"> {/** comment here */}
         <div className="sub-top-content-row">
           <div className="sub-top-left">
             <h2 className="sub-title">
