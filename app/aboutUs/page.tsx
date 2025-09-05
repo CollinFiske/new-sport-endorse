@@ -52,8 +52,8 @@ export default function AboutUs() {
       videoUrl: "https://www.youtube.com/embed/ewo7-iOQT_o"
     },
     {
-      name: "Mavav Bhatia",
-      role: "Leadership Team",
+      name: "Mavav Bhatia", 
+      role: "Global Marketing Manager",
       videoUrl: "https://www.youtube.com/embed/ikTrqDTIhTk"
     }
   ];
