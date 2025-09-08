@@ -83,12 +83,12 @@ export default function TalentPage() {
     />
 
     <section style={{ backgroundColor: '#f8f9fa', padding: '2rem', margin: '0 0 2rem' }}>
-      <div style={{ display: 'flex', maxWidth: '1200px', margin: '0 auto', alignItems: 'center', gap: '60px', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', maxWidth: '1200px', margin: '0 auto', alignItems: 'center', gap: '40px', flexWrap: 'wrap' }}>
         <div style={{ flex: '1', minWidth: '300px' }}>
           <BrandsGrid variant="5x4" />
         </div>
         <div style={{ flex: '1', minWidth: '300px', textAlign: 'left' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#333', marginBottom: '20px', lineHeight: '1.2' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#333', marginBottom: '20px', lineHeight: '1.2' }}>
             <span style={{ color: '#18A0FB' }}>FREE</span> To Sign Up
           </h2>
           <p style={{ fontSize: '1.2rem', color: '#666', lineHeight: '1.6', marginBottom: '30px' }}>

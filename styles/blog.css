@@ -48,7 +48,7 @@
 
 .blog-main-title {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 1rem;
   color: #111827;
   margin-top: 0;
@@ -90,7 +90,7 @@
 
 .blog-post-image {
   width: 100%;
-  height: 12rem;
+  height: 18rem;
   object-fit: cover;
 }
 

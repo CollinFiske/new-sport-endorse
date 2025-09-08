@@ -216,7 +216,7 @@ export default function PodcastsPage() {
       <header style={{ backgroundColor: 'white', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)' }}>
         <div className='h' style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem' }}>
           <div style={{ textAlign: 'center' }}>
-            <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '1.25rem' }}>
+            <h1 style={{ fontSize: '2.5rem', fontWeight:'800', color: '#111827', marginBottom: '1.25rem' }}>
               The Athlete Sitdown
             </h1>
             <p style={{ fontSize: '1.125rem', color: '#6b7280', maxWidth: '512px', margin: '0 auto' }}>
