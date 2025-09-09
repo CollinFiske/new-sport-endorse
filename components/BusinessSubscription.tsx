@@ -25,7 +25,7 @@ export default function BusinessSubscription() {
               Business Subscription
             </h2>
             <p className="sub-description">
-              Get sorted and harness the power of collaboration with elite athletes that are all about performance. Pay easily and automatically either every quarterly, or annually. Subscribe below!
+              Get started and harness the power of collaboration with elite athletes that are all about performance. Pay easily and automatically either every quarterly, or annually. Subscribe below!
             </p>
           </div>
           <div className="sub-top-right">

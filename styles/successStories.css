@@ -109,12 +109,29 @@
 }
 
 @media (max-width: 768px) {
+  .success-stories h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
   .success-stories p{
     margin-bottom: 5px;
   }
 }
 
+@media (max-width: 600px) {
+  .success-stories h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+
 @media (max-width: 430px) {
+  .success-stories h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
   .stories-carousel-container{
     gap: 0;
   }

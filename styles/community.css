@@ -6,10 +6,10 @@
   max-width: 1200px;
   margin: 2rem auto;
   font-family: Arial, sans-serif;
+  position: relative;
 }
 
 .statistics-header {
-  position: relative;
   margin-bottom: 2rem;
 }
 
@@ -33,8 +33,8 @@
 
 .live-badge {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -12px;
+  right: 2.5rem;
   background: #ffe5ec;
   color: #ff3366;
   font-size: 0.8rem;
@@ -46,6 +46,7 @@
   font-weight: bold;
   max-width: 57px;
   min-height: 25px;
+  z-index: 10;
 }
 
 .dot {
@@ -58,7 +59,7 @@
 .statistics-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 2rem;
+  column-gap: .25rem;
   margin: 0 auto;
 }
 
@@ -107,22 +108,44 @@
   color: #838383;
 }
 
-/* Ensure live badge always stays in upper right corner */
-@media (max-width: 780px) {
+/* Ensure live badge always straddles the border */
+@media (max-width: 1000px) {
   .live-badge {
+    top: -10px;
+    right: 10px;
     font-size: 0.7rem;
     padding: 0.2rem 0.4rem;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 780px) {
   .live-badge {
+    top: -8px;
+    right: 12px;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .live-badge {
+    top: -6px;
+    right: 14px;
     font-size: 0.6rem;
     padding: 0.15rem 0.3rem;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 520px) {
+  .live-badge {
+    top: -6px;
+    right: 14px;
+    font-size: 0.6rem;
+    padding: 0.15rem 0.3rem;
+  }
+}
+
+@media (max-width: 900px) {
   .statistics-section {
     margin: 1rem;
     padding: 1.5rem;
@@ -141,8 +164,8 @@
   }
   
   .statistics-header h2 {
-    font-size: 2rem;
-     text-align: center;
+    
+    text-align: center;
   }
 }
 
@@ -160,14 +183,14 @@
   
 }
 
-@media (max-width: 620px) {
+@media (max-width: 600px) {
   .statistics-section {
     padding: 0.75rem;
     margin: 0.25rem;
   }
 
   .stat-box{
-    min-width: 160px;
+    min-width: 190px;
     max-width: 200px;
     padding: 0.8rem;
   }
@@ -206,7 +229,7 @@
   }
   
   .stat-box{
-    min-width: 160px;
+    min-width: 170px;
     max-width: 90%;
     padding: 0.6rem;
   }

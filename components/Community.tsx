@@ -10,14 +10,14 @@ export default function Community() {
 
   return (
     <section className="statistics-section">
+      <div className="live-badge">
+        <span className="dot"></span> Live
+      </div>
       <div className="statistics-header">
         <h2>Our Growing Community</h2>
         {/*<p style={{width:"50%"}}>
           Unlock actionable insights with our advanced analytics, empowering you to optimize your sports marketing strategies.
         </p>*/}
-        <div className="live-badge">
-          <span className="dot"></span> Live
-        </div>
       </div>
       <div className="statistics-grid">
         <div className="stat-box">
