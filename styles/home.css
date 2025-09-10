@@ -222,6 +222,11 @@ table td:hover {
     max-width: 350px;
     border-radius: 15px;
   }
+  
+  .imageContainer{
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .home-section {
     flex-direction: column;

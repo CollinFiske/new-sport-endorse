@@ -59,7 +59,7 @@ export default function Page() {
         </div>
         
         <div className="imageContainer">
-          <Image src="/images/homeHero.png" alt="Athlete Hero" width={500} height={500} className="heroImage" />
+          <Image src="/images/homeHero.png" alt="Athlete Hero" width={600} height={500} className="heroImage" priority/>
         </div>
       </div>
     </section>

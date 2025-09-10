@@ -57,7 +57,6 @@
   margin-bottom: 1rem;
   font-size: 0.95rem;
   display: flex;
-  align-items: center;
   gap: 8px;
 }
 
@@ -116,6 +115,17 @@
   .benefit-left h2 {
     font-size: 2rem;
     margin: 0.75rem 0 1rem;
+  }
+
+  .benefit-left ul {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .benefit-left ul li{
+    text-align: center;
+    margin-left:  auto;
+    margin-right:  auto;
   }
 
   .benefit-right {

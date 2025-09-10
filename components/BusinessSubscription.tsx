@@ -51,7 +51,7 @@ export default function BusinessSubscription() {
           <div className="sub-pivot-header">
             <div className="sub-pivot-feature-header">Features</div>
             <div className="sub-pivot-plan-header sub-trial-header">
-              <div className="sub-plan-badge sub-trial-badge">Free Trial</div>
+              <div className="sub-plan-badge sub-trial-badge">Free!</div>
               <h3>FREE TRIAL</h3>
               <div className="sub-price">
                 <span className="sub-amount-trial">$0</span>

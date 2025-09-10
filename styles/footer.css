@@ -211,6 +211,9 @@
   .newsletter form {
     flex-direction: column;
   }
+  .newsletter p {
+    max-width: 250px;
+  }
   .newsletter button {
     max-width: 250px;
   }

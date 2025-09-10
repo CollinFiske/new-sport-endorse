@@ -70,6 +70,9 @@
   .brandsTable img {
     max-height: 40px;
   }
+  .label {
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {

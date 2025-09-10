@@ -32,7 +32,7 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
             <>
               <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=trial"><button className="benefit-button">START FREE TRIAL</button></a>
               <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
-          <button className="demo-button">DEMO FOR BUSINESS</button>
+              <button className="demo-button">DEMO FOR BUSINESS</button>
               </a>
             </>
           ) : (

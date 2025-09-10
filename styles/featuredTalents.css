@@ -153,3 +153,25 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+
+
+@media (max-width: 768px) {
+  .featured-talents .header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-talents .header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 430px) {
+  .featured-talents .header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
