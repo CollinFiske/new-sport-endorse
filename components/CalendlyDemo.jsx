@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
+import "../styles/calendly.css";
 
 // create a client-only component
 const CalendlyInlineWidget = dynamic(() => {
@@ -34,7 +35,6 @@ const CalendlyInlineWidget = dynamic(() => {
         <div 
           ref={widgetRef}
           className="calendly-inline-widget" 
-          style={{ minWidth: '320px', height: '700px' }}
         />
       );
     };
@@ -42,8 +42,23 @@ const CalendlyInlineWidget = dynamic(() => {
   });
 }, { ssr: false }); // no server-side rendering
 
-export default function CalendlyWidget() {
+export default function CalendlyDemo() {
   const widgetRef = useRef(null);
 
-  return <CalendlyInlineWidget widgetRef={widgetRef} />;
+  return (
+    <div className="calendly-demo-section">
+      <div className="calendly-demo-container">
+        <div className="calendly-demo-header">
+          <h2 className="calendly-demo-title">See Sport Endorse in Action</h2>
+          <p className="calendly-demo-description">
+            Select a time that suits to learn more about our innovative solution and revolutionary platform, 
+            set up your account, and use athletes to endorse products and services.
+          </p>
+        </div>
+        <div className="calendly-demo-widget">
+          <CalendlyInlineWidget widgetRef={widgetRef} />
+        </div>
+      </div>
+    </div>
+  );
 }

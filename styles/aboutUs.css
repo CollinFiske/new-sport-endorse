@@ -74,7 +74,7 @@ position: relative;
 z-index: 10;
 max-width: 1200px;
 margin: 0 auto;
-padding: 4rem 0;
+padding: 4rem 1rem;
 text-align: center;
 }
 
@@ -84,12 +84,18 @@ margin: 0 auto;
 }
 
 .about-us-hero-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
   color: #1f2937;
   letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .about-us-hero-title {
+    font-size: 4rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -108,10 +114,16 @@ margin: 0 auto;
 }
 
 .about-us-hero-subtitle {
-font-size: 1.25rem;
+font-size: 1rem;
 margin-bottom: 32px;
 line-height: 1.6;
 color: #bfdbfe;
+}
+
+@media (min-width: 768px) {
+.about-us-hero-subtitle {
+    font-size: 1.25rem;
+}
 }
 
 @media (min-width: 1024px) {
@@ -125,11 +137,17 @@ display: inline-block;
 }
 
 .about-us-hero-description-text {
-font-size: 1.125rem;
+font-size: 0.95rem;
 line-height: 1.6;
 max-width: 768px;
 color: #bfdbfe;
 margin: 0;
+}
+
+@media (min-width: 768px) {
+.about-us-hero-description-text {
+    font-size: 1.125rem;
+}
 }
 
 @media (min-width: 1024px) {
@@ -142,6 +160,7 @@ margin: 0;
 .about-us-values-section {
     margin-top: 3rem;
   background-color: #f9fafb;
+  padding: 3rem 1rem;
 }
 
 .about-us-section-header {
@@ -150,10 +169,16 @@ margin-bottom: 64px;
 }
 
 .about-us-section-title {
-font-size: 2.5rem;
+font-size: 2rem;
 font-weight: 700;
 color: #1f2937;
 margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+.about-us-section-title {
+    font-size: 2.5rem;
+}
 }
 
 @media (min-width: 1024px) {
@@ -167,10 +192,16 @@ color: #18A0FB;
 }
 
 .about-us-section-subtitle {
-font-size: 1.25rem;
+font-size: 1rem;
 color: #6b7280;
 max-width: 768px;
 margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+.about-us-section-subtitle {
+    font-size: 1.25rem;
+}
 }
 
 .about-us-values-grid {
@@ -244,17 +275,24 @@ margin: 0;
 
 /* Team Section */
 .about-us-team-section {
-padding: 80px 0 40px;
+padding: 80px 1rem 40px;
 background-color: white;
 }
 
 .about-us-team-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-template-columns: 1fr;
 gap: 32px;
 max-width: 1280px;
 margin: 0 auto;
-padding: 0 24px;
+padding: 0;
+}
+
+@media (min-width: 768px) {
+.about-us-team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0 24px;
+}
 }
 
 .about-us-team-card {
@@ -435,35 +473,41 @@ margin: 0;
 
 /* Partners Section */
 .about-us-partners-section {
-background: linear-gradient(135deg, #eff6ff, #faf5ff);
+  padding: 3rem 1rem;
 }
 
 .about-us-partners-container {
-max-width: 1024px;
-margin: 0 auto;
-padding: 0 24px;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+.about-us-partners-container {
+  padding: 0 24px;
+}
 }
 
 .about-us-partner-card {
-background-color: white;
-border-radius: 16px;
-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-padding: 48px;
-margin-bottom: 32px;
-border: 1px solid #f3f4f6;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 48px;
+  margin-bottom: 32px;
+  border: 1px solid #f3f4f6;
 }
 
 .about-us-partner-content {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
 }
 
 @media (min-width: 1024px) {
 .about-us-partner-content {
-    flex-direction: row;
-    text-align: left;
+  flex-direction: row;
+  text-align: left;
 }
 }
 
@@ -530,8 +574,38 @@ margin: 0;
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+  .about-us-hero-container {
+    padding: 3rem 1rem;
+  }
+  
+  .about-us-hero-bg-element-1,
+  .about-us-hero-bg-element-2 {
+    display: none;
+  }
+  
+  .about-us-section-header {
+    margin-bottom: 32px;
+  }
+  
+  .about-us-values-section {
+    padding: 2rem 1rem;
+  }
+  
   .about-us-values-grid {
     padding: 0;
+    gap: 24px;
+  }
+  
+  .about-us-value-card {
+    padding: 1.5rem;
+  }
+  
+  .about-us-team-section {
+    padding: 3rem 1rem 2rem;
+  }
+  
+  .about-us-team-grid {
+    gap: 24px;
   }
   
   .about-us-partners-container {
@@ -540,10 +614,15 @@ margin: 0;
   
   .about-us-partner-card {
     padding: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .about-us-careers-section {
+    padding: 2rem 0;
   }
   
   .about-us-careers-container {
-    padding: 0;
+    padding: 0 1rem;
   }
   
   .about-us-careers-card {
@@ -557,30 +636,145 @@ margin: 0;
   .about-us-careers-description {
     font-size: 1rem;
   }
+}
+
+@media (max-width: 600px) {
+  .about-us-hero-container {
+    padding: 2rem 1rem;
+  }
   
-  .about-us-team-video-container {
-    max-width: 100%;
-    width: 100%;
+  .about-us-hero-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  
+  .about-us-hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+  
+  .about-us-hero-description-text {
+    font-size: 0.9rem;
+  }
+  
+  .about-us-section-title {
+    font-size: 1.75rem;
+  }
+  
+  .about-us-section-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .about-us-values-grid {
+    gap: 20px;
+  }
+  
+  .about-us-value-card {
+    padding: 1.25rem;
+  }
+  
+  .about-us-value-title {
+    font-size: 1.25rem;
   }
   
   .about-us-team-grid {
-    padding: 0 16px;
-    gap: 0;
+    gap: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .about-us-team-section{
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-  }
-  .about-us-values-grid {
-    padding: 0;
-    margin: 0 16px;
+  .about-us-hero-container {
+    padding: 1.5rem 0.75rem;
   }
   
-  .about-us-partners-container {
+  .about-us-hero-title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  
+  .about-us-hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-hero-description-text {
+    font-size: 0.85rem;
+  }
+  
+  .about-us-values-section {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .about-us-section-header {
+    margin-bottom: 24px;
+  }
+  
+  .about-us-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+  
+  .about-us-section-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .about-us-values-grid {
     padding: 0;
+    margin: 0;
+    gap: 16px;
+  }
+  
+  .about-us-value-card {
+    padding: 1rem;
+  }
+  
+  .about-us-value-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .about-us-value-icon-text {
+    font-size: 1.25rem;
+  }
+  
+  .about-us-value-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-us-value-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .about-us-team-section {
+    padding: 2rem 0.75rem 1rem;
+  }
+  
+  .about-us-team-grid {
+    padding: 0;
+    gap: 16px;
+  }
+  
+  .about-us-team-video-container {
+    border-radius: 12px;
+  }
+  
+  .about-us-team-info {
+    padding: 16px 0;
+  }
+  
+  .about-us-team-name {
+    font-size: 1.125rem;
+  }
+  
+  .about-us-team-role {
+    font-size: 0.8rem;
+  }
+  
+  .about-us-partners-section {
+    padding: 2rem 0.75rem;
   }
   
   .about-us-partner-card {
@@ -588,17 +782,36 @@ margin: 0;
     margin-bottom: 16px;
   }
   
+  .about-us-partner-content {
+    gap: 24px;
+  }
+  
+  .about-us-partner-logo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .about-us-partner-name {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .about-us-partner-description,
+  .about-us-partner-description-secondary {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
   .about-us-careers-section {
-    padding: 40px 0;
+    padding: 2rem 0;
   }
   
   .about-us-careers-container {
-    padding: 0;
+    padding: 0 0.75rem;
   }
   
   .about-us-careers-card {
     padding: 24px 16px;
-    margin: 0 16px;
   }
   
   .about-us-careers-title {
@@ -614,15 +827,88 @@ margin: 0;
     padding: 12px 24px;
     font-size: 1rem;
   }
-  
-  .about-us-team-video-container {
-    max-width: 100%;
-    width: 100vw;
-    margin-left: -16px;
-    border-radius: 8px;
+}
+
+@media (max-width: 360px) {
+  .about-us-hero-container {
+    padding: 1rem 0.5rem;
   }
   
-  .about-us-team-grid {
-    padding: 0 8px;
+  .about-us-hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .about-us-hero-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .about-us-hero-description-text {
+    font-size: 0.8rem;
+  }
+  
+  .about-us-values-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .about-us-section-title {
+    font-size: 1.25rem;
+  }
+  
+  .about-us-section-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .about-us-value-card {
+    padding: 0.75rem;
+  }
+  
+  .about-us-value-title {
+    font-size: 1rem;
+  }
+  
+  .about-us-value-description {
+    font-size: 0.85rem;
+  }
+  
+  .about-us-team-section {
+    padding: 1.5rem 0.5rem 1rem;
+  }
+  
+  .about-us-partners-section {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .about-us-partner-card {
+    padding: 12px;
+  }
+  
+  .about-us-partner-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .about-us-partner-name {
+    font-size: 1.25rem;
+  }
+  
+  .about-us-careers-container {
+    padding: 0 0.5rem;
+  }
+  
+  .about-us-careers-card {
+    padding: 20px 12px;
+  }
+  
+  .about-us-careers-title {
+    font-size: 1.25rem;
+  }
+  
+  .about-us-careers-description {
+    font-size: 0.9rem;
+  }
+  
+  .about-us-careers-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
   }
 }

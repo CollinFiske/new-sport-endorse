@@ -22,6 +22,11 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
         {label && <a href={learnMoreLink}><span className="benefit-label" style={{ color }}>◉ {label}</span></a>}
         <h2 style={label ? undefined: { marginTop: 0 }}>{title}</h2>
         <p>{subtitle}</p>
+        <div className="icons-row">
+          <img src="/images/heart_icon.png" alt="heart" className="bullet-icon-mobile" />
+          <img src="/images/division_icon.png" alt="division" className="bullet-icon-mobile" />
+          <img src="/images/star_icon.png" alt="star" className="bullet-icon-mobile" />
+        </div>
         <ul>
           <li><img src="/images/heart_icon.png" alt="heart" className="bullet-icon" /> {item1}</li>
           <li><img src="/images/division_icon.png" alt="division" className="bullet-icon" /> {item2}</li>

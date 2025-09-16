@@ -38,7 +38,7 @@ export default function Footer() {
         <MainLogo/>
         <div className="footer-top">
           <div className="newsletter">
-            <h2>Keep up with us</h2>
+            <h2>Keep Up With Us!</h2>
             <p>Get news, photos, events, and business updates</p>
             <form onSubmit={handleSubmit} style={{ paddingBottom: "5px" }}>
               <input
@@ -72,9 +72,11 @@ export default function Footer() {
               <span><a target="_blank" href="https://www.tiktok.com/@sportendorse"><img src="/images/linkedinLogo.webp" alt="linkedin logo" className="social-logo"></img></a></span>
               <span><a target="_blank" href="https://open.spotify.com/show/2c2mWOkxmUpeGyFI2dZgC5"><img src="/images/spotify.png" alt="spotify logo" className="social-logo"></img></a></span>
             </div>
-            <p>✆ +353 1 546 1103</p>
-            <p>✉ hello@sportendorse.com</p>
-            <p>🏠︎ 10 Fitzwilliam Street Upper, Dublin 2, D02 T024, Ireland</p>
+            <div className="contact-info">
+              <p>✆ +353 1 546 1103</p>
+              <p>✉ hello@sportendorse.com</p>
+              <p>🏠︎ 10 Fitzwilliam Street Upper, Dublin 2, D02 T024, Ireland</p>
+            </div>
           </div>
 
 

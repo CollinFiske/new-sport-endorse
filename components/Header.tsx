@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import type { Language } from "../context/LanguageContext";
 import "../styles/header.css";
@@ -11,9 +11,24 @@ export default function Header() {
   const { language, changeLanguage } = useLanguage();
   const t = translations[language];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node) && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [mobileMenuOpen]);
 
   return (
-    <header className="modern-header">
+    <header className="modern-header" ref={headerRef}>
       <div className="logo-area">
         <Link href="/">
           <img src="/images/sportEndorseLogo.png" alt="sport endorse logo"></img>
@@ -33,8 +48,12 @@ export default function Header() {
         <Link href="/talent" onClick={() => setMobileMenuOpen(false)}>Talent</Link>
         <Link href="/brands" onClick={() => setMobileMenuOpen(false)}>Brands</Link>
         <Link href="/wp/successStories" onClick={() => setMobileMenuOpen(false)}>Success Stories</Link>
-        <div className="dropdown">
-          <span>Resources ▾</span>
+        <div 
+          className="dropdown"
+          onMouseEnter={() => setDropdownOpen(true)}
+          onMouseLeave={() => setDropdownOpen(false)}
+        >
+          <span>Resources {dropdownOpen ? "▴" : "▾"}</span>
           <div className="dropdown-content">
             <Link href="/agency" onClick={() => setMobileMenuOpen(false)}>Agencies</Link>
             <Link href="/subscription" onClick={() => setMobileMenuOpen(false)}>Subscription</Link>

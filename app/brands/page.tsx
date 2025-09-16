@@ -76,27 +76,7 @@ export default function BrandsPage() {
     
     <SuccessStories />
 
-    {/* removing the featured podcast part per Liam's feedback in doc 7/28
-    <div style={{ textAlign: 'left', margin: '0 auto 40px', maxWidth: '570px', backgroundColor:"#E5F1FF", padding:"2rem", borderRadius: "20px" }}>
-      <p><strong>The Sitdown with Sport Endorse</strong></p>
-      <br />
-      <h2>Lorna Danaher</h2>
-      <p style={{color:"#414a4c"}}>Sponsorship Manager at Energia</p>
-      <br />
-      <iframe src="https://www.podomatic.com/embed/html5/episode/10536784?style=normal&width=504&height=208" width="504" height="208" frameBorder="0" allow="encrypted-media" style={{backgroundColor:"#FBFAF5"}}></iframe>
-      <p style={{marginTop:"15px"}}>
-        For the first episode in a series where we explore the collaboration between brands and sport and what best practice looks like, we were delighted to have Lorna Danaher, Sponsorship Manager for Energia, as our guest.
-      </p>
-    </div>
-    */}
-
-    <div style={{ textAlign: 'center', padding: '0', margin: '0 auto', maxWidth:"1200px" }}>
-      <h2 style={{ fontSize: '2.5rem', fontWeight:'800', margin: '0 0 20px', color: '#333' }}>See Sport Endorse in Action</h2>
-      <p style={{ fontSize: '1.1rem', lineHeight: '1.6', maxWidth: '600px', margin: '0 auto', color: '#666' }}>
-          Select a time that suits to learn more about our innovative solution and revolutionary platform, set up your account, and use athletes to endorse products and services.
-      </p>
-      <CalendlyDemo />
-    </div>
+    <CalendlyDemo />
 
     <FAQs />
 
