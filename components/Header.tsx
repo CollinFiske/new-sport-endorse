@@ -12,12 +12,18 @@ export default function Header() {
   const t = translations[language];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (headerRef.current && !headerRef.current.contains(event.target as Node) && mobileMenuOpen) {
-        setMobileMenuOpen(false);
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        if (mobileMenuOpen) {
+          setMobileMenuOpen(false);
+        }
+        if (languageDropdownOpen) {
+          setLanguageDropdownOpen(false);
+        }
       }
     };
 
@@ -25,7 +31,21 @@ export default function Header() {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [mobileMenuOpen]);
+  }, [mobileMenuOpen, languageDropdownOpen]);
+
+  const getFlagImage = (lang: string) => {
+    switch(lang) {
+      case 'en': return '/images/flags/UK_flag.png';
+      case 'es': return '/images/flags/spanish_flag.svg';
+      case 'de': return '/images/flags/german_flag.png';
+      default: return '/images/flags/UK_flag.png';
+    }
+  };
+
+  const handleLanguageChange = (newLanguage: Language) => {
+    changeLanguage(newLanguage);
+    setLanguageDropdownOpen(false);
+  };
 
   return (
     <header className="modern-header" ref={headerRef}>
@@ -64,12 +84,28 @@ export default function Header() {
         </div>
       </nav>
       <div className="actions">
-        <select value={language} onChange={(e) => changeLanguage(e.target.value as Language)}>
-          <option value="en">🇺🇸</option>
-          <option value="es">🇪🇸</option>
-          <option value="fr">🇫🇷</option>
-          <option value="de">🇩🇪</option>
-        </select>
+        <div className="custom-language-dropdown">
+          <button 
+            className="language-selector"
+            onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
+          >
+            <img src={getFlagImage(language)} alt={language} width="30" height="20" />
+            <span className="dropdown-arrow">{languageDropdownOpen ? "▴" : "▾"}</span>
+          </button>
+          {languageDropdownOpen && (
+            <div className="language-dropdown-content">
+              <button onClick={() => handleLanguageChange('en')}>
+                <img src="/images/flags/UK_flag.png" alt="English" width="30" height="20" />
+              </button>
+              <button onClick={() => handleLanguageChange('es')}>
+                <img src="/images/flags/spanish_flag.svg" alt="Español" width="30" height="20" />
+              </button>
+              <button onClick={() => handleLanguageChange('de')}>
+                <img src="/images/flags/german_flag.png" alt="Deutsch" width="30" height="20" />
+              </button>
+            </div>
+          )}
+        </div>
         <a target="_blank" href="https://platform.sportendorse.com/signup/talent">
           <button className="signup-btn">{t.header.signUpBtn}</button>
         </a>

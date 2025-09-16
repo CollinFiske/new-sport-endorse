@@ -2,7 +2,7 @@ a{
     display: flex;
     align-items: center;
 }
-img{
+.main-logo-img{
     height: 50px;
 }
 h3{

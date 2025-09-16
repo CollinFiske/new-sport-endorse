@@ -7,7 +7,7 @@ export default function MainLogo() {
   return (
     <div>
         <Link href="/">
-            <img src="/images/sportEndorseLogo.png" alt="sport endorse logo"></img>
+            <img className="main-logo-img" src="/images/sportEndorseLogo.png" alt="sport endorse logo"></img>
             <h3>SPORT ENDORSE</h3>
         </Link>
     </div>
