@@ -89,7 +89,7 @@ export default function Header() {
             className="language-selector"
             onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
           >
-            <img src={getFlagImage(language)} alt={language} width="30" height="20" />
+            <img src={getFlagImage(language)} alt={language} width="30" height="20" /> 
             <span className="dropdown-arrow">{languageDropdownOpen ? "▴" : "▾"}</span>
           </button>
           {languageDropdownOpen && (
