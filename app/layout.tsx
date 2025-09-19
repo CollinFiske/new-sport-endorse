@@ -9,6 +9,7 @@ import ChatbotWrapper from "@/components/ChatbotWrapper";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Metadata } from "next";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 
 export const metadata: Metadata = {
@@ -26,6 +27,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+  
   return (
     <html lang="en"> 
       <head>
@@ -33,9 +36,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="keywords" content="SportEndorse, Talent, Brands, Subscription, Agencies, Success Stories"></meta>
         <meta name="author" content="SportEndorse"></meta>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+
         <link rel="icon" type="image/ico" href="favicon.ico" />
       </head>
+
+      {gtmId && <GoogleTagManager gtmId={gtmId} />}
       <body>
+
+        <noscript>
+          <div style={{margin:"70px 20px"}}>
+            <h1>JavaScript Required</h1>
+            <p>Sport Endorse requires JavaScript to function properly. Please enable JavaScript in your browser settings and refresh the page.</p>
+            <p><strong>To enable JavaScript:</strong></p>
+            <ul>
+              <li>Chrome/Edge: Settings → Privacy and Security → Site Settings → JavaScript</li>
+              <li>Firefox: about:config → javascript.enabled → true</li>
+              <li>Safari: Preferences → Security → Enable JavaScript</li>
+            </ul>
+          </div>
+        </noscript>
+
         <ChatbotWrapper>
           <LanguageProvider>
             <Header />
@@ -47,6 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
         <SpeedInsights />
       </body>
+
     </html>
   );
 }
