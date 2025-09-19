@@ -39,6 +39,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
         <link rel="icon" type="image/ico" href="favicon.ico" />
+
+        {/*<!-- Start of HubSpot Embed Code -->*/}
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js.hs-scripts.com/4025606.js"
+        />
+        {/*<!-- End of HubSpot Embed Code -->*/}
       </head>
 
       {gtmId && <GoogleTagManager gtmId={gtmId} />}
