@@ -43,18 +43,38 @@ export default function AboutUs() {
   const teamMembers = [
     {
       name: "Trevor Twamley",
-      role: "Co-Founder",
-      videoUrl: "https://www.youtube.com/embed/sb67T8pYyz8"
+      role: "Founder, CEO",
+      imageUrl: "/images/teamPhotos/Trevor Twanley, Founder.png"
     },
     {
       name: "Declan Bourke", 
-      role: "Co-Founder",
-      videoUrl: "https://www.youtube.com/embed/ewo7-iOQT_o"
+      role: "Founder, COO",
+      imageUrl: "/images/teamPhotos/Declan Bourke, Founder.png"
     },
     {
-      name: "Mavav Bhatia", 
+      name: "Manav Bhatia", 
       role: "Global Marketing Manager",
-      videoUrl: "https://www.youtube.com/embed/ikTrqDTIhTk"
+      imageUrl: "/images/teamPhotos/Manav Bhatia, Global Marketing Manager.jpg"
+    },
+    {
+      name: "Jack Sampson",
+      role: "Data Analyst",
+      imageUrl: "/images/teamPhotos/Jack Sampson, Data Analysist.jpeg"
+    },
+    {
+      name: "Allison Melting",
+      role: "Social Media Marketing Manager", 
+      imageUrl: "/images/teamPhotos/Allison Melting, Social Media Marketing Manager.jpeg"
+    },
+    {
+      name: "Liam Forster",
+      role: "Sales Team",
+      imageUrl: "/images/teamPhotos/Liam Forster, Sales Team.jpeg"
+    },
+    {
+      name: "Oscar Quinn Hunt",
+      role: "Sales Team",
+      imageUrl: "/images/teamPhotos/Oscar Quinn Hunt, Sales Team.jpeg"
     }
   ];
 
@@ -131,17 +151,12 @@ export default function AboutUs() {
           <div className="about-us-team-grid">
             {teamMembers.map((member, index) => (
               <div key={index} className="about-us-team-card">
-                <div className="about-us-team-video-container">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={member.videoUrl}
-                    title={member.name + " video"}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    style={{ aspectRatio: '16/9', width: '100%', height: '100%', borderRadius: '16px', background: '#111827' }}
-                  ></iframe>
+                <div className="about-us-team-photo-container">
+                  <img
+                    src={member.imageUrl}
+                    alt={member.name}
+                    className="about-us-team-photo"
+                  />
                 </div>
                 <div className="about-us-team-info">
                   <h3 className="about-us-team-name">{member.name}</h3>

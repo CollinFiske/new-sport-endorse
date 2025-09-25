@@ -304,16 +304,36 @@ transition: all 0.3s ease;
 transform: translateY(-4px);
 }
 
-.about-us-team-video-container {
-position: relative;
-background: linear-gradient(135deg, #111827, #374151);
-border-radius: 16px;
-overflow: hidden;
-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-aspect-ratio: 16/9;
+.about-us-team-photo-container {
+  position: relative;
+  background: #f9fafb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 4/3;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
-.about-us-team-video-gradient {
+.about-us-team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-us-team-card:hover .about-us-team-photo {
+  transform: scale(1.05);
+}
+
+.about-us-team-video-container {
+  position: relative;
+  background: linear-gradient(135deg, #111827, #374151);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16/9;
+}.about-us-team-video-gradient {
 position: absolute;
 inset: 0;
 background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
@@ -390,24 +410,22 @@ margin-left: 4px;
 }
 
 .about-us-team-info {
-padding: 24px;
-color: white;
+  padding: 24px 0;
+  text-align: center;
 }
 
 .about-us-team-name {
-font-size: 1.25rem;
-font-weight: 700;
-margin: 0 0 8px 0;
-color: #1f2937;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #1f2937;
 }
 
 .about-us-team-role {
-color: #93c5fd;
-font-size: 0.875rem;
-margin: 0;
-}
-
-/* Careers Section */
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}/* Careers Section */
 .about-us-careers-section {
   padding: 40px 0 80px;
 }
@@ -755,6 +773,10 @@ margin: 0;
   .about-us-team-grid {
     padding: 0;
     gap: 16px;
+  }
+  
+  .about-us-team-photo-container {
+    border-radius: 12px;
   }
   
   .about-us-team-video-container {
