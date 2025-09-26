@@ -4,9 +4,10 @@ import BusinessSubscription from "@/components/BusinessSubscription";
 import FAQs from "@/components/FAQs";
 import SuccessStories from "@/components/SuccessStories";
 import BenefitSection from "@/components/BenefitSection";
-import AgencyHowItWorks from "@/components/AgencyHowItWorks";
+import BrandHowItWorks from "@/components/BrandHowItWorks";
 import BrandsGrid from "@/components/BrandsGrid";
 import CalendlyDemo from "@/components/CalendlyDemo";
+import BrandKeyFeatures from "@/components/BrandKeyFeatures";
 import { Metadata } from "next";
 
 
@@ -49,15 +50,14 @@ export default function BrandsPage() {
         </div>
         
         <div className="imageContainer">
-          <BrandsGrid variant="5x4" label="Check out our Featured Brands!" />
+          <BrandsGrid variant="5x4" label="" />
         </div>
       </div>
     </section>
 
-    <Community
-    />
+    <Community />
 
-    <BenefitSection 
+    {/*<BenefitSection 
       title="Book Iconic Sports Ambassadors"
       subtitle="Our user-friendly platform seamlessly connects agencies with top global athletes and ambassadors, reducing the steps to secure exceptional sponsorship deals and amplify your clients' marketing campaigns."
       image="/images/agencyPhonePic.png"
@@ -68,9 +68,11 @@ export default function BrandsPage() {
       item3="Ensuring authentic brand-athlete alignment"
       color="#F6B014"
       learnMoreLink="/wp/successStories"
-    />
+    /> removed as per doc 9/25*/}
 
-    <AgencyHowItWorks />
+    <BrandHowItWorks />
+
+    <BrandKeyFeatures />
 
     <BusinessSubscription />
     
@@ -78,7 +80,7 @@ export default function BrandsPage() {
 
     <CalendlyDemo />
 
-    <FAQs />
+    {/*<FAQs /> removed as per doc 9/25*/}
 
     </>
   );

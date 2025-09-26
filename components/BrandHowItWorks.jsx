@@ -2,31 +2,31 @@
 import '../styles/howItWorks.css';
 
 
-export default function AgencyHowItWorks() {
+export default function BrandHowItWorks() {
     const steps = [
         {
         icon: "testmessage.png",
-        title: "BOOK A DEMO",
+        title: "Create Profile",
         number: "[01]",
-        description: "Once you create an account with us, you can browse thousands of athlete ambassadors and connect easily to find the perfect fit for your client’s marketing needs.",
+        description: "Tell us about your brand, industry, and location to build a profile that attracts the right talent.",
         },
         {
         icon: "volume.png",
-        title: "CREATE A NEW OPPORTUNITY",
+        title: "Launch Opportunity",
         number: "[02]",
-        description: "Share marketing campaign goals with our team of sports heroes, outlining clear objectives, deliverables, and budget to ensure both parties understand their responsibilities.",
+        description: "Describe the athletes you want to collaborate with and outline the requirements of your partnership.",
         },
         {
         icon: "startwithyellow.png",
-        title: "CHOOSE THE RIGHT CANDIDATE",
+        title: "Choose Athletes ",
         number: "[03]",
-        description: "Interested athletes will engage with your opportunity and submit cover letters to make their case. Once you’ve found the perfect fit, book your chosen athlete brand ambassadors in exchange for cash, products, royalty or even equity.",
+        description: "Chat with athletes, discuss the details, and select the ones who align with your brand and campaign goals.",
         },
         {
         icon: "dollarsign.png",
-        title: "COMPLETE THE CAMPAIGN",
+        title: "Complete Campaign",
         number: "[04]",
-        description: "Once the campaign is successfully completed, and all deliverables met, Sport Endorse will generate an accounting invoice. From there, you can make a payment directly to the athlete’s bank account using a secure payment process.",
+        description: "After confirming the partnership, you can handle payments and finalize the deal securely through the platform.",
         }
     ];
 

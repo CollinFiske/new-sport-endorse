@@ -106,13 +106,13 @@ export default function Page() {
       color="#83BF24"
     />*/}
 
-    {/*<BusinessSubscription /> removed as per doc */}
+    {/*<BusinessSubscription /> removed as per doc 9/25*/}
 
     <FeaturedTalents />
 
     <br/><br/>
     
-    {/*<SuccessStories /> removed as per doc */}
+    {/*<SuccessStories /> removed as per doc 9/25*/}
 
     
     </>

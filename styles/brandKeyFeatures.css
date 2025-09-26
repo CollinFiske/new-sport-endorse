@@ -1,0 +1,290 @@
+.brand-key-features {
+  padding: 50px 35px;
+  margin: 0 0 2rem;
+  background: #f8f9fa;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-container h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #18A0FB;
+}
+
+.features-container p {
+  max-width: 800px;
+  margin: 0 auto 32px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 40px 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background-color: #f0f8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Large tablet styles */
+@media (max-width: 1024px) {
+  .brand-key-features {
+    padding: 50px 40px;
+  }
+  
+  .features-container h2 {
+    font-size: 2.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .features-container p {
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+  
+  .features-grid {
+    gap: 35px;
+    max-width: 700px;
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .brand-key-features {
+    padding: 40px 30px;
+  }
+  
+  .features-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .features-container p {
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+  
+  .features-grid {
+    gap: 30px;
+    max-width: 600px;
+  }
+  
+  .feature-card {
+    padding: 35px 25px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .feature-card p {
+    font-size: 15px;
+  }
+}
+
+/* Small tablet - transition to single column */
+@media (max-width: 650px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 450px;
+  }
+  
+  .feature-card {
+    padding: 32px 28px;
+  }
+}
+
+/* Mobile styles - single column */
+@media (max-width: 550px) {
+  .brand-key-features {
+    padding: 30px 20px;
+  }
+  
+  .features-container h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .features-container p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .features-grid {
+    gap: 20px;
+    max-width: 400px;
+  }
+  
+  .feature-card {
+    padding: 30px 20px;
+  }
+  
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-icon img {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .feature-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .brand-key-features {
+    padding: 25px 15px;
+  }
+  
+  .features-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .features-container p {
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
+  
+  .features-grid {
+    gap: 18px;
+    max-width: 100%;
+  }
+  
+  .feature-card {
+    padding: 25px 18px;
+  }
+  
+  .feature-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+  }
+  
+  .feature-icon img {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 380px) {
+  .brand-key-features {
+    padding: 20px 12px;
+  }
+  
+  .features-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+  }
+  
+  .features-container p {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+  
+  .features-grid {
+    gap: 15px;
+  }
+  
+  .feature-card {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+  
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+  }
+  
+  .feature-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .feature-card p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}

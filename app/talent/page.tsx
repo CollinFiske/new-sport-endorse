@@ -63,21 +63,20 @@ export default function TalentPage() {
           />
         </div>
       </div>
-      
     </section>
 
     <Community />
 
     {/*<p style={{textAlign:"center", margin:"200px"}}>1 2 3 4 steps here</p>*/}
     <BenefitSection 
-      title="Join our Talented Team of Athletes"
-      subtitle="Join 7000+ talent who are using Sport Endorse to find more commercial opportunities."
+      title="Why Athletes Choose Sport Endorse section"
+      subtitle="Download the app and sign up for free!"
       image="/images/phone-talent-benefit-pic.png"
       label=""
       background="white"
-      item1="Motivate your fans with inspiring public appearances"
-      item2="Aid your athletic performances"
-      item3="Start earning more money from your hard work!"
+      item1="Secure Paid Deals: Access brands seeking talent for brand ambassadorships, social media campaigns, and more."
+      item2="Build a standout professional profile. Secure genuine partnerships that support your performance and grow your income, with expert guidance from us."
+      item3="Manage on the Go: Our mobile app allows easy tracking of payments, communication, and deal management from your phone."
       color="#F6B014"
       learnMoreLink="/wp/successStories"
     />
@@ -101,9 +100,9 @@ export default function TalentPage() {
 
     <SuccessStories />
 
-    <LetsTalk />
+    {/*<LetsTalk /> removed as per doc 9/25*/}
 
-    <FeaturedTalents /> {/* maybe instead have it so that the featured talents are scrolled thru in the home hero picture */}
+    {/*<FeaturedTalents /> removed as per doc 9/25*/}
 
     {/* removing the featured podcast part per Liam's feedback in doc 7/28
     <div style={{ textAlign: 'left', margin: '3rem auto', maxWidth: '570px', backgroundColor:"#E5F1FF", padding:"2rem", borderRadius: "20px" }}>

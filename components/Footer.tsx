@@ -82,7 +82,7 @@ export default function Footer() {
 
           <div className="footer-links">
             <div>
-              <h2><span className="footer-number">01]</span><Link href="/talent">Telent<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">01]</span><Link href="/talent">Talent<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">02]</span><Link href="/brands">Brands<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">03]</span><Link href="/wp/successStories">Success Stories<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">04]</span><Link href="/agency">Agencies<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
