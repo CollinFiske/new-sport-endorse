@@ -90,6 +90,7 @@
 .stat-content img{
   padding: 10px; /* adjust as needed */
   border-radius: 50%;
+  max-width: 60px;
 }
 
 .stat-box h3 {
