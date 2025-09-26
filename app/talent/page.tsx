@@ -3,8 +3,6 @@ import "../../styles/talent.css";
 import Image from 'next/image';
 import AppStores from "@/components/AppStores";
 import SuccessStories from "@/components/SuccessStories";
-import FeaturedTalents from "@/components/FeaturedTalents";
-import LetsTalk from "@/components/LetsTalk";
 import BenefitSection from "@/components/BenefitSection";
 import BrandsGrid from "@/components/BrandsGrid";
 import { Metadata } from "next";

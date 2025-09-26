@@ -8,9 +8,7 @@ import "../styles/benefitSection.css";
 import "../styles/featuredTalents.css";
 import Community from "../components/Community";
 import FeaturedTalents from "@/components/FeaturedTalents";
-import BusinessSubscription from "@/components/BusinessSubscription";
 import AppStores from "@/components/AppStores";
-import SuccessStories from "@/components/SuccessStories";
 import BrandsGrid from "@/components/BrandsGrid";
 import { useState, useEffect } from "react";
 

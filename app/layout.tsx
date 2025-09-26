@@ -4,7 +4,6 @@ import "../styles/footer.css";
 import { LanguageProvider } from "../context/LanguageContext";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ChatbotWrapper from "@/components/ChatbotWrapper";
 
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -67,13 +66,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </noscript>
 
-        <ChatbotWrapper>
-          <LanguageProvider>
-            <Header />
-            <main style={{ padding: "80px 20px 0 20px" /* for space for header and on sides */}}>{children}</main>
-            <Footer /> 
-          </LanguageProvider>
-        </ChatbotWrapper>
+        <LanguageProvider>
+          <Header />
+          <main style={{ padding: "80px 20px 0 20px" /* for space for header and on sides */}}>{children}</main>
+          <Footer /> 
+        </LanguageProvider>
         
         <Analytics />
         <SpeedInsights />

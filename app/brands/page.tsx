@@ -1,9 +1,7 @@
 import Community from "@/components/Community";
 import "../../styles/brands.css";
 import BusinessSubscription from "@/components/BusinessSubscription";
-import FAQs from "@/components/FAQs";
 import SuccessStories from "@/components/SuccessStories";
-import BenefitSection from "@/components/BenefitSection";
 import BrandHowItWorks from "@/components/BrandHowItWorks";
 import BrandsGrid from "@/components/BrandsGrid";
 import CalendlyDemo from "@/components/CalendlyDemo";
