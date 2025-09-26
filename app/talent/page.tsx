@@ -1,6 +1,5 @@
 import Community from "@/components/Community";
 import "../../styles/talent.css";
-import Image from 'next/image';
 import AppStores from "@/components/AppStores";
 import SuccessStories from "@/components/SuccessStories";
 import BenefitSection from "@/components/BenefitSection";
@@ -51,14 +50,7 @@ export default function TalentPage() {
         </div>
            
         <div className="imageContainer">
-          <Image 
-            src="/images/athleteHero.png" 
-            alt="Athlete in action"
-            width={600}
-            height={500}
-            className="heroImage"
-            priority
-          />
+          <BrandsGrid variant="5x4" label="" />
         </div>
       </div>
     </section>
