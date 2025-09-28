@@ -85,6 +85,34 @@ export async function fetchPodcastById(id) {
 }
 
 /**
+ * Fetch a single podcast by slug
+ * @param {string} slug - The podcast slug
+ * @returns {Promise<Object>} Podcast object
+ */
+export async function getPodcastBySlug(slug) {
+  try {
+    const response = await fetch(`${WORDPRESS_API_URL}/podcasts?slug=${slug}`, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      next: { 
+        revalidate: 3600*24
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch podcast: ${response.status}`);
+    }
+
+    const podcasts = await response.json();
+    return podcasts[0];
+  } catch (error) {
+    console.error('Error fetching podcast by slug:', error);
+    throw error;
+  }
+}
+
+/**
  * Utility function to extract plain text from HTML
  * @param {string} html - HTML string
  * @returns {string} Plain text

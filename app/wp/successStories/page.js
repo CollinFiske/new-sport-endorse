@@ -1,6 +1,7 @@
 //page.js
 
 import { getAllSuccessStories } from './wordpress.js';
+import Link from 'next/link';
 import "../../../styles/blog.css"
 
 export const metadata = {
@@ -73,12 +74,23 @@ export default async function SuccessStoriesPage() {
 
                 <div className="blog-post-content">
                   <h3 className="blog-post-title">
-                    {decodeHtmlEntities(story.title.rendered)}
+                    <Link
+                      href={`/wp/successStories/${story.slug}`}
+                      className="blog-post-link"
+                    >
+                      {decodeHtmlEntities(story.title.rendered)}
+                    </Link>
                   </h3>
 
-                  <p className="blog-post-excerpt">
-                    {decodeHtmlEntities(story.yoast_head_json?.description) || 'No summary available.'}
-                  </p>
+                  <Link
+                    href={`/wp/successStories/${story.slug}`}
+                    className="blog-post-link"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <p className="blog-post-excerpt">
+                      {decodeHtmlEntities(story.yoast_head_json?.description) || 'No summary available.'}
+                    </p>
+                  </Link>
 
                   <time className="blog-post-date">
                     {new Date(story.date).toLocaleDateString()}

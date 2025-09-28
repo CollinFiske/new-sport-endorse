@@ -1,6 +1,7 @@
 import { getAllPosts, getPostBySlug } from '../wordpress'
 import { notFound } from 'next/navigation'
 import '../../../../styles/blog.css'
+import MainLogo from '@/components/MainLogo'
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
@@ -82,6 +83,11 @@ export default async function BlogPost({ params }) {
               />
             </div>
           </article>
+        </div>
+        
+        {/* Main Logo at bottom */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem', paddingBottom: '2rem' }}>
+          <MainLogo />
         </div>
       </main>
     </div>

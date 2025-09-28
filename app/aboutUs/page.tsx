@@ -75,6 +75,11 @@ export default function AboutUs() {
       name: "Oscar Quinn Hunt",
       role: "Sales Team",
       imageUrl: "/images/teamPhotos/Oscar Quinn Hunt, Sales Team.jpeg"
+    },
+    {
+      name: "Taisa Gwaj",
+      role: "Bookkeeper",
+      imageUrl: "/images/teamPhotos/Taisa Gwaj, Bookkeeper.jpg"
     }
   ];
 
