@@ -38,6 +38,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
         <link rel="icon" type="image/ico" href="favicon.ico" />
+        
+        {/* Preload video for instant loading */}
+        <link rel="preload" as="video" href="/videos/examplewatervideo.mp4" type="video/mp4" />
 
         {/*<!-- Start of HubSpot Embed Code -->*/}
         <script

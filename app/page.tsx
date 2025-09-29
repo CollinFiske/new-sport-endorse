@@ -30,6 +30,14 @@ export default function Page() {
 
   return (
     <>
+
+    <video autoPlay muted loop >
+      <source src="/videos/examplewatervideo.mp4" />
+      Your browser does not support the video tag.
+    </video>
+    
+
+
     <section className="heroSection">
       <div className="container">
         <div className="content">
