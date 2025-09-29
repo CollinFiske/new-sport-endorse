@@ -98,11 +98,11 @@ export default function AboutUs() {
               <span className="about-us-hero-title-span"> Sport Endorse</span>
             </h1>
             <p className="about-us-hero-subtitle">
-              The Sport Endorse team has exceptional experience in sports sponsorships, brand ambassador deals, athlete selection, and sports marketing
+              Sport Endorse is an online sports marketing platform reshaping how brands and athletes connect. Our powerful platform facilitates authentic commercial partnerships, supporting the entire world of sport—from the athletes who play it to the brands and businesses who back it.
             </p>
             <div className="about-us-hero-description">
               <p className="about-us-hero-description-text">
-                We serve the world of sport across the globe and are a group of people that have been participants in a diverse range of sports. We are fans of all sports, all sports people, and all brands that engage with sport. Our team is multinational, and multicultural, and we are passionate about delivering success for you – our clients!
+                Our global team brings decades of sports marketing expertise to the table. Reflecting the diversity and inclusivity of our platform, our team members come from a wide range of sports and backgrounds. We are passionate about combining our deep industry knowledge with our excellent technology to deliver success for our clients, creating a truly global and inclusive experience for brands and athletes in every kind of sport.
               </p>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function AboutUs() {
               <span className="about-us-section-title-span">Careers</span> At Sport Endorse
             </h2>
             <p className="about-us-section-subtitle">
-              Are you passionate about sports and want to be part of our growing team? We&apos;re always looking for talented individuals who share our values and vision.
+              Are you passionate about <strong>sports marketing</strong> and want to be part of our growing team? We&apos;re always looking for talented individuals who share our values and vision.
             </p>
           </div>
 
