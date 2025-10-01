@@ -58,7 +58,7 @@ export default function AboutUs() {
     },
     {
       name: "Jack Sampson",
-      role: "Data Analyst",
+      role: "Analytics Engineer",
       imageUrl: "/images/teamPhotos/Jack Sampson, Data Analysist.jpeg"
     },
     {
