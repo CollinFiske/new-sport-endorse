@@ -32,7 +32,7 @@ export default function Page() {
     <>
 
     <video autoPlay muted loop >
-      <source src="/videos/examplewatervideo.mp4" />
+      <source src="/videos/placeholder_video.mp4" />
       Your browser does not support the video tag.
     </video>
     
