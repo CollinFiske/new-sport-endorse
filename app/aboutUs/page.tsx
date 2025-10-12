@@ -57,9 +57,9 @@ export default function AboutUs() {
       imageUrl: "/images/teamPhotos/Manav Bhatia, Global Marketing Manager.jpg"
     },
     {
-      name: "Jack Sampson",
-      role: "Data Analyst",
-      imageUrl: "/images/teamPhotos/Jack Sampson, Data Analysist.jpeg"
+      name: "Martin Nutty",
+      role: "CDO",
+      imageUrl: "/images/teamPhotos/Martin Nutty, CDO.jpeg"
     },
     {
       name: "Allison Melting",
@@ -72,14 +72,14 @@ export default function AboutUs() {
       imageUrl: "/images/teamPhotos/Liam Forster, Lead Generation Manager.jpeg"
     },
     {
-      name: "Oscar Quinn Hunt",
-      role: "Customer Success Manager",
-      imageUrl: "/images/teamPhotos/Oscar Quinn Hunt, Customer Success Manager.jpeg"
+      name: "Taisa Gwaj",
+      role: "Bookkeeper",
+      imageUrl: "/images/teamPhotos/Taisa Gwaj, Bookkeeper.jpg"
     },
     {
-      name: "Martin Nutty",
-      role: "CDO",
-      imageUrl: "/images/teamPhotos/Martin Nutty, CDO.jpeg"
+      name: "Collin Fiske",
+      role: "Full Stack Developer",
+      imageUrl: "/images/teamPhotos/Collin Fiske, Full Stack Developer.jpg"
     },
     {
       name: "Sean Armadà",
@@ -87,15 +87,15 @@ export default function AboutUs() {
       imageUrl: "/images/teamPhotos/Sean Armadà, Markets Development Manager.jpg"
     },
     {
-      name: "Taisa Gwaj",
-      role: "Bookkeeper",
-      imageUrl: "/images/teamPhotos/Taisa Gwaj, Bookkeeper.jpg"
-    }/*,
+      name: "Jack Sampson",
+      role: "Data Analyst",
+      imageUrl: "/images/teamPhotos/Jack Sampson, Data Analysist.jpeg"
+    },
     {
-      name: "Collin Fiske",
-      role: "Full Stack Developer",
-      imageUrl: "/images/teamPhotos/Collin Fiske, Full Stack Developer.jpg"
-    }*/
+      name: "Oscar Quinn Hunt",
+      role: "Customer Success Manager",
+      imageUrl: "/images/teamPhotos/Oscar Quinn Hunt, Customer Success Manager.jpeg"
+    }
   ];
 
   return (
