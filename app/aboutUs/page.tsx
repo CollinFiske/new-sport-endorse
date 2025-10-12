@@ -43,13 +43,13 @@ export default function AboutUs() {
   const teamMembers = [
     {
       name: "Trevor Twamley",
-      role: "Founder, CEO",
-      imageUrl: "/images/teamPhotos/Trevor Twanley, Founder.png"
+      role: "Founder and CEO",
+      imageUrl: "/images/teamPhotos/Trevor Twanley, Founder and CEO.png"
     },
     {
       name: "Declan Bourke", 
-      role: "Founder, COO",
-      imageUrl: "/images/teamPhotos/Declan Bourke, Founder.png"
+      role: "Founder and COO",
+      imageUrl: "/images/teamPhotos/Declan Bourke, Founder and COO.png"
     },
     {
       name: "Manav Bhatia", 
@@ -58,29 +58,44 @@ export default function AboutUs() {
     },
     {
       name: "Jack Sampson",
-      role: "Analytics Engineer",
+      role: "Data Analyst",
       imageUrl: "/images/teamPhotos/Jack Sampson, Data Analysist.jpeg"
     },
     {
       name: "Allison Melting",
-      role: "Social Media Marketing Manager", 
-      imageUrl: "/images/teamPhotos/Allison Melting, Social Media Marketing Manager.jpeg"
+      role: "Content Marketing Manager", 
+      imageUrl: "/images/teamPhotos/Allison Melting, Content Marketing Manager.jpeg"
     },
     {
       name: "Liam Forster",
-      role: "Sales Team",
-      imageUrl: "/images/teamPhotos/Liam Forster, Sales Team.jpeg"
+      role: "Lead Generation Manager",
+      imageUrl: "/images/teamPhotos/Liam Forster, Lead Generation Manager.jpeg"
     },
     {
       name: "Oscar Quinn Hunt",
-      role: "Sales Team",
-      imageUrl: "/images/teamPhotos/Oscar Quinn Hunt, Sales Team.jpeg"
+      role: "Customer Success Manager",
+      imageUrl: "/images/teamPhotos/Oscar Quinn Hunt, Customer Success Manager.jpeg"
+    },
+    {
+      name: "Martin Nutty",
+      role: "CDO",
+      imageUrl: "/images/teamPhotos/Martin Nutty, CDO.jpeg"
+    },
+    {
+      name: "Sean Armadà",
+      role: "Markets Development Manager",
+      imageUrl: "/images/teamPhotos/Sean Armadà, Markets Development Manager.jpg"
     },
     {
       name: "Taisa Gwaj",
       role: "Bookkeeper",
       imageUrl: "/images/teamPhotos/Taisa Gwaj, Bookkeeper.jpg"
-    }
+    }/*,
+    {
+      name: "Collin Fiske",
+      role: "Full Stack Developer",
+      imageUrl: "/images/teamPhotos/Collin Fiske, Full Stack Developer.jpg"
+    }*/
   ];
 
   return (
@@ -221,7 +236,7 @@ export default function AboutUs() {
             <div className="about-us-partner-card">
               <div className="about-us-partner-content">
                 <div className="about-us-partner-logo">
-                  <a href="https://www.add-victor.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.add-victor.com/" target="_blank" rel="noopener">
                     <img src="/images/add-victor.webp" alt="add-victor logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
                   </a>
                 </div>
@@ -233,7 +248,49 @@ export default function AboutUs() {
                     As a valued partner of Sport Endorse, <strong>add-victor</strong> is at the forefront of connecting high-performing athletes & military individuals with exceptional career opportunities. With a growing talent pool of over 5,500 individuals, spanning from Olympians, Paralympians, and Student-Athletes to Military Veterans, add-victor plays a pivotal role in bridging the gap between sporting experience, military expertise, and the corporate world - elevating organisations culture & performance.
                   </p>
                   <p className="about-us-partner-description-secondary">
-                    add-victor&apos;s mission aligns with Sport Endorse commitment to excellence, empowering individuals to find their ideal career paths and assisting brands in discovering top-tier talent that can excel, both in marketing campaigns and within their organisations. Together with Sport Endorse, we&apos;re reshaping the future of talent acquisition and career advancement.
+                    <strong>add-victor&apos;s</strong> mission aligns with Sport Endorse commitment to excellence, empowering individuals to find their ideal career paths and assisting brands in discovering top-tier talent that can excel, both in marketing campaigns and within their organisations. Together with Sport Endorse, we&apos;re reshaping the future of talent acquisition and career advancement.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="about-us-partner-card">
+              <div className="about-us-partner-content">
+                <div className="about-us-partner-logo">
+                  <a href="https://3bigwheels.com/" target="_blank" rel="noopener">
+                    <img src="/images/3 big wheels.png" alt="3 big wheels logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
+                  </a>
+                </div>
+                <div className="about-us-partner-info">
+                  <h3 className="about-us-partner-name">
+                    3 Big Wheels
+                  </h3>
+                  <p className="about-us-partner-description">
+                    As a valued partner of Sport Endorse, <strong>3 Big Wheels</strong> is a creative international marketing agency that helps brands expand their reach. Their expertise in blending creativity with strategic planning ensures campaigns not only look great but also deliver measurable results.
+                  </p>
+                  <p className="about-us-partner-description-secondary">
+                    <strong>3 Big Wheels&apos;</strong> mission to empower businesses to thrive globally aligns with Sport Endorse's commitment to excellence, assisting brands in discovering top-tier talent and elevating their marketing campaigns. Together, we are bridging the gap between talent acquisition and international market success.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="about-us-partner-card">
+              <div className="about-us-partner-content">
+                <div className="about-us-partner-logo" style={{ backgroundColor:"black"}}>
+                  <a href="https://thesportingclub.ie/" target="_blank" rel="noopener">
+                    <img src="/images/The Sporting Club Ireland.webp" alt="The Sporting Club Ireland logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
+                  </a>
+                </div>
+                <div className="about-us-partner-info">
+                  <h3 className="about-us-partner-name">
+                    The Sporting Club Ireland
+                  </h3>
+                  <p className="about-us-partner-description">
+                    As a valued partner of Sport Endorse, <strong>The Sporting Club Ireland</strong> is at the forefront of connecting leaders in sport and business. Their community brings together decision-makers, entrepreneurs, and sports personalities to create a platform for meaningful connections and new opportunities.
+                  </p>
+                  <p className="about-us-partner-description-secondary">
+                    Their expertise in building relationships aligns with Sport Endorse's commitment to empowering individuals and brands. By bringing together influential professionals who share a passion for sport, <strong>The Sporting Club Ireland</strong> plays a pivotal role in expanding networks and driving new business ventures. Together, we are reshaping how the sports industry does business.
                   </p>
                 </div>
               </div>
