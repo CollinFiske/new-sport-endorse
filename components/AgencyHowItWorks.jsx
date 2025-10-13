@@ -6,36 +6,30 @@ export default function AgencyHowItWorks() {
     const steps = [
         {
         icon: "testmessage.png",
-        title: "BOOK A DEMO",
+        title: "Expand Your Earning Potential",
         number: "[01]",
-        description: "Once you create an account with us, you can browse thousands of athlete ambassadors and connect easily to find the perfect fit for your client’s marketing needs.",
+        description: "A pipeline of opportunities to help you secure more paid deals.",
         },
         {
         icon: "volume.png",
-        title: "CREATE A NEW OPPORTUNITY",
+        title: "A Partner, Not a Competitor",
         number: "[02]",
-        description: "Share marketing campaign goals with our team of sports heroes, outlining clear objectives, deliverables, and budget to ensure both parties understand their responsibilities.",
+        description: "We're transparent about our commission split on every paid deal.",
         },
         {
         icon: "startwithyellow.png",
-        title: "CHOOSE THE RIGHT CANDIDATE",
+        title: "Streamlined Management & Support",
         number: "[03]",
-        description: "Interested athletes will engage with your opportunity and submit cover letters to make their case. Once you’ve found the perfect fit, book your chosen athlete brand ambassadors in exchange for cash, products, royalty or even equity.",
-        },
-        {
-        icon: "dollarsign.png",
-        title: "COMPLETE THE CAMPAIGN",
-        number: "[04]",
-        description: "Once the campaign is successfully completed, and all deliverables met, Sport Endorse will generate an accounting invoice. From there, you can make a payment directly to the athlete’s bank account using a secure payment process.",
+        description: "A secure platform and dedicated team to help you manage your roster and find more deals.",
         }
     ];
 
   return (
     <section className='bgGrid'>
         <div className="how-it-works">
-            <h2>How it works</h2>
+            <h2>Why Agents Choose Sport Endorse</h2>
             <p className="subtitle">
-                Our innovative platform makes finding the right athlete brand ambassador for your client's marketing campaigns easier than ever before. Here's our simple four-step process to finding the perfect sports star aligning with your client's brand values.
+                We're more than just a platform—we're a dedicated partner.
             </p>
             <div className="how-it-works-content">
                 <div className="steps-container">

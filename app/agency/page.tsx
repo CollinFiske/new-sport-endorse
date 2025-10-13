@@ -8,6 +8,7 @@ import SuccessStories from "@/components/SuccessStories";
 import FAQs from "@/components/FAQs";
 import CalendlyDemo from "@/components/CalendlyDemo";
 import { Metadata } from "next";
+import BrandsGrid from "@/components/BrandsGrid";
 
 
 export const metadata: Metadata = {
@@ -47,21 +48,14 @@ export default function AgencyPage() {
         </div>
         
         <div className="imageContainer">
-          <Image 
-            src="/images/placeholder.png" 
-            alt="Athlete in action"
-            width={600}
-            height={500}
-            className="heroImage"
-            priority
-          />
+          <BrandsGrid variant="5x4" label="Maximise Your Roster’s Earning Potential" />
         </div>
       </div>
     </section>
 
-    <Community />
+    <Community showAgencies={true} />
 
-    <BenefitSection 
+    {/*<BenefitSection 
       title="Book Iconic Sports Ambassadors for Your Clients"
       subtitle="Our user-friendly platform seamlessly connects agencies with top global athletes and ambassadors, reducing the steps to secure exceptional sponsorship deals and amplify your clients' marketing campaigns."
       image="/images/agencyPhonePic.png"
@@ -71,18 +65,14 @@ export default function AgencyPage() {
       item2="Finding the right athletes or influencers for specific campaigns"
       item3="Ensuring authentic brand-athlete alignment"
       color="#F6B014"
-    />
+    />*/}
 
     <AgencyHowItWorks />
 
-    <BusinessSubscription />
+    <CalendlyDemo />
 
     <SuccessStories />
 
-    <CalendlyDemo />
-
-    <FAQs />
-    
     </>
   );
 }

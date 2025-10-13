@@ -1,10 +1,15 @@
 "use client";
 import "../styles/community.css";
 
-export default function Community() {
+interface CommunityProps {
+  showAgencies?: boolean;
+}
+
+export default function Community({ showAgencies = false }: CommunityProps) {
   // Hard-coded values
   const athletes = "6500+";
   const brands = "650+";
+  const agencies = "20+";
   const sports = "150+";
   const nationalities = "100+";
 
@@ -30,11 +35,11 @@ export default function Community() {
         </div>
         <div className="stat-box">
           <div className="stat-content">
-            <img src="/images/statistics/price-tag.png" alt="Brands icon" style={{backgroundColor:"#F6B014"}}/>
-            <h3>{brands.toLocaleString()}</h3>
+            <img src="/images/statistics/price-tag.png" alt={showAgencies ? "Agencies icon" : "Brands icon"} style={{backgroundColor:"#F6B014"}}/>
+            <h3>{showAgencies ? agencies : brands}</h3>
           </div>
           <hr className="stats-bar"/>
-          <p>Brands</p>
+          <p>{showAgencies ? "Agencies" : "Brands"}</p>
         </div>
         <div className="stat-box">
           <div className="stat-content">

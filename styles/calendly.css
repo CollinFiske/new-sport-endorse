@@ -24,28 +24,71 @@
   line-height: 1.2;
 }
 
-.calendly-demo-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 600px;
+.calendly-demo-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
   margin: 0 auto;
-  color: #666;
+  max-width: 900px;
 }
 
-.calendly-demo-widget {
-  max-width: 100%;
-  margin: 0 auto;
+.calendly-demo-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.calendly-inline-widget {
-  min-width: 320px;
-  height: 700px;
-  width: 100%;
+.calendly-demo-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.calendly-demo-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #666;
+  text-align: center;
+}
+
+.calendly-demo-button {
+  display: flex;
+  justify-content: center;
+}
+
+.agenecy-demo-btn {
+  background-color: #2196f3;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 16px 32px;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.demo-btn:hover {
+  background-color: #1976d2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.4);
 }
 
 /* Tablet styles */
@@ -67,8 +110,30 @@
     font-size: 1rem;
   }
   
-  .calendly-inline-widget {
-    height: 650px;
+  .calendly-demo-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .calendly-demo-right {
+    text-align: center;
+  }
+  
+  .calendly-demo-description {
+    text-align: center;
+  }
+  
+  .calendly-demo-button {
+    justify-content: center;
+  }
+  
+  .calendar-image {
+    max-width: 300px;
+  }
+  
+  .agenecy-demo-btn {
+    font-size: 1rem;
+    padding: 14px 28px;
   }
 }
 
@@ -90,17 +155,19 @@
   
   .calendly-demo-description {
     font-size: 0.95rem;
-    padding: 0 1rem;
   }
   
-  .calendly-demo-widget {
-    border-radius: 8px;
+  .calendly-demo-content {
+    gap: 1.5rem;
   }
   
-  .calendly-inline-widget {
-    min-width: 280px;
-    height: 600px;
-    border-radius: 8px;
+  .calendar-image {
+    max-width: 250px;
+  }
+  
+  .agenecy-demo-btn {
+    font-size: 0.95rem;
+    padding: 12px 24px;
   }
 }
 
@@ -121,33 +188,15 @@
   
   .calendly-demo-description {
     font-size: 0.9rem;
-    padding: 0 0.5rem;
     line-height: 1.5;
   }
   
-  .calendly-inline-widget {
-    height: 550px;
-  }
-}
-
-/* Very small mobile styles */
-@media (max-width: 360px) {
-  .calendly-demo-section {
-    padding: 0.75rem 0.25rem;
+  .calendar-image {
+    max-width: 200px;
   }
   
-  .calendly-demo-title {
-    font-size: 1.25rem;
-    word-break: break-word;
-  }
-  
-  .calendly-demo-description {
-    font-size: 0.85rem;
-    padding: 0 0.25rem;
-  }
-  
-  .calendly-inline-widget {
-    min-width: 260px;
-    height: 500px;
+  .agenecy-demo-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
 }
