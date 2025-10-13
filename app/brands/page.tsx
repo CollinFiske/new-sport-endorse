@@ -5,6 +5,7 @@ import SuccessStories from "@/components/SuccessStories";
 import BrandHowItWorks from "@/components/BrandHowItWorks";
 import CalendlyDemo from "@/components/CalendlyDemo";
 import BrandKeyFeatures from "@/components/BrandKeyFeatures";
+import BrandReviews from "@/components/BrandReviews";
 import { Metadata } from "next";
 
 
@@ -33,16 +34,12 @@ export default function BrandsPage() {
           </div>
           
           <h1 className="title">
-            Get the best{' '}
-            talent to<span className="gradientText"> boost</span>{' '}
-            your brand
+            Find the Right <span className="gradientText">Talent </span>
+            for Your Marketing Campaigns
           </h1>
           
           <p className="description">
-            Whatever your needs, our athletes have you covered.
-            We work with over 7000 sporting heroes from over 90 disciplines, all with different passions, interests and beliefs.
-            Whether you need someone passionate about mental health, coffee or nutrition, Sport Endorse&apos;s user-friendly platform
-            makes it easy to find the perfect fit for your next event, guest speaker, or marketing campaign.
+            Sport Endorse&apos;s global platform connects you with thousands of elite athletes and influencers for marketing campaigns and events, making it easy to find perfect talent and deliver real results.
           </p>
         </div>
         
@@ -139,8 +136,6 @@ export default function BrandsPage() {
       </div>
     </section>
 
-    <Community />
-
     {/*<BenefitSection 
       title="Book Iconic Sports Ambassadors"
       subtitle="Our user-friendly platform seamlessly connects agencies with top global athletes and ambassadors, reducing the steps to secure exceptional sponsorship deals and amplify your clients' marketing campaigns."
@@ -158,13 +153,15 @@ export default function BrandsPage() {
 
     <BrandKeyFeatures />
 
-    <BusinessSubscription />
-    
     <SuccessStories />
+
+    <BusinessSubscription />
 
     <CalendlyDemo />
 
     {/*<FAQs /> removed as per doc 9/25*/}
+
+    <BrandReviews />
 
     </>
   );

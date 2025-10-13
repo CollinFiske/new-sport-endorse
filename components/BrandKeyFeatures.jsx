@@ -14,6 +14,11 @@ export default function BrandKeyFeatures() {
       icon: "trophy.png", 
       title: "Precision Targeting",
       description: "Target specific sports, demographics, and markets to find the perfect fit for your campaigns.",
+    },
+    {
+      icon: "heart_icon.png",
+      title: "Dedicated Support",
+      description: "Our customer success team is on hand to ensure your campaigns run smoothly.",
     }
   ];
 
