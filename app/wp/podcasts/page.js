@@ -98,27 +98,6 @@ function PodcastCard({ podcast, index }) {
           </span>
         </div>
         
-        <div style={{ marginBottom: '1rem' }}>
-          <Link href={`/wp/podcasts/${podcast.slug}`}>
-            <button 
-              style={{
-                backgroundColor: '#18A0FB',
-                color: 'white',
-                border: 'none',
-                borderRadius: '6px',
-                padding: '8px 16px',
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                cursor: 'pointer',
-                textTransform: 'uppercase',
-                letterSpacing: '0.5px'
-              }}
-            >
-              Read More
-            </button>
-          </Link>
-        </div>
-        
         <h2 className="blog-post-title">
           {title}
         </h2>
@@ -145,9 +124,29 @@ function PodcastCard({ podcast, index }) {
           {/* Share button removed since server components can't have onClick handlers */}
           <div style={{ color: '#9ca3af', padding: '0.25rem' }}>
             <svg style={{ width: '1.25rem', height: '1.25rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+              <a href={`/wp/podcasts/${podcast.slug}`}>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+              </a>
             </svg>
           </div>
+          <Link href={`/wp/podcasts/${podcast.slug}`}>
+            <button 
+              style={{
+                backgroundColor: '#18A0FB',
+                color: 'white',
+                border: 'none',
+                borderRadius: '6px',
+                padding: '8px 16px',
+                fontSize: '0.875rem',
+                fontWeight: '600',
+                cursor: 'pointer',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px'
+              }}
+            >
+              Read More
+            </button>
+          </Link>
         </div>
       </div>
     </article>
@@ -162,17 +161,17 @@ export default async function PodcastsPage() {
     return (
       <div className="blog-container">
         {/* Header */}
-        <header style={{ backgroundColor: 'white', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem' }}>
+        <header style={{ backgroundColor: 'white', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)', position: 'relative' }}>
+          <div className="podcast-header-container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem' }}>
             <div style={{ textAlign: 'center' }}>
-              <h1 style={{ fontSize: '2.5rem', fontWeight:'800', color: '#111827', marginBottom: '1.25rem' }}>
+              <h1 className="podcast-header-title" style={{ fontSize: '2.5rem', fontWeight:'800', color: '#111827', marginBottom: '1.25rem' }}>
                 The Athlete Sitdown
               </h1>
-              <p style={{ fontSize: '1.125rem', color: '#6b7280', maxWidth: '512px', margin: '0 auto' }}>
+              <p className="podcast-header-description" style={{ fontSize: '1.125rem', color: '#6b7280', maxWidth: '512px', margin: '0 auto' }}>
                 Discover inspiring stories and insights from world-class athletes and sports professionals
               </p>
               
-              <div style={{ display: 'flex', justifyContent: 'center', margin:"0 0 5px" }}>
+              <div className="podcast-platforms-container" style={{ display: 'flex', justifyContent: 'center', margin:"0 0 5px" }}>
                 <a href="https://podcasts.apple.com/ie/podcast/the-athlete-sitdown/id1550095395" target="_blank" rel="noopener noreferrer">
                   <img 
                     src="/images/podcast/apple-podcasts-logo.webp" 
@@ -196,15 +195,35 @@ export default async function PodcastsPage() {
                 </a>
               </div>
               
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', fontSize: '0.875rem', color: '#6b7280' }}>
+              <div className="podcast-info-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', fontSize: '0.875rem', color: '#6b7280', flexWrap: 'wrap' }}>
                 <span style={{ display: 'flex', alignItems: 'center' }}>
                   <svg style={{ width: '1rem', height: '1rem', marginRight: '0.25rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                   </svg>
                   {podcasts.length} Episodes
                 </span>
-                <span>•</span>
+                <span className="podcast-info-separator">•</span>
                 <span>Discover Sport Endorse Podcasts</span>
+                <span className="podcast-info-separator">•</span>
+                <a href="mailto:hello@sportendorse.com?subject=Feature%20me%20on%20a%20podcast!&body=Feature%20me%20on%20a%20podcast!">
+                  <button 
+                    className="feature-me-button"
+                    style={{
+                      backgroundColor: '#18A0FB',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '6px',
+                      padding: '6px 12px',
+                      fontSize: '0.75rem',
+                      fontWeight: '600',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      boxShadow: '0 2px 8px rgba(24, 160, 251, 0.3)',
+                      whiteSpace: 'nowrap'
+                    }}>
+                    Feature Me!
+                  </button>
+                </a>
               </div>
             </div>
           </div>
