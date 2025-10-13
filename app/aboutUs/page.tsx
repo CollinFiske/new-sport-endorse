@@ -44,56 +44,67 @@ export default function AboutUs() {
     {
       name: "Trevor Twamley",
       role: "Founder and CEO",
+      country: "Ireland",
       imageUrl: "/images/teamPhotos/Trevor Twanley, Founder and CEO.png"
     },
     {
       name: "Declan Bourke", 
       role: "Founder and COO",
+      country: "Ireland",
       imageUrl: "/images/teamPhotos/Declan Bourke, Founder and COO.png"
     },
     {
       name: "Manav Bhatia", 
       role: "Global Marketing Manager",
+      country: "Dubai",
       imageUrl: "/images/teamPhotos/Manav Bhatia, Global Marketing Manager.jpg"
     },
     {
       name: "Martin Nutty",
       role: "CDO",
+      country: "USA",
       imageUrl: "/images/teamPhotos/Martin Nutty, CDO.jpeg"
     },
     {
       name: "Allison Melting",
-      role: "Content Marketing Manager", 
+      role: "Content Marketing Manager",
+      country: "USA", 
       imageUrl: "/images/teamPhotos/Allison Melting, Content Marketing Manager.jpeg"
     },
     {
       name: "Liam Forster",
       role: "Lead Generation Manager",
+      country: "Ireland",
       imageUrl: "/images/teamPhotos/Liam Forster, Lead Generation Manager.jpeg"
     },
     {
       name: "Taisa Gwaj",
       role: "Bookkeeper",
+      country: "Ireland",
       imageUrl: "/images/teamPhotos/Taisa Gwaj, Bookkeeper.jpg"
     },
     {
       name: "Collin Fiske",
       role: "Full Stack Developer",
+      country: "USA",
       imageUrl: "/images/teamPhotos/Collin Fiske, Full Stack Developer.jpg"
     },
     {
       name: "Sean Armadà",
       role: "Markets Development Manager",
+      country: "Spain",
       imageUrl: "/images/teamPhotos/Sean Armadà, Markets Development Manager.jpg"
     },
     {
       name: "Jack Sampson",
       role: "Data Analyst",
+      country: "USA",
       imageUrl: "/images/teamPhotos/Jack Sampson, Data Analysist.jpeg"
     },
     {
       name: "Oscar Quinn Hunt",
       role: "Customer Success Manager",
+      country: "Ireland",
       imageUrl: "/images/teamPhotos/Oscar Quinn Hunt, Customer Success Manager.jpeg"
     }
   ];
@@ -181,6 +192,7 @@ export default function AboutUs() {
                 <div className="about-us-team-info">
                   <h3 className="about-us-team-name">{member.name}</h3>
                   <p className="about-us-team-role">{member.role}</p>
+                  <p className="about-us-team-role" style={{marginTop:"5px"}}>{member.country}</p>
                 </div>
               </div>
             ))}
