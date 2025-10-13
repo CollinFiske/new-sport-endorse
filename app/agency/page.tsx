@@ -69,7 +69,7 @@ export default function AgencyPage() {
 
     <AgencyHowItWorks />
 
-    <CalendlyDemo />
+    <CalendlyDemo agencies={true} />
 
     <SuccessStories />
 
