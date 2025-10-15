@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
 import type { Language } from "../context/LanguageContext";
 import "../styles/header.css";
@@ -9,6 +10,8 @@ import translations from "@/utils/translations";
 
 export default function Header() {
   const { language, changeLanguage } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
   const t = translations[language];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -33,6 +36,25 @@ export default function Header() {
     };
   }, [mobileMenuOpen, languageDropdownOpen]);
 
+  // Detect language from URL and update context
+  useEffect(() => {
+    let detectedLanguage: Language = 'en'; // default
+    
+    // Only check the first path segment for language
+    const pathSegments = pathname.split('/').filter(segment => segment);
+    const firstSegment = pathSegments[0];
+    
+    if (firstSegment === 'es') {
+      detectedLanguage = 'es';
+    } else if (firstSegment === 'de') {
+      detectedLanguage = 'de';
+    }
+    
+    if (detectedLanguage !== language) {
+      changeLanguage(detectedLanguage);
+    }
+  }, [pathname, language, changeLanguage]);
+
   const getFlagImage = (lang: string) => {
     switch(lang) {
       case 'en': return '/images/flags/UK_flag.png';
@@ -42,15 +64,56 @@ export default function Header() {
     }
   };
 
+  const getLocalizedPath = (newLanguage: Language, currentPath: string) => {
+    // Remove any existing language prefix
+    let cleanPath = currentPath;
+    
+    // Remove language prefixes (handle multiple potential prefixes)
+    if (cleanPath.startsWith('/es/')) {
+      cleanPath = cleanPath.substring(3);
+    } else if (cleanPath.startsWith('/de/')) {
+      cleanPath = cleanPath.substring(3);
+    }
+    
+    // Ensure cleanPath starts with / if it's not empty
+    if (cleanPath && !cleanPath.startsWith('/')) {
+      cleanPath = '/' + cleanPath;
+    }
+    
+    // If cleanPath is empty, default to home page
+    if (!cleanPath || cleanPath === '/') {
+      cleanPath = '';
+    }
+    
+    // Add new language prefix (except for English which is default)
+    if (newLanguage === 'en') {
+      return cleanPath || '/';
+    } else {
+      return `/${newLanguage}${cleanPath || ''}`;
+    }
+  };
+
   const handleLanguageChange = (newLanguage: Language) => {
     changeLanguage(newLanguage);
+    const newPath = getLocalizedPath(newLanguage, pathname);
+    router.push(newPath);
     setLanguageDropdownOpen(false);
+  };
+
+  const getNavLink = (path: string) => {
+    // Ensure path starts with /
+    const cleanPath = path.startsWith('/') ? path : '/' + path;
+    
+    if (language === 'en') {
+      return cleanPath;
+    }
+    return `/${language}${cleanPath}`;
   };
 
   return (
     <header className="modern-header" ref={headerRef}>
       <div className="logo-area">
-        <Link href="/">
+        <Link href={getNavLink("/")}>
           <img src="/images/sportEndorseLogo.png" alt="sport endorse logo"></img>
           <h3>SPORT ENDORSE</h3>
         </Link>
@@ -65,8 +128,8 @@ export default function Header() {
         <span className="menu-bar" />
       </button>
       <nav className={`main-nav${mobileMenuOpen ? " open" : ""}`}>
-        <Link href="/talent" onClick={() => setMobileMenuOpen(false)}>Talent</Link>
-        <Link href="/brands" onClick={() => setMobileMenuOpen(false)}>Brands</Link>
+        <Link href={getNavLink("/talent")} onClick={() => setMobileMenuOpen(false)}>Talent</Link>
+        <Link href={getNavLink("/brands")} onClick={() => setMobileMenuOpen(false)}>Brands</Link>
         <Link href="/wp/successStories" onClick={() => setMobileMenuOpen(false)}>Success Stories</Link>
         <div 
           className="dropdown"
@@ -75,11 +138,11 @@ export default function Header() {
         >
           <span>Resources {dropdownOpen ? "▴" : "▾"}</span>
           <div className="dropdown-content">
-            <Link href="/agency" onClick={() => setMobileMenuOpen(false)}>Agencies</Link>
-            <Link href="/subscription" onClick={() => setMobileMenuOpen(false)}>Subscription</Link>
+            <Link href={getNavLink("/agency")} onClick={() => setMobileMenuOpen(false)}>Agencies</Link>
+            <Link href={getNavLink("/subscription")} onClick={() => setMobileMenuOpen(false)}>Subscription</Link>
             <Link href="/wp/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
             <Link href="/wp/podcasts" onClick={() => setMobileMenuOpen(false)}>Podcasts</Link>
-            <Link href="/aboutUs" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
+            <Link href={getNavLink("/aboutUs")} onClick={() => setMobileMenuOpen(false)}>About Us</Link>
           </div>
         </div>
       </nav>

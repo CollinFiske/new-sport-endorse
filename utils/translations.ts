@@ -14,6 +14,24 @@ const translations = {
       signUpBtn:"SIGN UP",
       demoBtn:"DEMO FOR BUSINESS",
     },
+    brands: {
+      badge: "FOR BRANDS",
+      title: "Find the Right <span class='gradientText'>Talent</span> for Your Marketing Campaigns",
+      description: "Sport Endorse's global platform connects you with thousands of elite athletes and influencers for marketing campaigns and events, making it easy to find perfect talent and deliver real results.",
+      featuredAthletes: "Featured Athletes",
+      viewAll: "View All",
+      sports: {
+        freestyle: "Freestyle Football",
+        fitness: "Fitness",
+        athletics: "Athletics", 
+        football: "Football",
+        triathlon: "Triathlon"
+      },
+      metadata: {
+        title: "Find Elite Athletes & Sports Influencers for Your Brand | Sport Endorse",
+        description: "Discover elite athletes and sports influencers to enhance your brand's visibility. Sport Endorse helps you manage athlete sponsorships and sports marketing campaigns."
+      }
+    },
     home:{
       welcome: "A new era for <span class='highlight-blue'>brand</span> and <span class='gradientText'>athlete</span> partnerships.",
       description: "Sport Endorse is the platform that brings brands and athletes together for authentic and impactful partnerships. We make it easy for brands to find and collaborate with the right talent, and for athletes to connect directly with brands and secure paid deals.",
@@ -60,6 +78,24 @@ const translations = {
       signUpBtn: "REGISTRARSE",
       demoBtn: "DEMO PARA EMPRESAS",
     },
+    brands: {
+      badge: "PARA MARCAS",
+      title: "Encuentra el <span class='gradientText'>Talento</span> Adecuado para tus Campañas de Marketing",
+      description: "La plataforma global de Sport Endorse te conecta con miles de atletas de élite e influencers para campañas de marketing y eventos, facilitando encontrar el talento perfecto y obtener resultados reales.",
+      featuredAthletes: "Atletas Destacados",
+      viewAll: "Ver Todos",
+      sports: {
+        freestyle: "Fútbol Freestyle",
+        fitness: "Fitness",
+        athletics: "Atletismo",
+        football: "Fútbol",
+        triathlon: "Triatlón"
+      },
+      metadata: {
+        title: "Encuentra Atletas de Élite e Influencers Deportivos para tu Marca | Sport Endorse",
+        description: "Descubre atletas de élite e influencers deportivos para mejorar la visibilidad de tu marca. Sport Endorse te ayuda a gestionar patrocinios de atletas y campañas de marketing deportivo."
+      }
+    },
     home:{
       welcome: "Desbloquea el poder del <span class='gradientText'> mercado </span> de embajadores <span class='highlight-blue'>deportivos</span>",
       description: "Plataforma de marketing deportivo que vincula marcas con atletas de élite e influencers deportivos para la gestión de patrocinios y asociaciones auténticas.",
@@ -92,52 +128,6 @@ const translations = {
       },
     },
   },
-  fr: {
-    header: {
-      talent: "Talent",
-      brand: "Marques",
-      agencies: "Agences",
-      subscription: "Abonnement",
-      resources: "Ressources",
-      blog: "Blog",
-      guides: "Guides",
-      podcast: "Podcast",
-      aboutUs: "À propos de nous",
-      signUpBtn: "INSCRIPTION",
-      demoBtn: "DÉMO POUR ENTREPRISE",
-    },
-    home:{
-      welcome: "Libérez la puissance du <span class='gradientText'> marché </span> des ambassadeurs <span class='highlight-blue'>sportifs</span>",
-      description: "Plateforme de marketing sportif, reliant les marques aux athlètes d'élite et aux influenceurs sportifs pour la gestion du sponsoring et des partenariats authentiques.",
-      tableHeader: "REJOIGNEZ PLUS DE 650 MARQUES ET ATHLÈTES D'ÉLITE DANS DES PARTENARIATS SPORTIFS AUTHENTIQUES",
-      benefitSection: {
-        athlete: {
-          label: "POUR LES ATHLÈTES",
-          title: "Développez votre marque personnelle",
-          subtitle: "Commencez à créer votre marque et à monétiser votre talent en rejoignant notre équipe diversifiée d'athlètes d'élite, passionnés par l'évolution de leur carrière et la connexion avec des marques influentes à travers le monde",
-          bullet1: "Monétisez votre carrière sportive",
-          bullet2: "Connectez-vous directement avec des marques et des agences de relations publiques",
-          bullet3: "Inscrivez-vous en tant qu'athlète vérifié pour des opportunités de sponsoring incroyables",
-        },
-        brand: {
-          label: "POUR LES MARQUES",
-          title: "Connectez-vous avec des stars du sport mondial",
-          subtitle: "Trouver un ambassadeur de marque qui correspond aux valeurs de votre entreprise n'a jamais été aussi simple.",
-          bullet1: "Quels que soient vos besoins, nos athlètes sont là pour vous",
-          bullet2: "Annoncez facilement des opportunités marketing",
-          bullet3: "Connectez-vous instantanément avec des stars du sport",
-        },
-        agency: {
-          label: "POUR LES AGENCES",
-          title: "Réservez des ambassadeurs de marque sportive",
-          subtitle: "Connecter les agences avec des athlètes et ambassadeurs de renommée mondiale garantit de faire passer les campagnes marketing de vos clients au niveau supérieur",
-          bullet1: "Connectez-vous instantanément avec des athlètes d'élite",
-          bullet2: "Accédez à une base de talents diversifiée",
-          bullet3: "Ciblez les ambassadeurs selon le sport, la localisation, le genre, le nombre d'abonnés et plus encore",
-        },
-      },
-    },    
-  },
   de: {
     header: {
       talent: "Talent",
@@ -151,6 +141,24 @@ const translations = {
       aboutUs: "Über uns",
       signUpBtn: "ANMELDEN",
       demoBtn: "DEMO FÜR UNTERNEHMEN",
+    },
+    brands: {
+      badge: "FÜR MARKEN",
+      title: "Finden Sie das richtige <span class='gradientText'>Talent</span> für Ihre Marketing-Kampagnen",
+      description: "Sport Endorses globale Plattform verbindet Sie mit Tausenden von Elite-Athleten und Influencern für Marketing-Kampagnen und Events, wodurch es einfach wird, das perfekte Talent zu finden und echte Ergebnisse zu erzielen.",
+      featuredAthletes: "Vorgestellte Athleten",
+      viewAll: "Alle Anzeigen",
+      sports: {
+        freestyle: "Freestyle Fußball",
+        fitness: "Fitness",
+        athletics: "Leichtathletik",
+        football: "Fußball",
+        triathlon: "Triathlon"
+      },
+      metadata: {
+        title: "Finden Sie Elite-Athleten & Sport-Influencer für Ihre Marke | Sport Endorse",
+        description: "Entdecken Sie Elite-Athleten und Sport-Influencer zur Steigerung der Sichtbarkeit Ihrer Marke. Sport Endorse hilft Ihnen bei der Verwaltung von Athleten-Sponsoring und Sport-Marketing-Kampagnen."
+      }
     },
     home:{
       welcome: "Entfesseln Sie die Macht des <span class='highlight-blue'>Sportbotschafter-</span>-<span class='gradientText'>Marketings</span>",
