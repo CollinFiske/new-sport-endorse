@@ -7,6 +7,8 @@ import BrandsGrid from "@/components/BrandsGrid";
 import { Metadata } from "next";
 import TalentHowItWorks from "@/components/TalentHowItWorks";
 import WhyAthletesChooseUs from "@/components/WhyAthletesChooseUs";
+import BrandReviews from "@/components/BrandReviews";
+import TrustedSportAgencyPartners from "@/components/TrustedSportAgencyPartners";
 
 
 export const metadata: Metadata = {
@@ -111,6 +113,10 @@ export default function TalentPage() {
       </p>
     </div>
     */}
+
+    <BrandReviews />
+
+    <TrustedSportAgencyPartners />
 
     <br/>
     <br/>

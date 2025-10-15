@@ -9,7 +9,7 @@ export default function BrandReviews() {
       id: 3,
       image: "/images/laura siddal.png",
       alt: "Professional headshot of Carlos Rodriguez, football player",
-      text: "I've been a long-time fan of MINI. It's a brand that for me is so British and carries this heritage<br>through its design over the years. I was delighted when through Sport Endorse I was made aFriend of the Brand for MINI UK.",
+      text: "I've been a long-time fan of MINI. It's a brand that for me is so British and carries this heritage through its design over the years. I was delighted when through Sport Endorse I was made a Friend of the Brand for MINI UK.",
       name: "Laura Siddall",
       position: "TRIATHLON  | PROFESSIONAL"
     },
@@ -25,7 +25,7 @@ export default function BrandReviews() {
       id: 2,
       image: "/images/donal healy.png",
       alt: "Donal Healy",
-      text: "We were delighted to work with Sport Endorse on campaigns involving both<br>Jack Carty and Jason Quigley - two outstanding sporting ambassadors for the West and North West of Ireland.",
+      text: "We were delighted to work with Sport Endorse on campaigns involving both Jack Carty and Jason Quigley - two outstanding sporting ambassadors for the West and North West of Ireland.",
       name: "Donal Healy",
       position: "IRELAND WEST AIRPORT | HEAD OF MARKETING, AVIATION BUSINESS DEVELOPMENT & COMMUNICATIONS"
     },
@@ -41,7 +41,7 @@ export default function BrandReviews() {
       id: 5,
       image: "/images/jason quigley.png",
       alt: "Jason Quigley",
-      text: "When you're on the way to being a World Champion you need a good team in your corner<br>and Sport Endorse has been setting me up to knock out the competition for brands I work with....<br>.. plenty more fire power here!",
+      text: "When you're on the way to being a World Champion you need a good team in your corner and Sport Endorse has been setting me up to knock out the competition for brands I work with.... .. plenty more fire power here!",
       name: "Jason Quigley",
       position: "BOXING | PROFESSIONAL & FORMER TEAM IRELAND"
     },
@@ -49,7 +49,7 @@ export default function BrandReviews() {
       id: 6,
       image: "/images/daithi oconnor.png",
       alt: "Daithí O'Connor",
-      text: "Working with Sport Endorse is a pleasure. We've been very happy with the partnerships we've secured and look forward to driving our business<br> in the UK with help from the platform.",
+      text: "Working with Sport Endorse is a pleasure. We've been very happy with the partnerships we've secured and look forward to driving our business  in the UK with help from the platform.",
       name: "Daithí O'Connor",
       position: "REVIVE ACTIVE | MD & FOUNDER"
     }
