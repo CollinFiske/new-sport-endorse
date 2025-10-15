@@ -5,6 +5,7 @@ import SuccessStories from "@/components/SuccessStories";
 import BenefitSection from "@/components/BenefitSection";
 import BrandsGrid from "@/components/BrandsGrid";
 import { Metadata } from "next";
+import TalentHowItWorks from "@/components/TalentHowItWorks";
 
 
 export const metadata: Metadata = {
@@ -55,9 +56,9 @@ export default function TalentPage() {
       </div>
     </section>
 
-    <Community />
+    <TalentHowItWorks />
 
-    {/*<p style={{textAlign:"center", margin:"200px"}}>1 2 3 4 steps here</p>*/}
+    {/*<p style={{textAlign:"center", margin:"200px"}}>1 2 3 4 steps here</p>
     <BenefitSection 
       title="Why Athletes Choose Sport Endorse section"
       subtitle="Download the app and sign up for free!"
@@ -69,9 +70,9 @@ export default function TalentPage() {
       item3="Manage on the Go: Our mobile app allows easy tracking of payments, communication, and deal management from your phone."
       color="#F6B014"
       learnMoreLink="/wp/successStories"
-    />
+    />*/}
 
-    <section style={{ backgroundColor: '#f8f9fa', padding: '2rem', margin: '0 0 2rem' }}>
+    {/*<section style={{ backgroundColor: '#f8f9fa', padding: '2rem', margin: '0 0 2rem' }}>
       <div style={{ display: 'flex', maxWidth: '1200px', margin: '0 auto', alignItems: 'center', gap: '40px', flexWrap: 'wrap' }}>
         <div style={{ flex: '1', minWidth: '300px' }}>
           <BrandsGrid variant="5x4" />
@@ -86,7 +87,7 @@ export default function TalentPage() {
           <AppStores />
         </div>
       </div>
-    </section>
+    </section>  removed as per doc 10/14 */}
 
     <SuccessStories />
 

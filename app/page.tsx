@@ -30,11 +30,11 @@ export default function Page() {
 
   return (
     <>
-
+{/*}
     <video autoPlay muted loop >
       <source src="/videos/placeholder_video.mp4" />
       Your browser does not support the video tag.
-    </video>
+    </video>*/}
     
 
 

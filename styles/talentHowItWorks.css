@@ -1,0 +1,282 @@
+.talent-how-it-works-bg {
+  background-image: 
+    linear-gradient(to right, rgba(173, 216, 230, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(173, 216, 230, 0.3) 1px, transparent 1px);
+  background-size: 70px 70px;
+}
+
+.talent-how-it-works {
+  padding: 40px 35px;  
+  max-width: 1200px;
+  margin: 50px auto 50px auto;
+}
+
+.talent-how-it-works h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.talent-how-it-works .subtitle {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  color: #777;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.talent-steps-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.talent-step-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.talent-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.talent-step-image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.step-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.talent-step-content {
+  padding: 24px 20px;
+}
+
+.talent-step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.talent-step-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  text-align: left;
+}
+
+.talent-step-number {
+  font-size: 12px;
+  color: #bbb;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.talent-divider {
+  border: none;
+  border-top: 1px solid #E5E5E5;
+  margin: 12px 0;
+}
+
+.talent-step-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+.talent-start-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.talent-start-button {
+  background-color: #18A0FB;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-transform: uppercase;
+}
+
+.talent-start-button:hover {
+  background-color: #1976d2;
+}
+
+/* Large tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .talent-how-it-works {
+    padding: 40px 40px;
+    margin: 40px auto;
+  }
+  
+  .talent-steps-container {
+    gap: 20px;
+    max-width: 900px;
+  }
+  
+  .talent-how-it-works h2 {
+    font-size: 2.2rem;
+  }
+  
+  .talent-how-it-works .subtitle {
+    font-size: 15px;
+    margin-bottom: 35px;
+  }
+}
+
+/* Medium tablets - switch to 2x2 grid */
+@media (max-width: 768px) {
+  .talent-steps-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+  }
+  
+  .talent-how-it-works {
+    padding: 30px 30px;
+    margin: 30px auto;
+  }
+  
+  .talent-step-image {
+    height: 140px;
+  }
+  
+  .talent-step-content {
+    padding: 20px 16px;
+  }
+  
+  .talent-how-it-works h2 {
+    font-size: 2rem;
+  }
+  
+  .talent-how-it-works .subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 600px) {
+  .talent-how-it-works {
+    padding: 25px 20px;
+    margin: 25px auto;
+  }
+  
+  .talent-steps-container {
+    gap: 16px;
+    max-width: 500px;
+  }
+  
+  .talent-step-image {
+    height: 120px;
+  }
+  
+  .talent-step-content {
+    padding: 18px 14px;
+  }
+  
+  .talent-step-title {
+    font-size: 15px;
+  }
+  
+  .talent-step-description {
+    font-size: 13px;
+  }
+}
+
+/* Mobile phones - single column */
+@media (max-width: 480px) {
+  .talent-steps-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 350px;
+  }
+  
+  .talent-how-it-works {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+  
+  .talent-step-image {
+    height: 180px;
+  }
+  
+  .talent-step-content {
+    padding: 20px 16px;
+  }
+  
+  .talent-how-it-works h2 {
+    font-size: 1.8rem;
+  }
+  
+  .talent-how-it-works .subtitle {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+  
+  .talent-step-title {
+    font-size: 16px;
+  }
+  
+  .talent-step-description {
+    font-size: 14px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .talent-how-it-works {
+    padding: 15px 10px;
+    margin: 15px auto;
+  }
+  
+  .talent-step-content {
+    padding: 16px 12px;
+  }
+  
+  .talent-how-it-works h2 {
+    font-size: 1.6rem;
+  }
+  
+  .talent-how-it-works .subtitle {
+    font-size: 12px;
+  }
+  
+  .talent-step-title {
+    font-size: 15px;
+  }
+  
+  .talent-step-description {
+    font-size: 13px;
+  }
+}
