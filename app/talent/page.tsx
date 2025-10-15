@@ -6,6 +6,7 @@ import BenefitSection from "@/components/BenefitSection";
 import BrandsGrid from "@/components/BrandsGrid";
 import { Metadata } from "next";
 import TalentHowItWorks from "@/components/TalentHowItWorks";
+import WhyAthletesChooseUs from "@/components/WhyAthletesChooseUs";
 
 
 export const metadata: Metadata = {
@@ -58,6 +59,10 @@ export default function TalentPage() {
 
     <TalentHowItWorks />
 
+    <WhyAthletesChooseUs />
+
+    <SuccessStories />
+
     {/*<p style={{textAlign:"center", margin:"200px"}}>1 2 3 4 steps here</p>
     <BenefitSection 
       title="Why Athletes Choose Sport Endorse section"
@@ -88,8 +93,6 @@ export default function TalentPage() {
         </div>
       </div>
     </section>  removed as per doc 10/14 */}
-
-    <SuccessStories />
 
     {/*<LetsTalk /> removed as per doc 9/25*/}
 

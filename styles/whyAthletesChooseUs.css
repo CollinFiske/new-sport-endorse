@@ -1,0 +1,275 @@
+.why-athletes-section {
+  background: #E5F1FF;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
+.why-athletes-container {
+  width: 100%;
+}
+
+.why-athletes-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1f2937;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.why-athletes-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.why-athletes-text {
+  flex: 1 1 60%;
+  max-width: 600px;
+}
+
+.cta-section {
+  flex: 1 1 35%;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: right;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 350px;
+  align-self: center;
+}
+
+.cta-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+.feature-item {
+  margin-bottom: 2.5rem;
+}
+
+.feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.feature-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.feature-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.feature-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6b7280;
+  margin: 0;
+  padding-left: 40px;
+}
+
+.cta-section {
+  flex: 1 1 35%;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: right;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  align-self: center;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .why-athletes-section {
+    padding: 2.5rem 1.5rem;
+    margin: 40px auto;
+  }
+
+  .why-athletes-title {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .why-athletes-content {
+    gap: 1rem;
+  }
+
+  .feature-title {
+    font-size: 1.3rem;
+  }
+
+  .feature-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+  .why-athletes-section {
+    padding: 2rem 1.5rem;
+    margin: 30px auto;
+    border-radius: 15px;
+  }
+
+  .why-athletes-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .why-athletes-text {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
+  .cta-section {
+    flex: 1 1 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .why-athletes-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-item {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .feature-title {
+    justify-content: flex-start;
+    font-size: 1.2rem;
+  }
+
+  .feature-description {
+    padding-left: 40px;
+    font-size: 0.95rem;
+  }
+
+  .cta-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .why-athletes-section {
+    padding: 1.5rem 1rem;
+    margin: 20px 0.5rem;
+    border-radius: 12px;
+  }
+
+  .why-athletes-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .why-athletes-content {
+    gap: 1.5rem;
+  }
+
+  .feature-item {
+    margin-bottom: 1.75rem;
+    text-align: center;
+  }
+
+  .feature-title {
+    justify-content: center;
+    font-size: 1.1rem;
+    gap: 10px;
+  }
+
+  .feature-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature-description {
+    padding-left: 0;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .cta-section {
+    padding: 1.25rem;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 360px) {
+  .why-athletes-section {
+    padding: 1.25rem 0.75rem;
+    margin: 15px 0.25rem;
+  }
+
+  .why-athletes-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+    gap: 8px;
+  }
+
+  .feature-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .feature-description {
+    font-size: 0.85rem;
+  }
+
+  .cta-section {
+    padding: 0.875rem;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .cta-text {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
