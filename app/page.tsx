@@ -6,7 +6,6 @@ import translations from "../utils/translations";
 import "../styles/home.css";
 import "../styles/benefitSection.css";
 import "../styles/featuredTalents.css";
-import Community from "../components/Community";
 import FeaturedTalents from "@/components/FeaturedTalents";
 import AppStores from "@/components/AppStores";
 import BrandsGrid from "@/components/BrandsGrid";

@@ -359,15 +359,15 @@ export default function PrivacyPolicyPage() {
                     <tr><td>_cfuvid</td><td>hubspot.com</td><td>This cookie is a part of the services provided by Cloudflare - Including load-balancing, deliverance of website content and serving DNS connection for website operators.</td><td>Session</td><td>HTTP Cookie</td></tr>
                     <tr><td>__cf_bm</td><td>hubspot.net</td><td>This cookie is used to distinguish between humans and bots. This is beneficial for the website, in order to make valid reports on the use of their website.</td><td>1 day</td><td>HTTP Cookie</td></tr>
                     <tr><td>1.gif</td><td>imgsct.cookiebot.com</td><td>Used to count the number of sessions to the website, necessary for optimizing CMP product delivery.</td><td>Session</td><td>Pixel Tracker</td></tr>
-                    <tr><td>li_gc</td><td>linkedin.com</td><td>Stores the user's cookie consent state for the current domain</td><td>180 days</td><td>HTTP Cookie</td></tr>
+                    <tr><td>li_gc</td><td>linkedin.com</td><td>Stores the user&apos;s cookie consent state for the current domain</td><td>180 days</td><td>HTTP Cookie</td></tr>
                     <tr><td>m</td><td>m.stripe.com</td><td>Determines the device used to access the website. This allows the website to be formatted accordingly.</td><td>400 days</td><td>HTTP Cookie</td></tr>
                     <tr><td>_ab</td><td>m.stripe.network</td><td>This cookie is necessary for making credit card transactions on the website. The service is provided by Stripe.com which allows online transactions without storing any credit card information.</td><td>Session</td><td>HTML Local Storage</td></tr>
                     <tr><td>_mf</td><td>m.stripe.network</td><td>This cookie is necessary for making credit card transactions on the website. The service is provided by Stripe.com which allows online transactions without storing any credit card information.</td><td>Session</td><td>HTML Local Storage</td></tr>
                     <tr><td>id</td><td>m.stripe.network</td><td></td><td>Session</td><td>HTML Local Storage</td></tr>
                     <tr><td>__cf_bm</td><td>usemessages.com</td><td></td><td>1 day</td><td>HTTP Cookie</td></tr>
                     <tr><td>visitorId</td><td>ws.zoominfo.com</td><td>Preserves users states across page requests.</td><td>1 year</td><td>HTTP Cookie</td></tr>
-                    <tr><td>CookieConsent</td><td>www.sportendorse.com</td><td>Stores the user's cookie consent state for the current domain</td><td>1 year</td><td>HTTP Cookie</td></tr>
-                    <tr><td>elementor</td><td>www.sportendorse.com</td><td>Used in context with the website's WordPress theme. The cookie allows the website owner to implement or change the website's content in real-time.</td><td>Persistent</td><td>HTML Local Storage</td></tr>
+                    <tr><td>CookieConsent</td><td>www.sportendorse.com</td><td>Stores the user&apos;s cookie consent state for the current domain</td><td>1 year</td><td>HTTP Cookie</td></tr>
+                    <tr><td>elementor</td><td>www.sportendorse.com</td><td>Used in context with the website&apos;s WordPress theme. The cookie allows the website owner to implement or change the website&apos;s content in real-time.</td><td>Persistent</td><td>HTML Local Storage</td></tr>
                     <tr><td>wpEmojiSettingsSupports</td><td>www.sportendorse.com</td><td>This cookie is part of a bundle of cookies which serve the purpose of content delivery and presentation. The cookies keep the correct state of font, blog/picture sliders, color themes and other website settings.</td><td>Session</td><td>HTML Local Storage</td></tr>
                     <tr><td>_cfuvid</td><td>zoominfo.com</td><td>This cookie is a part of the services provided by Cloudflare - Including load-balancing, deliverance of website content and serving DNS connection for website operators.</td><td>Session</td><td>HTTP Cookie</td></tr>
                   </tbody>
@@ -391,9 +391,9 @@ export default function PrivacyPolicyPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><td>_calendly_session</td><td>calendly.com</td><td>If consent is given by the visitor, this cookie allows the website to add events into the visitor's calendar.</td><td>21 days</td><td>HTTP Cookie</td></tr>
+                    <tr><td>_calendly_session</td><td>calendly.com</td><td>If consent is given by the visitor, this cookie allows the website to add events into the visitor&apos;s calendar.</td><td>21 days</td><td>HTTP Cookie</td></tr>
                     <tr><td>1</td><td>m.stripe.network</td><td>This cookie is used in conjunction with the payment window - The cookie is necessary for making secure transactions on the website.</td><td>Session</td><td>HTML Local Storage</td></tr>
-                    <tr><td>gt_autoswitch</td><td>www.sportendorse.com</td><td>Determines the preferred language of the visitor. Allows the website to set the preferred language upon the visitor's re-entry.</td><td>Session</td><td>HTML Local Storage</td></tr>
+                    <tr><td>gt_autoswitch</td><td>www.sportendorse.com</td><td>Determines the preferred language of the visitor. Allows the website to set the preferred language upon the visitor&apos;s re-entry.</td><td>Session</td><td>HTML Local Storage</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -415,28 +415,28 @@ export default function PrivacyPolicyPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><td>dd_cookie_test_#</td><td>calendly.com</td><td>Registers data on visitors' website-behaviour. This is used for internal analysis and website optimization.</td><td>1 day</td><td>HTTP Cookie</td></tr>
-                    <tr><td>hjActiveViewportIds</td><td>hotjar.com</td><td>This cookie contains an ID string on the current session. This contains non-personal information on what subpages the visitor enters – this information is used to optimize the visitor's experience.</td><td>Persistent</td><td>HTML Local Storage</td></tr>
-                    <tr><td>hjViewportId</td><td>hotjar.com</td><td>Saves the user's screen size in order to adjust the size of images on the website.</td><td>Session</td><td>HTML Local Storage</td></tr>
-                    <tr><td>__qca</td><td>quantserve.com</td><td>Collects data on the user's visits to the website, such as the number of visits, average time spent on the website and what pages have been loaded with the purpose of generating reports for optimising the website content.</td><td>Persistent</td><td>HTML Local Storage</td></tr>
-                    <tr><td>__qca</td><td>sportendorse.com</td><td>Collects data on the user's visits to the website, such as the number of visits, average time spent on the website and what pages have been loaded with the purpose of generating reports for optimising the website content.</td><td>1 year</td><td>HTTP Cookie</td></tr>
-                    <tr><td>_clck</td><td>sportendorse.com</td><td>Collects data on the user's navigation and behavior on the website. This is used to compile statistical reports and heatmaps for the website owner.</td><td>1 year</td><td>HTTP Cookie</td></tr>
-                    <tr><td>_clsk</td><td>sportendorse.com</td><td>Registers statistical data on users' behaviour on the website. Used for internal analytics by the website operator.</td><td>1 day</td><td>HTTP Cookie</td></tr>
+                    <tr><td>dd_cookie_test_#</td><td>calendly.com</td><td>Registers data on visitors&apos; website-behaviour. This is used for internal analysis and website optimization.</td><td>1 day</td><td>HTTP Cookie</td></tr>
+                    <tr><td>hjActiveViewportIds</td><td>hotjar.com</td><td>This cookie contains an ID string on the current session. This contains non-personal information on what subpages the visitor enters – this information is used to optimize the visitor&apos;s experience.</td><td>Persistent</td><td>HTML Local Storage</td></tr>
+                    <tr><td>hjViewportId</td><td>hotjar.com</td><td>Saves the user&apos;s screen size in order to adjust the size of images on the website.</td><td>Session</td><td>HTML Local Storage</td></tr>
+                    <tr><td>__qca</td><td>quantserve.com</td><td>Collects data on the user&apos;s visits to the website, such as the number of visits, average time spent on the website and what pages have been loaded with the purpose of generating reports for optimising the website content.</td><td>Persistent</td><td>HTML Local Storage</td></tr>
+                    <tr><td>__qca</td><td>sportendorse.com</td><td>Collects data on the user&apos;s visits to the website, such as the number of visits, average time spent on the website and what pages have been loaded with the purpose of generating reports for optimising the website content.</td><td>1 year</td><td>HTTP Cookie</td></tr>
+                    <tr><td>_clck</td><td>sportendorse.com</td><td>Collects data on the user&apos;s navigation and behavior on the website. This is used to compile statistical reports and heatmaps for the website owner.</td><td>1 year</td><td>HTTP Cookie</td></tr>
+                    <tr><td>_clsk</td><td>sportendorse.com</td><td>Registers statistical data on users&apos; behaviour on the website. Used for internal analytics by the website operator.</td><td>1 day</td><td>HTTP Cookie</td></tr>
                     <tr><td>_dlt</td><td>sportendorse.com</td><td>Sets a unique ID for the session. This allows the website to obtain data on visitor behaviour for statistical purposes.</td><td>1 day</td><td>HTTP Cookie</td></tr>
                     <tr><td>_ga</td><td>sportendorse.com</td><td>Registers a unique ID that is used to generate statistical data on how the visitor uses the website.</td><td>2 years</td><td>HTTP Cookie</td></tr>
                     <tr><td>_ga_#</td><td>sportendorse.com</td><td>Used by Google Analytics to collect data on the number of times a user has visited the website as well as dates for the first and most recent visit.</td><td>2 years</td><td>HTTP Cookie</td></tr>
                     <tr><td>_gat</td><td>sportendorse.com</td><td>Used by Google Analytics to throttle request rate</td><td>1 day</td><td>HTTP Cookie</td></tr>
                     <tr><td>_gid</td><td>sportendorse.com</td><td>Registers a unique ID that is used to generate statistical data on how the visitor uses the website.</td><td>1 day</td><td>HTTP Cookie</td></tr>
-                    <tr><td>_hjSession_#</td><td>sportendorse.com</td><td>Collects statistics on the visitor's visits to the website, such as the number of visits, average time spent on the website and what pages have been read.</td><td>1 day</td><td>HTTP Cookie</td></tr>
-                    <tr><td>_hjSessionUser_#</td><td>sportendorse.com</td><td>Collects statistics on the visitor's visits to the website, such as the number of visits, average time spent on the website and what pages have been read.</td><td>1 year</td><td>HTTP Cookie</td></tr>
-                    <tr><td>_hjTLDTest</td><td>sportendorse.com</td><td>Registers statistical data on users' behaviour on the website. Used for internal analytics by the website operator.</td><td>Session</td><td>HTTP Cookie</td></tr>
+                    <tr><td>_hjSession_#</td><td>sportendorse.com</td><td>Collects statistics on the visitor&apos;s visits to the website, such as the number of visits, average time spent on the website and what pages have been read.</td><td>1 day</td><td>HTTP Cookie</td></tr>
+                    <tr><td>_hjSessionUser_#</td><td>sportendorse.com</td><td>Collects statistics on the visitor&apos;s visits to the website, such as the number of visits, average time spent on the website and what pages have been read.</td><td>1 year</td><td>HTTP Cookie</td></tr>
+                    <tr><td>_hjTLDTest</td><td>sportendorse.com</td><td>Registers statistical data on users&apos; behaviour on the website. Used for internal analytics by the website operator.</td><td>Session</td><td>HTTP Cookie</td></tr>
                     <tr><td>_tt_enable_cookie</td><td>sportendorse.com</td><td>Used by the social networking service, TikTok, for tracking the use of embedded services.</td><td>1 year</td><td>HTTP Cookie</td></tr>
-                    <tr><td>ziwsSession</td><td>ws.zoominfo.com</td><td>Collects statistics on the user's visits to the website, such as the number of visits, average time spent on the website and what pages have been read.</td><td>Session</td><td>HTML Local Storage</td></tr>
-                    <tr><td>ziwsSessionId</td><td>ws.zoominfo.com</td><td>Collects statistics on the user's visits to the website, such as the number of visits, average time spent on the website and what pages have been read.</td><td>Session</td><td>HTML Local Storage</td></tr>
-                    <tr><td>__hssc</td><td>www.sportendorse.com</td><td>Identifies if the cookie data needs to be updated in the visitor's browser.</td><td>1 day</td><td>HTTP Cookie</td></tr>
-                    <tr><td>__hssrc</td><td>www.sportendorse.com</td><td>Used to recognise the visitor's browser upon reentry on the website.</td><td>Session</td><td>HTTP Cookie</td></tr>
+                    <tr><td>ziwsSession</td><td>ws.zoominfo.com</td><td>Collects statistics on the user&apos;s visits to the website, such as the number of visits, average time spent on the website and what pages have been read.</td><td>Session</td><td>HTML Local Storage</td></tr>
+                    <tr><td>ziwsSessionId</td><td>ws.zoominfo.com</td><td>Collects statistics on the user&apos;s visits to the website, such as the number of visits, average time spent on the website and what pages have been read.</td><td>Session</td><td>HTML Local Storage</td></tr>
+                    <tr><td>__hssc</td><td>www.sportendorse.com</td><td>Identifies if the cookie data needs to be updated in the visitor&apos;s browser.</td><td>1 day</td><td>HTTP Cookie</td></tr>
+                    <tr><td>__hssrc</td><td>www.sportendorse.com</td><td>Used to recognise the visitor&apos;s browser upon reentry on the website.</td><td>Session</td><td>HTTP Cookie</td></tr>
                     <tr><td>__hstc</td><td>www.sportendorse.com</td><td>Sets a unique ID for the session. This allows the website to obtain data on visitor behaviour for statistical purposes.</td><td>180 days</td><td>HTTP Cookie</td></tr>
-                    <tr><td>client_id</td><td>www.sportendorse.com</td><td>Registers statistical data on users' behaviour on the website. Used for internal analytics by the website operator.</td><td>Session</td><td>HTTP Cookie</td></tr>
+                    <tr><td>client_id</td><td>www.sportendorse.com</td><td>Registers statistical data on users&apos; behaviour on the website. Used for internal analytics by the website operator.</td><td>Session</td><td>HTTP Cookie</td></tr>
                     <tr><td>hubspotutk</td><td>www.sportendorse.com</td><td>Sets a unique ID for the session. This allows the website to obtain data on visitor behaviour for statistical purposes.</td><td>180 days</td><td>HTTP Cookie</td></tr>
                   </tbody>
                 </table>
@@ -468,34 +468,34 @@ export default function PrivacyPolicyPage() {
                     <tr><td>lastExternalReferrerTime</td><td>connect.facebook.net</td><td>Detects how the user reached the website by registering their last URL-address.</td><td>Persistent</td><td>HTML Local Storage</td></tr>
                     <tr><td>topicsLastReferenceTime</td><td>connect.facebook.net</td><td>Collects data on the user across websites - This data is used to make advertisement more relevant.</td><td>Persistent</td><td>HTML Local Storage</td></tr>
                     <tr><td>NID</td><td>google.com</td><td></td><td>6 months</td><td>HTTP Cookie</td></tr>
-                    <tr><td>__ptq.gif</td><td>hubspot.com</td><td>Sends data to the marketing platform Hubspot about the visitor's device and behaviour. Tracks the visitor across devices and marketing channels.</td><td>Session</td><td>Pixel Tracker</td></tr>
+                    <tr><td>__ptq.gif</td><td>hubspot.com</td><td>Sends data to the marketing platform Hubspot about the visitor&apos;s device and behaviour. Tracks the visitor across devices and marketing channels.</td><td>Session</td><td>Pixel Tracker</td></tr>
                     <tr><td>bcookie</td><td>linkedin.com</td><td>Used by the social networking service, LinkedIn, for tracking the use of embedded services.</td><td>1 year</td><td>HTTP Cookie</td></tr>
                     <tr><td>lidc</td><td>linkedin.com</td><td>Used by the social networking service, LinkedIn, for tracking the use of embedded services.</td><td>1 day</td><td>HTTP Cookie</td></tr>
-                    <tr><td>_session_id</td><td>podomatic.com</td><td>Stores visitors' navigation by registering landing pages - This allows the website to present relevant products and/or measure their advertisement efficiency on other websites.</td><td>29 days</td><td>HTTP Cookie</td></tr>
+                    <tr><td>_session_id</td><td>podomatic.com</td><td>Stores visitors&apos; navigation by registering landing pages - This allows the website to present relevant products and/or measure their advertisement efficiency on other websites.</td><td>29 days</td><td>HTTP Cookie</td></tr>
                     <tr><td>_qcses_p-RP-t4aH9Y3U2Z</td><td>quantserve.com</td><td></td><td>Persistent</td><td>HTML Local Storage</td></tr>
-                    <tr><td>mc</td><td>quantserve.com</td><td>Collects data on the user's visits to the website, such as what pages have been loaded. The registered data is used for targeted ads.</td><td>13 months</td><td>HTTP Cookie</td></tr>
+                    <tr><td>mc</td><td>quantserve.com</td><td>Collects data on the user&apos;s visits to the website, such as what pages have been loaded. The registered data is used for targeted ads.</td><td>13 months</td><td>HTTP Cookie</td></tr>
                     <tr><td>_fbp</td><td>sportendorse.com</td><td>Used by Facebook to deliver a series of advertisement products such as real time bidding from third party advertisers.</td><td>3 months</td><td>HTTP Cookie</td></tr>
                     <tr><td>_ttp</td><td>sportendorse.com</td><td>Used by the social networking service, TikTok, for tracking the use of embedded services.</td><td>1 year</td><td>HTTP Cookie</td></tr>
                     <tr><td>_ttp</td><td>tiktok.com</td><td>Used by the social networking service, TikTok, for tracking the use of embedded services.</td><td>1 year</td><td>HTTP Cookie</td></tr>
-                    <tr><td>#-#</td><td>youtube.com</td><td>Used to track user's interaction with embedded content.</td><td>Session</td><td>HTML Local Storage</td></tr>
+                    <tr><td>#-#</td><td>youtube.com</td><td>Used to track user&apos;s interaction with embedded content.</td><td>Session</td><td>HTML Local Storage</td></tr>
                     <tr><td>__Secure-ROLLOUT_TOKEN</td><td>youtube.com</td><td></td><td>180 days</td><td>HTTP Cookie</td></tr>
-                    <tr><td>__Secure-YEC</td><td>youtube.com</td><td>Stores the user's video player preferences using embedded YouTube video</td><td>Session</td><td>HTTP Cookie</td></tr>
+                    <tr><td>__Secure-YEC</td><td>youtube.com</td><td>Stores the user&apos;s video player preferences using embedded YouTube video</td><td>Session</td><td>HTTP Cookie</td></tr>
                     <tr><td>iU5q-!O9@$</td><td>youtube.com</td><td>Registers a unique ID to keep statistics of what videos from YouTube the user has seen.</td><td>Session</td><td>HTML Local Storage</td></tr>
-                    <tr><td>LAST_RESULT_ENTRY_KEY</td><td>youtube.com</td><td>Used to track user's interaction with embedded content.</td><td>Session</td><td>HTTP Cookie</td></tr>
-                    <tr><td>LogsDatabaseV2:V#||LogsRequestsStore</td><td>youtube.com</td><td>Used to track user's interaction with embedded content.</td><td>Persistent</td><td>IndexedDB</td></tr>
+                    <tr><td>LAST_RESULT_ENTRY_KEY</td><td>youtube.com</td><td>Used to track user&apos;s interaction with embedded content.</td><td>Session</td><td>HTTP Cookie</td></tr>
+                    <tr><td>LogsDatabaseV2:V#||LogsRequestsStore</td><td>youtube.com</td><td>Used to track user&apos;s interaction with embedded content.</td><td>Persistent</td><td>IndexedDB</td></tr>
                     <tr><td>remote_sid</td><td>youtube.com</td><td>Necessary for the implementation and functionality of YouTube video-content on the website.</td><td>Session</td><td>HTTP Cookie</td></tr>
                     <tr><td>ServiceWorkerLogsDatabase#SWHealthLog</td><td>youtube.com</td><td>Necessary for the implementation and functionality of YouTube video-content on the website.</td><td>Persistent</td><td>IndexedDB</td></tr>
-                    <tr><td>TESTCOOKIESENABLED</td><td>youtube.com</td><td>Used to track user's interaction with embedded content.</td><td>1 day</td><td>HTTP Cookie</td></tr>
-                    <tr><td>VISITOR_INFO1_LIVE</td><td>youtube.com</td><td>Tries to estimate the users' bandwidth on pages with integrated YouTube videos.</td><td>180 days</td><td>HTTP Cookie</td></tr>
+                    <tr><td>TESTCOOKIESENABLED</td><td>youtube.com</td><td>Used to track user&apos;s interaction with embedded content.</td><td>1 day</td><td>HTTP Cookie</td></tr>
+                    <tr><td>VISITOR_INFO1_LIVE</td><td>youtube.com</td><td>Tries to estimate the users&apos; bandwidth on pages with integrated YouTube videos.</td><td>180 days</td><td>HTTP Cookie</td></tr>
                     <tr><td>YSC</td><td>youtube.com</td><td>Registers a unique ID to keep statistics of what videos from YouTube the user has seen.</td><td>Session</td><td>HTTP Cookie</td></tr>
-                    <tr><td>YtIdbMeta#databases</td><td>youtube.com</td><td>Used to track user's interaction with embedded content.</td><td>Persistent</td><td>IndexedDB</td></tr>
-                    <tr><td>yt-remote-cast-available</td><td>youtube.com</td><td>Stores the user's video player preferences using embedded YouTube video</td><td>Session</td><td>HTML Local Storage</td></tr>
-                    <tr><td>yt-remote-cast-installed</td><td>youtube.com</td><td>Stores the user's video player preferences using embedded YouTube video</td><td>Session</td><td>HTML Local Storage</td></tr>
-                    <tr><td>yt-remote-connected-devices</td><td>youtube.com</td><td>Stores the user's video player preferences using embedded YouTube video</td><td>Persistent</td><td>HTML Local Storage</td></tr>
-                    <tr><td>yt-remote-device-id</td><td>youtube.com</td><td>Stores the user's video player preferences using embedded YouTube video</td><td>Persistent</td><td>HTML Local Storage</td></tr>
-                    <tr><td>yt-remote-fast-check-period</td><td>youtube.com</td><td>Stores the user's video player preferences using embedded YouTube video</td><td>Session</td><td>HTML Local Storage</td></tr>
-                    <tr><td>yt-remote-session-app</td><td>youtube.com</td><td>Stores the user's video player preferences using embedded YouTube video</td><td>Session</td><td>HTML Local Storage</td></tr>
-                    <tr><td>yt-remote-session-name</td><td>youtube.com</td><td>Stores the user's video player preferences using embedded YouTube video</td><td>Session</td><td>HTML Local Storage</td></tr>
+                    <tr><td>YtIdbMeta#databases</td><td>youtube.com</td><td>Used to track user&apos;s interaction with embedded content.</td><td>Persistent</td><td>IndexedDB</td></tr>
+                    <tr><td>yt-remote-cast-available</td><td>youtube.com</td><td>Stores the user&apos;s video player preferences using embedded YouTube video</td><td>Session</td><td>HTML Local Storage</td></tr>
+                    <tr><td>yt-remote-cast-installed</td><td>youtube.com</td><td>Stores the user&apos;s video player preferences using embedded YouTube video</td><td>Session</td><td>HTML Local Storage</td></tr>
+                    <tr><td>yt-remote-connected-devices</td><td>youtube.com</td><td>Stores the user&apos;s video player preferences using embedded YouTube video</td><td>Persistent</td><td>HTML Local Storage</td></tr>
+                    <tr><td>yt-remote-device-id</td><td>youtube.com</td><td>Stores the user&apos;s video player preferences using embedded YouTube video</td><td>Persistent</td><td>HTML Local Storage</td></tr>
+                    <tr><td>yt-remote-fast-check-period</td><td>youtube.com</td><td>Stores the user&apos;s video player preferences using embedded YouTube video</td><td>Session</td><td>HTML Local Storage</td></tr>
+                    <tr><td>yt-remote-session-app</td><td>youtube.com</td><td>Stores the user&apos;s video player preferences using embedded YouTube video</td><td>Session</td><td>HTML Local Storage</td></tr>
+                    <tr><td>yt-remote-session-name</td><td>youtube.com</td><td>Stores the user&apos;s video player preferences using embedded YouTube video</td><td>Session</td><td>HTML Local Storage</td></tr>
                   </tbody>
                 </table>
               </div>

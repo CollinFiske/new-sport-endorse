@@ -1,5 +1,4 @@
 "use client";
-import Community from "@/components/Community";
 import "../../../styles/talent.css";
 import AppStores from "@/components/AppStores";
 import SuccessStories from "@/components/SuccessStories";

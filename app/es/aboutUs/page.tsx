@@ -5,6 +5,12 @@ import translations from "@/utils/translations";
 import Head from 'next/head';
 import { useEffect } from 'react';
 
+interface ValueItem {
+  icon: string;
+  title: string;
+  description: string;
+}
+
 export default function AboutUsES() {
   const { changeLanguage } = useLanguage();
   const t = translations.es.aboutUs;
@@ -143,7 +149,7 @@ export default function AboutUsES() {
           </div>
 
           <div className="about-us-values-grid">
-            {t.values.items.map((value: any, index: number) => (
+            {t.values.items.map((value: ValueItem, index: number) => (
               <div key={index} className="about-us-value-card">
                 <div className="about-us-value-card-content">
                   <div className="about-us-value-icon">

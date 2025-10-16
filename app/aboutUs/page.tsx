@@ -4,6 +4,12 @@ import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
 import Head from 'next/head';
 
+interface ValueItem {
+  icon: string;
+  title: string;
+  description: string;
+}
+
 export default function AboutUs() {
   const { language } = useLanguage();
   const t = translations[language].aboutUs;
@@ -138,7 +144,7 @@ export default function AboutUs() {
           </div>
 
           <div className="about-us-values-grid">
-            {t.values.items.map((value: any, index: number) => (
+            {t.values.items.map((value: ValueItem, index: number) => (
               <div key={index} className="about-us-value-card">
                 <div className="about-us-value-card-content">
                   <div className="about-us-value-icon">
@@ -269,7 +275,7 @@ export default function AboutUs() {
                     As a valued partner of Sport Endorse, <strong>3 Big Wheels</strong> is a creative international marketing agency that helps brands expand their reach. Their expertise in blending creativity with strategic planning ensures campaigns not only look great but also deliver measurable results.
                   </p>
                   <p className="about-us-partner-description-secondary">
-                    <strong>3 Big Wheels&apos;</strong> mission to empower businesses to thrive globally aligns with Sport Endorse's commitment to excellence, assisting brands in discovering top-tier talent and elevating their marketing campaigns. Together, we are bridging the gap between talent acquisition and international market success.
+                    <strong>3 Big Wheels&apos;</strong> mission to empower businesses to thrive globally aligns with Sport Endorse&apos;s commitment to excellence, assisting brands in discovering top-tier talent and elevating their marketing campaigns. Together, we are bridging the gap between talent acquisition and international market success.
                   </p>
                 </div>
               </div>
@@ -290,7 +296,7 @@ export default function AboutUs() {
                     As a valued partner of Sport Endorse, <strong>The Sporting Club Ireland</strong> is at the forefront of connecting leaders in sport and business. Their community brings together decision-makers, entrepreneurs, and sports personalities to create a platform for meaningful connections and new opportunities.
                   </p>
                   <p className="about-us-partner-description-secondary">
-                    Their expertise in building relationships aligns with Sport Endorse's commitment to empowering individuals and brands. By bringing together influential professionals who share a passion for sport, <strong>The Sporting Club Ireland</strong> plays a pivotal role in expanding networks and driving new business ventures. Together, we are reshaping how the sports industry does business.
+                    Their expertise in building relationships aligns with Sport Endorse&apos;s commitment to empowering individuals and brands. By bringing together influential professionals who share a passion for sport, <strong>The Sporting Club Ireland</strong> plays a pivotal role in expanding networks and driving new business ventures. Together, we are reshaping how the sports industry does business.
                   </p>
                 </div>
               </div>

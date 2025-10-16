@@ -2,11 +2,8 @@
 import Community from "@/components/Community";
 import "../../styles/agency.css";
 import Image from 'next/image';
-import BusinessSubscription from "@/components/BusinessSubscription";
-import BenefitSection from "@/components/BenefitSection";
 import AgencyHowItWorks from "@/components/AgencyHowItWorks";
 import SuccessStories from "@/components/SuccessStories";
-import FAQs from "@/components/FAQs";
 import CalendlyDemo from "@/components/CalendlyDemo";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";

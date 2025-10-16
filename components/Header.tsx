@@ -6,13 +6,11 @@ import { useLanguage } from "../context/LanguageContext";
 import type { Language } from "../context/LanguageContext";
 import "../styles/header.css";
 import "../styles/mainLogo.css";
-import translations from "@/utils/translations";
 
 export default function Header() {
   const { language, changeLanguage } = useLanguage();
   const router = useRouter();
   const pathname = usePathname();
-  const t = translations[language];
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
   const [signUpDropdownOpen, setSignUpDropdownOpen] = useState(false);
   const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);

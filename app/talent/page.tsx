@@ -1,9 +1,7 @@
 "use client";
-import Community from "@/components/Community";
 import "../../styles/talent.css";
 import AppStores from "@/components/AppStores";
 import SuccessStories from "@/components/SuccessStories";
-import BenefitSection from "@/components/BenefitSection";
 import BrandsGrid from "@/components/BrandsGrid";
 import TalentHowItWorks from "@/components/TalentHowItWorks";
 import WhyAthletesChooseUs from "@/components/WhyAthletesChooseUs";
