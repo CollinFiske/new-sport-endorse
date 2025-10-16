@@ -1,22 +1,26 @@
 "use client";
 import Image from "next/image";
-import BenefitSection from "../components/BenefitSection";
-import { useLanguage } from "../context/LanguageContext";
-import translations from "../utils/translations";
-import "../styles/home.css";
-import "../styles/benefitSection.css";
-import "../styles/featuredTalents.css";
-import Community from "../components/Community";
+import BenefitSection from "../../components/BenefitSection";
+import { useLanguage } from "../../context/LanguageContext";
+import translations from "../../utils/translations";
+import "../../styles/home.css";
+import "../../styles/benefitSection.css";
+import "../../styles/featuredTalents.css";
+import Community from "../../components/Community";
 import FeaturedTalents from "@/components/FeaturedTalents";
 import AppStores from "@/components/AppStores";
 import BrandsGrid from "@/components/BrandsGrid";
 import { useState, useEffect } from "react";
 import Head from 'next/head';
 
-export default function Page() {
-  const { language } = useLanguage();
-  const t = translations[language];
+export default function HomePageDE() {
+  const { changeLanguage } = useLanguage();
+  const t = translations.de;
   const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    changeLanguage('de');
+  }, [changeLanguage]);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -29,45 +33,22 @@ export default function Page() {
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
-  const homeMetadata = {
-    en: {
-      title: "Sport Endorse | Connect Brands with Elite Athletes & Sports Influencers",
-      description: "Sport Endorse is the platform that brings brands and athletes together for authentic and impactful partnerships. We make it easy for brands to find and collaborate with the right talent, and for athletes to connect directly with brands and secure paid deals."
-    },
-    es: {
-      title: "Sport Endorse | Conecta Marcas con Atletas de Élite e Influencers Deportivos",
-      description: "Sport Endorse es la plataforma que une marcas y atletas para asociaciones auténticas e impactantes. Facilitamos que las marcas encuentren y colaboren con el talento adecuado, y que los atletas se conecten directamente con marcas y aseguren acuerdos pagados."
-    },
-    de: {
-      title: "Sport Endorse | Verbinde Marken mit Elite-Athleten & Sport-Influencern",
-      description: "Sport Endorse ist die Plattform, die Marken und Athleten für authentische und wirkungsvolle Partnerschaften zusammenbringt. Wir machen es einfach für Marken, das richtige Talent zu finden und mit ihm zu kollaborieren, und für Athleten, sich direkt mit Marken zu verbinden und bezahlte Deals zu sichern."
-    }
-  };
-
   return (
     <>
       <Head>
-        <title>{homeMetadata[language].title}</title>
-        <meta name="description" content={homeMetadata[language].description} />
+        <title>Sport Endorse | Verbinde Marken mit Elite-Athleten & Sport-Influencern</title>
+        <meta name="description" content="Sport Endorse ist die Plattform, die Marken und Athleten für authentische und wirkungsvolle Partnerschaften zusammenbringt. Wir machen es einfach für Marken, das richtige Talent zu finden und mit ihm zu kollaborieren, und für Athleten, sich direkt mit Marken zu verbinden und bezahlte Deals zu sichern." />
         <link rel="alternate" hrefLang="en" href="https://www.sportendorse.com/" />
         <link rel="alternate" hrefLang="es" href="https://www.sportendorse.com/es" />
         <link rel="alternate" hrefLang="de" href="https://www.sportendorse.com/de" />
         <link rel="alternate" hrefLang="x-default" href="https://www.sportendorse.com/" />
-        <meta property="og:title" content={homeMetadata[language].title} />
-        <meta property="og:description" content={homeMetadata[language].description} />
+        <meta property="og:title" content="Sport Endorse | Verbinde Marken mit Elite-Athleten & Sport-Influencern" />
+        <meta property="og:description" content="Sport Endorse ist die Plattform, die Marken und Athleten für authentische und wirkungsvolle Partnerschaften zusammenbringt. Wir machen es einfach für Marken, das richtige Talent zu finden und mit ihm zu kollaborieren, und für Athleten, sich direkt mit Marken zu verbinden und bezahlte Deals zu sichern." />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content={language === 'es' ? 'es_ES' : language === 'de' ? 'de_DE' : 'en_US'} />
+        <meta property="og:locale" content="de_DE" />
         <meta property="og:site_name" content="Sport Endorse" />
-        <html lang={language} />
+        <html lang="de" />
       </Head>
-
-{/*}
-    <video autoPlay muted loop >
-      <source src="/videos/placeholder_video.mp4" />
-      Your browser does not support the video tag.
-    </video>*/}
-    
-
 
     <section className="heroSection">
       <div className="container">
@@ -116,7 +97,7 @@ export default function Page() {
       item2={t.home.benefitSection.brand.bullet2}
       item3={t.home.benefitSection.brand.bullet3}
       color="#008cfa" /* was F6B014 */
-      learnMoreLink={language === 'es' ? "/es/brands" : language === 'de' ? "/de/brands" : "/brands"}
+      learnMoreLink="/de/brands"
     />
 
     <BenefitSection
@@ -129,7 +110,7 @@ export default function Page() {
       item2={t.home.benefitSection.athlete.bullet2}
       item3={t.home.benefitSection.athlete.bullet3}
       color="#008cfa"
-      learnMoreLink={language === 'es' ? "/es/talent" : language === 'de' ? "/de/talent" : "/talent"}
+      learnMoreLink="/de/talent"
     />
 
     {/*<BenefitSection
