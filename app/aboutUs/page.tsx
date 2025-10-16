@@ -102,6 +102,12 @@ export default function AboutUs() {
       imageUrl: "/images/teamPhotos/Jack Sampson, Data Analysist.jpeg"
     },
     {
+      name: "Karl Napper",
+      role: "Customer Success Manager",
+      country: "Ireland",
+      imageUrl: "/images/teamPhotos/Karl Napper, Customer Success Manager.jpeg"
+    },
+    {
       name: "Oscar Quinn Hunt",
       role: "Customer Success Manager",
       country: "Ireland",

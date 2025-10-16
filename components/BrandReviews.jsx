@@ -6,7 +6,7 @@ import '../styles/brandReviews.css';
 export default function BrandReviews() {
   const reviews = [
     {
-      id: 3,
+      id: 1,
       image: "/images/laura siddal.png",
       alt: "Professional headshot of Carlos Rodriguez, football player",
       text: "I've been a long-time fan of MINI. It's a brand that for me is so British and carries this heritage through its design over the years. I was delighted when through Sport Endorse I was made a Friend of the Brand for MINI UK.",
@@ -14,7 +14,7 @@ export default function BrandReviews() {
       position: "TRIATHLON  | PROFESSIONAL"
     },
     {
-      id: 1,
+      id: 2,
       image: "/images/homePageTable/shuzgroup_logo.png",
       alt: "Shuz Group company logo",
       text: "Sport Endorse has revolutionised the way ShuzGroup approaches sports brand ambassador marketing. This platform has not only simplified the process of connecting with sports talent across the nation but has also given us the freedom to choose the perfect ambassadors for our brand. This platform has truly enhanced our ability to make informed decisions when selecting sports talent and we would gladly recommend Sport Endorse.",
@@ -22,7 +22,7 @@ export default function BrandReviews() {
       position: "Marketing Director at Shuz Group"
     },
     {
-      id: 2,
+      id: 3,
       image: "/images/donal healy.png",
       alt: "Donal Healy",
       text: "We were delighted to work with Sport Endorse on campaigns involving both Jack Carty and Jason Quigley - two outstanding sporting ambassadors for the West and North West of Ireland.",
@@ -52,6 +52,22 @@ export default function BrandReviews() {
       text: "Working with Sport Endorse is a pleasure. We've been very happy with the partnerships we've secured and look forward to driving our business  in the UK with help from the platform.",
       name: "Daithí O'Connor",
       position: "REVIVE ACTIVE | MD & FOUNDER"
+    },
+    {
+      id: 7,
+      image: "/images/perform_nutrition.png",
+      alt: "Perfom nutrition logo",
+      text: "Sport Endorse is doing fantastic work in looking after athletes and helping them achieve their potential on and off the field. We are delighted to work with the Sport Endorse team to secure brand partnerships that, without them, would not have been possible.",
+      name: "Aoife Cassidy",
+      position: "Marketing Executive"
+    },
+    {
+      id: 8,
+      image: "/images/solestar.png",
+      alt: "Solestar logo",
+      text: "Sport Endorse is a great platform for connecting with brand ambassadors! It's always a plus when a platform is not only effective but also easy to use and has helpful support staff.",
+      name: "Jelena Jelic",
+      position: "Key Account Manager"
     }
   ];
 

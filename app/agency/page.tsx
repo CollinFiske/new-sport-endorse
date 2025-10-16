@@ -8,7 +8,6 @@ import SuccessStories from "@/components/SuccessStories";
 import FAQs from "@/components/FAQs";
 import CalendlyDemo from "@/components/CalendlyDemo";
 import { Metadata } from "next";
-import BrandsGrid from "@/components/BrandsGrid";
 
 
 export const metadata: Metadata = {
@@ -28,25 +27,34 @@ export const metadata: Metadata = {
 export default function AgencyPage() {
   return (
     <>
-    <section className="heroSection">
-      <div className="container">
-        <div className="content">
-          <div className="badge">
+    <section className="agency-heroSection">
+      <div className="agency-container">
+        <div className="agency-content">
+          <div className="agency-badge">
             ⦿ FOR AGENCIES
           </div>
           
-          <h1 className="title">
+          <h1 className="agency-title">
             Book sports {' '}
-            <span className="gradientText">celebrities</span>
+            <span className="agency-gradientText">celebrities</span>
           </h1>
           
-          <p className="description">
+          <p className="agency-description">
             The all-in-one platform for your sports agency to secure and manage paid collaborations at scale. Connect your entire roster with brands seeking authentic partnerships that align with their profiles and passions. 
           </p>
         </div>
         
-        <div className="imageContainer">
-          <BrandsGrid variant="5x4" label="Maximise Your Roster's Earning Potential" />
+        <div className="agency-imageContainer">
+          <div className="agency-dashboard-wrapper">
+            <Image 
+              src="/images/agency_dashboard.png" 
+              alt="Agency Dashboard - Sport Endorse Platform" 
+              width={800} 
+              height={600}
+              className="agency-dashboard-image"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
