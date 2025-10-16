@@ -1,9 +1,8 @@
 "use client";
 import Community from "@/components/Community";
-import "../../styles/talent.css";
+import "../../../styles/talent.css";
 import AppStores from "@/components/AppStores";
 import SuccessStories from "@/components/SuccessStories";
-import BenefitSection from "@/components/BenefitSection";
 import BrandsGrid from "@/components/BrandsGrid";
 import TalentHowItWorks from "@/components/TalentHowItWorks";
 import WhyAthletesChooseUs from "@/components/WhyAthletesChooseUs";
@@ -12,10 +11,15 @@ import TrustedSportAgencyPartners from "@/components/TrustedSportAgencyPartners"
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
 import Head from 'next/head';
+import { useEffect } from 'react';
 
-export default function TalentPage() {
-  const { language } = useLanguage();
-  const t = translations[language];
+export default function TalentPageES() {
+  const { changeLanguage } = useLanguage();
+  const t = translations.es;
+
+  useEffect(() => {
+    changeLanguage('es');
+  }, [changeLanguage]);
 
   return (
     <>
@@ -29,8 +33,9 @@ export default function TalentPage() {
         <meta property="og:title" content={t.talent.metadata.title} />
         <meta property="og:description" content={t.talent.metadata.description} />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content={language === 'en' ? 'en_US' : language === 'es' ? 'es_ES' : 'de_DE'} />
+        <meta property="og:locale" content="es_ES" />
         <meta property="og:site_name" content="Sport Endorse" />
+        <html lang="es" />
       </Head>
 
       <section className="heroSection">

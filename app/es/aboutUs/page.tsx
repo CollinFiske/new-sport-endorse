@@ -1,12 +1,17 @@
 "use client";
-import '../../styles/aboutUs.css';
+import "../../../styles/aboutUs.css";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
 import Head from 'next/head';
+import { useEffect } from 'react';
 
-export default function AboutUs() {
-  const { language } = useLanguage();
-  const t = translations[language].aboutUs;
+export default function AboutUsES() {
+  const { changeLanguage } = useLanguage();
+  const t = translations.es.aboutUs;
+
+  useEffect(() => {
+    changeLanguage('es');
+  }, [changeLanguage]);
 
   const teamMembers = [
     {
@@ -95,9 +100,9 @@ export default function AboutUs() {
         <meta property="og:title" content={t.metadata.title} />
         <meta property="og:description" content={t.metadata.description} />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content={language === 'es' ? 'es_ES' : language === 'de' ? 'de_DE' : 'en_US'} />
+        <meta property="og:locale" content="es_ES" />
         <meta property="og:site_name" content="Sport Endorse" />
-        <html lang={language} />
+        <html lang="es" />
       </Head>
 
     <div className="about-us-container">
@@ -245,10 +250,10 @@ export default function AboutUs() {
                     add-victor
                   </h3>
                   <p className="about-us-partner-description">
-                    As a valued partner of Sport Endorse, <strong>add-victor</strong> is at the forefront of connecting high-performing athletes & military individuals with exceptional career opportunities. With a growing talent pool of over 5,500 individuals, spanning from Olympians, Paralympians, and Student-Athletes to Military Veterans, add-victor plays a pivotal role in bridging the gap between sporting experience, military expertise, and the corporate world - elevating organisations culture & performance.
+                    Como socio valioso de Sport Endorse, <strong>add-victor</strong> está a la vanguardia de conectar atletas de alto rendimiento e individuos militares con oportunidades de carrera excepcionales. Con un grupo de talentos en crecimiento de más de 5,500 individuos, que abarca desde Olímpicos, Paralímpicos y Atletas Estudiantes hasta Veteranos Militares, add-victor juega un papel fundamental en cerrar la brecha entre la experiencia deportiva, la experiencia militar y el mundo corporativo - elevando la cultura y el rendimiento de las organizaciones.
                   </p>
                   <p className="about-us-partner-description-secondary">
-                    <strong>add-victor&apos;s</strong> mission aligns with Sport Endorse commitment to excellence, empowering individuals to find their ideal career paths and assisting brands in discovering top-tier talent that can excel, both in marketing campaigns and within their organisations. Together with Sport Endorse, we&apos;re reshaping the future of talent acquisition and career advancement.
+                    La misión de <strong>add-victor</strong> se alinea con el compromiso de Sport Endorse con la excelencia, empoderando a individuos a encontrar sus caminos de carrera ideales y asistiendo a las marcas en descubrir talento de primer nivel que puede sobresalir, tanto en campañas de marketing como dentro de sus organizaciones. Junto con Sport Endorse, estamos reformando el futuro de la adquisición de talento y el avance profesional.
                   </p>
                 </div>
               </div>
@@ -266,10 +271,10 @@ export default function AboutUs() {
                     3 Big Wheels
                   </h3>
                   <p className="about-us-partner-description">
-                    As a valued partner of Sport Endorse, <strong>3 Big Wheels</strong> is a creative international marketing agency that helps brands expand their reach. Their expertise in blending creativity with strategic planning ensures campaigns not only look great but also deliver measurable results.
+                    Como socio valioso de Sport Endorse, <strong>3 Big Wheels</strong> es una agencia de marketing internacional creativa que ayuda a las marcas a expandir su alcance. Su experiencia en combinar creatividad con planificación estratégica asegura que las campañas no solo se vean geniales sino que también entreguen resultados medibles.
                   </p>
                   <p className="about-us-partner-description-secondary">
-                    <strong>3 Big Wheels&apos;</strong> mission to empower businesses to thrive globally aligns with Sport Endorse's commitment to excellence, assisting brands in discovering top-tier talent and elevating their marketing campaigns. Together, we are bridging the gap between talent acquisition and international market success.
+                    La misión de <strong>3 Big Wheels</strong> de empoderar a los negocios para prosperar globalmente se alinea con el compromiso de Sport Endorse con la excelencia, asistiendo a las marcas en descubrir talento de primer nivel y elevar sus campañas de marketing. Juntos, estamos cerrando la brecha entre la adquisición de talento y el éxito del mercado internacional.
                   </p>
                 </div>
               </div>
@@ -287,10 +292,10 @@ export default function AboutUs() {
                     The Sporting Club Ireland
                   </h3>
                   <p className="about-us-partner-description">
-                    As a valued partner of Sport Endorse, <strong>The Sporting Club Ireland</strong> is at the forefront of connecting leaders in sport and business. Their community brings together decision-makers, entrepreneurs, and sports personalities to create a platform for meaningful connections and new opportunities.
+                    Como socio valioso de Sport Endorse, <strong>The Sporting Club Ireland</strong> está a la vanguardia de conectar líderes en el deporte y los negocios. Su comunidad reúne a tomadores de decisiones, emprendedores y personalidades deportivas para crear una plataforma para conexiones significativas y nuevas oportunidades.
                   </p>
                   <p className="about-us-partner-description-secondary">
-                    Their expertise in building relationships aligns with Sport Endorse's commitment to empowering individuals and brands. By bringing together influential professionals who share a passion for sport, <strong>The Sporting Club Ireland</strong> plays a pivotal role in expanding networks and driving new business ventures. Together, we are reshaping how the sports industry does business.
+                    Su experiencia en construir relaciones se alinea con el compromiso de Sport Endorse de empoderar a individuos y marcas. Al reunir profesionales influyentes que comparten una pasión por el deporte, <strong>The Sporting Club Ireland</strong> juega un papel fundamental en expandir redes e impulsar nuevas empresas comerciales. Juntos, estamos reformando cómo la industria deportiva hace negocios.
                   </p>
                 </div>
               </div>

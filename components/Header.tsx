@@ -235,7 +235,7 @@ export default function Header() {
             Blog
           </Link>
           <Link href="/wp/podcasts" onClick={() => setHamburgerMenuOpen(false)}>
-            Podcast
+            Podcasts
           </Link>
           <Link href={getNavLink("/faqs")} onClick={() => setHamburgerMenuOpen(false)}>
             FAQs
