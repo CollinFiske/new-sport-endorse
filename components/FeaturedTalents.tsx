@@ -1,7 +1,11 @@
 "use client";
 import "../styles/featuredTalents.css";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 export default function FeaturedTalents() {
+  const { language } = useLanguage();
+  const t = translations[language].components.featuredTalents;
   const talents = [
     {
       name: "Fabian Pecher",
@@ -177,8 +181,8 @@ export default function FeaturedTalents() {
     <section className="featured-talents">
       <div className="header">
         <div>
-          <h2>Featured Global Talent</h2>
-          <p>We work with a diverse selection of more than 6,500 global athletes from more than 150 sporting disciplines.</p>
+          <h2>{t.title}</h2>
+          <p>{t.subtitle}</p>
         </div>
       </div>
       
@@ -213,7 +217,7 @@ export default function FeaturedTalents() {
         {/* CTA Card */}
         <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="cta-card">
           <img src="/images/whiteSportEndorseLogo.webp" alt="Sport Endorse logo" />
-          <h3>Sign up to view more!</h3>
+          <h3>{t.viewAll}</h3>
         </a>
       </div>
     </section>

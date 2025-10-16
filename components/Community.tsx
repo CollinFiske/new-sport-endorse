@@ -1,11 +1,16 @@
 "use client";
 import "../styles/community.css";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 interface CommunityProps {
   showAgencies?: boolean;
 }
 
 export default function Community({ showAgencies = false }: CommunityProps) {
+  const { language } = useLanguage();
+  const t = translations[language].components.community;
+  
   // Hard-coded values
   const athletes = "6500+";
   const brands = "650+";
@@ -16,10 +21,10 @@ export default function Community({ showAgencies = false }: CommunityProps) {
   return (
     <section className="statistics-section">
       <div className="live-badge">
-        <span className="dot"></span> Live
+        <span className="dot"></span> {t.liveBadge}
       </div>
       <div className="statistics-header">
-        <h2>Our Growing Community</h2>
+        <h2>{t.title}</h2>
         {/*<p style={{width:"50%"}}>
           Unlock actionable insights with our advanced analytics, empowering you to optimize your sports marketing strategies.
         </p>*/}
@@ -31,7 +36,7 @@ export default function Community({ showAgencies = false }: CommunityProps) {
             <h3>{athletes.toLocaleString()}</h3>
           </div>
           <hr className="stats-bar"/>
-          <p>Athletes</p>
+          <p>{t.labels.athletes}</p>
         </div>
         <div className="stat-box">
           <div className="stat-content">
@@ -39,7 +44,7 @@ export default function Community({ showAgencies = false }: CommunityProps) {
             <h3>{showAgencies ? agencies : brands}</h3>
           </div>
           <hr className="stats-bar"/>
-          <p>{showAgencies ? "Agencies" : "Brands"}</p>
+          <p>{showAgencies ? t.labels.agencies : t.labels.brands}</p>
         </div>
         <div className="stat-box">
           <div className="stat-content">
@@ -47,7 +52,7 @@ export default function Community({ showAgencies = false }: CommunityProps) {
             <h3>{sports.toLocaleString()}</h3>
           </div>
           <hr className="stats-bar"/>
-          <p>Sports Represented</p>
+          <p>{t.labels.sports}</p>
         </div>
         <div className="stat-box">
           <div className="stat-content">
@@ -55,7 +60,7 @@ export default function Community({ showAgencies = false }: CommunityProps) {
             <h3>{nationalities.toLocaleString()}</h3>
           </div>
           <hr className="stats-bar"/>
-          <p>Nationalities</p>
+          <p>{t.labels.nationalities}</p>
         </div>
       </div>
     </section>

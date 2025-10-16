@@ -1,48 +1,53 @@
 "use client";
 import "../styles/whyAthletesChooseUs.css";
 import AppStores from "./AppStores";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 export default function WhyAthletesChooseUs() {
+  const { language } = useLanguage();
+  const t = translations[language].components.whyAthletesChooseUs;
+  
   return (
     <section className="why-athletes-section">
       <div className="why-athletes-container">
-        <h2 className="why-athletes-title">Why Athletes Choose Sport Endorse</h2>
+        <h2 className="why-athletes-title">{t.title}</h2>
         
         <div className="why-athletes-content">
           <div className="why-athletes-text">
             <div className="feature-item">
               <h3 className="feature-title">
                 <img src="/images/dollarsign.png" alt="dollar" className="feature-icon" />
-                Secure Paid Deals
+                {t.features[0].title}
               </h3>
               <p className="feature-description">
-                Access brands seeking talent for brand ambassadorships, social media campaigns, and more.
+                {t.features[0].description}
               </p>
             </div>
 
             <div className="feature-item">
               <h3 className="feature-title">
                 <img src="/images/trophy.png" alt="trophy" className="feature-icon" />
-                Build Your Brand
+                {t.features[1].title}
               </h3>
               <p className="feature-description">
-                Build a standout professional profile. Secure genuine partnerships that support your performance and grow your income, with expert guidance from us.
+                {t.features[1].description}
               </p>
             </div>
 
             <div className="feature-item">
               <h3 className="feature-title">
                 <img src="/images/phone-talent-benefit-pic.png" alt="phone" className="feature-icon" />
-                Manage on the Go
+                {t.features[2].title}
               </h3>
               <p className="feature-description">
-                Our mobile app allows easy tracking of payments, communication, and deal management from your phone.
+                {t.features[2].description}
               </p>
             </div>
           </div>
 
           <div className="cta-section">
-            <p className="cta-text">Download the app and sign up for free</p>
+            <p className="cta-text">{t.ctaText}</p>
             <AppStores />
           </div>
         </div>

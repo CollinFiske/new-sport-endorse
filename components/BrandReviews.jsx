@@ -2,8 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import '../styles/brandReviews.css';
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 export default function BrandReviews() {
+  const { language } = useLanguage();
+  const t = translations[language].components.brandReviews;
   const reviews = [
     {
       id: 1,
@@ -88,10 +92,9 @@ export default function BrandReviews() {
       <div className="reviews-container">
         <div className="reviews-header">
           <div className="quote-icon">"</div>
-          <h2>What Our Clients Say</h2>
+          <h2>{t.title}</h2>
           <p>
-            We know that what we've got to offer is incredible - but if you're
-            still not convinced, see what people we work with say!
+            {t.subtitle}
           </p>
         </div>
 

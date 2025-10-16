@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "../styles/successStories.css";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 function decodeHtmlEntities(text: string) {
   if (!text) return text;
@@ -63,6 +65,9 @@ type Story = {
 };
 
 export default function SuccessStories() {
+  const { language } = useLanguage();
+  const t = translations[language].components.successStories;
+  
   const [stories, setStories] = useState<Story[]>([]);
   const [loading, setLoading] = useState(true);
   const [startIdx, setStartIdx] = useState(0);
@@ -105,8 +110,8 @@ export default function SuccessStories() {
 
   return (
     <section className="success-stories">
-      <h2>Success Stories</h2>
-      <p>Learn how brands and athletes have been winning together</p>
+      <h2>{t.title}</h2>
+      <p>{t.subtitle}</p>
       <div className="stories-carousel-container">
         <button
           className="carousel-arrow left"
@@ -118,9 +123,9 @@ export default function SuccessStories() {
         </button>
         <div className="stories-scroll">
           {loading ? (
-            <div>Loading...</div>
+            <div>{t.loading}</div>
           ) : stories.length === 0 ? (
-            <div>No stories found.</div>
+            <div>{t.noStories}</div>
           ) : (
             visibleStories.map((story, i) => (
               <div className={`success-card${i === Math.floor(visibleCount / 2) ? " active" : " faded"}`} key={story.id}>
@@ -136,7 +141,7 @@ export default function SuccessStories() {
                   <p className="success-text">
                     {decodeHtmlEntities(story.yoast_head_json?.description ?? "") || "No summary available."}
                   </p>
-                  <a className="read-more" href="wp/succcessStories" >READ MORE →</a>
+                  <a className="read-more" href="wp/succcessStories" >{t.readMore}</a>
                 </div>
               </div>
             ))

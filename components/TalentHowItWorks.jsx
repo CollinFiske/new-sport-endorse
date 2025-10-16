@@ -1,40 +1,45 @@
 "use client"
 import '../styles/talentHowItWorks.css';
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 export default function TalentHowItWorks() {
+  const { language } = useLanguage();
+  const t = translations[language].components.talentHowItWorks;
+  
   const steps = [
     {
       image: "03.png",
-      title: "Create Your Profile",
+      title: t.steps[0].title,
       number: "[01]",
-      description: "Build a compelling athlete profile showcasing your achievements, stats, and personal brand to attract sponsors."
+      description: t.steps[0].description
     },
     {
       image: "04.png", 
-      title: "Browse Opportunities",
+      title: t.steps[1].title,
       number: "[02]",
-      description: "Explore brand partnerships, sponsorship deals, and collaboration opportunities that match your interests."
+      description: t.steps[1].description
     },
     {
       image: "05.png",
-      title: "Connect & Negotiate", 
+      title: t.steps[2].title, 
       number: "[03]",
-      description: "Connect directly with brands, discuss partnership terms, and negotiate deals that work for both parties."
+      description: t.steps[2].description
     },
     {
       image: "06.png",
-      title: "Get Paid",
+      title: t.steps[3].title,
       number: "[04]", 
-      description: "Complete campaigns, deliver results, and receive secure payments through our trusted platform."
+      description: t.steps[3].description
     }
   ];
 
   return (
     <section className='talent-how-it-works-bg'>
       <div className="talent-how-it-works">
-        <h2>How It Works</h2>
+        <h2>{t.title}</h2>
         <p className="subtitle">
-          Join thousands of elite athletes who are monetizing their personal brand and building meaningful partnerships with top brands worldwide.
+          {t.subtitle}
         </p>
         <div className="talent-steps-container">
           {steps.map((step, index) => (
@@ -54,7 +59,7 @@ export default function TalentHowItWorks() {
           ))}
         </div>
         <a target="_blank" href="https://platform.sportendorse.com/signup/talent" className="talent-start-link">
-          <button className="talent-start-button">START NOW</button>
+          <button className="talent-start-button">{t.buttonText}</button>
         </a>
       </div>
     </section>

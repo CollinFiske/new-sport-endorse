@@ -1,19 +1,23 @@
 "use client";
 import "../styles/businessSubscription.css";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 export default function BusinessSubscription() {
+  const { language } = useLanguage();
+  const t = translations[language].components.businessSubscription;
   const features = [
-    { name: "Access to Sport Endorse platform", trial: true, quarterly: true, annual: true },
-    { name: "Suite of tools and filters to support your search", trial: true, quarterly: true, annual: true },
-    { name: "Talent ID verification included", trial: true, quarterly: true, annual: true },
-    { name: "Built-in instant messaging feature", trial: true, quarterly: true, annual: true },
-    { name: "Dedicated onboarding support", trial: true, quarterly: true, annual: true },
-    { name: "Target unlimited countries", trial: false, quarterly: true, annual: true },
-    { name: "Access unlimited athletes' profiles", trial: false, quarterly: true, annual: true },
-    { name: "Share opportunities with all talent in any market", trial: false, quarterly: true, annual: true },
+    { name: t.features[0], trial: true, quarterly: true, annual: true },
+    { name: t.features[1], trial: true, quarterly: true, annual: true },
+    { name: t.features[2], trial: true, quarterly: true, annual: true },
+    { name: t.features[3], trial: true, quarterly: true, annual: true },
+    { name: t.features[4], trial: true, quarterly: true, annual: true },
+    { name: t.features[5], trial: false, quarterly: true, annual: true },
+    { name: t.features[6], trial: false, quarterly: true, annual: true },
+    { name: t.features[7], trial: false, quarterly: true, annual: true },
     //{ name: "Post unlimited number of opportunities", trial: false, quarterly: true, annual: true },
-    { name: "Full access to advanced tools and search filters", trial: false, quarterly: true, annual: true },
-    { name: "Monthly check-ins with Dedicated Customer Success Manager", trial: false, quarterly: false, annual: true }
+    { name: t.features[8], trial: false, quarterly: true, annual: true },
+    { name: t.features[9], trial: false, quarterly: false, annual: true }
   ];
 
   return (
@@ -22,22 +26,22 @@ export default function BusinessSubscription() {
         <div className="sub-top-content-row">
           <div className="sub-top-left">
             <h2 className="sub-title">
-              Business Subscription
+              {t.title}
             </h2>
             <p className="sub-description">
-              Get started and harness the power of collaboration with elite athletes that are all about performance. Pay easily and automatically either every quarterly, or annually. Subscribe below!
+              {t.subtitle}
             </p>
           </div>
           <div className="sub-top-right">
             <div className="sub-consultation-section">
               <div className="sub-consultation-text">
-                <h3>ANY QUESTIONS LEFT?</h3>
-                <p>Schedule a 15-min Call with Our Expert Team of Sports Marketing!</p>
+                <h3>{t.consultation.title}</h3>
+                <p>{t.consultation.subtitle}</p>
               </div>
             </div>
             <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
               <button className="sub-schedule-button">
-                SCHEDULE
+                {t.consultation.buttonText}
                 <svg className="faq-schedule-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7l10 10M7 17l10-10" />
                 </svg>

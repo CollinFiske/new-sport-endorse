@@ -1,41 +1,45 @@
 "use client"
 import '../styles/howItWorks.css';
-
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 export default function BrandHowItWorks() {
+    const { language } = useLanguage();
+    const t = translations[language].components.brandHowItWorks;
+    
     const steps = [
         {
         icon: "testmessage.png",
-        title: "Create Profile",
+        title: t.steps[0].title,
         number: "[01]",
-        description: "Tell us about your brand, industry, and location to build a profile that attracts the right talent.",
+        description: t.steps[0].description,
         },
         {
         icon: "volume.png",
-        title: "Launch Opportunity",
+        title: t.steps[1].title,
         number: "[02]",
-        description: "Describe the athletes you want to collaborate with and outline the requirements of your partnership.",
+        description: t.steps[1].description,
         },
         {
         icon: "startwithyellow.png",
-        title: "Choose Athletes ",
+        title: t.steps[2].title,
         number: "[03]",
-        description: "Chat with athletes, discuss the details, and select the ones who align with your brand and campaign goals.",
+        description: t.steps[2].description,
         },
         {
         icon: "dollarsign.png",
-        title: "Complete Campaign",
+        title: t.steps[3].title,
         number: "[04]",
-        description: "After confirming the partnership, you can handle payments and finalize the deal securely through the platform.",
+        description: t.steps[3].description,
         }
     ];
 
   return (
     <section className='bgGrid'>
         <div className="how-it-works">
-            <h2>How it works</h2>
+            <h2>{t.title}</h2>
             <p className="subtitle">
-                Our innovative platform makes finding the right athlete brand ambassador for your client's marketing campaigns easier than ever before. Here's our simple four-step process to finding the perfect sports star aligning with your client's brand values.
+                {t.subtitle}
             </p>
             <div className="how-it-works-content">
                 <div className="steps-container">
@@ -56,7 +60,7 @@ export default function BrandHowItWorks() {
                 ))}
                 </div>
                 <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="start-link">
-                    <button className="start-button">START NOW</button>
+                    <button className="start-button">{t.buttonText}</button>
                 </a>
             </div>
         </div>

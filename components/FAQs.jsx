@@ -3,8 +3,13 @@
 import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import "../styles/faqs.css"
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 export default function FAQs(){
+    const { language } = useLanguage();
+    const t = translations[language].components.faqs;
+    
     const [openItems, setOpenItems] = useState({});
 
   const toggleItem = (index) => {
@@ -14,7 +19,9 @@ export default function FAQs(){
     }));
   };
 
-  const faqItems = [
+  const faqItems = t.questions;
+
+  const fullFaqItems = [
     {
       question: "HOW MUCH DOES IT COST?",
       answer: "A subscription for brands/companies/agencies costs $/£/€ 700 (+VAT if applicable) for 3 months, or $/£/€ 1,799 (+VAT if applicable) for 12months. The final cost for an opportunity is the budget that you set for the opportunity (+VAT if applicable), plus any relevant bank processing charges."
@@ -37,7 +44,7 @@ export default function FAQs(){
     },
     {
       question: "CAN I RESET MY PASSWORD?",
-      answer: "Yes, you can reset your password – by using the ‘Forgot Password?’ link on the login page – at anytime, and in fact we recommended that you do so at least once per quarter."
+      answer: "Yes, you can reset your password - by using the 'Forgot Password?' link on the login page - at anytime, and in fact we recommended that you do so at least once per quarter."
     },
     {
       question: "CAN I RESET MY PROFILE?",
@@ -64,6 +71,9 @@ export default function FAQs(){
       answer: "Currently no, but this ability is in the development road map for a future release. However, when creating an opportunity you can target athletes based on various different factors such as their sport, gender, age and country. You can also ‘favourite’ Talent to keep track of what profiles you think might be suitable for your needs."
     }
   ];
+
+  // Use the main FAQ items from translations
+  const faqItemsToRender = faqItems;
 
   return (
     <div className="faq-container">
@@ -97,7 +107,7 @@ export default function FAQs(){
         
         <div className="faq-right-section">
           <div className="faq-items-list">
-            {faqItems.map((item, index) => (
+            {faqItemsToRender.map((item, index) => (
               <div key={index} className="faq-item">
                 <button 
                   onClick={() => toggleItem(index)}

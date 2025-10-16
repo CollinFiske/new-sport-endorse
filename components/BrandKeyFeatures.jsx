@@ -2,31 +2,36 @@
 
 "use client"
 import '../styles/brandKeyFeatures.css';
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 export default function BrandKeyFeatures() {
+  const { language } = useLanguage();
+  const t = translations[language].components.brandKeyFeatures;
+  
   const features = [
     {
       icon: "location.png",
-      title: "Global Reach",
-      description: "Book multiple athletes, in multiple markets, and pay in multiple currencies—all through one platform.",
+      title: t.features[0].title,
+      description: t.features[0].description,
     },
     {
       icon: "trophy.png", 
-      title: "Precision Targeting",
-      description: "Target specific sports, demographics, and markets to find the perfect fit for your campaigns.",
+      title: t.features[1].title,
+      description: t.features[1].description,
     },
     {
       icon: "heart_icon.png",
-      title: "Dedicated Support",
-      description: "Our customer success team is on hand to ensure your campaigns run smoothly.",
+      title: t.features[2].title,
+      description: t.features[2].description,
     }
   ];
 
   return (
     <section className="brand-key-features">
       <div className="features-container">
-        <h2>Key Features</h2>
-        <p>Discover what makes Sport Endorse the ultimate platform for connecting brands with elite athletes worldwide.</p>
+        <h2>{t.title}</h2>
+        <p>{t.subtitle}</p>
         <div className="features-grid">
           {features.map((feature, index) => (
             <div className="feature-card" key={index}>

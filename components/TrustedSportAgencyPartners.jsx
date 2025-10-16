@@ -1,8 +1,12 @@
 "use client";
 import { useState } from "react";
 import "../styles/trustedSportAgencyPartners.css";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 export default function TrustedSportAgencyPartners() {
+  const { language } = useLanguage();
+  const t = translations[language].components.trustedSportAgencyPartners;
   const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -53,24 +57,22 @@ export default function TrustedSportAgencyPartners() {
       <section className="trusted-partners-section">
         <div className="trusted-partners-container">
           <div className="trusted-partners-label">
-            <span>◉ TRUSTED AGENCY PARTNERS</span>
+            <span>◉ {t.label}</span>
           </div>
           
           <h2 className="trusted-partners-title">
-            Need an Agent or Legal Support?
+            {t.title}
           </h2>
           
           <p className="trusted-partners-description">
-            Navigating contracts and legal issues can be complex. While we only focus on commercial opportunities, 
-            we can connect you with trusted sports agency partners in your sport and region to help with your career 
-            and contracts. Let us know your sport and region, and we'll make a referral.
+            {t.description}
           </p>
 
           <button 
             className="referral-button"
             onClick={() => setShowPopup(true)}
           >
-            Get a Referral
+            {t.buttonText}
           </button>
         </div>
       </section>
@@ -83,15 +85,15 @@ export default function TrustedSportAgencyPartners() {
               ×
             </button>
             
-            <h3 className="popup-title">Get Agency Referral</h3>
+            <h3 className="popup-title">{t.popup.title}</h3>
             <p className="popup-subtitle">
-              Please fill out the form below and we'll connect you with trusted agency partners.
+              {t.popup.subtitle}
             </p>
 
             <form onSubmit={handleSubmit} className="referral-form">
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="firstName">First Name *</label>
+                  <label htmlFor="firstName">{t.popup.form.firstName} *</label>
                   <input
                     type="text"
                     id="firstName"
@@ -102,7 +104,7 @@ export default function TrustedSportAgencyPartners() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="surname">Surname *</label>
+                  <label htmlFor="surname">{t.popup.form.surname} *</label>
                   <input
                     type="text"
                     id="surname"
@@ -116,7 +118,7 @@ export default function TrustedSportAgencyPartners() {
 
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="email">Email *</label>
+                  <label htmlFor="email">{t.popup.form.email} *</label>
                   <input
                     type="email"
                     id="email"
@@ -127,7 +129,7 @@ export default function TrustedSportAgencyPartners() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="phoneNumber">Phone Number</label>
+                  <label htmlFor="phoneNumber">{t.popup.form.phoneNumber}</label>
                   <input
                     type="tel"
                     id="phoneNumber"
@@ -140,22 +142,22 @@ export default function TrustedSportAgencyPartners() {
 
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="gender">Gender</label>
+                  <label htmlFor="gender">{t.popup.form.gender}</label>
                   <select
                     id="gender"
                     name="gender"
                     value={formData.gender}
                     onChange={handleInputChange}
                   >
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                    <option value="prefer-not-to-say">Prefer not to say</option>
+                    <option value="">{t.popup.form.selectGender}</option>
+                    <option value="male">{t.popup.form.male}</option>
+                    <option value="female">{t.popup.form.female}</option>
+                    <option value="other">{t.popup.form.other}</option>
+                    <option value="prefer-not-to-say">{t.popup.form.preferNotToSay}</option>
                   </select>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="nationality">Nationality</label>
+                  <label htmlFor="nationality">{t.popup.form.nationality}</label>
                   <input
                     type="text"
                     id="nationality"
@@ -169,7 +171,7 @@ export default function TrustedSportAgencyPartners() {
 
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="currentLocation">Current Location *</label>
+                  <label htmlFor="currentLocation">{t.popup.form.currentLocation} *</label>
                   <input
                     type="text"
                     id="currentLocation"
@@ -181,7 +183,7 @@ export default function TrustedSportAgencyPartners() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="sport">Sport *</label>
+                  <label htmlFor="sport">{t.popup.form.sport} *</label>
                   <input
                     type="text"
                     id="sport"
@@ -195,7 +197,7 @@ export default function TrustedSportAgencyPartners() {
               </div>
 
               <div className="form-group full-width">
-                <label htmlFor="dateOfBirth">Date of Birth</label>
+                <label htmlFor="dateOfBirth">{t.popup.form.dateOfBirth}</label>
                 <input
                   type="date"
                   id="dateOfBirth"
@@ -206,7 +208,7 @@ export default function TrustedSportAgencyPartners() {
               </div>
 
               <button type="submit" className="submit-button">
-                Submit Request
+                {t.popup.form.submitButton}
               </button>
             </form>
           </div>

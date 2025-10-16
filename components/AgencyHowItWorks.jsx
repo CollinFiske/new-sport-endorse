@@ -1,35 +1,39 @@
 "use client"
 import '../styles/howItWorks.css';
-
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 export default function AgencyHowItWorks() {
+    const { language } = useLanguage();
+    const t = translations[language].components.agencyHowItWorks;
+    
     const steps = [
         {
         icon: "testmessage.png",
-        title: "Expand Your Earning Potential",
+        title: t.steps[0].title,
         number: "[01]",
-        description: "A pipeline of opportunities to help you secure more paid deals.",
+        description: t.steps[0].description,
         },
         {
         icon: "volume.png",
-        title: "A Partner, Not a Competitor",
+        title: t.steps[1].title,
         number: "[02]",
-        description: "We're transparent about our commission split on every paid deal.",
+        description: t.steps[1].description,
         },
         {
         icon: "startwithyellow.png",
-        title: "Streamlined Management & Support",
+        title: t.steps[2].title,
         number: "[03]",
-        description: "A secure platform and dedicated team to help you manage your roster and find more deals.",
+        description: t.steps[2].description,
         }
     ];
 
   return (
     <section className='bgGrid'>
         <div className="how-it-works">
-            <h2>Why Agents Choose Sport Endorse</h2>
+            <h2>{t.title}</h2>
             <p className="subtitle">
-                We're more than just a platform—we're a dedicated partner.
+                {t.subtitle}
             </p>
             <div className="how-it-works-content">
                 <div className="steps-container">
@@ -50,7 +54,7 @@ export default function AgencyHowItWorks() {
                 ))}
                 </div>
                 <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="start-link">
-                    <button className="start-button">START NOW</button>
+                    <button className="start-button">{t.buttonText}</button>
                 </a>
             </div>
         </div>
