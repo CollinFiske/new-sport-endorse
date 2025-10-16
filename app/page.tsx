@@ -72,20 +72,8 @@ export default function Page() {
 
     <BrandsGrid variant={isMobile ? "5x4" : "8x4"} label={t.home.tableHeader} />
 
-    <Community />
-
-    <BenefitSection
-      title={t.home.benefitSection.athlete.title}
-      subtitle={t.home.benefitSection.athlete.subtitle}
-      image="/images/talentBenefitPic.png"
-      label={t.home.benefitSection.athlete.label}
-      background="#E5F1FF"
-      item1={t.home.benefitSection.athlete.bullet1}
-      item2={t.home.benefitSection.athlete.bullet2}
-      item3={t.home.benefitSection.athlete.bullet3}
-      color="#008cfa"
-      learnMoreLink="/talent"
-    />
+    <br/>
+    <FeaturedTalents />
 
     <BenefitSection
       title={t.home.benefitSection.brand.title}
@@ -98,6 +86,19 @@ export default function Page() {
       item3={t.home.benefitSection.brand.bullet3}
       color="#008cfa" /* was F6B014 */
       learnMoreLink="/brands"
+    />
+
+    <BenefitSection
+      title={t.home.benefitSection.athlete.title}
+      subtitle={t.home.benefitSection.athlete.subtitle}
+      image="/images/talentBenefitPic.png"
+      label={t.home.benefitSection.athlete.label}
+      background="#E5F1FF"
+      item1={t.home.benefitSection.athlete.bullet1}
+      item2={t.home.benefitSection.athlete.bullet2}
+      item3={t.home.benefitSection.athlete.bullet3}
+      color="#008cfa"
+      learnMoreLink="/talent"
     />
 
     {/*<BenefitSection
@@ -114,9 +115,6 @@ export default function Page() {
 
     {/*<BusinessSubscription /> removed as per doc 9/25*/}
 
-    <FeaturedTalents />
-
-    <br/><br/>
     
     {/*<SuccessStories /> removed as per doc 9/25*/}
 

@@ -13,16 +13,32 @@ export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const t = translations[language];
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
+  const [signUpDropdownOpen, setSignUpDropdownOpen] = useState(false);
   const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Initial check
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
-        if (mobileMenuOpen) {
-          setMobileMenuOpen(false);
+        if (hamburgerMenuOpen) {
+          setHamburgerMenuOpen(false);
+        }
+        if (signUpDropdownOpen) {
+          setSignUpDropdownOpen(false);
         }
         if (languageDropdownOpen) {
           setLanguageDropdownOpen(false);
@@ -34,7 +50,7 @@ export default function Header() {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [mobileMenuOpen, languageDropdownOpen]);
+  }, [hamburgerMenuOpen, signUpDropdownOpen, languageDropdownOpen]);
 
   // Detect language from URL and update context
   useEffect(() => {
@@ -112,41 +128,24 @@ export default function Header() {
 
   return (
     <header className="modern-header" ref={headerRef}>
+      {/* Logo/Home Button - Far left */}
       <div className="logo-area">
         <Link href={getNavLink("/")}>
           <img src="/images/sportEndorseLogo.png" alt="sport endorse logo"></img>
           <h3>SPORT ENDORSE</h3>
         </Link>
       </div>
-      <button
-        className="mobile-menu-icon"
-        aria-label="Open menu"
-        onClick={() => setMobileMenuOpen((open) => !open)}
-      >
-        <span className="menu-bar" />
-        <span className="menu-bar" />
-        <span className="menu-bar" />
-      </button>
-      <nav className={`main-nav${mobileMenuOpen ? " open" : ""}`}>
-        <Link href={getNavLink("/talent")} onClick={() => setMobileMenuOpen(false)}>Talent</Link>
-        <Link href={getNavLink("/brands")} onClick={() => setMobileMenuOpen(false)}>Brands</Link>
-        <Link href="/wp/successStories" onClick={() => setMobileMenuOpen(false)}>Success Stories</Link>
-        <div 
-          className="dropdown"
-          onMouseEnter={() => setDropdownOpen(true)}
-          onMouseLeave={() => setDropdownOpen(false)}
-        >
-          <span>Resources {dropdownOpen ? "▴" : "▾"}</span>
-          <div className="dropdown-content">
-            <Link href={getNavLink("/agency")} onClick={() => setMobileMenuOpen(false)}>Agencies</Link>
-            <Link href={getNavLink("/subscription")} onClick={() => setMobileMenuOpen(false)}>Subscription</Link>
-            <Link href="/wp/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-            <Link href="/wp/podcasts" onClick={() => setMobileMenuOpen(false)}>Podcasts</Link>
-            <Link href={getNavLink("/aboutUs")} onClick={() => setMobileMenuOpen(false)}>About Us</Link>
-          </div>
-        </div>
+
+      {/* Main Navigation */}
+      <nav className="main-nav">
+        <Link href={getNavLink("/talent")}>Talent</Link>
+        <Link href={getNavLink("/brands")}>Brand</Link>
+        <Link href={getNavLink("/agency")}>Sports Agency</Link>
       </nav>
+
+      {/* Actions */}
       <div className="actions">
+        {/* Language Dropdown */}
         <div className="custom-language-dropdown">
           <button 
             className="language-selector"
@@ -169,14 +168,80 @@ export default function Header() {
             </div>
           )}
         </div>
-        <a target="_blank" href="https://platform.sportendorse.com/signup/talent">
-          <button className="signup-btn">{t.header.signUpBtn}</button>
-        </a>
-        <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
-          <button className="demo-btn">{t.header.demoBtn}</button>
-        </a>
+
+        {/* Sign Up Dropdown */}
+        <div 
+          className="signup-dropdown"
+          onMouseEnter={() => setSignUpDropdownOpen(true)}
+          onMouseLeave={() => setSignUpDropdownOpen(false)}
+        >
+          <button className="signup-btn">
+            Sign Up {signUpDropdownOpen ? "▴" : "▾"}
+          </button>
+          <div className="signup-dropdown-content">
+            <a target="_blank" href="https://platform.sportendorse.com/signup/brand">
+              Sign up as Brand/Business
+            </a>
+            <a target="_blank" href="https://platform.sportendorse.com/signup/talent">
+              Sign up as Talent
+            </a>
+          </div>
+        </div>
       </div>
-      
+
+      {/* Hamburger Menu Button - Far right */}
+      <button
+        className="hamburger-menu-btn"
+        aria-label="Open hamburger menu"
+        onClick={() => setHamburgerMenuOpen((open) => !open)}
+      >
+        <span className="hamburger-bar" />
+        <span className="hamburger-bar" />
+        <span className="hamburger-bar" />
+      </button>
+
+      {/* Hamburger Dropdown Menu */}
+      {hamburgerMenuOpen && (
+        <div className="hamburger-dropdown">
+          <a target="_blank" href="https://platform.sportendorse.com/login" onClick={() => setHamburgerMenuOpen(false)}>
+            Login
+          </a>
+          {isMobile && (
+            <>
+              <Link href={getNavLink("/talent")} onClick={() => setHamburgerMenuOpen(false)}>
+                Talent
+              </Link>
+              <Link href={getNavLink("/brands")} onClick={() => setHamburgerMenuOpen(false)}>
+                Brand
+              </Link>
+              <Link href={getNavLink("/agency")} onClick={() => setHamburgerMenuOpen(false)}>
+                Sports Agency
+              </Link>
+            </>
+          )}
+          <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07" onClick={() => setHamburgerMenuOpen(false)}>
+            Book A Demo
+          </a>
+          <Link href="/wp/successStories" onClick={() => setHamburgerMenuOpen(false)}>
+            Success Stories
+          </Link>
+          <Link href={getNavLink("/aboutUs")} onClick={() => setHamburgerMenuOpen(false)}>
+            About Us
+          </Link>
+          <Link href={getNavLink("/subscription")} onClick={() => setHamburgerMenuOpen(false)}>
+            Subscriptions
+          </Link>
+          <Link href="/wp/blog" onClick={() => setHamburgerMenuOpen(false)}>
+            Blog
+          </Link>
+          <Link href="/wp/podcasts" onClick={() => setHamburgerMenuOpen(false)}>
+            Podcast
+          </Link>
+          <Link href={getNavLink("/faqs")} onClick={() => setHamburgerMenuOpen(false)}>
+            FAQs
+          </Link>
+        </div>
+      )}
     </header>
   );
 }

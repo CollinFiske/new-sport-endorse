@@ -177,7 +177,7 @@ export default function FeaturedTalents() {
     <section className="featured-talents">
       <div className="header">
         <div>
-          <h2>Featured Talent From All Over The World</h2>
+          <h2>Featured Global Talent</h2>
           <p>We work with a diverse selection of more than 6,500 global athletes from more than 150 sporting disciplines.</p>
         </div>
       </div>

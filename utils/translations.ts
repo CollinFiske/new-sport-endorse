@@ -18,7 +18,7 @@ const translations = {
       badge: "FOR BRANDS",
       title: "Find the Right <span class='gradientText'>Talent</span> for Your Marketing Campaigns",
       description: "Sport Endorse's global platform connects you with thousands of elite athletes and influencers for marketing campaigns and events, making it easy to find perfect talent and deliver real results.",
-      featuredAthletes: "Featured Athletes",
+      featuredAthletes: "Featured Global Athletes",
       viewAll: "View All",
       sports: {
         freestyle: "Freestyle Football",
