@@ -16,6 +16,7 @@ import Head from 'next/head';
 export default function TalentPage() {
   const { language } = useLanguage();
   const t = translations[language];
+  const currentTalentFAQs = talentFAQs[language] || talentFAQs.en;
 
   return (
     <>
@@ -71,8 +72,8 @@ export default function TalentPage() {
       <TrustedSportAgencyPartners />
 
       <CategoryDropdownFAQ 
-        title="Talent FAQs"
-        faqs={talentFAQs}
+        title={t.components.faqs.categories.talent}
+        faqs={currentTalentFAQs}
         color="#10b981"
       />
 

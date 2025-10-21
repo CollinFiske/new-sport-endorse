@@ -14,6 +14,7 @@ import Head from 'next/head';
 export default function AgencyPage() {
   const { language } = useLanguage();
   const t = translations[language];
+  const currentAgencyFAQs = agencyFAQs[language] || agencyFAQs.en;
 
   return (
     <>
@@ -72,8 +73,8 @@ export default function AgencyPage() {
       <SuccessStories />
 
       <CategoryDropdownFAQ 
-        title="Sports Agency FAQs"
-        faqs={agencyFAQs}
+        title={t.components.faqs.categories.agency}
+        faqs={currentAgencyFAQs}
         color="#f59e0b"
       />
     </>

@@ -300,6 +300,18 @@ const translations = {
       faqs: {
         title: "Frequently Asked Questions",
         subtitle: "Get answers to common questions about our platform",
+        leftSection: {
+          title: "FAQs",
+          questionsLeft: "ANY QUESTIONS LEFT?",
+          description: "Schedule a 15-min Call with Our Expert Team of\nSports Marketing!",
+          scheduleButton: "SCHEDULE"
+        },
+        categories: {
+          brand: "Brand FAQs",
+          talent: "Talent FAQs",
+          agency: "Sports Agency FAQs"
+        },
+        emptyMessage: "Coming soon! Check back for updates.",
         questions: [
           {
             question: "HOW MUCH DOES IT COST?",
@@ -652,6 +664,18 @@ const translations = {
       faqs: {
         title: "Preguntas Frecuentes",
         subtitle: "Obtén respuestas a preguntas comunes sobre nuestra plataforma",
+        leftSection: {
+          title: "FAQs",
+          questionsLeft: "¿ALGUNA PREGUNTA?",
+          description: "¡Programa una llamada de 15 minutos con nuestro equipo experto en marketing deportivo!",
+          scheduleButton: "PROGRAMAR"
+        },
+        categories: {
+          brand: "FAQs de Marcas",
+          talent: "FAQs de Talento",
+          agency: "FAQs de Agencias Deportivas"
+        },
+        emptyMessage: "¡Próximamente! Vuelve pronto para actualizaciones.",
         questions: [
           {
             question: "¿CUÁNTO CUESTA?",
@@ -1004,6 +1028,18 @@ const translations = {
       faqs: {
         title: "Häufig Gestellte Fragen",
         subtitle: "Erhalten Sie Antworten auf häufige Fragen zu unserer Plattform",
+        leftSection: {
+          title: "FAQs",
+          questionsLeft: "NOCH FRAGEN?",
+          description: "Planen Sie einen 15-minütigen Anruf mit unserem Expertenteam für Sportmarketing!",
+          scheduleButton: "TERMIN PLANEN"
+        },
+        categories: {
+          brand: "Marken FAQs",
+          talent: "Talent FAQs",
+          agency: "Sportagentur FAQs"
+        },
+        emptyMessage: "Bald verfügbar! Schauen Sie bald wieder vorbei für Updates.",
         questions: [
           {
             question: "WIE VIEL KOSTET ES?",

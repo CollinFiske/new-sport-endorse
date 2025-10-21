@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { Plus, Minus, ChevronDown, ChevronUp } from 'lucide-react';
 import "../styles/faqs.css"
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 interface FAQItem {
   question: string;
@@ -16,6 +18,8 @@ interface CategoryDropdownFAQProps {
 }
 
 export default function CategoryDropdownFAQ({ title, faqs, color = '#18A0FB' }: CategoryDropdownFAQProps) {
+  const { language } = useLanguage();
+  const t = translations[language].components.faqs;
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [openItems, setOpenItems] = useState<Record<number, boolean>>({});
 
@@ -52,7 +56,7 @@ export default function CategoryDropdownFAQ({ title, faqs, color = '#18A0FB' }: 
           {categoryOpen && (
             <div className="faq-category-content">
               <div className="faq-empty-message">
-                Coming soon! Check back for updates.
+                {t.emptyMessage}
               </div>
             </div>
           )}

@@ -1,3 +1,5 @@
+"use client";
+
 import BrandHowItWorks from "@/components/BrandHowItWorks";
 import BrandKeyFeatures from "@/components/BrandKeyFeatures";
 import SuccessStories from "@/components/SuccessStories";
@@ -6,6 +8,8 @@ import CalendlyDemo from "@/components/CalendlyDemo";
 import BrandReviews from "@/components/BrandReviews";
 import CategoryDropdownFAQ from "@/components/CategoryDropdownFAQ";
 import { brandFAQs } from "@/utils/faqData";
+import { useLanguage } from "@/context/LanguageContext";
+import translations from "@/utils/translations";
 
 interface BrandsContentProps {
   badge: string;
@@ -30,6 +34,10 @@ export default function BrandsContent({
   viewAll, 
   sports 
 }: BrandsContentProps) {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const currentBrandFAQs = brandFAQs[language] || brandFAQs.en;
+
   return (
     <>
       <section className="heroSection">
@@ -151,8 +159,8 @@ export default function BrandsContent({
       <BrandReviews />
       
       <CategoryDropdownFAQ 
-        title="Brand FAQs"
-        faqs={brandFAQs}
+        title={t.components.faqs.categories.brand}
+        faqs={currentBrandFAQs}
         color="#18A0FB"
       />
     </>
