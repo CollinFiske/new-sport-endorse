@@ -7,8 +7,10 @@ import TalentHowItWorks from "@/components/TalentHowItWorks";
 import WhyAthletesChooseUs from "@/components/WhyAthletesChooseUs";
 import BrandReviews from "@/components/BrandReviews";
 import TrustedSportAgencyPartners from "@/components/TrustedSportAgencyPartners";
+import CategoryDropdownFAQ from "@/components/CategoryDropdownFAQ";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
+import { talentFAQs } from "@/utils/faqData";
 import Head from 'next/head';
 
 export default function TalentPage() {
@@ -67,6 +69,12 @@ export default function TalentPage() {
       <BrandReviews />
 
       <TrustedSportAgencyPartners />
+
+      <CategoryDropdownFAQ 
+        title="Talent FAQs"
+        faqs={talentFAQs}
+        color="#10b981"
+      />
 
       <br/>
       <br/>

@@ -4,6 +4,8 @@ import SuccessStories from "@/components/SuccessStories";
 import BusinessSubscription from "@/components/BusinessSubscription";
 import CalendlyDemo from "@/components/CalendlyDemo";
 import BrandReviews from "@/components/BrandReviews";
+import CategoryDropdownFAQ from "@/components/CategoryDropdownFAQ";
+import { brandFAQs } from "@/utils/faqData";
 
 interface BrandsContentProps {
   badge: string;
@@ -147,6 +149,12 @@ export default function BrandsContent({
       <BusinessSubscription />
       <CalendlyDemo />
       <BrandReviews />
+      
+      <CategoryDropdownFAQ 
+        title="Brand FAQs"
+        faqs={brandFAQs}
+        color="#18A0FB"
+      />
     </>
   );
 }

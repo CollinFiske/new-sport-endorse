@@ -72,6 +72,14 @@ export default function BrandReviews() {
       text: "Sport Endorse is a great platform for connecting with brand ambassadors! It's always a plus when a platform is not only effective but also easy to use and has helpful support staff.",
       name: "Jelena Jelic",
       position: "Key Account Manager"
+    },
+    {
+      id: 9,
+      image: "/images/skins_logo.webp",
+      alt: "Skins logo",
+      text: "Sport Endorse provides brands a user-friendly channel to connect with influencers of various sports. Through this platform, I can create different contents with influencers to enhance our brand awareness!",
+      name: "Mavis Leung",
+      position: "Brand manager"
     }
   ];
 

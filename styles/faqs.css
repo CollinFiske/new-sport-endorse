@@ -142,6 +142,141 @@
   font-size: 0.9rem;
 }
 
+/* Category Styles */
+.faq-category {
+  margin-bottom: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-category-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1rem;
+  text-align: left;
+  background: #f9fafb;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-weight: 600;
+}
+
+.faq-category-button:hover {
+  background-color: #f3f4f6;
+}
+
+.faq-category-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-right: 1rem;
+}
+
+.faq-category-icon {
+  flex-shrink: 0;
+}
+
+.faq-category-content {
+  background: white;
+  border-top: 1px solid #e5e7eb;
+}
+
+.faq-category-content .faq-item {
+  border-bottom: 1px solid #f3f4f6;
+  margin: 0;
+}
+
+.faq-category-content .faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-category-content .faq-item-button {
+  padding: 1rem 1.5rem;
+}
+
+.faq-category-content .faq-item-content {
+  padding: .5rem 1.5rem 1rem;
+  margin-left: 0;
+}
+
+.faq-empty-message {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Single Category FAQ Styles */
+.single-category-faq-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.single-category-faq-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+.single-category-faq-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  margin: 0;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.single-category-faq-items {
+  padding: 0;
+}
+
+.single-category-faq-items .faq-item {
+  border-bottom: 1px solid #f3f4f6;
+  margin: 0;
+}
+
+.single-category-faq-items .faq-item:last-child {
+  border-bottom: none;
+}
+
+.single-category-faq-items .faq-item-button {
+  padding: 1.5rem 2rem;
+  transition: all 0.2s ease;
+}
+
+.single-category-faq-items .faq-item-button:hover {
+  background-color: #f9fafb;
+}
+
+.single-category-faq-items .faq-item-content {
+  padding: 0 2rem 1.5rem;
+  margin-left: 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page-specific FAQ Styles */
+.page-faq-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
 @media (max-width: 768px) {
   .faq-content {
     flex-direction: column;

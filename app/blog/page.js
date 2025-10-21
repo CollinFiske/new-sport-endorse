@@ -1,6 +1,6 @@
 import { getAllPosts } from './wordpress.js'
 import Link from 'next/link'
-import '../../../styles/blog.css'
+import '../../styles/blog.css'
 
 
 export const metadata = {

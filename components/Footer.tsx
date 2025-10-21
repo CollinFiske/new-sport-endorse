@@ -73,9 +73,10 @@ export default function Footer() {
               <span><a target="_blank" href="https://open.spotify.com/show/2c2mWOkxmUpeGyFI2dZgC5"><img src="/images/spotify.png" alt="spotify logo" className="social-logo"></img></a></span>
             </div>
             <div className="contact-info">
+              <br/>
+              <h2>Contact Us!</h2>
               <p>✆ +353 1 546 1103</p>
               <p>✉ hello@sportendorse.com</p>
-              <p>🏠︎ 10 Fitzwilliam Street Upper, Dublin 2, D02 T024, Ireland</p>
             </div>
           </div>
 
@@ -84,13 +85,13 @@ export default function Footer() {
             <div>
               <h2><span className="footer-number">01]</span><Link href="/talent">Talent<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">02]</span><Link href="/brands">Brands<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">03]</span><Link href="/wp/successStories">Success Stories<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">03]</span><Link href="/successStories">Success Stories<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">04]</span><Link href="/agency">Agencies<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
             </div>
             <div>
-              <h2><span className="footer-number">05]</span><Link href="/wp/blog">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">05]</span><Link href="/blog">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">06]</span><Link href="/subscription">Subscription<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">07]</span><Link href="/wp/podcasts">Podcasts<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">07]</span><Link href="/podcasts">Podcasts<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
               <h2><span className="footer-number">08]</span><Link href="/aboutUs">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
             </div>
 

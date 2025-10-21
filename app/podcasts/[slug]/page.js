@@ -1,6 +1,6 @@
 import { fetchPodcasts, getPodcastBySlug } from '../wordpress'
 import { notFound } from 'next/navigation'
-import '../../../../styles/blog.css'
+import '../../../styles/blog.css'
 import MainLogo from '@/components/MainLogo'
 
 // podcast iframe URLs list (same as main page)

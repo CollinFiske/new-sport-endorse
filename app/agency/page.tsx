@@ -5,8 +5,10 @@ import Image from 'next/image';
 import AgencyHowItWorks from "@/components/AgencyHowItWorks";
 import SuccessStories from "@/components/SuccessStories";
 import CalendlyDemo from "@/components/CalendlyDemo";
+import CategoryDropdownFAQ from "@/components/CategoryDropdownFAQ";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
+import { agencyFAQs } from "@/utils/faqData";
 import Head from 'next/head';
 
 export default function AgencyPage() {
@@ -68,6 +70,12 @@ export default function AgencyPage() {
       <CalendlyDemo agencies={true} />
 
       <SuccessStories />
+
+      <CategoryDropdownFAQ 
+        title="Sports Agency FAQs"
+        faqs={agencyFAQs}
+        color="#f59e0b"
+      />
     </>
   );
 }

@@ -1,7 +1,7 @@
 // page.js - Main podcasts page component
 import { fetchPodcasts, stripHtml, formatDate, createExcerpt } from './wordpress.js';
 import Link from 'next/link';
-import "../../../styles/blog.css"
+import "../../styles/blog.css"
 
 export const metadata = {
   //metadataBase: new URL("put the home url here later"),

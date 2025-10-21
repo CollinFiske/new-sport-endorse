@@ -2,11 +2,11 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-export default function RootPage() {
+export default function CatchAllPage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirect to the home page
+    // Redirect any invalid/non-existent routes to the home page
     router.replace('/home');
   }, [router]);
 

@@ -82,11 +82,16 @@ export default function Header() {
     // Remove any existing language prefix
     let cleanPath = currentPath;
     
-    // Remove language prefixes (handle multiple potential prefixes)
+    // Remove language prefixes more carefully
     if (cleanPath.startsWith('/es/')) {
       cleanPath = cleanPath.substring(3);
     } else if (cleanPath.startsWith('/de/')) {
       cleanPath = cleanPath.substring(3);
+    }
+    
+    // Handle the case where we're on a language-specific root (like /es or /de)
+    if (cleanPath === '/es' || cleanPath === '/de') {
+      cleanPath = '';
     }
     
     // Ensure cleanPath starts with / if it's not empty
@@ -94,16 +99,20 @@ export default function Header() {
       cleanPath = '/' + cleanPath;
     }
     
-    // If cleanPath is empty, default to home page
-    if (!cleanPath || cleanPath === '/') {
-      cleanPath = '';
+    // Special handling for home page
+    if (!cleanPath || cleanPath === '/' || cleanPath === '/home') {
+      if (newLanguage === 'en') {
+        return '/home';
+      } else {
+        return `/${newLanguage}/home`;
+      }
     }
     
     // Add new language prefix (except for English which is default)
     if (newLanguage === 'en') {
-      return cleanPath || '/';
+      return cleanPath;
     } else {
-      return `/${newLanguage}${cleanPath || ''}`;
+      return `/${newLanguage}${cleanPath}`;
     }
   };
 
@@ -128,7 +137,7 @@ export default function Header() {
     <header className="modern-header" ref={headerRef}>
       {/* Logo/Home Button - Far left */}
       <div className="logo-area">
-        <Link href={getNavLink("/")}>
+        <Link href={getNavLink("/home")}>
           <img src="/images/sportEndorseLogo.png" alt="sport endorse logo"></img>
           <h3>SPORT ENDORSE</h3>
         </Link>
@@ -220,7 +229,7 @@ export default function Header() {
           <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07" onClick={() => setHamburgerMenuOpen(false)}>
             Book A Demo
           </a>
-          <Link href="/wp/successStories" onClick={() => setHamburgerMenuOpen(false)}>
+          <Link href="/successStories" onClick={() => setHamburgerMenuOpen(false)}>
             Success Stories
           </Link>
           <Link href={getNavLink("/aboutUs")} onClick={() => setHamburgerMenuOpen(false)}>
@@ -229,10 +238,10 @@ export default function Header() {
           <Link href={getNavLink("/subscription")} onClick={() => setHamburgerMenuOpen(false)}>
             Subscriptions
           </Link>
-          <Link href="/wp/blog" onClick={() => setHamburgerMenuOpen(false)}>
+          <Link href="/blog" onClick={() => setHamburgerMenuOpen(false)}>
             Blog
           </Link>
-          <Link href="/wp/podcasts" onClick={() => setHamburgerMenuOpen(false)}>
+          <Link href="/podcasts" onClick={() => setHamburgerMenuOpen(false)}>
             Podcasts
           </Link>
           <Link href={getNavLink("/faqs")} onClick={() => setHamburgerMenuOpen(false)}>
