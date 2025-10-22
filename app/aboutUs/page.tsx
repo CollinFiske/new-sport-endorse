@@ -200,7 +200,7 @@ export default function AboutUs() {
       </section>
 
       {/* Careers Section */}
-      <section className="about-us-careers-section">
+      <section className="about-us-careers-section" id='careers'>
         <div className="about-us-container">
           <div className="about-us-section-header">
             <h2 className="about-us-section-title">

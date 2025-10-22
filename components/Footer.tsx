@@ -38,7 +38,7 @@ export default function Footer() {
         <MainLogo/>
         <div className="footer-top">
           <div className="newsletter">
-            <h2>Keep Up With Us!</h2>
+            <h2>Subscribe to our newsletter!</h2>
             <p>Get news, photos, events, and business updates</p>
             <form onSubmit={handleSubmit} style={{ paddingBottom: "5px" }}>
               <input
@@ -71,6 +71,7 @@ export default function Footer() {
               <span><a target="_blank" href="https://www.linkedin.com/company/sportendorse/"><img src="/images/tiktokLogo.webp" alt="tiktok logo" className="social-logo"></img></a></span>
               <span><a target="_blank" href="https://www.tiktok.com/@sportendorse"><img src="/images/linkedinLogo.webp" alt="linkedin logo" className="social-logo"></img></a></span>
               <span><a target="_blank" href="https://open.spotify.com/show/2c2mWOkxmUpeGyFI2dZgC5"><img src="/images/spotify.png" alt="spotify logo" className="social-logo"></img></a></span>
+              <span><a target="_blank" href="https://www.youtube.com/channel/UCwHt-_eNBHav6TSihoirZIA"><img src="/images/youbue icon.png" alt="youtube logo" className="social-logo"></img></a></span>
             </div>
             <div className="contact-info">
               <br/>
@@ -83,16 +84,19 @@ export default function Footer() {
 
           <div className="footer-links">
             <div>
-              <h2><span className="footer-number">01]</span><Link href="/talent">Talent<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">02]</span><Link href="/brands">Brands<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">03]</span><Link href="/successStories">Success Stories<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">04]</span><Link href="/agency">Agencies<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">01]</span><Link href="/brands">Sign up as Brand<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">02]</span><Link href="/testing">Book A Demo<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">03]</span><Link href="/subscription">Subscriptions<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">04]</span><Link href="/podcasts">Podcasts<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">05]</span><Link href="/aboutUs#careers">Careers<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
             </div>
             <div>
-              <h2><span className="footer-number">05]</span><Link href="/blog">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">06]</span><Link href="/subscription">Subscription<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">07]</span><Link href="/podcasts">Podcasts<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
-              <h2><span className="footer-number">08]</span><Link href="/aboutUs">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              
+              <h2><span className="footer-number">06]</span><Link href="/talent">Sign up as Talent<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">07]</span><Link href="/successStories">Success Stories<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">08]</span><Link href="/faqs">FAQs<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
+              <h2><span className="footer-number">09]</span><Link href="/blog">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>              
+              <h2><span className="footer-number">10]</span><Link href="/aboutUs">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h2>
             </div>
 
             <span className="footer-app-store-logos">
