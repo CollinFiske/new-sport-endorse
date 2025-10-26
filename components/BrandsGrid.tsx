@@ -50,7 +50,7 @@ export default function BrandsGrid({ variant = "8x4", label }: BrandsGridProps) 
 
   return (
     <div className={styles.brandsGridWrapper}>
-      {label && <p className={styles.label}>{label}</p>}
+      {label && <h2 className={styles.label}>{label}</h2>}
       <table className={styles.brandsTable}>
         <tbody>
           {[...Array(rows)].map((_, rowIdx) => (

@@ -26,6 +26,19 @@
   margin: 0 0 1.5rem;
 }
 
+.statistics-header .statistics-title {
+  /*font-size: 2rem;
+  margin-bottom: 0.5rem;
+*/
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1f2937;
+  letter-spacing: -0.02em;
+  
+  margin: 0 0 1.5rem;
+}
+
 .statistics-header p {
   color: #555;
   max-width: 600px;
@@ -168,6 +181,11 @@
     
     text-align: center;
   }
+  
+  .statistics-header .statistics-title {
+    
+    text-align: center;
+  }
 }
 
 
@@ -205,6 +223,11 @@
     font-size: 1.8rem;
     margin-top: 1rem;
   }
+  
+  .statistics-header .statistics-title {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
 }
 
 @media (max-width: 520px) {
@@ -220,6 +243,11 @@
   }
   
   .statistics-header h2{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .statistics-header .statistics-title{
     text-align: center;
     font-size: 1.5rem;
   }

@@ -24,7 +24,7 @@ export default function Community({ showAgencies = false }: CommunityProps) {
         <span className="dot"></span> {t.liveBadge}
       </div>
       <div className="statistics-header">
-        <h2>{t.title}</h2>
+        <p className="statistics-title">{t.title}</p>
         {/*<p style={{width:"50%"}}>
           Unlock actionable insights with our advanced analytics, empowering you to optimize your sports marketing strategies.
         </p>*/}

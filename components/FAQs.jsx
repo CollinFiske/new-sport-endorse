@@ -38,7 +38,7 @@ export default function FAQs(){
     <div className="faq-container">
       <div className="faq-content">
         <div className="faq-left-section">
-          <h1 className="faq-title">{t.leftSection.title}</h1>
+          <h2 className="faq-title">{t.leftSection.title}</h2>
           
           <div className="faq-questions-section">
             <div className="faq-avatars">
@@ -109,7 +109,7 @@ export default function FAQs(){
                           onClick={() => toggleItem(category.key, index)}
                           className="faq-item-button"
                         >
-                          <span className="faq-item-text">{item.question}</span>
+                          <h2 className="faq-item-text">{item.question}</h2>
                           <div className="faq-item-icon">
                             {openItems[`${category.key}-${index}`] ? (
                               <Minus className="faq-icon" />

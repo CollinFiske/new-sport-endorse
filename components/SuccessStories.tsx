@@ -110,7 +110,7 @@ export default function SuccessStories() {
 
   return (
     <section className="success-stories">
-      <h2>{t.title}</h2>
+      <h3 className="success-stories-title">{t.title}</h3>
       <p>{t.subtitle}</p>
       <div className="stories-carousel-container">
         <button

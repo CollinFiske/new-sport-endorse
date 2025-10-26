@@ -54,6 +54,14 @@
   margin-top: 0;
 }
 
+h1.blog-main-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #111827;
+  margin-top: 0;
+}
+
 .blog-main-description {
   font-size: 1.125rem;
   color: #6b7280;
@@ -99,6 +107,13 @@
 }
 
 .blog-post-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+h2.blog-post-title {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -258,6 +273,10 @@
   }
   
   .blog-main-title {
+    font-size: 2rem;
+  }
+  
+  h1.blog-main-title {
     font-size: 2rem;
   }
   

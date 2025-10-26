@@ -11,6 +11,13 @@
   margin-bottom: 0.5rem;
 }
 
+.success-stories .success-stories-title {
+  /*font-size: 2rem;*/
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
 .success-stories p {
   font-size: 0.95rem;
   color: #666;
@@ -114,6 +121,11 @@
     font-weight: 700;
   }
   
+  .success-stories .success-stories-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
   .success-stories p{
     margin-bottom: 5px;
   }
@@ -124,10 +136,20 @@
     font-size: 1.8rem;
     font-weight: 600;
   }
+  
+  .success-stories .success-stories-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
 }
 
 @media (max-width: 430px) {
   .success-stories h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .success-stories .success-stories-title {
     font-size: 1.5rem;
     font-weight: 600;
   }

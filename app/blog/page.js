@@ -55,7 +55,7 @@ export default async function BlogPage() {
       {/* Main Content */}
       <main className="blog-main">
         <div className="blog-main-header">
-          <h2 className="blog-main-title">Latest Blog Posts</h2>
+          <h1 className="blog-main-title">Latest Blog Posts</h1>
           <p className="blog-main-description">
             Articles from Sport Endorse team members on what is impacting the sports, marketing and sponsorship world
           </p>
@@ -75,14 +75,14 @@ export default async function BlogPage() {
                 )}
                         
                 <div className="blog-post-content">
-                  <h3 className="blog-post-title">
+                  <h2 className="blog-post-title">
                     <Link
                       href={`/wp/blog/${post.slug}`}
                       className="blog-post-link"
                     >
                       {decodeHtmlEntities(post.title.rendered)}
                     </Link>
-                  </h3>
+                  </h2>
                             
                   <div
                     className="blog-post-excerpt"

@@ -18,7 +18,7 @@ export default function CalendlyDemo({ agencies = false }) {
     <div className="calendly-demo-section">
       <div className="calendly-demo-container">
         <div className="calendly-demo-header">
-          <h2 className="calendly-demo-title">{tDemo.title}</h2>
+          <h3 className="calendly-demo-title">{tDemo.title}</h3>
         </div>
 
         <div className="calendly-demo-content">
