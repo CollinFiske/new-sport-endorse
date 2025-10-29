@@ -10,6 +10,7 @@ import CategoryDropdownFAQ from "@/components/CategoryDropdownFAQ";
 import { brandFAQs } from "@/utils/faqData";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
+import { getTopFeaturedTalents } from "@/utils/featuredTalentsData";
 
 interface BrandsContentProps {
   badge: string;
@@ -37,6 +38,7 @@ export default function BrandsContent({
   const { language } = useLanguage();
   const t = translations[language];
   const currentBrandFAQs = brandFAQs[language] || brandFAQs.en;
+  const topTalents = getTopFeaturedTalents(language as 'en' | 'es' | 'de');
 
   return (
     <>
@@ -67,66 +69,20 @@ export default function BrandsContent({
                 padding: '1.5rem',
                 borderRadius: '1rem'
               }}>
-                <div className="talent-card" style={{ 
-                  background: 'white', 
-                  borderRadius: '0.75rem', 
-                  overflow: 'hidden',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.06)'
-                }}>
-                  <img src="/images/featuredTalent/fabian pecher.png" alt="Fabian Pecher" style={{ width: '100%', height: '120px', objectFit: 'cover' }} />
-                  <div style={{ padding: '0.75rem' }}>
-                    <p style={{ fontSize: '0.85rem', fontWeight: '600', margin: '0 0 0.5rem 0' }}>Fabian Pecher</p>
-                    <p style={{ fontSize: '0.75rem', color: '#666', margin: '0' }}>{sports.freestyle}</p>
+                {topTalents.map((talent, index) => (
+                  <div key={index} className="talent-card" style={{ 
+                    background: 'white', 
+                    borderRadius: '0.75rem', 
+                    overflow: 'hidden',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.06)'
+                  }}>
+                    <img src={talent.image} alt={talent.name} style={{ width: '100%', height: '120px', objectFit: 'cover' }} />
+                    <div style={{ padding: '0.75rem' }}>
+                      <p style={{ fontSize: '0.85rem', fontWeight: '600', margin: '0 0 0.5rem 0' }}>{talent.name}</p>
+                      <p style={{ fontSize: '0.75rem', color: '#666', margin: '0' }}>{talent.sport}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="talent-card" style={{ 
-                  background: 'white', 
-                  borderRadius: '0.75rem', 
-                  overflow: 'hidden',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.06)'
-                }}>
-                  <img src="/images/featuredTalent/abby berner.png" alt="Abby Berner" style={{ width: '100%', height: '120px', objectFit: 'cover' }} />
-                  <div style={{ padding: '0.75rem' }}>
-                    <p style={{ fontSize: '0.85rem', fontWeight: '600', margin: '0 0 0.5rem 0' }}>Abby Berner</p>
-                    <p style={{ fontSize: '0.75rem', color: '#666', margin: '0' }}>{sports.fitness}</p>
-                  </div>
-                </div>
-                <div className="talent-card" style={{ 
-                  background: 'white', 
-                  borderRadius: '0.75rem', 
-                  overflow: 'hidden',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.06)'
-                }}>
-                  <img src="/images/featuredTalent/emily cole.webp" alt="Emily Cole" style={{ width: '100%', height: '120px', objectFit: 'cover' }} />
-                  <div style={{ padding: '0.75rem' }}>
-                    <p style={{ fontSize: '0.85rem', fontWeight: '600', margin: '0 0 0.5rem 0' }}>Emily Cole</p>
-                    <p style={{ fontSize: '0.75rem', color: '#666', margin: '0' }}>{sports.athletics}</p>
-                  </div>
-                </div>
-                <div className="talent-card" style={{ 
-                  background: 'white', 
-                  borderRadius: '0.75rem', 
-                  overflow: 'hidden',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.06)'
-                }}>
-                  <img src="/images/featuredTalent/sergio sanchez.png" alt="Sergio Sanchez" style={{ width: '100%', height: '120px', objectFit: 'cover' }} />
-                  <div style={{ padding: '0.75rem' }}>
-                    <p style={{ fontSize: '0.85rem', fontWeight: '600', margin: '0 0 0.5rem 0' }}>Sergio Sanchez</p>
-                    <p style={{ fontSize: '0.75rem', color: '#666', margin: '0' }}>{sports.football}</p>
-                  </div>
-                </div>
-                <div className="talent-card" style={{ 
-                  background: 'white', 
-                  borderRadius: '0.75rem', 
-                  overflow: 'hidden',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.06)'
-                }}>
-                  <img src="/images/featuredTalent/jordi garcia.png" alt="Jordi Garcia" style={{ width: '100%', height: '120px', objectFit: 'cover' }} />
-                  <div style={{ padding: '0.75rem' }}>
-                    <p style={{ fontSize: '0.85rem', fontWeight: '600', margin: '0 0 0.5rem 0' }}>Jordi Garcia</p>
-                    <p style={{ fontSize: '0.75rem', color: '#666', margin: '0' }}>{sports.triathlon}</p>
-                  </div>
-                </div>
+                ))}
                 <a href="https://platform.sportendorse.com/signup/brand" target="_blank" className="cta-card" style={{ 
                   background: '#18A0FB', 
                   borderRadius: '0.75rem',
