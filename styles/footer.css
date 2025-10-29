@@ -1,7 +1,7 @@
 .modern-footer {
   background: #001f36;
   color: white;
-  padding: 3rem 2rem;
+  padding: 2rem;
   font-size: 0.95rem;
   position: relative;
   z-index: 1000;
@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: .5rem;
 }
 
 .newsletter {
@@ -233,82 +233,6 @@
     gap: 0;
   }
   .footer-app-store-logos{
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 785px) and (min-width: 551px) {
-  .footer-top {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .newsletter {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 1rem;
-    align-items: start;
-  }
-  
-  .newsletter h2 {
-    grid-column: 1;
-    grid-row: 1;
-    margin-bottom: 0.5rem;
-  }
-  
-  .newsletter p:first-of-type {
-    grid-column: 1;
-    grid-row: 2;
-    margin: 0;
-  }
-  
-  .newsletter .all-social-logos {
-    grid-column: 2;
-    grid-row: 2;
-    margin: 0 0 0 3rem;
-    justify-content: flex-start;
-    align-self: center;
-  }
-  
-  .newsletter form {
-    grid-column: 1;
-    grid-row: 3;
-    margin-top: 0;
-  }
-  
-  .newsletter .terms {
-    grid-column: 1;
-    grid-row: 4;
-  }
-  
-  .newsletter .contact-info {
-    grid-column: 2;
-    grid-row: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    align-self: center;
-    margin-left: 3rem;
-  }
-  
-  .newsletter p:nth-last-child(3),
-  .newsletter p:nth-last-child(2),
-  .newsletter p:nth-last-child(1) {
-    margin: 0;
-    line-height: 1.2;
-    font-size: 0.85rem;
-  }
-  
-  .footer-links {
-    margin-top: 1rem;
-    flex-direction: column;
-    gap: 0;
-  }
-  
-  .footer-app-store-logos {
-    margin-left: 0;
     margin-top: 20px;
   }
 }

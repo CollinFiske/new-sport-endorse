@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
 import "../styles/footer.css";
-import MainLogo from "./MainLogo";
 import AppStores from "./AppStores";
 
 export default function Footer() {
@@ -49,7 +48,7 @@ export default function Footer() {
   return (
     <footer className={`modern-footer ${language === 'es' ? 'footer-spanish' : ''}`}>
       <div className="maxWidth">
-        <MainLogo/>
+        <img src="/images/sport endorse logo white.png" alt="Sport Endorse Logo" style={{ height: '6rem', marginBottom: '0' }} />
         <div className="footer-top">
           <div className="newsletter">
             <h2>{t.newsletterTitle}</h2>
@@ -87,30 +86,24 @@ export default function Footer() {
               <span><a target="_blank" href="https://open.spotify.com/show/2c2mWOkxmUpeGyFI2dZgC5"><img src="/images/spotify.png" alt="spotify logo" className="social-logo"></img></a></span>
               <span><a target="_blank" href="https://www.youtube.com/channel/UCwHt-_eNBHav6TSihoirZIA"><img src="/images/youtube icon.png" alt="youtube logo" className="social-logo"></img></a></span>
             </div>
-            <div className="contact-info">
-              <br/>
-              <h2>{t.contactUsTitle}</h2>
-              <p>✆ +353 1 546 1103</p>
-              <p>✉ hello@sportendorse.com</p>
-            </div>
+            
           </div>
 
 
           <div className="footer-links">
             <div>
-              <h5><span className="footer-number">01]</span><Link href={getNavLink("/brands")}>{t.links.signUpBrand}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">02]</span><Link href={getNavLink("/testing")}>{t.links.bookDemo}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">03]</span><Link href={getNavLink("/subscription")}>{t.links.subscriptions}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">04]</span><Link href={getNavLink("/podcasts")}>{t.links.podcasts}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">05]</span><Link href={getNavLink("/about-us#careers")}>{t.links.careers}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">01]</span><Link target="_blank" href="https://platform.sportendorse.com/signup/brand" >{t.links.signUpBrand}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">02]</span><Link target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">{t.links.bookDemo}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">03]</span><Link href={getNavLink("/podcasts")}>{t.links.podcasts}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">04]</span><Link href={getNavLink("/about-us#careers")}>{t.links.careers}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">05]</span><Link href={getNavLink("/about-us")}>{t.links.aboutUs}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
             </div>
             <div>
-              <h5><span className="footer-number">06]</span><Link href={getNavLink("/talent")}>{t.links.signUpTalent}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">06]</span><Link target="_blank" href="https://platform.sportendorse.com/signup/talent">{t.links.signUpTalent}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
               <h5><span className="footer-number">07]</span><Link href={getNavLink("/success-stories")}>{t.links.successStories}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
               <h5><span className="footer-number">08]</span><Link href={getNavLink("/faqs")}>{t.links.faqs}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
               <h5><span className="footer-number">09]</span><Link href={getNavLink("/blog")}>{t.links.blog}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>              
-              <h5><span className="footer-number">10]</span><Link href={getNavLink("/about-us")}>{t.links.aboutUs}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">11]</span><Link href={getNavLink("/contact-us")}>{t.links.contactUs}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">10]</span><Link href={getNavLink("/contact-us")}>{t.links.contactUs}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
             </div>
 
             <span className="footer-app-store-logos">
