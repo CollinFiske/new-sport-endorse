@@ -2,12 +2,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 import "../styles/footer.css";
 import MainLogo from "./MainLogo";
 import AppStores from "./AppStores";
 
 export default function Footer() {
   const { language } = useLanguage();
+  const t = translations[language].footer;
   const [email, setEmail] = useState("");
   const [isChecked, setIsChecked] = useState(true);
 
@@ -25,17 +27,17 @@ export default function Footer() {
     e.preventDefault();
     
     if (!email) {
-      alert("Please enter an email address");
+      alert(t.alerts.emailRequired);
       return;
     }
 
     if (!isChecked) {
-      alert("Please agree to the Privacy Policy and Terms and Conditions");
+      alert(t.alerts.termsRequired);
       return;
     }
 
-    const subject = "Newsletter Subscription Request";
-    const body = `Hello,\n\nI would like to subscribe to the Sport Endorse newsletter.\n\nEmail: ${email}\n\nPlease add me to your mailing list for news, photos, events, and business updates.\n\nThank you!`;
+    const subject = t.newsletter.subject;
+    const body = `${t.newsletter.bodyIntro}\n\n${t.newsletter.bodyEmail} ${email}\n\n${t.newsletter.bodyRequest}\n\n${t.newsletter.bodyClosing}`;
 
     const mailtoLink = `mailto:hello@sportendorse.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink);
@@ -45,23 +47,23 @@ export default function Footer() {
   };
 
   return (
-    <footer className="modern-footer">
+    <footer className={`modern-footer ${language === 'es' ? 'footer-spanish' : ''}`}>
       <div className="maxWidth">
         <MainLogo/>
         <div className="footer-top">
           <div className="newsletter">
-            <h2>Subscribe to our newsletter!</h2>
-            <p>Get news, photos, events, and business updates</p>
+            <h2>{t.newsletterTitle}</h2>
+            <p>{t.newsletterDescription}</p>
             <form onSubmit={handleSubmit} style={{ paddingBottom: "5px" }}>
               <input
                 style={{ maxWidth: "250px" }}
                 type="email"
-                placeholder="Email address*"
+                placeholder={t.emailPlaceholder}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <button type="submit">SUBSCRIBE</button>
+              <button type="submit">{t.subscribeButton}</button>
             </form>
             <label className="terms" style={{ display: "flex", alignItems: "flex-start", gap: "8px", flexWrap: "nowrap", width: "100%" }}>
               <input 
@@ -71,9 +73,9 @@ export default function Footer() {
                 style={{ flex: "0 0 auto", marginTop: "2px" }}
               />
               <span style={{ flex: "1 1 0", minWidth: 0 }}>
-                By signing up, I agree to Sport Endorse&apos;s
-                <a target="_blank" href={getNavLink("/privacy-policy")}>Privacy policy</a> and
-                <a target="_blank" href={getNavLink("/terms-and-conditions")}>Terms and Conditions.</a>
+                {t.termsText} {" "}
+                <a target="_blank" href={getNavLink("/privacy-policy")}>{t.privacyPolicy}</a> {" "}
+                and <a target="_blank" href={getNavLink("/terms-and-conditions")}>{t.termsConditions}</a>
               </span>
             </label>
 
@@ -87,7 +89,7 @@ export default function Footer() {
             </div>
             <div className="contact-info">
               <br/>
-              <h2>Contact Us!</h2>
+              <h2>{t.contactUsTitle}</h2>
               <p>✆ +353 1 546 1103</p>
               <p>✉ hello@sportendorse.com</p>
             </div>
@@ -96,19 +98,19 @@ export default function Footer() {
 
           <div className="footer-links">
             <div>
-              <h5><span className="footer-number">01]</span><Link href={getNavLink("/brands")}>Sign up as Brand<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">02]</span><Link href={getNavLink("/testing")}>Book A Demo<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">03]</span><Link href={getNavLink("/subscription")}>Subscriptions<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">04]</span><Link href={getNavLink("/podcasts")}>Podcasts<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">05]</span><Link href={getNavLink("/about-us#careers")}>Careers<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">01]</span><Link href={getNavLink("/brands")}>{t.links.signUpBrand}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">02]</span><Link href={getNavLink("/testing")}>{t.links.bookDemo}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">03]</span><Link href={getNavLink("/subscription")}>{t.links.subscriptions}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">04]</span><Link href={getNavLink("/podcasts")}>{t.links.podcasts}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">05]</span><Link href={getNavLink("/about-us#careers")}>{t.links.careers}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
             </div>
             <div>
-              <h5><span className="footer-number">06]</span><Link href={getNavLink("/talent")}>Sign up as Talent<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">07]</span><Link href={getNavLink("/success-stories")}>Success Stories<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">08]</span><Link href={getNavLink("/faqs")}>FAQs<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">09]</span><Link href={getNavLink("/blog")}>Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>              
-              <h5><span className="footer-number">10]</span><Link href={getNavLink("/about-us")}>About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">11]</span><Link href={getNavLink("/contact-us")}>Contact Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">06]</span><Link href={getNavLink("/talent")}>{t.links.signUpTalent}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">07]</span><Link href={getNavLink("/success-stories")}>{t.links.successStories}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">08]</span><Link href={getNavLink("/faqs")}>{t.links.faqs}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">09]</span><Link href={getNavLink("/blog")}>{t.links.blog}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>              
+              <h5><span className="footer-number">10]</span><Link href={getNavLink("/about-us")}>{t.links.aboutUs}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">11]</span><Link href={getNavLink("/contact-us")}>{t.links.contactUs}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
             </div>
 
             <span className="footer-app-store-logos">
@@ -119,14 +121,14 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <div className="footer-bottom-left">
-            <p>©Copyright 2025 Sport Endorse. All Rights Reserved</p><br />
-            <a target="_blank" href={getNavLink("/privacy-policy")} style={{display:"inline", textDecoration:"underline"}}>Privacy Centre</a><br />
-            <a target="_blank" href={getNavLink("/terms-and-conditions")} style={{display:"inline", textDecoration:"underline"}}>Terms and Conditions</a>
+            <p>{t.copyright}</p><br />
+            <a target="_blank" href={getNavLink("/privacy-policy")} style={{display:"inline", textDecoration:"underline"}}>{t.privacyCentre}</a><br />
+            <a target="_blank" href={getNavLink("/terms-and-conditions")} style={{display:"inline", textDecoration:"underline"}}>{t.termsConditions}</a>
           </div>
 
           <div className="footer-bottom-right">
             <div className="logoContainer">
-              <p>We have been supported by:</p>
+              <p>{t.supportedBy}</p>
               <div className="logo"><img src="/images/image-129.png" alt="Support Logos" /></div>
               <div className="logo"><img src="/images/image-128.png" alt="Support Logos" /></div>
               <div className="logo"><img src="/images/image-127.png" alt="Support Logos" /></div>

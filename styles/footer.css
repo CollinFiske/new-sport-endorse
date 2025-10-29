@@ -22,7 +22,7 @@
 }
 
 .newsletter {
-  flex: 1 1 300px;
+  flex: 1 1 200px;
 }
 
 .newsletter h2 {
@@ -109,6 +109,11 @@
   width: 100%;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+/* Spanish language specific styling */
+.footer-spanish .footer-links h5 {
+  font-size: 1.2rem;
 }
 .footer-links h2 span.footer-number {
   font-size: 12px;

@@ -1,6 +1,43 @@
 
 const translations = {
   en: {
+    footer: {
+      newsletterTitle: "Subscribe to our newsletter!",
+      newsletterDescription: "Get news, photos, events, and business updates",
+      emailPlaceholder: "Email address*",
+      subscribeButton: "SUBSCRIBE",
+      termsText: "By signing up, I agree to Sport Endorse's",
+      privacyPolicy: "Privacy policy",
+      termsConditions: "Terms and Conditions.",
+      contactUsTitle: "Contact Us!",
+      supportedBy: "We have been supported by:",
+      copyright: "©Copyright 2025 Sport Endorse. All Rights Reserved",
+      privacyCentre: "Privacy Centre",
+      links: {
+        signUpBrand: "Sign up as Brand",
+        bookDemo: "Book A Demo",
+        subscriptions: "Subscriptions",
+        podcasts: "Podcasts",
+        careers: "Careers",
+        signUpTalent: "Sign up as Talent",
+        successStories: "Success Stories",
+        faqs: "FAQs",
+        blog: "Blog",
+        aboutUs: "About Us",
+        contactUs: "Contact Us"
+      },
+      alerts: {
+        emailRequired: "Please enter an email address",
+        termsRequired: "Please agree to the Privacy Policy and Terms and Conditions"
+      },
+      newsletter: {
+        subject: "Newsletter Subscription Request",
+        bodyIntro: "Hello,\n\nI would like to subscribe to the Sport Endorse newsletter.",
+        bodyEmail: "Email:",
+        bodyRequest: "Please add me to your mailing list for news, photos, events, and business updates.",
+        bodyClosing: "Thank you!"
+      }
+    },
     header:{
       talent:"Talent",
       brand:"Brands",
@@ -408,6 +445,43 @@ const translations = {
     }
   },
   es: {
+    footer: {
+      newsletterTitle: "¡Suscríbete a nuestro boletín!",
+      newsletterDescription: "Recibe noticias, fotos, eventos y actualizaciones de negocios",
+      emailPlaceholder: "Dirección de correo electrónico*",
+      subscribeButton: "SUSCRIBIRSE",
+      termsText: "Al registrarme, acepto las",
+      privacyPolicy: "Política de privacidad",
+      termsConditions: "Términos y Condiciones de Sport Endorse.",
+      contactUsTitle: "¡Contáctanos!",
+      supportedBy: "Hemos sido apoyados por:",
+      copyright: "©Copyright 2025 Sport Endorse. Todos los Derechos Reservados",
+      privacyCentre: "Centro de Privacidad",
+      links: {
+        signUpBrand: "Registrarse como Marca",
+        bookDemo: "Reservar Una Demo",
+        subscriptions: "Suscripciones",
+        podcasts: "Podcasts",
+        careers: "Carreras",
+        signUpTalent: "Registrarse como Talento",
+        successStories: "Historias de Éxito",
+        faqs: "Preguntas Frecuentes",
+        blog: "Blog",
+        aboutUs: "Sobre Nosotros",
+        contactUs: "Contáctanos"
+      },
+      alerts: {
+        emailRequired: "Por favor ingresa una dirección de correo electrónico",
+        termsRequired: "Por favor acepta la Política de Privacidad y Términos y Condiciones"
+      },
+      newsletter: {
+        subject: "Solicitud de Suscripción al Boletín",
+        bodyIntro: "Hola,\n\nMe gustaría suscribirme al boletín de Sport Endorse.",
+        bodyEmail: "Correo electrónico:",
+        bodyRequest: "Por favor agrégame a tu lista de correos para noticias, fotos, eventos y actualizaciones de negocios.",
+        bodyClosing: "¡Gracias!"
+      }
+    },
     header: {
       talent: "Talento",
       brand: "Marcas",
@@ -815,6 +889,43 @@ const translations = {
     }
   },
   de: {
+    footer: {
+      newsletterTitle: "Abonnieren Sie unseren Newsletter!",
+      newsletterDescription: "Erhalten Sie Nachrichten, Fotos, Events und Geschäfts-Updates",
+      emailPlaceholder: "E-Mail-Adresse*",
+      subscribeButton: "ABONNIEREN",
+      termsText: "Mit der Anmeldung stimme ich Sport Endorses",
+      privacyPolicy: "Datenschutzrichtlinie",
+      termsConditions: "Allgemeinen Geschäftsbedingungen zu.",
+      contactUsTitle: "Kontaktieren Sie uns!",
+      supportedBy: "Wir wurden unterstützt von:",
+      copyright: "©Copyright 2025 Sport Endorse. Alle Rechte vorbehalten",
+      privacyCentre: "Datenschutzzentrum",
+      links: {
+        signUpBrand: "Als Marke anmelden",
+        bookDemo: "Demo Buchen",
+        subscriptions: "Abonnements",
+        podcasts: "Podcasts",
+        careers: "Karrieren",
+        signUpTalent: "Als Talent anmelden",
+        successStories: "Erfolgsgeschichten",
+        faqs: "Häufige Fragen",
+        blog: "Blog",
+        aboutUs: "Über uns",
+        contactUs: "Kontakt"
+      },
+      alerts: {
+        emailRequired: "Bitte geben Sie eine E-Mail-Adresse ein",
+        termsRequired: "Bitte stimmen Sie der Datenschutzrichtlinie und den Allgemeinen Geschäftsbedingungen zu"
+      },
+      newsletter: {
+        subject: "Newsletter-Abonnement Anfrage",
+        bodyIntro: "Hallo,\n\nIch möchte gerne den Sport Endorse Newsletter abonnieren.",
+        bodyEmail: "E-Mail:",
+        bodyRequest: "Bitte fügen Sie mich zu Ihrer Mailingliste für Nachrichten, Fotos, Events und Geschäfts-Updates hinzu.",
+        bodyClosing: "Vielen Dank!"
+      }
+    },
     header: {
       talent: "Talent",
       brand: "Marken",
