@@ -5,14 +5,17 @@ import Image from 'next/image';
 import AgencyHowItWorks from "@/components/AgencyHowItWorks";
 import SuccessStories from "@/components/SuccessStories";
 import CalendlyDemo from "@/components/CalendlyDemo";
+import CategoryDropdownFAQ from "@/components/CategoryDropdownFAQ";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
+import { agencyFAQs } from "@/utils/faqData";
 import Head from 'next/head';
 import { useEffect } from 'react';
 
 export default function AgencyPageES() {
   const { changeLanguage } = useLanguage();
   const t = translations.es;
+  const currentAgencyFAQs = agencyFAQs.es || agencyFAQs.en;
 
   useEffect(() => {
     changeLanguage('es');
@@ -74,6 +77,15 @@ export default function AgencyPageES() {
       <CalendlyDemo agencies={true} />
 
       <SuccessStories />
+
+      <CategoryDropdownFAQ 
+        title={t.components.faqs.categories.agency}
+        faqs={currentAgencyFAQs}
+        color="#f59e0b"
+      />
+
+      <br/>
+      <br/>
     </>
   );
 }

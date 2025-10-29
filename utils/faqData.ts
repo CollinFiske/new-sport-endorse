@@ -557,7 +557,94 @@ export const talentFAQs = {
 };
 
 export const agencyFAQs = {
-  en: [],
-  es: [],
-  de: []
+  en: [
+    {
+      question: "How does Sport Endorse function as an athlete management platform for agents?",
+      answer: "Sport Endorse serves as an integrated athlete management platform designed to maximise efficiency. It provides your sports agent agency with one secure hub to manage your entire roster, track communication, submit applications, and handle payments for all athlete endorsement deals."
+    },
+    {
+      question: "What is the benefit of using Sport Endorse over traditional methods?",
+      answer: "By streamlining the discovery and payment process, we help you find significantly more commercial opportunities for your entire roster. Our sports agent platform gives you direct, scalable access to a higher volume of pre-vetted brand deals, making us the best endorsement management platform for expanding your business."
+    },
+    {
+      question: "Is the commission split transparent for deals secured through the platform?",
+      answer: "Yes, absolute transparency is a core pillar of our partnership. We are clear about our commission split on every deal your athletes find via our platform. We operate as a partner to your sports agent agency, ensuring you always know the exact terms for every successful collaboration."
+    },
+    {
+      question: "What kind of support is available to help me find deals for my roster?",
+      answer: "Our dedicated team acts as an extension of your agency. We actively help you leverage the sports agent platform to identify and secure more suitable athlete endorsement deals, ensuring your clients remain happy and fully engaged."
+    },
+    {
+      question: "Can I integrate my entire client roster into the platform?",
+      answer: "Yes. The athlete management platform is built to help you easily onboard and manage athlete endorsement deals for your entire roster, regardless of size, providing a single, comprehensive overview of all their commercial activities."
+    },
+    {
+      question: "How can I become a partner agent with Sport Endorse?",
+      answer: "You can request to become a Partner Agency for a specific sport or region by clicking the \"Partner with Us\" button. This unique partnership means that we will refer unrepresented athletes on our platform who need contractual or legal assistance directly to you."
+    },
+    {
+      question: "How does the platform handle the payment and contracting process?",
+      answer: "Our system facilitates secure payments via Stripe and automatically generates invoices. This seamless process simplifies endorsement management and accounting for your agency, allowing you to focus on the athletes rather than the paperwork."
+    }
+  ],
+  es: [
+    {
+      question: "¿Cómo funciona Sport Endorse como plataforma de gestión de atletas para agentes?",
+      answer: "Sport Endorse sirve como una plataforma integrada de gestión de atletas diseñada para maximizar la eficiencia. Proporciona a tu agencia de agentes deportivos un centro seguro para gestionar toda tu lista, rastrear comunicación, enviar aplicaciones y manejar pagos para todos los acuerdos de promoción de atletas."
+    },
+    {
+      question: "¿Cuál es el beneficio de usar Sport Endorse sobre métodos tradicionales?",
+      answer: "Al agilizar el proceso de descubrimiento y pago, te ayudamos a encontrar significativamente más oportunidades comerciales para toda tu lista. Nuestra plataforma de agentes deportivos te da acceso directo y escalable a un mayor volumen de acuerdos de marca previamente verificados, convirtiéndonos en la mejor plataforma de gestión de promociones para expandir tu negocio."
+    },
+    {
+      question: "¿Es transparente la división de comisiones para acuerdos asegurados a través de la plataforma?",
+      answer: "Sí, la transparencia absoluta es un pilar central de nuestra asociación. Somos claros sobre nuestra división de comisiones en cada acuerdo que tus atletas encuentran a través de nuestra plataforma. Operamos como un socio de tu agencia de agentes deportivos, asegurando que siempre sepas los términos exactos para cada colaboración exitosa."
+    },
+    {
+      question: "¿Qué tipo de apoyo está disponible para ayudarme a encontrar acuerdos para mi lista?",
+      answer: "Nuestro equipo dedicado actúa como una extensión de tu agencia. Te ayudamos activamente a aprovechar la plataforma de agentes deportivos para identificar y asegurar acuerdos de promoción de atletas más adecuados, asegurando que tus clientes permanezcan felices y completamente comprometidos."
+    },
+    {
+      question: "¿Puedo integrar toda mi lista de clientes en la plataforma?",
+      answer: "Sí. La plataforma de gestión de atletas está construida para ayudarte a incorporar y gestionar fácilmente acuerdos de promoción de atletas para toda tu lista, sin importar el tamaño, proporcionando una visión general única y completa de todas sus actividades comerciales."
+    },
+    {
+      question: "¿Cómo puedo convertirme en un agente socio con Sport Endorse?",
+      answer: "Puedes solicitar convertirte en una Agencia Socia para un deporte o región específica haciendo clic en el botón \"Asociarse con Nosotros\". Esta asociación única significa que referiremos atletas no representados en nuestra plataforma que necesiten asistencia contractual o legal directamente a ti."
+    },
+    {
+      question: "¿Cómo maneja la plataforma el proceso de pago y contratación?",
+      answer: "Nuestro sistema facilita pagos seguros a través de Stripe y genera automáticamente facturas. Este proceso sin problemas simplifica la gestión de promociones y contabilidad para tu agencia, permitiéndote enfocarte en los atletas en lugar del papeleo."
+    }
+  ],
+  de: [
+    {
+      question: "Wie funktioniert Sport Endorse als Athleten-Management-Plattform für Agenten?",
+      answer: "Sport Endorse dient als integrierte Athleten-Management-Plattform, die darauf ausgelegt ist, die Effizienz zu maximieren. Sie bietet Ihrer Sportagenten-Agentur eine sichere Zentrale zur Verwaltung Ihres gesamten Kaders, zur Verfolgung der Kommunikation, zum Einreichen von Bewerbungen und zur Abwicklung von Zahlungen für alle Athleten-Endorsement-Deals."
+    },
+    {
+      question: "Was ist der Vorteil der Nutzung von Sport Endorse gegenüber traditionellen Methoden?",
+      answer: "Durch die Straffung des Entdeckungs- und Zahlungsprozesses helfen wir Ihnen, erheblich mehr kommerzielle Möglichkeiten für Ihren gesamten Kader zu finden. Unsere Sportagenten-Plattform gibt Ihnen direkten, skalierbaren Zugang zu einem höheren Volumen vorab geprüfter Marken-Deals und macht uns zur besten Endorsement-Management-Plattform für die Expansion Ihres Geschäfts."
+    },
+    {
+      question: "Ist die Provisionsaufteilung für über die Plattform gesicherte Deals transparent?",
+      answer: "Ja, absolute Transparenz ist ein Kernpfeiler unserer Partnerschaft. Wir sind klar über unsere Provisionsaufteilung bei jedem Deal, den Ihre Athleten über unsere Plattform finden. Wir arbeiten als Partner Ihrer Sportagenten-Agentur und stellen sicher, dass Sie immer die genauen Bedingungen für jede erfolgreiche Zusammenarbeit kennen."
+    },
+    {
+      question: "Welche Art von Unterstützung steht zur Verfügung, um mir zu helfen, Deals für meinen Kader zu finden?",
+      answer: "Unser engagiertes Team fungiert als Erweiterung Ihrer Agentur. Wir helfen Ihnen aktiv dabei, die Sportagenten-Plattform zu nutzen, um geeignetere Athleten-Endorsement-Deals zu identifizieren und zu sichern, und stellen sicher, dass Ihre Kunden zufrieden und vollständig engagiert bleiben."
+    },
+    {
+      question: "Kann ich meinen gesamten Kundenstamm in die Plattform integrieren?",
+      answer: "Ja. Die Athleten-Management-Plattform ist darauf ausgelegt, Ihnen zu helfen, Athleten-Endorsement-Deals für Ihren gesamten Kader unabhängig von der Größe einfach zu integrieren und zu verwalten, und bietet einen einzigen, umfassenden Überblick über alle ihre kommerziellen Aktivitäten."
+    },
+    {
+      question: "Wie kann ich ein Partner-Agent mit Sport Endorse werden?",
+      answer: "Sie können beantragen, eine Partner-Agentur für eine bestimmte Sportart oder Region zu werden, indem Sie auf den Button \"Partner werden\" klicken. Diese einzigartige Partnerschaft bedeutet, dass wir nicht vertretene Athleten auf unserer Plattform, die vertragliche oder rechtliche Hilfe benötigen, direkt an Sie weiterleiten."
+    },
+    {
+      question: "Wie handhabt die Plattform den Zahlungs- und Vertragsprozess?",
+      answer: "Unser System ermöglicht sichere Zahlungen über Stripe und generiert automatisch Rechnungen. Dieser nahtlose Prozess vereinfacht das Endorsement-Management und die Buchhaltung für Ihre Agentur und ermöglicht es Ihnen, sich auf die Athleten zu konzentrieren anstatt auf den Papierkram."
+    }
+  ]
 };
