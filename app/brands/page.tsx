@@ -36,7 +36,6 @@ export default function BrandsPage() {
       description={t.description}
       featuredAthletes={t.featuredAthletes}
       viewAll={t.viewAll}
-      sports={t.sports}
     />
   );
 }

@@ -18,13 +18,6 @@ interface BrandsContentProps {
   description: string;
   featuredAthletes: string;
   viewAll: string;
-  sports: {
-    freestyle: string;
-    fitness: string;
-    athletics: string;
-    football: string;
-    triathlon: string;
-  };
 }
 
 export default function BrandsContent({ 
@@ -32,8 +25,7 @@ export default function BrandsContent({
   title, 
   description, 
   featuredAthletes, 
-  viewAll, 
-  sports 
+  viewAll
 }: BrandsContentProps) {
   const { language } = useLanguage();
   const t = translations[language];
