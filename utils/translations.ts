@@ -361,6 +361,41 @@ const translations = {
       brandReviews: {
         title: "What Our Clients Say",
         subtitle: "We know that what we've got to offer is incredible - but if you're still not convinced, see what people we work with say!"
+      },
+      contactUs: {
+        title: "Contact Us",
+        description: "Get in touch with our team to learn more about how Sport Endorse can help connect brands with elite athletes for impactful sponsorship opportunities.",
+        contactInfo: {
+          telephone: "Telephone",
+          email: "Email",
+          address: "Address"
+        },
+        followUs: "Follow Us",
+        form: {
+          nameLabel: "Name*",
+          namePlaceholder: "Full name",
+          clientTypeLabel: "Type of client*",
+          clientTypePlaceholder: "Select client type",
+          clientTypes: {
+            talent: "Talent (Athlete/Creator/Media Personality)",
+            brand: "Brand/Business",
+            agency: "Sports Agency",
+            other: "Other"
+          },
+          messageLabel: "Message",
+          messagePlaceholder: "Tell us more about your inquiry...",
+          submitButton: "Send Message",
+          requiredFieldsError: "Please fill in all required fields"
+        },
+        emailSubject: "Contact Form Submission",
+        emailBody: {
+          greeting: "Hello,",
+          intro: "I would like to get in touch with Sport Endorse.",
+          nameField: "Name:",
+          clientTypeField: "Type of Client:",
+          messageField: "Message:",
+          closing: "Thank you!"
+        }
       }
     }
   },
@@ -725,6 +760,41 @@ const translations = {
       brandReviews: {
         title: "Lo Que Dicen Nuestros Clientes",
         subtitle: "Sabemos que lo que tenemos para ofrecer es increíble, pero si aún no estás convencido, ¡mira lo que dicen las personas con las que trabajamos!"
+      },
+      contactUs: {
+        title: "Contáctanos",
+        description: "Ponte en contacto con nuestro equipo para aprender más sobre cómo Sport Endorse puede ayudar a conectar marcas con atletas de élite para oportunidades de patrocinio impactantes.",
+        contactInfo: {
+          telephone: "Teléfono",
+          email: "Correo Electrónico",
+          address: "Dirección"
+        },
+        followUs: "Síguenos",
+        form: {
+          nameLabel: "Nombre*",
+          namePlaceholder: "Nombre completo",
+          clientTypeLabel: "Tipo de cliente*",
+          clientTypePlaceholder: "Seleccionar tipo de cliente",
+          clientTypes: {
+            talent: "Talento (Atleta/Creador/Personalidad de Medios)",
+            brand: "Marca/Empresa",
+            agency: "Agencia Deportiva",
+            other: "Otro"
+          },
+          messageLabel: "Mensaje",
+          messagePlaceholder: "Cuéntanos más sobre tu consulta...",
+          submitButton: "Enviar Mensaje",
+          requiredFieldsError: "Por favor completa todos los campos requeridos"
+        },
+        emailSubject: "Envío de Formulario de Contacto",
+        emailBody: {
+          greeting: "Hola,",
+          intro: "Me gustaría ponerme en contacto con Sport Endorse.",
+          nameField: "Nombre:",
+          clientTypeField: "Tipo de Cliente:",
+          messageField: "Mensaje:",
+          closing: "¡Gracias!"
+        }
       }
     }
   },
@@ -1089,6 +1159,41 @@ const translations = {
       brandReviews: {
         title: "Was Unsere Kunden Sagen",
         subtitle: "Wir wissen, dass das, was wir zu bieten haben, unglaublich ist - aber falls Sie noch nicht überzeugt sind, sehen Sie, was die Menschen sagen, mit denen wir arbeiten!"
+      },
+      contactUs: {
+        title: "Kontakt",
+        description: "Nehmen Sie Kontakt mit unserem Team auf, um mehr darüber zu erfahren, wie Sport Endorse dabei helfen kann, Marken mit Elite-Athleten für wirkungsvolle Sponsoring-Möglichkeiten zu verbinden.",
+        contactInfo: {
+          telephone: "Telefon",
+          email: "E-Mail",
+          address: "Adresse"
+        },
+        followUs: "Folgen Sie uns",
+        form: {
+          nameLabel: "Name*",
+          namePlaceholder: "Vollständiger Name",
+          clientTypeLabel: "Kundentyp*",
+          clientTypePlaceholder: "Kundentyp auswählen",
+          clientTypes: {
+            talent: "Talent (Athlet/Creator/Medienpersönlichkeit)",
+            brand: "Marke/Unternehmen",
+            agency: "Sportagentur",
+            other: "Andere"
+          },
+          messageLabel: "Nachricht",
+          messagePlaceholder: "Erzählen Sie uns mehr über Ihre Anfrage...",
+          submitButton: "Nachricht Senden",
+          requiredFieldsError: "Bitte füllen Sie alle Pflichtfelder aus"
+        },
+        emailSubject: "Kontaktformular-Übermittlung",
+        emailBody: {
+          greeting: "Hallo,",
+          intro: "Ich möchte gerne mit Sport Endorse in Kontakt treten.",
+          nameField: "Name:",
+          clientTypeField: "Kundentyp:",
+          messageField: "Nachricht:",
+          closing: "Vielen Dank!"
+        }
       }
     }
   },

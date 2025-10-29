@@ -229,10 +229,10 @@ export default function Header() {
           <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07" onClick={() => setHamburgerMenuOpen(false)}>
             Book A Demo
           </a>
-          <Link href="/successStories" onClick={() => setHamburgerMenuOpen(false)}>
+          <Link href="/success-stories" onClick={() => setHamburgerMenuOpen(false)}>
             Success Stories
           </Link>
-          <Link href={getNavLink("/aboutUs")} onClick={() => setHamburgerMenuOpen(false)}>
+          <Link href={getNavLink("/about-us")} onClick={() => setHamburgerMenuOpen(false)}>
             About Us
           </Link>
           <Link href={getNavLink("/subscription")} onClick={() => setHamburgerMenuOpen(false)}>
@@ -246,6 +246,9 @@ export default function Header() {
           </Link>
           <Link href={getNavLink("/faqs")} onClick={() => setHamburgerMenuOpen(false)}>
             FAQs
+          </Link>
+          <Link href={getNavLink("/contact-us")} onClick={() => setHamburgerMenuOpen(false)}>
+            Contact Us
           </Link>
         </div>
       )}

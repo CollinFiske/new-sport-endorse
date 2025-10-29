@@ -1,13 +1,25 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "../styles/footer.css";
 import MainLogo from "./MainLogo";
 import AppStores from "./AppStores";
 
 export default function Footer() {
+  const { language } = useLanguage();
   const [email, setEmail] = useState("");
   const [isChecked, setIsChecked] = useState(true);
+
+  const getNavLink = (path: string) => {
+    // Ensure path starts with /
+    const cleanPath = path.startsWith('/') ? path : '/' + path;
+    
+    if (language === 'en') {
+      return cleanPath;
+    }
+    return `/${language}${cleanPath}`;
+  };
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
@@ -60,8 +72,8 @@ export default function Footer() {
               />
               <span style={{ flex: "1 1 0", minWidth: 0 }}>
                 By signing up, I agree to Sport Endorse&apos;s
-                <a target="_blank" href="/privacy-policy">Privacy policy</a> and
-                <a target="_blank" href="/terms-and-conditions">Terms and Conditions.</a>
+                <a target="_blank" href={getNavLink("/privacy-policy")}>Privacy policy</a> and
+                <a target="_blank" href={getNavLink("/terms-and-conditions")}>Terms and Conditions.</a>
               </span>
             </label>
 
@@ -71,7 +83,7 @@ export default function Footer() {
               <span><a target="_blank" href="https://www.linkedin.com/company/sportendorse/"><img src="/images/tiktokLogo.webp" alt="tiktok logo" className="social-logo"></img></a></span>
               <span><a target="_blank" href="https://www.tiktok.com/@sportendorse"><img src="/images/linkedinLogo.webp" alt="linkedin logo" className="social-logo"></img></a></span>
               <span><a target="_blank" href="https://open.spotify.com/show/2c2mWOkxmUpeGyFI2dZgC5"><img src="/images/spotify.png" alt="spotify logo" className="social-logo"></img></a></span>
-              <span><a target="_blank" href="https://www.youtube.com/channel/UCwHt-_eNBHav6TSihoirZIA"><img src="/images/youbue icon.png" alt="youtube logo" className="social-logo"></img></a></span>
+              <span><a target="_blank" href="https://www.youtube.com/channel/UCwHt-_eNBHav6TSihoirZIA"><img src="/images/youtube icon.png" alt="youtube logo" className="social-logo"></img></a></span>
             </div>
             <div className="contact-info">
               <br/>
@@ -84,19 +96,19 @@ export default function Footer() {
 
           <div className="footer-links">
             <div>
-              <h5><span className="footer-number">01]</span><Link href="/brands">Sign up as Brand<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">02]</span><Link href="/testing">Book A Demo<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">03]</span><Link href="/subscription">Subscriptions<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">04]</span><Link href="/podcasts">Podcasts<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">05]</span><Link href="/aboutUs#careers">Careers<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">01]</span><Link href={getNavLink("/brands")}>Sign up as Brand<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">02]</span><Link href={getNavLink("/testing")}>Book A Demo<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">03]</span><Link href={getNavLink("/subscription")}>Subscriptions<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">04]</span><Link href={getNavLink("/podcasts")}>Podcasts<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">05]</span><Link href={getNavLink("/about-us#careers")}>Careers<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
             </div>
             <div>
-              
-              <h5><span className="footer-number">06]</span><Link href="/talent">Sign up as Talent<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">07]</span><Link href="/successStories">Success Stories<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">08]</span><Link href="/faqs">FAQs<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
-              <h5><span className="footer-number">09]</span><Link href="/blog">Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>              
-              <h5><span className="footer-number">10]</span><Link href="/aboutUs">About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">06]</span><Link href={getNavLink("/talent")}>Sign up as Talent<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">07]</span><Link href={getNavLink("/success-stories")}>Success Stories<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">08]</span><Link href={getNavLink("/faqs")}>FAQs<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">09]</span><Link href={getNavLink("/blog")}>Blog<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>              
+              <h5><span className="footer-number">10]</span><Link href={getNavLink("/about-us")}>About Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">11]</span><Link href={getNavLink("/contact-us")}>Contact Us<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
             </div>
 
             <span className="footer-app-store-logos">
@@ -108,8 +120,8 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-left">
             <p>©Copyright 2025 Sport Endorse. All Rights Reserved</p><br />
-            <a target="_blank" href="/privacy-policy" style={{display:"inline", textDecoration:"underline"}}>Privacy Centre</a><br />
-            <a target="_blank" href="/terms-and-conditions" style={{display:"inline", textDecoration:"underline"}}>Terms and Conditions</a>
+            <a target="_blank" href={getNavLink("/privacy-policy")} style={{display:"inline", textDecoration:"underline"}}>Privacy Centre</a><br />
+            <a target="_blank" href={getNavLink("/terms-and-conditions")} style={{display:"inline", textDecoration:"underline"}}>Terms and Conditions</a>
           </div>
 
           <div className="footer-bottom-right">
