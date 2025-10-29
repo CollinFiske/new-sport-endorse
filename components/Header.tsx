@@ -4,11 +4,13 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
 import type { Language } from "../context/LanguageContext";
+import translations from "../utils/translations";
 import "../styles/header.css";
 import "../styles/mainLogo.css";
 
 export default function Header() {
   const { language, changeLanguage } = useLanguage();
+  const t = translations[language].header;
   const router = useRouter();
   const pathname = usePathname();
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -145,9 +147,9 @@ export default function Header() {
 
       {/* Main Navigation */}
       <nav className="main-nav">
-        <Link href={getNavLink("/talent")}>Talent</Link>
-        <Link href={getNavLink("/brands")}>Brand</Link>
-        <Link href={getNavLink("/agency")}>Sports Agency</Link>
+        <Link href={getNavLink("/talent")}>{t.talent}</Link>
+        <Link href={getNavLink("/brands")}>{t.brand}</Link>
+        <Link href={getNavLink("/agency")}>{t.agencies}</Link>
       </nav>
 
       {/* Actions */}
@@ -183,14 +185,14 @@ export default function Header() {
           onMouseLeave={() => setSignUpDropdownOpen(false)}
         >
           <button className="signup-btn">
-            Sign Up {signUpDropdownOpen ? "▴" : "▾"}
+            {t.signUpBtn} {signUpDropdownOpen ? "▴" : "▾"}
           </button>
           <div className="signup-dropdown-content">
             <a target="_blank" href="https://platform.sportendorse.com/signup/brand">
-              Sign up as Brand/Business
+              {t.signUpBrand}
             </a>
             <a target="_blank" href="https://platform.sportendorse.com/signup/talent">
-              Sign up as Talent
+              {t.signUpTalent}
             </a>
           </div>
         </div>
@@ -211,44 +213,44 @@ export default function Header() {
       {hamburgerMenuOpen && (
         <div className="hamburger-dropdown">
           <a target="_blank" href="https://platform.sportendorse.com/login" onClick={() => setHamburgerMenuOpen(false)}>
-            Login
+            {t.login}
           </a>
           {isMobile && (
             <>
               <Link href={getNavLink("/talent")} onClick={() => setHamburgerMenuOpen(false)}>
-                Talent
+                {t.talent}
               </Link>
               <Link href={getNavLink("/brands")} onClick={() => setHamburgerMenuOpen(false)}>
-                Brand
+                {t.brand}
               </Link>
               <Link href={getNavLink("/agency")} onClick={() => setHamburgerMenuOpen(false)}>
-                Sports Agency
+                {t.agencies}
               </Link>
             </>
           )}
           <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07" onClick={() => setHamburgerMenuOpen(false)}>
-            Book A Demo
+            {t.bookDemo}
           </a>
           <Link href="/success-stories" onClick={() => setHamburgerMenuOpen(false)}>
-            Success Stories
+            {t.successStories}
           </Link>
           <Link href={getNavLink("/about-us")} onClick={() => setHamburgerMenuOpen(false)}>
-            About Us
+            {t.aboutUs}
           </Link>
           <Link href={getNavLink("/subscription")} onClick={() => setHamburgerMenuOpen(false)}>
-            Subscriptions
+            {t.subscription}
           </Link>
           <Link href="/blog" onClick={() => setHamburgerMenuOpen(false)}>
-            Blog
+            {t.blog}
           </Link>
           <Link href="/podcasts" onClick={() => setHamburgerMenuOpen(false)}>
-            Podcasts
+            {t.podcasts}
           </Link>
           <Link href={getNavLink("/faqs")} onClick={() => setHamburgerMenuOpen(false)}>
-            FAQs
+            {t.faqs}
           </Link>
           <Link href={getNavLink("/contact-us")} onClick={() => setHamburgerMenuOpen(false)}>
-            Contact Us
+            {t.contactUs}
           </Link>
         </div>
       )}

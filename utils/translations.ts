@@ -13,6 +13,14 @@ const translations = {
       aboutUs:"About Us",
       signUpBtn:"SIGN UP",
       demoBtn:"DEMO FOR BUSINESS",
+      login:"Login",
+      bookDemo:"Book A Demo",
+      successStories:"Success Stories",
+      faqs:"FAQs",
+      contactUs:"Contact Us",
+      podcasts:"Podcasts",
+      signUpBrand:"Sign up as Brand/Business",
+      signUpTalent:"Sign up as Talent"
     },
     brands: {
       badge: "FOR BRANDS",
@@ -412,6 +420,14 @@ const translations = {
       aboutUs: "Sobre Nosotros",
       signUpBtn: "REGISTRARSE",
       demoBtn: "DEMO PARA EMPRESAS",
+      login: "Iniciar Sesión",
+      bookDemo: "Reservar Una Demo",
+      successStories: "Historias de Éxito",
+      faqs: "Preguntas Frecuentes",
+      contactUs: "Contáctanos",
+      podcasts: "Podcasts",
+      signUpBrand: "Registrarse como Marca/Empresa",
+      signUpTalent: "Registrarse como Talento"
     },
     brands: {
       badge: "PARA MARCAS",
@@ -811,6 +827,14 @@ const translations = {
       aboutUs: "Über uns",
       signUpBtn: "ANMELDEN",
       demoBtn: "DEMO FÜR UNTERNEHMEN",
+      login: "Anmelden",
+      bookDemo: "Demo Buchen",
+      successStories: "Erfolgsgeschichten",
+      faqs: "Häufige Fragen",
+      contactUs: "Kontakt",
+      podcasts: "Podcasts",
+      signUpBrand: "Als Marke/Unternehmen anmelden",
+      signUpTalent: "Als Talent anmelden"
     },
     brands: {
       badge: "FÜR MARKEN",
