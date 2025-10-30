@@ -21,7 +21,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 920);
     };
 
     // Initial check
@@ -150,6 +150,7 @@ export default function Header() {
         <Link href={getNavLink("/talent")}>{t.talent}</Link>
         <Link href={getNavLink("/brands")}>{t.brand}</Link>
         <Link href={getNavLink("/agency")}>{t.agencies}</Link>
+        <Link href={getNavLink("/subscription")}>{t.subscription}</Link>
       </nav>
 
       {/* Actions */}
@@ -226,6 +227,9 @@ export default function Header() {
               <Link href={getNavLink("/agency")} onClick={() => setHamburgerMenuOpen(false)}>
                 {t.agencies}
               </Link>
+              <Link href={getNavLink("/subscription")} onClick={() => setHamburgerMenuOpen(false)}>
+                {t.subscription}
+              </Link>
             </>
           )}
           <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07" onClick={() => setHamburgerMenuOpen(false)}>
@@ -236,9 +240,6 @@ export default function Header() {
           </Link>
           <Link href={getNavLink("/about-us")} onClick={() => setHamburgerMenuOpen(false)}>
             {t.aboutUs}
-          </Link>
-          <Link href={getNavLink("/subscription")} onClick={() => setHamburgerMenuOpen(false)}>
-            {t.subscription}
           </Link>
           <Link href="/blog" onClick={() => setHamburgerMenuOpen(false)}>
             {t.blog}

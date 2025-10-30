@@ -247,7 +247,7 @@
 }
 
 
-@media (max-width: 795px) {
+@media (max-width: 920px) {
    .main-nav {
     display: none;
   }
@@ -270,13 +270,11 @@
   }
 }
 
-@media (max-width: 660px) {
+
+@media (max-width: 480px) {
   .logo-area h3 {
     display: none;
   }
-}
-
-@media (max-width: 480px) {
   .modern-header {
     padding: 0.75rem 0.5rem;
   }
