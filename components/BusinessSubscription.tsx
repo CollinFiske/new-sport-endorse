@@ -9,9 +9,15 @@ export default function BusinessSubscription() {
   const t = translations[language].components.businessSubscription;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
-    fullName: '',
+    firstName: '',
+    lastName: '',
     email: '',
-    message: ''
+    company: '',
+    country: '',
+    mobileNumber: '',
+    typeOfCampaign: '',
+    campaignTiming: '',
+    note: ''
   });
 
   const features = [
@@ -42,18 +48,34 @@ export default function BusinessSubscription() {
 
 I would like to learn more about your custom package options.
 
-Full Name: ${formData.fullName}
-Email: ${formData.email}
+First Name: ${formData.firstName}
+Last Name: ${formData.lastName}
+Professional Email: ${formData.email}
+Company: ${formData.company}
+Country: ${formData.country}
+Mobile Number: ${formData.mobileNumber}
+Type of Campaign: ${formData.typeOfCampaign}
+Campaign Timing: ${formData.campaignTiming}
 
-Message:
-${formData.message}
+Note / How Can We Help:
+${formData.note}
 
 Thank you!`;
     
     const mailtoLink = `mailto:hello@sportendorse.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
     
-    setFormData({ fullName: '', email: '', message: '' });
+    setFormData({ 
+      firstName: '',
+      lastName: '',
+      email: '',
+      company: '',
+      country: '',
+      mobileNumber: '',
+      typeOfCampaign: '',
+      campaignTiming: '',
+      note: ''
+    });
     closeModal();
   };
 
@@ -203,19 +225,31 @@ Thank you!`;
             </div>
             <form onSubmit={handleSubmit} className="subscription-modal-form">
               <div className="subscription-form-group">
-                <label htmlFor="fullName">Full Name *</label>
+                <label htmlFor="firstName">First Name *</label>
                 <input
                   type="text"
-                  id="fullName"
-                  name="fullName"
-                  value={formData.fullName}
+                  id="firstName"
+                  name="firstName"
+                  value={formData.firstName}
                   onChange={handleInputChange}
                   required
-                  placeholder="Enter your full name"
+                  placeholder="Enter your first name"
                 />
               </div>
               <div className="subscription-form-group">
-                <label htmlFor="email">Email *</label>
+                <label htmlFor="lastName">Last Name *</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="Enter your last name"
+                />
+              </div>
+              <div className="subscription-form-group">
+                <label htmlFor="email">Professional Email *</label>
                 <input
                   type="email"
                   id="email"
@@ -223,19 +257,79 @@ Thank you!`;
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  placeholder="Enter your email address"
+                  placeholder="Enter your professional email address"
                 />
               </div>
               <div className="subscription-form-group">
-                <label htmlFor="message">Message *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
+                <label htmlFor="company">Company *</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
                   onChange={handleInputChange}
                   required
+                  placeholder="Enter your company name"
+                />
+              </div>
+              <div className="subscription-form-group">
+                <label htmlFor="country">Country</label>
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  value={formData.country}
+                  onChange={handleInputChange}
+                  placeholder="Enter your country"
+                />
+              </div>
+              <div className="subscription-form-group">
+                <label htmlFor="mobileNumber">Mobile Number</label>
+                <input
+                  type="tel"
+                  id="mobileNumber"
+                  name="mobileNumber"
+                  value={formData.mobileNumber}
+                  onChange={handleInputChange}
+                  placeholder="Enter your mobile number"
+                />
+              </div>
+              <div className="subscription-form-group">
+                <label htmlFor="typeOfCampaign">Type of Campaign</label>
+                <input
+                  type="text"
+                  id="typeOfCampaign"
+                  name="typeOfCampaign"
+                  value={formData.typeOfCampaign}
+                  onChange={handleInputChange}
+                  placeholder="e.g., Brand ambassador, Social media, Event sponsorship"
+                />
+              </div>
+              <div className="subscription-form-group">
+                <label htmlFor="campaignTiming">Campaign Timing</label>
+                <select
+                  id="campaignTiming"
+                  name="campaignTiming"
+                  value={formData.campaignTiming}
+                  onChange={handleInputChange}
+                  className="subscription-form-select"
+                >
+                  <option value="">Select timing</option>
+                  <option value="Within 3 months">Within 3 months</option>
+                  <option value="Within 6 - 12 months">Within 6 - 12 months</option>
+                  <option value="In 12+ months">In 12+ months</option>
+                  <option value="TBC">TBC</option>
+                </select>
+              </div>
+              <div className="subscription-form-group">
+                <label htmlFor="note">Note (Please leave any additional information) / How Can We Help?</label>
+                <textarea
+                  id="note"
+                  name="note"
+                  value={formData.note}
+                  onChange={handleInputChange}
                   rows={4}
-                  placeholder="Tell us about your specific requirements..."
+                  placeholder="Tell us about your specific requirements and how we can help..."
                 />
               </div>
               <div className="subscription-form-actions">
