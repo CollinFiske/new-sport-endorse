@@ -39,9 +39,9 @@ const translations = {
       }
     },
     header:{
-      talent:"Talent",
-      brand:"Brands",
-      agencies:"Agencies",
+      talent:"For Talent",
+      brand:"For Brands",
+      agencies:"For Agencies",
       subscription:"Subscription",
       resources:"Resources",
       blog:"Blog",
@@ -483,9 +483,9 @@ const translations = {
       }
     },
     header: {
-      talent: "Talento",
-      brand: "Marcas",
-      agencies: "Agencias",
+      talent: "Por el Talento",
+      brand: "Para Marcas",
+      agencies: "Para Agencias",
       subscription: "Suscripción",
       resources: "Recursos",
       blog: "Blog",
@@ -927,9 +927,9 @@ const translations = {
       }
     },
     header: {
-      talent: "Talent",
-      brand: "Marken",
-      agencies: "Agenturen",
+      talent: "Für Talent",
+      brand: "Für Marken",
+      agencies: "Für Agenturen",
       subscription: "Abonnement",
       resources: "Ressourcen",
       blog: "Blog",
