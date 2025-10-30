@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/successStories.css";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
+import Link from "next/link";
 
 function decodeHtmlEntities(text: string) {
   if (!text) return text;
@@ -76,11 +77,44 @@ export default function SuccessStories() {
   useEffect(() => {
     async function fetchStories() {
       try {
-        const res = await fetch(
+        console.log('🎯 SuccessStories component: Starting fetch...');
+        
+        // Try the main endpoint first
+        let res = await fetch(
           `https://www.sportendorse.com/wp-json/wp/v2/success_stories?_embed&per_page=10&page=1`
         );
+        
+        console.log('📊 Main endpoint response status:', res.status);
+        
+        // If main endpoint fails, try alternatives
+        if (!res.ok) {
+          console.log('🔄 Main endpoint failed, trying alternatives...');
+          const alternatives = [
+            "https://www.sportendorse.com/wp-json/wp/v2/success-stories?_embed&per_page=10&page=1",
+            "https://www.sportendorse.com/wp-json/wp/v2/successstories?_embed&per_page=10&page=1",
+            "https://www.sportendorse.com/wp-json/wp/v2/posts?_embed&per_page=10&page=1",
+            "https://www.sportendorse.com/wp-json/wp/v2/success?_embed&per_page=10&page=1"
+          ];
+          
+          for (const altUrl of alternatives) {
+            console.log(`🔄 Trying: ${altUrl}`);
+            try {
+              const altRes = await fetch(altUrl);
+              if (altRes.ok) {
+                console.log(`✅ Alternative worked: ${altUrl}`);
+                res = altRes;
+                break;
+              }
+            } catch (error) {
+              console.log(`❌ Alternative failed:`, error);
+            }
+          }
+        }
+        
         if (!res.ok) throw new Error("Failed to fetch success stories");
         const data = await res.json();
+        console.log('📋 Success stories data received:', data);
+        console.log('📊 Stories count:', data?.length || 0);
         setStories(data || []);
       } catch {
         setStories([]);
@@ -141,7 +175,7 @@ export default function SuccessStories() {
                   <p className="success-text">
                     {decodeHtmlEntities(story.yoast_head_json?.description ?? "") || "No summary available."}
                   </p>
-                  <a className="read-more" href="wp/succcessStories" >{t.readMore}</a>
+                  <Link className="read-more" href="/success-stories" >{t.readMore}</Link>
                 </div>
               </div>
             ))

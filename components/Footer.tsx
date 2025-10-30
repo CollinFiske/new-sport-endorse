@@ -115,7 +115,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-left">
             <p>{t.copyright}</p><br />
-            <a target="_blank" href={getNavLink("/privacy-policy")} style={{display:"inline", textDecoration:"underline"}}>{t.privacyCentre}</a><br />
+            <a target="_blank" href={getNavLink("/privacy-center")} style={{display:"inline", textDecoration:"underline"}}>{t.privacyCentre}</a><br />
             <a target="_blank" href={getNavLink("/terms-and-conditions")} style={{display:"inline", textDecoration:"underline"}}>{t.termsConditions}</a>
           </div>
 

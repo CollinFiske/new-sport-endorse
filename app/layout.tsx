@@ -2,13 +2,13 @@ import "../styles/base.css";
 import "../styles/header.css";
 import "../styles/footer.css";
 import { LanguageProvider } from "../context/LanguageContext";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import ConditionalLayout from "../components/ConditionalLayout";
 
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Metadata } from "next";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 
 export const metadata: Metadata = {
@@ -43,19 +43,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" as="video" href="/videos/examplewatervideo.mp4" type="video/mp4" />
 
         {/*<!-- Start of HubSpot Embed Code -->*/}
-        <script
-          type="text/javascript"
+        <Script
           id="hs-script-loader"
-          async
-          defer
           src="//js.hs-scripts.com/4025606.js"
+          strategy="afterInteractive" // This ensures Dataships can intercept it
         />
         {/*<!-- End of HubSpot Embed Code -->*/}
       </head>
 
-      {gtmId && <GoogleTagManager gtmId={gtmId} />}
-      <body>
+      {/* Dataships Cookie Script - outside head */}
+      <Script
+        src="https://core-api.dataships.io/v1/code-snippets/cookie-script?apikey=YDf7ngeS_q4cFkPgNcinQ_IqQ2rJBKT1"
+        strategy="afterInteractive"
+      />
 
+      {gtmId && <GoogleTagManager gtmId={gtmId} />}
+      
+      <body>
         <noscript>
           <div style={{margin:"70px 20px"}}>
             <h1>JavaScript Required</h1>
@@ -70,26 +74,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </noscript>
 
         <LanguageProvider>
-          <Header />
-          <main style={{ padding: "80px 20px 0 20px" /* for space for header and on sides */}}>{children}</main>
-          <Footer /> 
+          <ConditionalLayout>
+            {children}
+          </ConditionalLayout>
         </LanguageProvider>
         
         <Analytics />
         <SpeedInsights />
       </body>
-
     </html>
   );
 }
-
-/*
-
-      <head>
-        <meta charSet="UTF-8"></meta>
-        <meta name="description" content="SportEndorse"></meta>
-        <meta name="keywords" content="SportEndorse, Talent, Brands"></meta>
-        <meta name="author" content="SportEndorse"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-      </head>
-*/

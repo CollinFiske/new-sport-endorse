@@ -77,7 +77,7 @@ export default async function BlogPage() {
                 <div className="blog-post-content">
                   <h2 className="blog-post-title">
                     <Link
-                      href={`/wp/blog/${post.slug}`}
+                      href={`/blog/${post.slug}`}
                       className="blog-post-link"
                     >
                       {decodeHtmlEntities(post.title.rendered)}

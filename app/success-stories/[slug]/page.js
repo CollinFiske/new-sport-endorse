@@ -71,19 +71,36 @@ export async function generateMetadata({ params }) {
 // Generate static params for all success stories
 export async function generateStaticParams() {
   try {
+    console.log('🏗️ Generating static params for success stories...');
     const stories = await getAllSuccessStories()
+    console.log(`📊 Total stories fetched for static generation: ${stories?.length || 0}`);
     
-    // Double-check each story before including it in static params
+    // Use the same relaxed filtering as the main page - only require basic fields
     const validSlugs = stories
       .filter(story => {
         try {
-          return (
+          const isValid = (
             story?.slug &&
-            story?.title?.rendered &&
-            story?.content?.rendered
-          )
+            story?.title?.rendered
+          );
+          
+          if (!isValid) {
+            console.warn(`❌ Filtering out story during static params generation:`, {
+              hasSlug: !!story?.slug,
+              hasTitle: !!story?.title?.rendered,
+              storyId: story?.id
+            });
+          } else {
+            console.log(`✅ Including story in static generation:`, {
+              id: story.id,
+              slug: story.slug,
+              title: story.title.rendered
+            });
+          }
+          
+          return isValid;
         } catch (error) {
-          console.warn(`Filtering out story during static params generation:`, error)
+          console.warn(`❌ Error filtering story during static params generation:`, error)
           return false
         }
       })
@@ -109,10 +126,22 @@ export default async function SuccessStoryPost({ params }) {
     }
     
     // Additional validation to ensure we have the required content
-    if (!story.title?.rendered || !story.content?.rendered) {
-      console.warn(`Success story "${resolvedParams.slug}" missing essential content`)
+    if (!story.title?.rendered) {
+      console.warn(`Success story "${resolvedParams.slug}" missing essential title`)
       notFound()
     }
+    
+    // Log what content we have available
+    console.log(`Story content analysis for "${resolvedParams.slug}":`, {
+      hasTitle: !!story.title?.rendered,
+      hasContent: !!story.content?.rendered,
+      contentLength: story.content?.rendered?.length || 0,
+      hasYoastTitle: !!story.yoast_head_json?.og_title,
+      hasYoastDescription: !!story.yoast_head_json?.description,
+      hasImage: !!story.yoast_head_json?.og_image?.[0]?.url,
+      hasBottomDescription: !!story.success_stories_bottom_description,
+      bottomDescriptionLength: story.success_stories_bottom_description?.length || 0
+    });
     
     const title = decodeHtmlEntities(story.title.rendered)
     const publishDate = story.date ? new Date(story.date) : null
@@ -152,11 +181,82 @@ export default async function SuccessStoryPost({ params }) {
                     </div>
                   )}
                   
-                  <div 
-                    dangerouslySetInnerHTML={{ 
-                      __html: story.content.rendered 
-                    }} 
-                  />
+                  {/* Show content if available, otherwise show a message */}
+                  {story.content?.rendered ? (
+                    <div 
+                      dangerouslySetInnerHTML={{ 
+                        __html: story.content.rendered 
+                      }} 
+                    />
+                  ) : (
+                    <div>
+                      {/* Bottom Description from the story's success_stories_bottom_description field */}
+                      {story.success_stories_bottom_description && (
+                        <div style={{ 
+                          padding: '2rem', 
+                          backgroundColor: '#f8f9fa', 
+                          borderRadius: '0.5rem',
+                          border: '1px solid #e9ecef',
+                          marginBottom: '2rem'
+                        }}>
+                          <div className="blog-post-prose">
+                            <div 
+                              dangerouslySetInnerHTML={{ 
+                                __html: story.success_stories_bottom_description 
+                              }} 
+                            />
+                          </div>
+                        </div>
+                      )}
+                      
+                      <div style={{ 
+                        padding: '2rem', 
+                        textAlign: 'center', 
+                        backgroundColor: '#f8f9fa', 
+                        borderRadius: '0.5rem',
+                        border: '1px solid #e9ecef'
+                      }}>
+                        <h3 style={{ color: '#6c757d', marginBottom: '1rem' }}>Success Story Details</h3>
+                        <p style={{ color: '#6c757d' }}>
+                          This success story showcases a partnership facilitated by Sport Endorse. 
+                          For more details about this collaboration, please contact us.
+                        </p>
+                        {story.yoast_head_json?.og_image?.[0]?.url && (
+                          <div style={{ marginTop: '1.5rem' }}>
+                            <img 
+                              src={story.yoast_head_json.og_image[0].url} 
+                              alt={title}
+                              style={{
+                                maxWidth: '100%',
+                                height: 'auto',
+                                borderRadius: '0.5rem',
+                                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                              }}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Bottom Description for stories WITH content */}
+                  {story.content?.rendered && story.success_stories_bottom_description && (
+                    <div style={{ 
+                      padding: '2rem', 
+                      backgroundColor: '#f8f9fa', 
+                      borderRadius: '0.5rem',
+                      border: '1px solid #e9ecef',
+                      marginTop: '2rem'
+                    }}>
+                      <div className="blog-post-prose">
+                        <div 
+                          dangerouslySetInnerHTML={{ 
+                            __html: story.success_stories_bottom_description 
+                          }} 
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </article>
