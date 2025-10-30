@@ -20,73 +20,73 @@ export default function AboutUs() {
       name: "Trevor Twamley",
       role: "Founder and CEO",
       country: "Ireland",
-      imageUrl: "/images/teamPhotos/Trevor Twanley, Founder and CEO.png"
+      imageUrl: "/images/teamPhotos/trevor-twamley.png"
     },
     {
       name: "Declan Bourke", 
       role: "Founder and COO",
       country: "Ireland",
-      imageUrl: "/images/teamPhotos/Declan Bourke, Founder and COO.png"
+      imageUrl: "/images/teamPhotos/declan-bourke.png"
     },
     {
       name: "Manav Bhatia", 
       role: "Global Marketing Manager",
       country: "Dubai",
-      imageUrl: "/images/teamPhotos/Manav Bhatia, Global Marketing Manager.jpg"
+      imageUrl: "/images/teamPhotos/manav-bhatia.jpg"
     },
     {
       name: "Martin Nutty",
       role: "CDO",
       country: "USA",
-      imageUrl: "/images/teamPhotos/Martin Nutty, CDO.jpeg"
+      imageUrl: "/images/teamPhotos/martin-nutty.jpeg"
     },
     {
       name: "Allison Melting",
       role: "Content Marketing Manager",
       country: "USA", 
-      imageUrl: "/images/teamPhotos/Allison Melting, Content Marketing Manager.jpeg"
+      imageUrl: "/images/teamPhotos/allison-melting.jpeg"
     },
     {
       name: "Liam Forster",
       role: "Lead Generation Manager",
       country: "Ireland",
-      imageUrl: "/images/teamPhotos/Liam Forster, Lead Generation Manager.jpeg"
+      imageUrl: "/images/teamPhotos/liam-forster.jpeg"
     },
     {
       name: "Taisa Gwaj",
       role: "Bookkeeper",
       country: "Ireland",
-      imageUrl: "/images/teamPhotos/Taisa Gwaj, Bookkeeper.jpg"
+      imageUrl: "/images/teamPhotos/taisa-gwaj.jpg"
     },
     {
       name: "Collin Fiske",
       role: "Full Stack Developer",
       country: "USA",
-      imageUrl: "/images/teamPhotos/Collin Fiske, Full Stack Developer.jpg"
+      imageUrl: "/images/teamPhotos/collin-fiske.jpg"
     },
     {
       name: "Sean Armadà",
       role: "Markets Development Manager",
       country: "Spain",
-      imageUrl: "/images/teamPhotos/Sean Armadà, Markets Development Manager.jpg"
+      imageUrl: "/images/teamPhotos/sean-armada.jpg"
     },
     {
       name: "Jack Sampson",
       role: "Data Analyst",
       country: "USA",
-      imageUrl: "/images/teamPhotos/Jack Sampson, Data Analysist.jpeg"
+      imageUrl: "/images/teamPhotos/jack-sampson.jpeg"
     },
     {
       name: "Karl Napper",
       role: "Customer Success Manager",
       country: "Ireland",
-      imageUrl: "/images/teamPhotos/Karl Napper, Customer Success Manager.jpeg"
+      imageUrl: "/images/teamPhotos/karl-napper.jpeg"
     },
     {
       name: "Oscar Quinn Hunt",
       role: "Customer Success Manager",
       country: "Ireland",
-      imageUrl: "/images/teamPhotos/Oscar Quinn Hunt, Customer Success Manager.jpeg"
+      imageUrl: "/images/teamPhotos/oscar-quinn-hunt.jpeg"
     }
   ];
 
