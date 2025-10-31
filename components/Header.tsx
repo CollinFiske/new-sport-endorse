@@ -200,64 +200,61 @@ export default function Header() {
       </div>
 
       {/* Hamburger Menu Button - Far right */}
-      <button
+      <div
         className="hamburger-menu-btn"
-        aria-label="Open hamburger menu"
-        onClick={() => setHamburgerMenuOpen((open) => !open)}
+        onMouseEnter={() => setHamburgerMenuOpen(true)}
+        onMouseLeave={() => setHamburgerMenuOpen(false)}
       >
         <span className="hamburger-bar" />
         <span className="hamburger-bar" />
         <span className="hamburger-bar" />
-      </button>
 
-      {/* Hamburger Dropdown Menu */}
-      {hamburgerMenuOpen && (
-        <div className="hamburger-dropdown">
-          <a target="_blank" href="https://platform.sportendorse.com/login" onClick={() => setHamburgerMenuOpen(false)}>
-            {t.login}
-          </a>
-          {isMobile && (
-            <>
-              <Link href={getNavLink("/talent")} onClick={() => setHamburgerMenuOpen(false)}>
-                {t.talent}
-              </Link>
-              <Link href={getNavLink("/brands")} onClick={() => setHamburgerMenuOpen(false)}>
-                {t.brand}
-              </Link>
-              <Link href={getNavLink("/agency")} onClick={() => setHamburgerMenuOpen(false)}>
-                {t.agencies}
-              </Link>
-              <Link href={getNavLink("/subscription")} onClick={() => setHamburgerMenuOpen(false)}>
-                {t.subscription}
-              </Link>
-            </>
-          )}
-          <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07" onClick={() => setHamburgerMenuOpen(false)}>
-            {t.bookDemo}
-          </a>
-          <Link href={getNavLink("/success-stories")} onClick={() => setHamburgerMenuOpen(false)}>
-            {t.successStories}
-          </Link>
-          <Link href={getNavLink("/about-us")} onClick={() => setHamburgerMenuOpen(false)}>
-            {t.aboutUs}
-          </Link>
-          <Link href={getNavLink("/blog")} onClick={() => setHamburgerMenuOpen(false)}>
-            {t.blog}
-          </Link>
-          <Link href={getNavLink("/podcasts")} onClick={() => setHamburgerMenuOpen(false)}>
-            {t.podcasts}
-          </Link>
-          <Link href={getNavLink("/faqs")} onClick={() => setHamburgerMenuOpen(false)}>
-            {t.faqs}
-          </Link>
-          <Link href={getNavLink("/contact-us")} onClick={() => setHamburgerMenuOpen(false)}>
-            {t.contactUs}
-          </Link>
-          <Link href={getNavLink("/terms-and-conditions")} onClick={() => setHamburgerMenuOpen(false)}>
-            {t.termsConditions}
-          </Link>
-        </div>
-      )}
+        {/* Hamburger Dropdown Menu */}
+        {hamburgerMenuOpen && (
+          <div className="hamburger-dropdown">
+            <a target="_blank" href="https://platform.sportendorse.com/login" onClick={() => setHamburgerMenuOpen(false)}>
+              {t.login}
+            </a>
+            {isMobile && (
+              <>
+                <Link href={getNavLink("/talent")} onClick={() => setHamburgerMenuOpen(false)}>
+                  {t.talent}
+                </Link>
+                <Link href={getNavLink("/brands")} onClick={() => setHamburgerMenuOpen(false)}>
+                  {t.brand}
+                </Link>
+                <Link href={getNavLink("/agency")} onClick={() => setHamburgerMenuOpen(false)}>
+                  {t.agencies}
+                </Link>
+                <Link href={getNavLink("/subscription")} onClick={() => setHamburgerMenuOpen(false)}>
+                  {t.subscription}
+                </Link>
+              </>
+            )}
+            <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07" onClick={() => setHamburgerMenuOpen(false)}>
+              {t.bookDemo}
+            </a>
+            <Link href={getNavLink("/success-stories")} onClick={() => setHamburgerMenuOpen(false)}>
+              {t.successStories}
+            </Link>
+            <Link href={getNavLink("/about-us")} onClick={() => setHamburgerMenuOpen(false)}>
+              {t.aboutUs}
+            </Link>
+            <Link href={getNavLink("/blog")} onClick={() => setHamburgerMenuOpen(false)}>
+              {t.blog}
+            </Link>
+            <Link href={getNavLink("/podcasts")} onClick={() => setHamburgerMenuOpen(false)}>
+              {t.podcasts}
+            </Link>
+            <Link href={getNavLink("/faqs")} onClick={() => setHamburgerMenuOpen(false)}>
+              {t.faqs}
+            </Link>
+            <Link href={getNavLink("/contact-us")} onClick={() => setHamburgerMenuOpen(false)}>
+              {t.contactUs}
+            </Link>
+          </div>
+        )}
+      </div>
     </header>
   );
 }

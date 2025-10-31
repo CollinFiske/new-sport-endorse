@@ -4,7 +4,7 @@
   padding: 2rem;
   font-size: 0.95rem;
   position: relative;
-  z-index: 1000;
+  z-index: 20;
 }
 
 .maxWidth{

@@ -15,7 +15,7 @@ const translations = {
       privacyCentre: "Privacy Centre",
       links: {
         signUpBrand: "Sign up as Brand",
-        bookDemo: "Book A Demo",
+        bookDemo: "Book a Demo",
         subscriptions: "Subscriptions",
         podcasts: "Podcasts",
         careers: "Careers",
@@ -51,7 +51,7 @@ const translations = {
       signUpBtn:"SIGN UP",
       demoBtn:"DEMO FOR BUSINESS",
       login:"Login",
-      bookDemo:"Book A Demo",
+      bookDemo:"Book a Demo",
       successStories:"Success Stories",
       faqs:"FAQs",
       contactUs:"Contact Us",
@@ -99,7 +99,7 @@ const translations = {
     },
     home:{
       welcome: "A new era for <span class='highlight-blue'>brand</span> and <span class='gradientText'>athlete</span> partnerships.",
-      description: "Sport Endorse is the platform that brings brands and athletes together for authentic and impactful partnerships. We make it easy for brands to find and collaborate with the right talent, and for athletes to connect directly with brands and secure paid deals.",
+      description: "Sport Endorse is the Leading sports sponsorship platform connecting brands, athletes, and sports influencers for authentic, data-driven, and impactful partnerships. We simplify every stage of sports sponsorship management — making it easy for brands to discover the right athletes and for athletes to connect directly with brands for verified, paid collaborations. Trusted by global organisations, Sport Endorse is the most reliable sports sponsorship marketplace in the industry.",
       tableHeader:"Featured Brands We Work With",
       benefitSection:{
         athlete:{
@@ -544,7 +544,7 @@ const translations = {
     },
     home:{
       welcome: "Desbloquea el poder del <span class='gradientText'> mercado </span> de embajadores <span class='highlight-blue'>deportivos</span>",
-      description: "Plataforma de marketing deportivo que vincula marcas con atletas de élite e influencers deportivos para la gestión de patrocinios y asociaciones auténticas.",
+      description: "Sport Endorse es la Plataforma líder de patrocinio deportivo que conecta marcas, atletas e influencers deportivos para asociaciones auténticas, basadas en datos e impactantes. Simplificamos cada etapa de la gestión de patrocinio deportivo — facilitando que las marcas descubran a los atletas correctos y que los atletas se conecten directamente con marcas para colaboraciones verificadas y remuneradas. Con la confianza de organizaciones globales, Sport Endorse es el mercado de patrocinio deportivo más confiable de la industria.",
       tableHeader: "ÚNETE A MÁS DE 650 MARCAS Y ATLETAS DE ÉLITE EN ALIANZAS DEPORTIVAS AUTÉNTICAS",
       benefitSection: {
         athlete: {
@@ -989,7 +989,7 @@ const translations = {
     },
     home:{
       welcome: "Entfesseln Sie die Macht des <span class='highlight-blue'>Sportbotschafter-</span>-<span class='gradientText'>Marketings</span>",
-      description: "Plattform für Sportmarketing, die Marken mit Spitzensportlern und Sport-Influencern für Sponsoringmanagement und authentische Partnerschaften verbindet.",
+      description: "Sport Endorse ist die Führende Sport-Sponsoring-Plattform, die Marken, Athleten und Sport-Influencer für authentische, datengestützte und wirkungsvolle Partnerschaften verbindet. Wir vereinfachen jede Stufe des Sport-Sponsoring-Managements — und machen es Marken einfach, die richtigen Athleten zu entdecken und Athleten, sich direkt mit Marken für verifizierte, bezahlte Kooperationen zu verbinden. Vertraut von globalen Organisationen ist Sport Endorse der zuverlässigste Sport-Sponsoring-Marktplatz der Branche.",
       tableHeader: "SCHLIESSEN SIE SICH ÜBER 650 MARKEN UND ELITE-ATHLETEN IN AUTHENTISCHEN SPORTPARTNERSCHAFTEN AN",
       benefitSection: {
         athlete: {

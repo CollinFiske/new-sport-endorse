@@ -10,12 +10,15 @@
   align-items: center;
   padding: 1rem 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  max-width: 1200px;
+  /*max-width: 1200px;*/
+  width: 100vw;
+
   z-index: 1000;
 }
 
 /* Hamburger Menu Button - Far right */
 .hamburger-menu-btn {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +44,7 @@
 
 .hamburger-dropdown {
   position: absolute;
-  top: 64px;
+  top: 100%;
   right: 0;
   background: white;
   border: 1px solid #ddd;
