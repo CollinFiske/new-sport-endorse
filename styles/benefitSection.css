@@ -80,7 +80,7 @@
 }
 
 .benefit-button {
-  background: #008cfa;
+  background: #0078c1;
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -98,8 +98,8 @@
 
 .demo-button {
   background: white;
-  color: #008cfa;
-  border: 2px solid #008cfa;
+  color: #0078c1;
+  border: 2px solid #0078c1;
   padding: 0.6rem 1.2rem;
   font-weight: bold;
   border-radius: 5px;

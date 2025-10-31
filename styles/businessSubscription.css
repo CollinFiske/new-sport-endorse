@@ -15,7 +15,7 @@
   font-weight: 900;
   color: #1e293b;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #1e293b 0%, #009ee3 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -52,7 +52,7 @@
 }
 
 .subscription-pricing-card.subscription-featured {
-  border-color: #3b82f6;
+  border-color: #0078c1;
   transform: scale(1.05);
 }
 
@@ -78,7 +78,7 @@
 }
 
 .subscription-annual-header {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  background: #009ee3;
   color: white;
 }
 
@@ -256,9 +256,9 @@
 }
 
 .subscription-annual-button {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  background: #0078c1;
   color: white;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 120, 193, 0.3);
 }
 
 .subscription-annual-button:hover {
@@ -421,8 +421,8 @@
 .subscription-form-group textarea:focus,
 .subscription-form-group select:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #0078c1;
+  box-shadow: 0 0 0 3px rgba(0, 120, 193, 0.1);
 }
 
 .subscription-form-group textarea {

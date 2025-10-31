@@ -19,7 +19,7 @@
 .trusted-partners-label span {
   font-size: 0.85rem;
   font-weight: 500;
-  color: #18A0FB;
+  color: #0078c1;
 }
 
 .trusted-partners-title {
@@ -42,7 +42,7 @@
 }
 
 .referral-button {
-  background: #18A0FB;
+  background: #0078c1;
   color: white;
   font-size: 1rem;
   font-weight: 600;
@@ -56,7 +56,7 @@
 }
 
 .referral-button:hover {
-  background: #1976d2;
+  background: #005a8c;
   transform: translateY(-2px);
 }
 
@@ -164,12 +164,12 @@
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #18A0FB;
-  box-shadow: 0 0 0 3px rgba(24, 160, 251, 0.1);
+  border-color: #0078c1;
+  box-shadow: 0 0 0 3px rgba(0, 120, 193, 0.1);
 }
 
 .submit-button {
-  background: #18A0FB;
+  background: #0078c1;
   color: white;
   font-size: 1rem;
   font-weight: 600;
@@ -182,7 +182,7 @@
 }
 
 .submit-button:hover {
-  background: #1976d2;
+  background: #005a8c;
 }
 
 /* Tablet styles */

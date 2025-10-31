@@ -95,7 +95,7 @@ export default function HomePageDE() {
       item1={t.home.benefitSection.brand.bullet1}
       item2={t.home.benefitSection.brand.bullet2}
       item3={t.home.benefitSection.brand.bullet3}
-      color="#008cfa" /* was F6B014 */
+      color="#009ee3" /* was F6B014 */
       learnMoreLink="/de/brands"
     />
 
@@ -108,7 +108,7 @@ export default function HomePageDE() {
       item1={t.home.benefitSection.athlete.bullet1}
       item2={t.home.benefitSection.athlete.bullet2}
       item3={t.home.benefitSection.athlete.bullet3}
-      color="#008cfa"
+      color="#009ee3"
       learnMoreLink="/de/talent"
     />
 

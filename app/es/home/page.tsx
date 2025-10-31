@@ -123,7 +123,7 @@ export default function HomePage() {
       item1={t.home.benefitSection.brand.bullet1}
       item2={t.home.benefitSection.brand.bullet2}
       item3={t.home.benefitSection.brand.bullet3}
-      color="#008cfa"
+      color="#009ee3"
       learnMoreLink={language === 'es' ? "/es/brands" : language === 'de' ? "/de/brands" : "/brands"}
     />
 
@@ -136,7 +136,7 @@ export default function HomePage() {
       item1={t.home.benefitSection.athlete.bullet1}
       item2={t.home.benefitSection.athlete.bullet2}
       item3={t.home.benefitSection.athlete.bullet3}
-      color="#008cfa"
+      color="#009ee3"
       learnMoreLink={language === 'es' ? "/es/talent" : language === 'de' ? "/de/talent" : "/talent"}
     />
     

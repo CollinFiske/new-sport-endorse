@@ -42,7 +42,7 @@
 }
 
 .carousel-arrow {
-  background: #18A0FB;
+  background: #0078c1;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -110,7 +110,7 @@
 .read-more {
   display: block;
   margin-top: 0.5rem;
-  color: #008cfa;
+  color: #0078c1;
   font-weight: 500;
   text-decoration: none;
 }

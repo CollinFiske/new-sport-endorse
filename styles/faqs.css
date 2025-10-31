@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 20px auto;
   
-  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", "Myriad Pro", "Myriad", Arial, Helvetica, sans-serif;
 }
 
 .faq-content {
@@ -70,7 +70,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #18A0FB;
+  color: #0078c1;
   font-weight: 500;
   background: none;
   border: none;
@@ -142,7 +142,7 @@ h2.faq-item-text {
 .faq-icon {
   width: 1.25rem;
   height: 1.25rem;
-  color: #3b82f6;
+  color: #0078c1;
 }
 
 .faq-item-content {

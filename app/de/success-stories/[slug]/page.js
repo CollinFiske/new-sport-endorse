@@ -174,7 +174,7 @@ export default async function SuccessStoryPost({ params }) {
                 <div className="blog-post-prose">
                   {/* Show description if available */}
                   {story.yoast_head_json?.description && (
-                    <div style={{ marginBottom: '2rem', padding: '1.5rem', backgroundColor: '#f8f9fa', borderRadius: '0.5rem', borderLeft: '4px solid #18A0FB' }}>
+                    <div style={{ marginBottom: '2rem', padding: '1.5rem', backgroundColor: '#f8f9fa', borderRadius: '0.5rem', borderLeft: '4px solid #0078c1' }}>
                       <p style={{ margin: '0', fontSize: '1.125rem', fontStyle: 'italic', color: '#374151' }}>
                         {decodeHtmlEntities(story.yoast_head_json.description)}
                       </p>

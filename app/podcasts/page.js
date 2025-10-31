@@ -132,7 +132,7 @@ function PodcastCard({ podcast, index }) {
           <Link href={`/podcasts/${podcast.slug}`}>
             <button 
               style={{
-                backgroundColor: '#18A0FB',
+                backgroundColor: '#0078c1',
                 color: 'white',
                 border: 'none',
                 borderRadius: '6px',
@@ -209,7 +209,7 @@ export default async function PodcastsPage() {
                   <button 
                     className="feature-me-button"
                     style={{
-                      backgroundColor: '#18A0FB',
+                      backgroundColor: '#0078c1',
                       color: 'white',
                       border: 'none',
                       borderRadius: '6px',

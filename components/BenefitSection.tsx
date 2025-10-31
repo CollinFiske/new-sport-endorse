@@ -15,7 +15,7 @@ interface BenefitProps {
   learnMoreLink?: string;
 }
 
-export default function BenefitSection({ title, subtitle, image, label, background = "#e8f2fd", item1="item1", item2="item2", item3="item3", color="#008cfa", learnMoreLink = "/talent" }: BenefitProps) {
+export default function BenefitSection({ title, subtitle, image, label, background = "#e8f2fd", item1="item1", item2="item2", item3="item3", color="#009ee3", learnMoreLink = "/talent" }: BenefitProps) {
   return (
     <section className="benefit-section" style={{ background, paddingBottom: label === "FOR BRANDS" ? "40px !important" : undefined }}>
       <div className="benefit-left">

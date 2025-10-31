@@ -17,7 +17,7 @@ interface CategoryDropdownFAQProps {
   color?: string;
 }
 
-export default function CategoryDropdownFAQ({ title, faqs, color = '#18A0FB' }: CategoryDropdownFAQProps) {
+export default function CategoryDropdownFAQ({ title, faqs, color = '#0078c1' }: CategoryDropdownFAQProps) {
   const { language } = useLanguage();
   const t = translations[language].components.faqs;
   const [categoryOpen, setCategoryOpen] = useState(false);

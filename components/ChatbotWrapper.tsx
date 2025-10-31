@@ -21,7 +21,7 @@ const ChatbotWrapper = ({ children }: { children: React.ReactNode }) => {
             width: 56,
             height: 56,
             borderRadius: "50%",
-            background: "#18A0FB",
+            background: "#0078c1",
             color: "#fff",
             fontSize: "2rem",
             border: "none",

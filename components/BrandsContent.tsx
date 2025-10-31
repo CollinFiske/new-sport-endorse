@@ -76,7 +76,7 @@ export default function BrandsContent({
                   </div>
                 ))}
                 <a href="https://platform.sportendorse.com/signup/brand" target="_blank" className="cta-card" style={{ 
-                  background: '#18A0FB', 
+                  background: '#0078c1', 
                   borderRadius: '0.75rem',
                   display: 'flex',
                   flexDirection: 'column',
@@ -109,7 +109,7 @@ export default function BrandsContent({
       <CategoryDropdownFAQ 
         title={t.components.faqs.categories.brand}
         faqs={currentBrandFAQs}
-        color="#18A0FB"
+        color="#0078c1"
       />
     </>
   );

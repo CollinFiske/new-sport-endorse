@@ -109,12 +109,12 @@ main{
 }
 
 .highlight-blue {
-  color: #18A0FB;
+  color: #0078c1;
 }
 
 .gradientText {
   position: relative;
-  background: linear-gradient(45deg, #3b82f6 0%, #10b981 50%, #f59e0b 100%);
+  background: linear-gradient(45deg, #0078c1 0%, #10b981 50%, #f59e0b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

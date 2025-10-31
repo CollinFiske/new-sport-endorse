@@ -1,5 +1,5 @@
 "use client"
-import '../styles/howItWorks.css';
+import '../styles/brandHowItWorks.css';
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
 
@@ -35,32 +35,32 @@ export default function BrandHowItWorks() {
     ];
 
   return (
-    <section className='bgGrid'>
-        <div className="how-it-works">
+    <section className='brand-how-bgGrid'>
+        <div className="brand-how-it-works">
             <h2>{t.title}</h2>
-            <p className="subtitle">
+            <p className="brand-how-subtitle">
                 {t.subtitle}
             </p>
-            <div className="how-it-works-content">
-                <div className="steps-container">
+            <div className="brand-how-it-works-content">
+                <div className="brand-how-steps-container">
                 {steps.map((step, index) => (
-                    <div className="step-card" key={index}>
-                    <div className="step-header">
+                    <div className="brand-how-step-card" key={index}>
+                    <div className="brand-how-step-header">
                         <span className="icon">
-                            <img src={`/images/${step.icon}`} alt={step.title} className={`step-icon step-${index}`} />
+                            <img src={`/images/${step.icon}`} alt={step.title} className={`brand-how-step-icon brand-how-step-${index}`} />
                         </span>
-                        <div className="title-row">
-                        <h3 className="step-title">{step.title}</h3>
-                        <span className="step-number">{step.number}</span>
+                        <div className="brand-how-title-row">
+                        <h3 className="brand-how-step-title">{step.title}</h3>
+                        <span className="brand-how-step-number">{step.number}</span>
                         </div>
                     </div>
-                    <hr className="divider" />
-                    <p className="step-description">{step.description}</p>
+                    <hr className="brand-how-divider" />
+                    <p className="brand-how-step-description">{step.description}</p>
                     </div>
                 ))}
                 </div>
-                <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="start-link">
-                    <button className="start-button">{t.buttonText}</button>
+                <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="brand-how-start-link">
+                    <button className="brand-how-start-button">{t.buttonText}</button>
                 </a>
             </div>
         </div>

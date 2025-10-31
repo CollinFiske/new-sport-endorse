@@ -70,7 +70,7 @@ export default function FAQs(){
                 name: t.categories.brand,
                 key: 'brands',
                 faqs: currentBrandFAQs,
-                color: '#18A0FB'
+                color: '#0078c1'
               },
               {
                 name: t.categories.talent, 

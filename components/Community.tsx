@@ -32,7 +32,7 @@ export default function Community({ showAgencies = false }: CommunityProps) {
       <div className="statistics-grid">
         <div className="stat-box">
           <div className="stat-content">
-            <img src="/images/statistics/athlete.png" alt="Athletes icon" style={{backgroundColor:"#18A0FB"}}/>
+            <img src="/images/statistics/athlete.png" alt="Athletes icon" style={{backgroundColor:"#0078c1"}}/>
             <h3>{athletes.toLocaleString()}</h3>
           </div>
           <hr className="stats-bar"/>

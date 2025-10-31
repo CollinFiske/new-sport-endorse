@@ -128,8 +128,8 @@
 .contact-us-select:focus,
 .contact-us-textarea:focus {
   outline: none;
-  border-color: #18A0FB;
-  box-shadow: 0 0 0 3px rgba(24, 160, 251, 0.1);
+  border-color: #0078c1;
+  box-shadow: 0 0 0 3px rgba(0, 120, 193, 0.1);
 }
 
 .contact-us-textarea {
@@ -155,12 +155,12 @@
   margin-right: 0.5rem;
   width: 16px;
   height: 16px;
-  accent-color: #18A0FB;
+  accent-color: #0078c1;
 }
 
 .contact-us-submit-btn {
   width: 100%;
-  background: #18A0FB;
+  background: #0078c1;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -173,7 +173,7 @@
 }
 
 .contact-us-submit-btn:hover {
-  background: #1976d2;
+  background: #005a8c;
   transform: translateY(-2px);
 }
 

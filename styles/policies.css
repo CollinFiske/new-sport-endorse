@@ -6,7 +6,7 @@ main {
   padding: 32px 24px;
   background: #fff;
   border-radius: 8px;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Source Sans Pro", "Myriad Pro", "Myriad", Arial, Helvetica, sans-serif;
   color: #222;
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   margin-bottom: 2rem;

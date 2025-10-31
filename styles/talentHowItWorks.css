@@ -116,7 +116,7 @@
 }
 
 .talent-start-button {
-  background-color: #18A0FB;
+  background-color: #0078c1;
   color: white;
   font-size: 14px;
   font-weight: 600;
@@ -129,7 +129,7 @@
 }
 
 .talent-start-button:hover {
-  background-color: #1976d2;
+  background-color: #005a8c;
 }
 
 /* Large tablets and smaller desktops */

@@ -15,7 +15,7 @@ interface SingleCategoryFAQProps {
   color?: string;
 }
 
-export default function SingleCategoryFAQ({ title, faqs, color = '#18A0FB' }: SingleCategoryFAQProps) {
+export default function SingleCategoryFAQ({ title, faqs, color = '#0078c1' }: SingleCategoryFAQProps) {
   const [openItems, setOpenItems] = useState<Record<number, boolean>>({});
 
   const toggleItem = (index: number) => {

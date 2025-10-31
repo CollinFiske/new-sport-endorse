@@ -86,9 +86,9 @@
 }
 
 .demo-btn:hover {
-  background-color: #1976d2;
+  background-color: #005a8c;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.4);
+  box-shadow: 0 6px 16px rgba(0, 120, 193, 0.4);
 }
 
 /* Tablet styles */

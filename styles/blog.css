@@ -127,7 +127,7 @@ h2.blog-post-title {
 }
 
 .blog-post-link:hover {
-  color: #18A0FB;
+  color: #0078c1;
 }
 
 .blog-post-excerpt {
@@ -227,12 +227,12 @@ h2.blog-post-title {
 }
 
 .blog-post-prose a {
-  color: #18A0FB;
+  color: #0078c1;
   text-decoration: underline;
 }
 
 .blog-post-prose a:hover {
-  color: #1d4ed8;
+  color: #005a8c;
 }
 
 .blog-post-prose ul,
@@ -304,9 +304,9 @@ h2.blog-post-title {
 
 /* Feature Me Button Styles */
 .feature-me-button:hover {
-  background-color: #1976d2 !important;
+  background-color: #005a8c !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(24, 160, 251, 0.4) !important;
+  box-shadow: 0 6px 16px rgba(0, 120, 193, 0.4) !important;
 }
 
 /* Podcast Header Mobile Responsive Styles */
