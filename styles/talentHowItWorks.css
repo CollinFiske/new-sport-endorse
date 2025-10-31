@@ -55,7 +55,7 @@
 
 .talent-step-image {
   width: 100%;
-  height: 160px;
+  height: 400px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -168,7 +168,7 @@
   }
   
   .talent-step-image {
-    height: 140px;
+    height: 180px;
   }
   
   .talent-step-content {
@@ -198,7 +198,7 @@
   }
   
   .talent-step-image {
-    height: 120px;
+    height: 160px;
   }
   
   .talent-step-content {
@@ -228,7 +228,7 @@
   }
   
   .talent-step-image {
-    height: 180px;
+    height: 220px;
   }
   
   .talent-step-content {
