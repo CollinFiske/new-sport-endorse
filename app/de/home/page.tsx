@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import BenefitSection from "../../../components/BenefitSection";
 import { useLanguage } from "../../../context/LanguageContext";
 import translations from "../../../utils/translations";
