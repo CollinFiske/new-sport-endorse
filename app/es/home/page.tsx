@@ -16,8 +16,10 @@ export default function HomePage() {
   const { language } = useLanguage();
   const t = translations[language];
   const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth <= 480);
     };
@@ -27,6 +29,19 @@ export default function HomePage() {
 
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
+
+  // Function to get the appropriate video source based on screen size
+  const getVideoSource = () => {
+    if (!isClient) return "/videos/4_3 aspect ratio (wide) .MOV";
+    
+    if (window.innerWidth <= 480) {
+      return "/videos/9_16 aspect ratio (mobile_reel_tiktok).MOV";
+    } else if (window.innerWidth <= 768) {
+      return "/videos/3_4 aspect ratio (in between).MOV";
+    } else {
+      return "/videos/4_3 aspect ratio (wide) .MOV";
+    }
+  };
 
   const homeMetadata = {
     en: {
@@ -61,6 +76,12 @@ export default function HomePage() {
       </Head>
 
     <section className="heroSection">
+      <div className="videoBackground">
+        <video autoPlay muted loop playsInline className="backgroundVideo">
+          <source src={getVideoSource()} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <div className="container">
         <div className="content">
           <h1 className="title"
@@ -69,12 +90,12 @@ export default function HomePage() {
           <p className="description">
             {t.home.description}
           </p>
-          <div className="home-apps">
-            <AppStores />
-          </div>
-          <br/>
-          <div className="rating-container" style={{display:"flex"}}>
-            <div className="rating">
+        </div>
+        
+        <div className="appStoresContainer" style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "10px"}}>
+          <AppStores />
+          <div style={{display:"flex", alignItems: "center", justifyContent: "center", gap: "20px", marginLeft:"20px"}}>
+            <div className="rating" style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
               <img src="/images/star_icon.png" alt="star" className="star-icon" /> 
               <img src="/images/star_icon.png" alt="star" className="star-icon" />
               <img src="/images/star_icon.png" alt="star" className="star-icon" />
@@ -82,12 +103,8 @@ export default function HomePage() {
               <img src="/images/star_icon.png" alt="star" className="star-icon" />
               <span className="rating-text">5.0</span>
             </div>
-            <img className="home-app-for-athletes-img" style={{marginLeft:200, width:"230px", height:"auto"}} src="/images/appforathletes.png" alt="app for athletes text" />
+            <img className="home-app-for-athletes-img" style={{width:"200px", height:"auto"}} src="/images/appforathletes.png" alt="app for athletes text" />
           </div>
-        </div>
-        
-        <div className="imageContainer">
-          <Image src="/images/homeHero.png" alt="Athlete Hero" width={600} height={500} className="heroImage" priority/>
         </div>
       </div>
     </section>

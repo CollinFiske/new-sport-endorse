@@ -7,6 +7,25 @@ main{
   padding: 10px 0 20px;
   display: flex;
   align-items: center;
+  position: relative;
+  min-height: 70vh;
+  overflow: hidden;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.backgroundVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .container {
@@ -16,6 +35,14 @@ main{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.appStoresContainer {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -46,6 +73,41 @@ main{
   letter-spacing: -0.02em;
 }
 
+/* Add overlay for better text readability on video */
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make title white with shadow for better readability over video */
+@media (min-width: 769px) {
+  .title {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .description {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .rating-text,
+  .star-icon {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+  }
+}
+
 .highlight-blue {
   color: #18A0FB;
 }
@@ -73,7 +135,8 @@ main{
 .description {
   font-size: 1.125rem;
   line-height: 1.7;
-  color: #6b7280;
+  /*color: #6b7280;*/
+  color: white;
   margin-bottom: 30px;
   max-width: 480px;
 }
@@ -119,6 +182,7 @@ main{
 .rating-text {
   margin-left: 4px;
   font-weight: 500;
+  color: white;
 }
 
 .home-right {
@@ -188,13 +252,14 @@ table td:hover {
 @media (max-width: 768px) {
   .heroSection {
     padding: 20px 0 30px;
+    min-height: 80vh;
   }
 
   .container {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
-    padding: 0;
+    padding: 0 20px;
   }
 
   .content {
@@ -208,26 +273,14 @@ table td:hover {
     text-align: center;
   }
 
-  .home-apps {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  .appStoresContainer {
+    margin-top: 20px;
   }
 
-  .home-apps .app-stores {
+  .appStoresContainer .app-stores {
     justify-content: center;
-  }
-
-  .heroImage {
-    max-width: 350px;
-    border-radius: 15px;
   }
   
-  .imageContainer{
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .home-section {
     flex-direction: column;
     text-align: center;
@@ -249,6 +302,13 @@ table td:hover {
   .title {
     font-size: 2.5rem;
     margin: 0 0 1rem 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .description {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
 
   .home-left p {
@@ -279,29 +339,30 @@ table td:hover {
 @media (max-width: 480px) {
   .heroSection {
     padding: 0 0 25px;
+    min-height: 90vh;
   }
 
   .container {
     gap: 25px;
+    padding: 0 15px;
   }
 
   .title {
     font-size: 1.8rem;
     margin: 15px 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
 
   .description {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   }
 
-  .heroImage {
-    max-width: 280px;
-    border-radius: 12px;
-  }
-
-  .home-apps {
+  .appStoresContainer {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
@@ -318,5 +379,10 @@ table td:hover {
 
   .rating {
     font-size: 0.9rem;
+  }
+
+  .rating-text,
+  .star-icon {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
   }
 }
