@@ -235,16 +235,16 @@ export default function Header() {
           <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07" onClick={() => setHamburgerMenuOpen(false)}>
             {t.bookDemo}
           </a>
-          <Link href="/success-stories" onClick={() => setHamburgerMenuOpen(false)}>
+          <Link href={getNavLink("/success-stories")} onClick={() => setHamburgerMenuOpen(false)}>
             {t.successStories}
           </Link>
           <Link href={getNavLink("/about-us")} onClick={() => setHamburgerMenuOpen(false)}>
             {t.aboutUs}
           </Link>
-          <Link href="/blog" onClick={() => setHamburgerMenuOpen(false)}>
+          <Link href={getNavLink("/blog")} onClick={() => setHamburgerMenuOpen(false)}>
             {t.blog}
           </Link>
-          <Link href="/podcasts" onClick={() => setHamburgerMenuOpen(false)}>
+          <Link href={getNavLink("/podcasts")} onClick={() => setHamburgerMenuOpen(false)}>
             {t.podcasts}
           </Link>
           <Link href={getNavLink("/faqs")} onClick={() => setHamburgerMenuOpen(false)}>
@@ -252,6 +252,9 @@ export default function Header() {
           </Link>
           <Link href={getNavLink("/contact-us")} onClick={() => setHamburgerMenuOpen(false)}>
             {t.contactUs}
+          </Link>
+          <Link href={getNavLink("/terms-and-conditions")} onClick={() => setHamburgerMenuOpen(false)}>
+            {t.termsConditions}
           </Link>
         </div>
       )}

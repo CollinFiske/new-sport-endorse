@@ -57,7 +57,8 @@ const translations = {
       contactUs:"Contact Us",
       podcasts:"Podcasts",
       signUpBrand:"Sign up as Brand/Business",
-      signUpTalent:"Sign up as Talent"
+      signUpTalent:"Sign up as Talent",
+      termsConditions:"Terms & Conditions"
     },
     brands: {
       badge: "FOR BRANDS",
@@ -501,7 +502,8 @@ const translations = {
       contactUs: "Contáctanos",
       podcasts: "Podcasts",
       signUpBrand: "Registrarse como Marca/Empresa",
-      signUpTalent: "Registrarse como Talento"
+      signUpTalent: "Registrarse como Talento",
+      termsConditions: "Términos y Condiciones"
     },
     brands: {
       badge: "PARA MARCAS",
@@ -945,7 +947,8 @@ const translations = {
       contactUs: "Kontakt",
       podcasts: "Podcasts",
       signUpBrand: "Als Marke/Unternehmen anmelden",
-      signUpTalent: "Als Talent anmelden"
+      signUpTalent: "Als Talent anmelden",
+      termsConditions: "Allgemeine Geschäftsbedingungen"
     },
     brands: {
       badge: "FÜR MARKEN",
