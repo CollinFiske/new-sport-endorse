@@ -94,7 +94,7 @@ Thank you!`;
               <div className="subscription-plan-badge subscription-trial-badge">Free!</div>
               <h3 className="subscription-plan-name">FREE TRIAL</h3>
               <div className="subscription-price-section">
-                <span className="subscription-price-amount subscription-trial-price">$0</span>
+                <span className="subscription-price-amount subscription-trial-price">€/£/$0</span>
                 <span className="subscription-price-period">/month</span>
               </div>
               <p className="subscription-billing-info">1 month free trial</p>
@@ -121,7 +121,7 @@ Thank you!`;
             <div className="subscription-card-header subscription-quarterly-header">
               <h3 className="subscription-plan-name">QUARTERLY</h3>
               <div className="subscription-price-section">
-                <span className="subscription-price-amount">$700</span>
+                <span className="subscription-price-amount">€/£/$700</span>
                 <span className="subscription-price-period">/quarter</span>
               </div>
               <p className="subscription-billing-info">Paid every 3 months, +VAT</p>
@@ -149,7 +149,7 @@ Thank you!`;
               <div className="subscription-plan-badge subscription-annual-badge">Save 35%</div>
               <h3 className="subscription-plan-name">ANNUAL</h3>
               <div className="subscription-price-section">
-                <span className="subscription-price-amount">$1,799</span>
+                <span className="subscription-price-amount">€/£/$1,799</span>
                 <span className="subscription-price-period">/year</span>
               </div>
               <p className="subscription-billing-info">Paid every 12 months, +VAT</p>
