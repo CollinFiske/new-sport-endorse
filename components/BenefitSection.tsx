@@ -33,7 +33,7 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
           <li><img src="/images/star_icon.png" alt="star" className="bullet-icon" /> {item3}</li>
         </ul>
         <div className="button-group">
-          {title && (title !== "Join our Talented Team of Athletes" && title !== "Boost your personal brand") ? (
+          {image && (image !== "/images/talentBenefitPic.png") ? (
             <>
               <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=trial"><button className="benefit-button">START FREE TRIAL</button></a>
               <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">

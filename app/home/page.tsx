@@ -147,6 +147,19 @@ export default function HomePage() {
       learnMoreLink={language === 'es' ? "/es/talent" : language === 'de' ? "/de/talent" : "/talent"}
     />
 
+    <BenefitSection
+      title={t.home.benefitSection.agency.title}
+      subtitle={t.home.benefitSection.agency.subtitle}
+      image="/images/talentBenefitPic.png"
+      label={t.home.benefitSection.agency.label}
+      background="#E5F1FF"
+      item1={t.home.benefitSection.agency.bullet1}
+      item2={t.home.benefitSection.agency.bullet2}
+      item3={t.home.benefitSection.agency.bullet3}
+      color="#009ee3"
+      learnMoreLink={language === 'es' ? "/es/talent" : language === 'de' ? "/de/talent" : "/talent"}
+    />
+
     {/*<BenefitSection
       title={t.home.benefitSection.agency.title}
       subtitle={t.home.benefitSection.agency.subtitle}

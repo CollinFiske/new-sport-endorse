@@ -164,7 +164,7 @@
 }
 
 /* Tablet and smaller screens - 2x2 grid */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .brand-how-steps-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;

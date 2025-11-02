@@ -61,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       
       <body>
         <noscript>
-          <div style={{margin:"70px 20px"}}>
+          <div style={{margin:"70px 20px", backgroundColor:"white"}}>
             <h1>JavaScript Required</h1>
             <p>Sport Endorse requires JavaScript to function properly. Please enable JavaScript in your browser settings and refresh the page.</p>
             <p><strong>To enable JavaScript:</strong></p>

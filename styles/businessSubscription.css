@@ -603,3 +603,43 @@
     width: 100%;
   }
 }
+
+/* See More Button Styles */
+.subscription-see-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.subscription-see-more-button {
+  background: linear-gradient(135deg, #009ee3 0%, #0084c7 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 20px rgba(0, 158, 227, 0.3);
+}
+
+.subscription-see-more-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 158, 227, 0.4);
+  background: linear-gradient(135deg, #0084c7 0%, #006ba3 100%);
+}
+
+.subscription-see-more-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments for See More button */
+@media (max-width: 768px) {
+  .subscription-see-more-button {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}

@@ -55,7 +55,7 @@ export default function Footer() {
             <p>{t.newsletterDescription}</p>
             <form onSubmit={handleSubmit} style={{ paddingBottom: "5px" }}>
               <input
-                style={{ maxWidth: "250px" }}
+                style={{ maxWidth: "250px", backgroundColor:"white" }}
                 type="email"
                 placeholder={t.emailPlaceholder}
                 value={email}

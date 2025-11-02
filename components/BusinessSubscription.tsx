@@ -3,10 +3,12 @@ import "../styles/businessSubscription.css";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function BusinessSubscription() {
   const { language } = useLanguage();
   const t = translations[language].components.businessSubscription;
+  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -193,6 +195,20 @@ Thank you!`;
               <button onClick={openModal} className="subscription-cta-button subscription-custom-button">TALK TO SALES</button>
             </div>
           </div>
+        </div>
+
+        {/* See More Button */}
+        <div className="subscription-see-more-container">
+          <button 
+            onClick={() => {
+              const subscriptionRoute = language === 'es' ? '/es/subscription' : 
+                                      language === 'de' ? '/de/subscription' : '/subscription';
+              router.push(subscriptionRoute);
+            }}
+            className="subscription-see-more-button"
+          >
+            {t.seeMoreButton}
+          </button>
         </div>
                 {/*
         <div className="subscription-consultation-section">

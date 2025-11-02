@@ -68,6 +68,10 @@ export default function TrustedSportAgencyPartners() {
             {t.description}
           </p>
 
+          <p className="trusted-partners-disclaimer">
+            {t.disclaimer}
+          </p>
+
           <button 
             className="referral-button"
             onClick={() => setShowPopup(true)}
