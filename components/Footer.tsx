@@ -106,6 +106,7 @@ export default function Footer() {
               <h5><span className="footer-number">08]</span><Link href={getNavLink("/faqs")}>{t.links.faqs}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
               <h5><span className="footer-number">09]</span><Link href={getNavLink("/blog")}>{t.links.blog}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>              
               <h5><span className="footer-number">10]</span><Link href={getNavLink("/contact-us")}>{t.links.contactUs}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
+              <h5><span className="footer-number">11]</span><Link href={getNavLink("/news")}>{t.links.news}<img src="/images/yellowArrow.svg" alt="yellow arrow svg" /></Link></h5>
             </div>
 
             <span className="footer-app-store-logos">
