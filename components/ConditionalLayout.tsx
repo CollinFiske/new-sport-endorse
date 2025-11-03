@@ -20,7 +20,7 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
   return (
     <>
       <Header />
-      <main style={{ padding: "80px 20px 0 20px" }}>{children}</main>
+      <main style={{ padding: "70px 20px 0 20px" }}>{children}</main>
       <Footer />
     </>
   );
