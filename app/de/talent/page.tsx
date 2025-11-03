@@ -37,19 +37,19 @@ export default function TalentPageDE() {
         <html lang="de" />
       </Head>
 
-      <section className="heroSection">
-        <div className="container">
-          <div className="content">
-            <span className="badge">
+      <section className="talent-heroSection">
+        <div className="talent-container">
+          <div className="talent-content">
+            <span className="talent-badge">
               ⦿ {t.talent.badge}
             </span>
             
             <h1 
-              className="title"
+              className="talent-title"
               dangerouslySetInnerHTML={{ __html: t.talent.title }}
             />
             
-            <p className="description">
+            <p className="talent-description">
               {t.talent.description}
             </p>
             
@@ -58,7 +58,7 @@ export default function TalentPageDE() {
             </div>
           </div>
              
-          <div className="imageContainer">
+          <div className="talent-imageContainer">
             <BrandsGrid variant="5x4" label="" />
           </div>
         </div>

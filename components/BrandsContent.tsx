@@ -34,26 +34,26 @@ export default function BrandsContent({
 
   return (
     <>
-      <section className="heroSection">
-        <div className="container">
-          <div className="content">
-            <div className="badge">
+      <section className="brands-heroSection">
+        <div className="brands-container">
+          <div className="brands-content">
+            <div className="brands-badge">
               ⦿ {badge}
             </div>
             
-            <h1 className="title" dangerouslySetInnerHTML={{ __html: title }}></h1>
+            <h1 className="brands-title" dangerouslySetInnerHTML={{ __html: title }}></h1>
             
-            <p className="description">
+            <p className="brands-description">
               {description}
             </p>
           </div>
           
-          <div className="imageContainer">
-            <div className="talent-showcase">
+          <div className="brands-imageContainer">
+            <div className="brands-talent-showcase">
               <h3 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#333', marginBottom: '1rem' }}>
                 {featuredAthletes}
               </h3>
-              <div className="talent-grid" style={{ 
+              <div className="brands-talent-grid" style={{ 
                 display: 'grid', 
                 gridTemplateColumns: 'repeat(3, 1fr)', 
                 gap: '1rem',
@@ -62,7 +62,7 @@ export default function BrandsContent({
                 borderRadius: '1rem'
               }}>
                 {topTalents.map((talent, index) => (
-                  <div key={index} className="talent-card" style={{ 
+                  <div key={index} className="brands-talent-card" style={{ 
                     background: 'white', 
                     borderRadius: '0.75rem', 
                     overflow: 'hidden',
@@ -75,7 +75,7 @@ export default function BrandsContent({
                     </div>
                   </div>
                 ))}
-                <a href="https://platform.sportendorse.com/signup/brand" target="_blank" className="cta-card" style={{ 
+                <a href="https://platform.sportendorse.com/signup/brand" target="_blank" className="brands-cta-card" style={{ 
                   background: '#0078c1', 
                   borderRadius: '0.75rem',
                   display: 'flex',

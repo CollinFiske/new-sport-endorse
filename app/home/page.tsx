@@ -82,33 +82,33 @@ export default function HomePage() {
     
 
 
-    <section className="heroSection">
-      <div className="videoBackground">
-        <video autoPlay muted loop playsInline className="backgroundVideo">
+    <section className="home-heroSection">
+      <div className="home-videoBackground">
+        <video autoPlay muted loop playsInline className="home-backgroundVideo">
           <source src={getVideoSource()} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="container">
-        <div className="content">
-          <h1 className="title"
+      <div className="home-container">
+        <div className="home-content">
+          <h1 className="home-title"
             dangerouslySetInnerHTML={{ __html: t.home.welcome }}
           />
-          <p className="description">
+          <p className="home-description">
             {t.home.description}
           </p>
         </div>
         
-        <div className="appStoresContainer" style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "10px"}}>
+        <div className="home-appStoresContainer" style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "10px"}}>
           <AppStores />
           <div style={{display:"flex", alignItems: "center", justifyContent: "center", gap: "20px", marginLeft:"20px"}}>
-            <div className="rating" style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
-              <img src="/images/star_icon.png" alt="star" className="star-icon" /> 
-              <img src="/images/star_icon.png" alt="star" className="star-icon" />
-              <img src="/images/star_icon.png" alt="star" className="star-icon" />
-              <img src="/images/star_icon.png" alt="star" className="star-icon" />
-              <img src="/images/star_icon.png" alt="star" className="star-icon" />
-              <span className="rating-text">5.0</span>
+            <div className="home-rating" style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
+              <img src="/images/star_icon.png" alt="star" className="home-star-icon" /> 
+              <img src="/images/star_icon.png" alt="star" className="home-star-icon" />
+              <img src="/images/star_icon.png" alt="star" className="home-star-icon" />
+              <img src="/images/star_icon.png" alt="star" className="home-star-icon" />
+              <img src="/images/star_icon.png" alt="star" className="home-star-icon" />
+              <span className="home-rating-text">5.0</span>
             </div>
             <img className="home-app-for-athletes-img" style={{width:"200px", height:"auto"}} src="/images/appforathletes.png" alt="app for athletes text" />
           </div>
