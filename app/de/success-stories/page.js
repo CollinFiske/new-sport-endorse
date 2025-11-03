@@ -77,7 +77,7 @@ export default async function SuccessStoriesPage() {
 
       <main className="blog-main">
         <div className="blog-main-header">
-          <h2 className="blog-main-title">Sport Endorse Erfolgsgeschichten</h2>
+          <h1 className="blog-main-title">Sport Endorse Erfolgsgeschichten</h1>
           <p className="blog-main-description">
             Entdecken Sie, wie unsere Athleten und Marken durch strategische Partnerschaften bemerkenswerte Erfolge erzielt haben
           </p>
@@ -97,14 +97,14 @@ export default async function SuccessStoriesPage() {
                   )}
 
                   <div className="blog-post-content">
-                    <h3 className="blog-post-title">
+                    <h2 className="blog-post-title">
                       <Link
                         href={`/de/success-stories/${story.slug}`}
                         className="blog-post-link"
                       >
                         {decodeHtmlEntities(story.title.rendered)}
                       </Link>
-                    </h3>
+                    </h2>
 
                     <Link
                       href={`/de/success-stories/${story.slug}`}

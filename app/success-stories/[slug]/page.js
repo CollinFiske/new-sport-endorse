@@ -153,7 +153,7 @@ export default async function SuccessStoryPost({ params }) {
           <div className="blog-post-main-container">
             <article className="blog-post-article">
               <header className="blog-post-article-header">
-                <h2 className="blog-post-article-title">{title}</h2>
+                <h1 className="blog-post-article-title">{title}</h1>
                 
                 <div className="blog-post-article-meta">
                   <time>{publishDate ? publishDate.toLocaleDateString() : 'Date not available'}</time>

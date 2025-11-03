@@ -55,7 +55,7 @@ export default async function BlogPost({ params }) {
         <div className="blog-post-main-container">
           <article className="blog-post-article">
             <header className="blog-post-article-header">
-              <h2 className="blog-post-article-title">{post.title.rendered}</h2>
+              <h1 className="blog-post-article-title">{post.title.rendered}</h1>
               
               <div className="blog-post-article-meta">
                 <time>{new Date(post.date).toLocaleDateString()}</time>

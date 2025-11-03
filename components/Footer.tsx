@@ -48,10 +48,12 @@ export default function Footer() {
   return (
     <footer className={`modern-footer ${language === 'es' ? 'footer-spanish' : ''}`}>
       <div className="maxWidth">
-        <img src="/images/sport endorse logo white.png" alt="Sport Endorse Logo" style={{ height: '6rem', marginBottom: '0' }} />
+        <Link href={getNavLink("/home")}>
+          <img src="/images/sport endorse logo white.png" alt="Sport Endorse Logo" style={{ height: '6rem', marginBottom: '0' }} />
+        </Link>
         <div className="footer-top">
           <div className="newsletter">
-            <h2>{t.newsletterTitle}</h2>
+            <h4>{t.newsletterTitle}</h4>
             <p>{t.newsletterDescription}</p>
             <form onSubmit={handleSubmit} style={{ paddingBottom: "5px" }}>
               <input
