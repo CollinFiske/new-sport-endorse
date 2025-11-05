@@ -5,7 +5,7 @@ import SuccessStories from "@/components/SuccessStories";
 import BrandsGrid from "@/components/BrandsGrid";
 import TalentHowItWorks from "@/components/TalentHowItWorks";
 import WhyAthletesChooseUs from "@/components/WhyAthletesChooseUs";
-import BrandReviews from "@/components/BrandReviews";
+import TalentReviews from "@/components/TalentReviews";
 import TrustedSportAgencyPartners from "@/components/TrustedSportAgencyPartners";
 import CategoryDropdownFAQ from "@/components/CategoryDropdownFAQ";
 import { useLanguage } from "@/context/LanguageContext";
@@ -67,7 +67,7 @@ export default function TalentPage() {
 
       <SuccessStories />
 
-      <BrandReviews />
+      <TalentReviews />
 
       <TrustedSportAgencyPartners />
 

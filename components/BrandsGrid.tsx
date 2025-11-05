@@ -9,39 +9,39 @@ interface BrandsGridProps {
 
 const brands = [
   // Brands from target list with available logos
-  { src: "/images/homePageTable/Alpro_Logo_Slider.webp", alt: "Alpro logo" },
+  { src: "/images/homePageTable/alpro.png", alt: "Alpro logo" },
   { src: "/images/homePageTable/GrantThornton.webp", alt: "Grant Thornton logo" },
   { src: "/images/homePageTable/Kelloggs_Logo_Slider.webp", alt: "Kellogg's logo" },
   { src: "/images/homePageTable/Lovable.webp", alt: "Lovable logo" },
   { src: "/images/homePageTable/Optimum_Nutrition_Logo.png", alt: "Optimum Nutrition logo" },
-  { src: "/images/homePageTable/PricewaterhouseCoopers_Logo.webp", alt: "PWC logo" },
+  { src: "/images/homePageTable/PricewaterhouseCoopers_Logo.png", alt: "PWC logo" },
   { src: "/images/homePageTable/puma.webp", alt: "Puma logo" },
   { src: "/images/homePageTable/Pringles-Logo.png", alt: "Pringles logo" },
   { src: "/images/homePageTable/whoop_logo.png", alt: "Whoop logo" },
   { src: "/images/homePageTable/shokz.png", alt: "Shokz logo" },
   { src: "/images/homePageTable/Hard_Rock_Cafe.webp", alt: "Hard Rock Cafe logo" },
   { src: "/images/homePageTable/skechers.webp", alt: "Skechers logo" },
-  { src: "/images/homePageTable/Specsaver.webp", alt: "Specsavers logo" },
-  { src: "/images/homePageTable/Sports-Direct_Logo_Slider.webp", alt: "Sports Direct logo" },
+  { src: "/images/homePageTable/Specsaver.png", alt: "Specsavers logo" },
+  { src: "/images/homePageTable/Sports-Direct_Logo_Slider.png", alt: "Sports Direct logo" },
   { src: "/images/homePageTable/affidea.jpg", alt: "Affidea logo" },
   { src: "/images/homePageTable/red_bull.png", alt: "Red Bull logo" },
   { src: "/images/homePageTable/revive_active.png", alt: "Revive Active logo" },
-  { src: "/images/homePageTable/mini.jpg", alt: "Mini logo" },
+  { src: "/images/homePageTable/mini.png", alt: "Mini logo" },
   { src: "/images/homePageTable/skins.jpg", alt: "Skins logo" },
   { src: "/images/homePageTable/solestar.gif", alt: "Solestar logo" },
   { src: "/images/homePageTable/uniphar.png", alt: "AYA/Uniphar logo" },
   { src: "/images/homePageTable/movember.png", alt: "Movember logo" },
   { src: "/images/homePageTable/isdin.png", alt: "ISDIN logo" },
-  { src: "/images/homePageTable/Glanbia.jpg", alt: "Avonmore/Tirlán/Glanbia logo" },
+  { src: "/images/homePageTable/Glanbia.png", alt: "Avonmore/Tirlán/Glanbia logo" },
   { src: "/images/homePageTable/uriage.png", alt: "Uriage logo" },
   { src: "/images/homePageTable/sons-hair-loss-uk.png", alt: "Sons logo" },
-  { src: "/images/homePageTable/sunvit-d3.webp", alt: "SunVit-D3 logo" },
+  { src: "/images/homePageTable/sunvit-d3.png", alt: "SunVit-D3 logo" },
   { src: "/images/homePageTable/dalata.png", alt: "Dalata Hotel Group logo" },
   { src: "/images/homePageTable/active-iron.png", alt: "Active Iron logo" },
-  { src: "/images/homePageTable/BBC-news.svg", alt: "BBC logo" },
+  { src: "/images/homePageTable/BBC-news.png", alt: "BBC logo" },
+  { src: "/images/homePageTable/popeyes-supplements.png", alt: "Popeyes Supplements logo"},
   
-  
-  { src: "/images/whiteSportEndorseLogo.webp", alt: "sport endorse logo", isButton: true }
+  { src: "/images/sport-endorse-white-logo.png", alt: "sport endorse logo", isButton: true }
 ];
 
 export default function BrandsGrid({ variant = "8x4", label }: BrandsGridProps) {

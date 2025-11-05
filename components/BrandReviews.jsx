@@ -10,16 +10,8 @@ export default function BrandReviews() {
   const t = translations[language].components.brandReviews;
   const reviews = [
     {
-      id: 1,
-      image: "/images/laura siddal.png",
-      alt: "Professional headshot of Carlos Rodriguez, football player",
-      text: "I've been a long-time fan of MINI. It's a brand that for me is so British and carries this heritage through its design over the years. I was delighted when through Sport Endorse I was made a Friend of the Brand for MINI UK.",
-      name: "Laura Siddall",
-      position: "TRIATHLON  | PROFESSIONAL"
-    },
-    {
       id: 2,
-      image: "/images/homePageTable/shuzgroup_logo.png",
+      image: "/images/shuzgroup_logo.png",
       alt: "Shuz Group company logo",
       text: "Sport Endorse has revolutionised the way ShuzGroup approaches sports brand ambassador marketing. This platform has not only simplified the process of connecting with sports talent across the nation but has also given us the freedom to choose the perfect ambassadors for our brand. This platform has truly enhanced our ability to make informed decisions when selecting sports talent and we would gladly recommend Sport Endorse.",
       name: "Rebecca Quinlan",
@@ -40,14 +32,6 @@ export default function BrandReviews() {
       text: "The team at Sport Endorse were a pleasure to work with, they were on hand in the lead up to our photoshoot and on the day were more than accommodatingwith our requests. A great experience all around and one we will no doubt repeat!”",
       name: "John Delves",
       position: "MAGNET +  | MANAGING DIRECTOR"
-    },
-    {
-      id: 5,
-      image: "/images/jason quigley.png",
-      alt: "Jason Quigley",
-      text: "When you're on the way to being a World Champion you need a good team in your corner and Sport Endorse has been setting me up to knock out the competition for brands I work with.... .. plenty more fire power here!",
-      name: "Jason Quigley",
-      position: "BOXING | PROFESSIONAL & FORMER TEAM IRELAND"
     },
     {
       id: 6,

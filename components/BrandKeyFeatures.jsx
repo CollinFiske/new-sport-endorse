@@ -16,7 +16,7 @@ export default function BrandKeyFeatures() {
       description: t.features[0].description,
     },
     {
-      icon: "trophy.png", 
+      icon: "bullseye.png", 
       title: t.features[1].title,
       description: t.features[1].description,
     },

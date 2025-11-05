@@ -5,7 +5,7 @@ import SuccessStories from "@/components/SuccessStories";
 import BrandsGrid from "@/components/BrandsGrid";
 import TalentHowItWorks from "@/components/TalentHowItWorks";
 import WhyAthletesChooseUs from "@/components/WhyAthletesChooseUs";
-import BrandReviews from "@/components/BrandReviews";
+import TalentReviews from "@/components/TalentReviews";
 import TrustedSportAgencyPartners from "@/components/TrustedSportAgencyPartners";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
@@ -70,7 +70,7 @@ export default function TalentPageDE() {
 
       <SuccessStories />
 
-      <BrandReviews />
+      <TalentReviews />
 
       <TrustedSportAgencyPartners />
 

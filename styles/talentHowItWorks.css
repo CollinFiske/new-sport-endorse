@@ -1,14 +1,14 @@
-.talent-how-it-works-bg {
+/*.talent-how-it-works-bg {
   background-image: 
     linear-gradient(to right, rgba(173, 216, 230, 0.3) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(173, 216, 230, 0.3) 1px, transparent 1px);
   background-size: 70px 70px;
-}
+}*/
 
 .talent-how-it-works {
   padding: 40px 35px;  
   max-width: 1200px;
-  margin: 50px auto 50px auto;
+  margin: 1.5rem auto 1.5rem auto;
 }
 
 .talent-how-it-works h2 {
@@ -20,7 +20,7 @@
 }
 
 .talent-how-it-works .subtitle {
-  max-width: 900px;
+  max-width: 650px;
   margin: 0 auto 40px auto;
   color: #777;
   font-size: 16px;
@@ -137,6 +137,7 @@
   .talent-how-it-works {
     padding: 40px 40px;
     margin: 40px auto;
+    margin: 1.5rem auto 1.5rem auto;
   }
   
   .talent-steps-container {

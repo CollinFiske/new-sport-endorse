@@ -15,39 +15,39 @@ export default function WhyAthletesChooseUs() {
         
         <div className="why-athletes-content">
           <div className="why-athletes-text">
-            <div className="feature-item">
-              <h3 className="feature-title">
-                <img src="/images/dollarsign.png" alt="dollar" className="feature-icon" />
+            <div className="why-athletes-feature-item">
+              <h3 className="why-athletes-feature-title">
+                <img src="/images/trophy.png" alt="dollar" className="why-athletes-feature-icon" />
                 {t.features[0].title}
               </h3>
-              <p className="feature-description">
+              <p className="why-athletes-feature-description">
                 {t.features[0].description}
               </p>
             </div>
 
-            <div className="feature-item">
-              <h3 className="feature-title">
-                <img src="/images/trophy.png" alt="trophy" className="feature-icon" />
+            <div className="why-athletes-feature-item">
+              <h3 className="why-athletes-feature-title">
+                <img src="/images/heart_icon.png" alt="trophy" className="why-athletes-feature-icon" />
                 {t.features[1].title}
               </h3>
-              <p className="feature-description">
+              <p className="why-athletes-feature-description">
                 {t.features[1].description}
               </p>
             </div>
 
-            <div className="feature-item">
-              <h3 className="feature-title">
-                <img src="/images/phone-talent-benefit-pic.png" alt="phone" className="feature-icon" />
+            <div className="why-athletes-feature-item">
+              <h3 className="why-athletes-feature-title">
+                <img src="/images/location.png" alt="phone" className="why-athletes-feature-icon" />
                 {t.features[2].title}
               </h3>
-              <p className="feature-description">
+              <p className="why-athletes-feature-description">
                 {t.features[2].description}
               </p>
             </div>
           </div>
 
-          <div className="cta-section">
-            <p className="cta-text">{t.ctaText}</p>
+          <div className="why-athletes-cta-section">
+            <p className="why-athletes-cta-text">{t.ctaText}</p>
             <AppStores />
           </div>
         </div>

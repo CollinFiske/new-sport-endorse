@@ -1,0 +1,278 @@
+.talent-reviews {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.talent-reviews-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.talent-reviews-header {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.talent-quote-icon {
+  font-size: 3.5rem;
+  color: #10b981;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 15px;
+  font-family: serif;
+}
+
+.talent-reviews-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.talent-reviews-header p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.talent-review-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 35px;
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.talent-review-card:hover {
+  transform: translateY(-5px);
+}
+
+.talent-review-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 30px;
+  border: 4px solid #10b981;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.talent-review-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.talent-review-text {
+  margin-bottom: 30px;
+}
+
+.talent-review-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+}
+
+.talent-review-author h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.talent-review-author p {
+  font-size: 0.9rem;
+  color: #10b981;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.talent-review-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.talent-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.talent-indicator.active {
+  background: #10b981;
+  transform: scale(1.2);
+}
+
+.talent-indicator:hover {
+  background: #10b981;
+  opacity: 0.7;
+}
+
+.talent-review-navigation {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.talent-nav-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #10b981;
+  background: white;
+  color: #10b981;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.talent-nav-arrow:hover {
+  background: #10b981;
+  color: white;
+  transform: scale(1.1);
+}
+
+.talent-nav-arrow.prev {
+  margin-left: -25px;
+}
+
+.talent-nav-arrow.next {
+  margin-right: -25px;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .talent-reviews {
+    padding: 60px 15px;
+  }
+
+  .talent-reviews-header h2 {
+    font-size: 2rem;
+  }
+
+  .talent-reviews-header p {
+    font-size: 1rem;
+  }
+
+  .talent-review-card {
+    padding: 40px 25px;
+    min-height: 350px;
+  }
+
+  .talent-review-text p {
+    font-size: 1.1rem;
+  }
+
+  .talent-review-author h4 {
+    font-size: 1.2rem;
+  }
+
+  .talent-review-author p {
+    font-size: 0.8rem;
+  }
+
+  .talent-nav-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .talent-nav-arrow.prev {
+    margin-left: -22px;
+  }
+
+  .talent-nav-arrow.next {
+    margin-right: -22px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .talent-reviews {
+    padding: 50px 10px;
+  }
+
+  .talent-quote-icon {
+    font-size: 3rem;
+  }
+
+  .talent-reviews-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .talent-reviews-header p {
+    font-size: 0.95rem;
+  }
+
+  .talent-review-card {
+    padding: 30px 20px;
+    min-height: 320px;
+  }
+
+  .talent-review-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+  }
+
+  .talent-review-text p {
+    font-size: 1rem;
+  }
+
+  .talent-review-author h4 {
+    font-size: 1.1rem;
+  }
+
+  .talent-review-author p {
+    font-size: 0.75rem;
+  }
+
+  .talent-nav-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .talent-nav-arrow.prev {
+    margin-left: -20px;
+  }
+
+  .talent-nav-arrow.next {
+    margin-right: -20px;
+  }
+}

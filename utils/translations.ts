@@ -409,7 +409,11 @@ const translations = {
       },
       brandReviews: {
         title: "Client Reviews",
-        subtitle: "We know that what we've got to offer is incredible - but if you're still not convinced, see what people we work with say!"
+        subtitle: "We know that what we've got to offer is incredible, but if you're still not convinced, see what people we work with say!"
+      },
+      talentReviews: {
+        title: "Athlete Reviews",
+        subtitle: "Hear directly from the athletes who've built successful partnerships through Sport Endorse!"
       },
       contactUs: {
         title: "Contact Us",
@@ -859,6 +863,10 @@ const translations = {
         title: "Reseñas de Clientes",
         subtitle: "Sabemos que lo que tenemos para ofrecer es increíble, pero si aún no estás convencido, ¡mira lo que dicen las personas con las que trabajamos!"
       },
+      talentReviews: {
+        title: "Reseñas de Atletas",
+        subtitle: "¡Escucha directamente de los atletas que han construido asociaciones exitosas a través de Sport Endorse!"
+      },
       contactUs: {
         title: "Contáctanos",
         description: "Ponte en contacto con nuestro equipo para aprender más sobre cómo Sport Endorse puede ayudar a conectar marcas con atletas de élite para oportunidades de patrocinio impactantes.",
@@ -1306,6 +1314,10 @@ const translations = {
       brandReviews: {
         title: "Kundenbewertungen",
         subtitle: "Wir wissen, dass das, was wir zu bieten haben, unglaublich ist - aber falls Sie noch nicht überzeugt sind, sehen Sie, was die Menschen sagen, mit denen wir arbeiten!"
+      },
+      talentReviews: {
+        title: "Athletenbewertungen",
+        subtitle: "Hören Sie direkt von den Athleten, die erfolgreiche Partnerschaften über Sport Endorse aufgebaut haben!"
       },
       contactUs: {
         title: "Kontakt",
