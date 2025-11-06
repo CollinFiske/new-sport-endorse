@@ -64,6 +64,21 @@ export default function TalentPageES() {
         </div>
       </section>
 
+      <section className="talent-sponsorship-section">
+        <div className="talent-sponsorship-container">
+          <h2>{t.talent.sponsorshipSection.title}</h2>
+          <p className="talent-sponsorship-lead">
+            {t.talent.sponsorshipSection.lead}
+          </p>
+          <p className="talent-sponsorship-description">
+            {t.talent.sponsorshipSection.description}
+          </p>
+          <p className="talent-sponsorship-benefits">
+            {t.talent.sponsorshipSection.benefits}
+          </p>
+        </div>
+      </section>
+
       <TalentHowItWorks />
 
       <WhyAthletesChooseUs />

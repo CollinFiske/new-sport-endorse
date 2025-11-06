@@ -10,7 +10,7 @@ export default function BrandReviews() {
   const t = translations[language].components.brandReviews;
   const reviews = [
     {
-      id: 2,
+      id: 1,
       image: "/images/shuzgroup_logo.png",
       alt: "Shuz Group company logo",
       text: "Sport Endorse has revolutionised the way ShuzGroup approaches sports brand ambassador marketing. This platform has not only simplified the process of connecting with sports talent across the nation but has also given us the freedom to choose the perfect ambassadors for our brand. This platform has truly enhanced our ability to make informed decisions when selecting sports talent and we would gladly recommend Sport Endorse.",
@@ -18,7 +18,7 @@ export default function BrandReviews() {
       position: "Marketing Director at Shuz Group"
     },
     {
-      id: 3,
+      id: 2,
       image: "/images/donal healy.png",
       alt: "Donal Healy",
       text: "We were delighted to work with Sport Endorse on campaigns involving both Jack Carty and Jason Quigley - two outstanding sporting ambassadors for the West and North West of Ireland.",
@@ -26,7 +26,7 @@ export default function BrandReviews() {
       position: "IRELAND WEST AIRPORT | HEAD OF MARKETING, AVIATION BUSINESS DEVELOPMENT & COMMUNICATIONS"
     },
     {
-      id: 4,
+      id: 3,
       image: "/images/john delves.png",
       alt: "John Delves",
       text: "The team at Sport Endorse were a pleasure to work with, they were on hand in the lead up to our photoshoot and on the day were more than accommodatingwith our requests. A great experience all around and one we will no doubt repeat!”",
@@ -34,7 +34,7 @@ export default function BrandReviews() {
       position: "MAGNET +  | MANAGING DIRECTOR"
     },
     {
-      id: 6,
+      id: 4,
       image: "/images/daithi oconnor.png",
       alt: "Daithí O'Connor",
       text: "Working with Sport Endorse is a pleasure. We've been very happy with the partnerships we've secured and look forward to driving our business  in the UK with help from the platform.",
@@ -42,7 +42,7 @@ export default function BrandReviews() {
       position: "REVIVE ACTIVE | MD & FOUNDER"
     },
     {
-      id: 7,
+      id: 5,
       image: "/images/perform_nutrition.png",
       alt: "Perfom nutrition logo",
       text: "Sport Endorse is doing fantastic work in looking after athletes and helping them achieve their potential on and off the field. We are delighted to work with the Sport Endorse team to secure brand partnerships that, without them, would not have been possible.",
@@ -50,7 +50,7 @@ export default function BrandReviews() {
       position: "Marketing Executive"
     },
     {
-      id: 8,
+      id: 6,
       image: "/images/solestar.png",
       alt: "Solestar logo",
       text: "Sport Endorse is a great platform for connecting with brand ambassadors! It's always a plus when a platform is not only effective but also easy to use and has helpful support staff.",
@@ -58,7 +58,7 @@ export default function BrandReviews() {
       position: "Key Account Manager"
     },
     {
-      id: 9,
+      id: 7,
       image: "/images/skins_logo.webp",
       alt: "Skins logo",
       text: "Sport Endorse provides brands a user-friendly channel to connect with influencers of various sports. Through this platform, I can create different contents with influencers to enhance our brand awareness!",

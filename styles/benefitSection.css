@@ -19,11 +19,17 @@
   flex: 1 1 35%;
   text-align: center;
   margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .benefit-right img{
-  height: 100%;
-  width: 100%;
-  /*image-rendering: pixelated - maybe??? */ 
+  max-height: 400px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
 .benefit-label {
@@ -157,6 +163,17 @@
 
   .benefit-right {
     margin: 1rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefit-right img {
+    max-height: 300px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
   }
   
   .benefit-label{
@@ -228,5 +245,13 @@
   .demo-button, .benefit-button {
     padding: 0.65rem 1.25rem;
     font-size: 0.95rem;
+  }
+
+  .benefit-right img {
+    max-height: 250px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
   }
 }

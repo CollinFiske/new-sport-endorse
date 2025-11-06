@@ -10,6 +10,7 @@ import AppStores from "@/components/AppStores";
 import BrandsGrid from "@/components/BrandsGrid";
 import { useState, useEffect } from "react";
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -95,14 +96,14 @@ export default function HomePage() {
           <AppStores />
           <div style={{display:"flex", alignItems: "center", justifyContent: "center", gap: "20px", marginLeft:"20px"}}>
             <div className="home-rating" style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
-              <img src="/images/star_icon.png" alt="star" className="home-star-icon" /> 
-              <img src="/images/star_icon.png" alt="star" className="home-star-icon" />
-              <img src="/images/star_icon.png" alt="star" className="home-star-icon" />
-              <img src="/images/star_icon.png" alt="star" className="home-star-icon" />
-              <img src="/images/star_icon.png" alt="star" className="home-star-icon" />
+              <Image src="/images/star_icon.png" alt="star" width={20} height={20} className="home-star-icon" /> 
+              <Image src="/images/star_icon.png" alt="star" width={20} height={20} className="home-star-icon" />
+              <Image src="/images/star_icon.png" alt="star" width={20} height={20} className="home-star-icon" />
+              <Image src="/images/star_icon.png" alt="star" width={20} height={20} className="home-star-icon" />
+              <Image src="/images/star_icon.png" alt="star" width={20} height={20} className="home-star-icon" />
               <span className="home-rating-text">5.0</span>
             </div>
-            <img className="home-app-for-athletes-img" style={{width:"200px", height:"auto"}} src="/images/appforathletes.png" alt="app for athletes text" />
+            <Image className="home-app-for-athletes-img" style={{width:"200px", height:"auto"}} src="/images/appforathletes.png" alt="app for athletes text" width={200} height={60} />
           </div>
         </div>
       </div>
@@ -137,6 +138,19 @@ export default function HomePage() {
       item3={t.home.benefitSection.athlete.bullet3}
       color="#009ee3"
       learnMoreLink={language === 'es' ? "/es/talent" : language === 'de' ? "/de/talent" : "/talent"}
+    />
+
+    <BenefitSection
+      title={t.home.benefitSection.agency.title}
+      subtitle={t.home.benefitSection.agency.subtitle}
+      image="/images/agency_dashboard.png"
+      label={t.home.benefitSection.agency.label}
+      background="#E5F1FF"
+      item1={t.home.benefitSection.agency.bullet1}
+      item2={t.home.benefitSection.agency.bullet2}
+      item3={t.home.benefitSection.agency.bullet3}
+      color="#009ee3"
+      learnMoreLink={language === 'es' ? "/es/agency" : language === 'de' ? "/de/agency" : "/agency"}
     />
     
     </>

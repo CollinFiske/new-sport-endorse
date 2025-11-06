@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
@@ -140,7 +141,7 @@ export default function Header() {
       {/* Logo/Home Button - Far left */}
       <div className="logo-area">
         <Link href={getNavLink("/home")}>
-          <img src="/images/sportEndorseLogo.png" alt="sport endorse logo"></img>
+          <Image src="/images/sportEndorseLogo.png" alt="sport endorse logo" width={40} height={40} />
           <h3>SPORT ENDORSE</h3>
         </Link>
       </div>
@@ -161,19 +162,19 @@ export default function Header() {
             className="language-selector"
             onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
           >
-            <img src={getFlagImage(language)} alt={language} width="30" height="20" /> 
+            <Image src={getFlagImage(language)} alt={language} width={30} height={20} /> 
             <span className="dropdown-arrow">{languageDropdownOpen ? "▴" : "▾"}</span>
           </button>
           {languageDropdownOpen && (
             <div className="language-dropdown-content">
               <button onClick={() => handleLanguageChange('en')}>
-                <img src="/images/flags/UK_flag.png" alt="English" width="30" height="20" />
+                <Image src="/images/flags/UK_flag.png" alt="English" width={30} height={20} />
               </button>
               <button onClick={() => handleLanguageChange('es')}>
-                <img src="/images/flags/spanish_flag.svg" alt="Español" width="30" height="20" />
+                <Image src="/images/flags/spanish_flag.svg" alt="Español" width={30} height={20} />
               </button>
               <button onClick={() => handleLanguageChange('de')}>
-                <img src="/images/flags/german_flag.png" alt="Deutsch" width="30" height="20" />
+                <Image src="/images/flags/german_flag.png" alt="Deutsch" width={30} height={20} />
               </button>
             </div>
           )}

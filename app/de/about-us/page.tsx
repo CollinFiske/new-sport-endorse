@@ -3,6 +3,7 @@ import "../../../styles/aboutUs.css";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
 import Head from 'next/head';
+import Image from 'next/image';
 import { useEffect } from 'react';
 
 interface ValueItem {
@@ -184,9 +185,11 @@ export default function AboutUsDE() {
             {teamMembers.map((member, index) => (
               <div key={index} className="about-us-team-card">
                 <div className="about-us-team-photo-container">
-                  <img
+                  <Image
                     src={member.imageUrl}
                     alt={member.name}
+                    width={200}
+                    height={200}
                     className="about-us-team-photo"
                   />
                 </div>
@@ -248,7 +251,7 @@ export default function AboutUsDE() {
               <div className="about-us-partner-content">
                 <div className="about-us-partner-logo">
                   <a href="https://www.add-victor.com/" target="_blank" rel="noopener">
-                    <img src="/images/add-victor.webp" alt="add-victor logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
+                    <Image src="/images/add-victor.webp" alt="add-victor logo" width={150} height={150} style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
                   </a>
                 </div>
                 <div className="about-us-partner-info">
@@ -269,7 +272,7 @@ export default function AboutUsDE() {
               <div className="about-us-partner-content">
                 <div className="about-us-partner-logo">
                   <a href="https://3bigwheels.com/" target="_blank" rel="noopener">
-                    <img src="/images/3 big wheels.png" alt="3 big wheels logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
+                    <Image src="/images/3 big wheels.png" alt="3 big wheels logo" width={150} height={150} style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
                   </a>
                 </div>
                 <div className="about-us-partner-info">
@@ -290,7 +293,7 @@ export default function AboutUsDE() {
               <div className="about-us-partner-content">
                 <div className="about-us-partner-logo" style={{ backgroundColor:"black"}}>
                   <a href="https://thesportingclub.ie/" target="_blank" rel="noopener">
-                    <img src="/images/The Sporting Club Ireland.webp" alt="The Sporting Club Ireland logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
+                    <Image src="/images/The Sporting Club Ireland.webp" alt="The Sporting Club Ireland logo" width={150} height={150} style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
                   </a>
                 </div>
                 <div className="about-us-partner-info">

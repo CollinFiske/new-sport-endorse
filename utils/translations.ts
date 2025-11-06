@@ -91,8 +91,14 @@ const translations = {
     },
     talent: {
       badge: "FOR ATHLETES",
-      title: "Find Your Next Sponsorship Opportunity",
-      description: "Join thousands of verified athletes who use Sport Endorse — a platform trusted by leading global brands — to apply for sports sponsorships and get discovered by sponsors looking for athletic talent. Find athlete sponsorship opportunities that match your sport, achievements, and personality, from social media collaborations to event appearances and product endorsements. Our sports sponsorship platform for athletes makes it simple to find sponsors, connect directly with verified companies, and manage every stage of your paid partnerships — all in one place.",
+      title: "How to Get Sponsored as an Athlete",
+      description: "Welcome to the leading athlete endorsement marketplace. Sport Endorse is the all-in-one platform connecting you directly with brands for sponsorships for athletes and paid collaborations that align with your profile and passions. It's the easiest way to find and manage sponsorships for athletes",
+      sponsorshipSection: {
+        title: "Find Your Next Sponsorship Opportunity",
+        lead: "Join thousands of verified athletes who use Sport Endorse — a platform trusted by leading global brands — to apply for sports sponsorships and get discovered by sponsors looking for athletic talent.",
+        description: "Find athlete sponsorship opportunities that match your sport, achievements, and personality, from social media collaborations to event appearances and product endorsements.",
+        benefits: "Our sports sponsorship platform for athletes makes it simple to find sponsors, connect directly with verified companies, and manage every stage of your paid partnerships — all in one place."
+      },
       metadata: {
         title: "Elite Athletes: Boost Your Brand with Sponsorships | Join Sport Endorse",
         description: "Elite athletes, take control of your brand. Join Sport Endorse to connect with global brands, secure sponsorships, and enhance your visibility in sports marketing."
@@ -413,7 +419,54 @@ const translations = {
       },
       talentReviews: {
         title: "Athlete Reviews",
-        subtitle: "Hear directly from the athletes who've built successful partnerships through Sport Endorse!"
+        subtitle: "Hear directly from the athletes who've built successful partnerships through Sport Endorse!",
+        reviews: [
+          {
+            id: 1,
+            talentName: "Laura Siddall",
+            sport: "Professional Triathlete",
+            brand: "MINI UK",
+            quote: "I've been a long-time fan of MINI. It's a brand that for me is so British and carries this heritage through its design over the years. My favourite film is the 1969 The Italian Job, and I mean how can you just not love this brand and the cars. I was delighted when through Sport Endorse I was made a Friend of the Brand for MINI UK. I'm lucky enough to be driving a new MINI Countryman, and even better, it fits my TT bike in the boot without needing to take any wheels off!",
+            image: "/images/laura siddal.png",
+            alt: "Laura Siddall, Professional Triathlete"
+          },
+          {
+            id: 2,
+            talentName: "Jason Quigley",
+            sport: "Professional Boxer",
+            brand: "Ireland West Airport",
+            quote: "When you're on your way to become world champion, you need a good team in your corner, and Sport Endorse has been setting me up to knock out the competition for brands I work with.",
+            image: "/images/jason quigley.png",
+            alt: "Jason Quigley, Professional Boxer"
+          },
+          {
+            id: 3,
+            talentName: "Freddie Woodward",
+            sport: "Diving. Olympian",
+            brand: "Lovable",
+            quote: "I loved the concept when I first heard about Sport Endorse, but I wasn't sure how quickly it would lead to opportunities. From the moment I signed up, the team were in regular contact, asking about the type of collaboration that would be ideal for me. Within just a month or two, I landed exactly the kind of collab I'd hoped for! Fantastic experience — great communication, great people, and it really works.",
+            image: "/images/freddie_woodward.png",
+            alt: "Freddie Woodward, Diving Olympian"
+          },
+          {
+            id: 4,
+            talentName: "Marquis Dendy",
+            sport: "Athletics",
+            brand: "Lovable",
+            quote: "Amazing platform! Very easy and right to the point! I can talk directly to brands and even favorite the ones I love!",
+            image: "/images/marquis_dendy.png",
+            alt: "Marquis Dendy, Athletics"
+          },
+          {
+            id: 5,
+            talentName: "Nicola Barke",
+            sport: "Boxing",
+            brand: "Multiple",
+            quote: "It's been a delight to work with Sports Endorse on social media campaigns. I've successfully had 1 paid promotion and 1 product promotion exchange. I look forward to working with more brands with the support of Sports Endorses influential network.",
+            image: "/images/nicola_barke.png",
+            alt: "Nicola Barke, Boxing"
+          }
+        ]
       },
       contactUs: {
         title: "Contact Us",
@@ -543,8 +596,14 @@ const translations = {
     },
     talent: {
       badge: "PARA ATLETAS",
-      title: "Encuentra Tu Próxima Oportunidad de Patrocinio",
-      description: "Únete a miles de atletas verificados que usan Sport Endorse — una plataforma confiada por marcas globales líderes — para aplicar a patrocinios deportivos y ser descubierto por patrocinadores que buscan talento atlético. Encuentra oportunidades de patrocinio de atletas que coincidan con tu deporte, logros y personalidad, desde colaboraciones en redes sociales hasta apariciones en eventos y promociones de productos. Nuestra plataforma de patrocinio deportivo para atletas hace simple encontrar patrocinadores, conectar directamente con empresas verificadas y gestionar cada etapa de tus asociaciones pagadas — todo en un lugar.",
+      title: "Cómo Conseguir Patrocinio como Atleta",
+      description: "Bienvenido al mercado líder de patrocinio de atletas. Sport Endorse es la plataforma integral que te conecta directamente con marcas para patrocinios de atletas y colaboraciones pagadas que se alinean con tu perfil y pasiones. Es la forma más fácil de encontrar y gestionar patrocinios para atletas",
+      sponsorshipSection: {
+        title: "Encuentra Tu Próxima Oportunidad de Patrocinio",
+        lead: "Únete a miles de atletas verificados que usan Sport Endorse — una plataforma confiada por las principales marcas globales — para solicitar patrocinios deportivos y ser descubiertos por patrocinadores que buscan talento atlético.",
+        description: "Encuentra oportunidades de patrocinio deportivo que coincidan con tu deporte, logros y personalidad, desde colaboraciones en redes sociales hasta apariciones en eventos y endorsements de productos.",
+        benefits: "Nuestra plataforma de patrocinio deportivo para atletas hace que sea simple encontrar patrocinadores, conectar directamente con empresas verificadas y gestionar cada etapa de tus asociaciones pagadas — todo en un solo lugar."
+      },
       metadata: {
         title: "Atletas de Élite: Impulsa tu Marca con Patrocinios | Únete a Sport Endorse",
         description: "Atletas de élite, toma control de tu marca. Únete a Sport Endorse para conectar con marcas globales, asegurar patrocinios y mejorar tu visibilidad en el marketing deportivo."
@@ -865,7 +924,45 @@ const translations = {
       },
       talentReviews: {
         title: "Reseñas de Atletas",
-        subtitle: "¡Escucha directamente de los atletas que han construido asociaciones exitosas a través de Sport Endorse!"
+        subtitle: "¡Escucha directamente de los atletas que han construido asociaciones exitosas a través de Sport Endorse!",
+        reviews: [
+          {
+            id: 1,
+            talentName: "Carla Martin",
+            sport: "Roller Sports",
+            brand: "Hover Air",
+            quote: "La verdad que vuestra aplicación es una pasada, la colaboración con Hover Air fue increíble. No puedo esperar a poder encontrar otra colaboración para acceder ya que facilita mucho para contactar con las marcas. Espero que haya mas disponibilidades para españa y poder hacer mas colaboraciones 💕",
+            image: "/images/carla_martin.png",
+            alt: "Carla Martin, Roller Sports"
+          },
+          {
+            id: 2,
+            talentName: "Marcos Pascual",
+            sport: "Mountain Running",
+            brand: "Multiple",
+            quote: "Buena plataforma para entablar relación con marcas y colaborar",
+            image: "/images/marcos_pascual.png",
+            alt: "Marcos Pascual, Mountain Running"
+          },
+          {
+            id: 3,
+            talentName: "Alvaro Postigo Armendariz",
+            sport: "Fotógrafo",
+            brand: "FOTOPOSTIGO",
+            quote: "Una plataforma muy bien pensada para deportistas y con seguimiento real con personas reales, muy importante. Hacen un gran trabajo de seguimiento.",
+            image: "/images/alvaro_postigo.png",
+            alt: "Alvaro Postigo Armendariz, Fotógrafo"
+          },
+          {
+            id: 4,
+            talentName: "Adan Ramírez",
+            sport: "Artist",
+            brand: "Multiple",
+            quote: "Plataforma para creadores de contenido muy recomendada.",
+            image: "/images/adan_ramirez.png",
+            alt: "Adan Ramírez, Artist"
+          }
+        ]
       },
       contactUs: {
         title: "Contáctanos",
@@ -995,8 +1092,14 @@ const translations = {
     },
     talent: {
       badge: "FÜR ATHLETEN",
-      title: "Finden Sie Ihre Nächste Sponsoring-Gelegenheit",
-      description: "Schließen Sie sich Tausenden von verifizierten Athleten an, die Sport Endorse verwenden — eine Plattform, der führende globale Marken vertrauen — um sich für Sport-Sponsorings zu bewerben und von Sponsoren entdeckt zu werden, die athletisches Talent suchen. Finden Sie Athleten-Sponsoring-Gelegenheiten, die zu Ihrem Sport, Ihren Leistungen und Ihrer Persönlichkeit passen, von Social-Media-Kooperationen bis hin zu Event-Auftritten und Produkt-Endorsements. Unsere Sport-Sponsoring-Plattform für Athleten macht es einfach, Sponsoren zu finden, sich direkt mit verifizierten Unternehmen zu verbinden und jede Phase Ihrer bezahlten Partnerschaften zu verwalten — alles an einem Ort.",
+      title: "Wie Man Als Athlet Gesponsert Wird",
+      description: "Willkommen auf dem führenden Athleten-Endorsement-Marktplatz. Sport Endorse ist die All-in-One-Plattform, die Sie direkt mit Marken für Sponsorings für Athleten und bezahlte Kooperationen verbindet, die zu Ihrem Profil und Ihren Leidenschaften passen. Es ist der einfachste Weg, Sponsorings für Athleten zu finden und zu verwalten",
+      sponsorshipSection: {
+        title: "Finden Sie Ihre Nächste Sponsoring-Möglichkeit",
+        lead: "Schließen Sie sich Tausenden von verifizierten Athleten an, die Sport Endorse verwenden — eine Plattform, der führende globale Marken vertrauen — um sich für Sportsponsorings zu bewerben und von Sponsoren entdeckt zu werden, die nach athletischem Talent suchen.",
+        description: "Finden Sie Athleten-Sponsoring-Möglichkeiten, die zu Ihrem Sport, Ihren Leistungen und Ihrer Persönlichkeit passen, von Social-Media-Kooperationen bis hin zu Event-Auftritten und Produkt-Endorsements.",
+        benefits: "Unsere Sportsponsoring-Plattform für Athleten macht es einfach, Sponsoren zu finden, sich direkt mit verifizierten Unternehmen zu verbinden und jede Phase Ihrer bezahlten Partnerschaften zu verwalten — alles an einem Ort."
+      },
       metadata: {
         title: "Elite-Athleten: Stärken Sie Ihre Marke mit Sponsoring | Sport Endorse beitreten",
         description: "Elite-Athleten, übernehmen Sie die Kontrolle über Ihre Marke. Treten Sie Sport Endorse bei, um sich mit globalen Marken zu verbinden, Sponsoring zu sichern und Ihre Sichtbarkeit im Sportmarketing zu erhöhen."
@@ -1317,7 +1420,54 @@ const translations = {
       },
       talentReviews: {
         title: "Athletenbewertungen",
-        subtitle: "Hören Sie direkt von den Athleten, die erfolgreiche Partnerschaften über Sport Endorse aufgebaut haben!"
+        subtitle: "Hören Sie direkt von den Athleten, die erfolgreiche Partnerschaften über Sport Endorse aufgebaut haben!",
+        reviews: [
+          {
+            id: 1,
+            talentName: "Laura Siddall",
+            sport: "Professionelle Triathletin",
+            brand: "MINI UK",
+            quote: "Ich bin schon lange ein Fan von MINI. Es ist eine Marke, die für mich so britisch ist und dieses Erbe durch ihr Design über die Jahre trägt. Mein Lieblingsfilm ist The Italian Job von 1969, und ich meine, wie kann man diese Marke und die Autos einfach nicht lieben. Ich war begeistert, als ich durch Sport Endorse zu einem Friend of the Brand für MINI UK wurde. Ich habe das Glück, einen neuen MINI Countryman zu fahren, und noch besser, mein TT-Bike passt in den Kofferraum, ohne dass ich Räder abnehmen muss!",
+            image: "/images/laura siddal.png",
+            alt: "Laura Siddall, Professionelle Triathletin"
+          },
+          {
+            id: 2,
+            talentName: "Jason Quigley",
+            sport: "Profiboxer",
+            brand: "Ireland West Airport",
+            quote: "Wenn man auf dem Weg zum Weltmeister ist, braucht man ein gutes Team in seiner Ecke, und Sport Endorse hat mich darauf vorbereitet, die Konkurrenz für Marken auszuschalten, mit denen ich arbeite.",
+            image: "/images/jason quigley.png",
+            alt: "Jason Quigley, Profiboxer"
+          },
+          {
+            id: 3,
+            talentName: "Freddie Woodward",
+            sport: "Wasserspringen. Olympionike",
+            brand: "Lovable",
+            quote: "Ich liebte das Konzept, als ich zum ersten Mal von Sport Endorse hörte, aber ich war mir nicht sicher, wie schnell es zu Möglichkeiten führen würde. Vom Moment der Anmeldung an war das Team in regelmäßigem Kontakt und fragte nach der Art von Zusammenarbeit, die für mich ideal wäre. Innerhalb von nur ein oder zwei Monaten landete ich genau die Art von Kooperation, die ich mir erhofft hatte! Fantastische Erfahrung — großartige Kommunikation, großartige Menschen, und es funktioniert wirklich.",
+            image: "/images/freddie_woodward.png",
+            alt: "Freddie Woodward, Wasserspringen Olympionike"
+          },
+          {
+            id: 4,
+            talentName: "Marquis Dendy",
+            sport: "Leichtathletik",
+            brand: "Lovable",
+            quote: "Erstaunliche Plattform! Sehr einfach und direkt auf den Punkt! Ich kann direkt mit Marken sprechen und sogar die favorisieren, die ich liebe!",
+            image: "/images/marquis_dendy.png",
+            alt: "Marquis Dendy, Leichtathletik"
+          },
+          {
+            id: 5,
+            talentName: "Nicola Barke",
+            sport: "Boxen",
+            brand: "Mehrere",
+            quote: "Es war eine Freude, mit Sports Endorse an Social Media Kampagnen zu arbeiten. Ich hatte erfolgreich 1 bezahlte Promotion und 1 Produktpromotion-Austausch. Ich freue mich darauf, mit mehr Marken mit der Unterstützung von Sports Endorses einflussreichem Netzwerk zu arbeiten.",
+            image: "/images/nicola_barke.png",
+            alt: "Nicola Barke, Boxen"
+          }
+        ]
       },
       contactUs: {
         title: "Kontakt",

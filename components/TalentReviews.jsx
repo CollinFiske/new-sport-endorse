@@ -8,24 +8,7 @@ import translations from "../utils/translations";
 export default function TalentReviews() {
   const { language } = useLanguage();
   const t = translations[language].components.talentReviews;
-  const reviews = [
-    {
-      id: 1,
-      image: "/images/laura siddal.png",
-      alt: "Professional headshot of Laura Siddall, triathlon athlete",
-      text: "I've been a long-time fan of MINI. It's a brand that for me is so British and carries this heritage through its design over the years. I was delighted when through Sport Endorse I was made a Friend of the Brand for MINI UK.",
-      name: "Laura Siddall",
-      position: "TRIATHLON  | PROFESSIONAL"
-    },
-    {
-      id: 5,
-      image: "/images/jason quigley.png",
-      alt: "Jason Quigley",
-      text: "When you're on the way to being a World Champion you need a good team in your corner and Sport Endorse has been setting me up to knock out the competition for brands I work with.... .. plenty more fire power here!",
-      name: "Jason Quigley",
-      position: "BOXING | PROFESSIONAL & FORMER TEAM IRELAND"
-    }
-  ];
+  const reviews = t.reviews;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -55,11 +38,11 @@ export default function TalentReviews() {
             <img src={currentReview.image} alt={currentReview.alt} />
           </div>
           <div className="talent-review-text">
-            <p>"{currentReview.text}"</p>
+            <p>"{currentReview.quote}"</p>
           </div>
           <div className="talent-review-author">
-            <h4>{currentReview.name}</h4>
-            <p>{currentReview.position}</p>
+            <h4>{currentReview.talentName}</h4>
+            <p>{currentReview.sport.toUpperCase()} | WORKED WITH: {currentReview.brand.toUpperCase()}</p>
           </div>
         </div>
 
