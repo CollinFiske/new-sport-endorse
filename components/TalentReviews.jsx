@@ -42,7 +42,7 @@ export default function TalentReviews() {
           </div>
           <div className="talent-review-author">
             <h4>{currentReview.talentName}</h4>
-            <p>{currentReview.sport.toUpperCase()} | WORKED WITH: {currentReview.brand.toUpperCase()}</p>
+            <p>{currentReview.sport.toUpperCase()} | {currentReview.region.toUpperCase()}</p>
           </div>
         </div>
 
