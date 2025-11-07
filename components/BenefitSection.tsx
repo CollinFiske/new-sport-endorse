@@ -1,6 +1,7 @@
 "use client";
 import "../styles/benefitSection.css";
 import AppStores from "./AppStores";
+import Image from 'next/image';
 
 interface BenefitProps {
   title: string;
@@ -23,14 +24,14 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
         <h2 style={label ? undefined: { marginTop: 0 }}>{title}</h2>
         <p>{subtitle}</p>
         <div className="icons-row">
-          <img src="/images/gold-heart-icon2.png" alt="heart" className="bullet-icon-mobile" />
-          <img src="/images/division_icon.png" alt="division" className="bullet-icon-mobile" />
-          <img src="/images/star_icon.png" alt="star" className="bullet-icon-mobile" />
+          <Image src="/images/gold-heart-icon2.png" alt="heart" width={24} height={24} className="bullet-icon-mobile" />
+          <Image src="/images/division_icon.png" alt="division" width={24} height={24} className="bullet-icon-mobile" />
+          <Image src="/images/star_icon.png" alt="star" width={24} height={24} className="bullet-icon-mobile" />
         </div>
         <ul>
-          <li><img src="/images/gold-heart-icon2.png" alt="heart" className="bullet-icon" /> {item1}</li>
-          <li><img src="/images/division_icon.png" alt="division" className="bullet-icon" /> {item2}</li>
-          <li><img src="/images/star_icon.png" alt="star" className="bullet-icon" /> {item3}</li>
+          <li><Image src="/images/gold-heart-icon2.png" alt="heart" width={16} height={16} className="bullet-icon" /> {item1}</li>
+          <li><Image src="/images/division_icon.png" alt="division" width={16} height={16} className="bullet-icon" /> {item2}</li>
+          <li><Image src="/images/star_icon.png" alt="star" width={16} height={16} className="bullet-icon" /> {item3}</li>
         </ul>
         <div className="button-group">
           {image && (image !== "/images/talentBenefitPic.png" && image !== "images/agencyBenefitPic.jpg") ? (
@@ -46,7 +47,7 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
         </div>
       </div>
       <div className="benefit-right">
-        <img src={image} alt="Benefit Example Image" className="benefit-right img" />
+        <Image src={image} alt="Benefit Example Image" width={400} height={300} className="benefit-right img" />
       </div>
     </section>
   );

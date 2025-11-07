@@ -1,6 +1,7 @@
 // page.js - Main podcasts page component
 import { fetchPodcasts, stripHtml, formatDate, createExcerpt } from '../../podcasts/wordpress.js';
 import Link from 'next/link';
+import Image from 'next/image';
 import "../../../styles/blog.css"
 
 export const metadata = {
@@ -173,24 +174,30 @@ export default async function PodcastsPage() {
               
               <div className="podcast-platforms-container" style={{ display: 'flex', justifyContent: 'center', margin:"0 0 5px" }}>
                 <a href="https://podcasts.apple.com/ie/podcast/the-athlete-sitdown/id1550095395" target="_blank" rel="noopener noreferrer">
-                  <img 
+                  <Image 
                     src="/images/podcast/apple-podcasts-logo.webp" 
                     alt="Apple Podcasts logo" 
-                    style={{ height: '32px', cursor: 'pointer' }}
+                    width={96}
+                    height={32}
+                    style={{ height: '32px', width: 'auto', cursor: 'pointer' }}
                   />
                 </a>
                 <a href="https://music.amazon.com/podcasts/47a22b01-42ad-447a-b137-1866a49890a1/the-athlete-sitdown" target="_blank" rel="noopener noreferrer">
-                  <img 
+                  <Image 
                     src="/images/podcast/amazon-music-logo.webp" 
                     alt="Amazon Music logo" 
-                    style={{ height: '45px', cursor: 'pointer', margin:" 0 5px 0 20px" }}
+                    width={90}
+                    height={45}
+                    style={{ height: '45px', width: 'auto', cursor: 'pointer', margin:" 0 5px 0 20px" }}
                   />
                 </a>
                 <a href="https://open.spotify.com/show/2c2mWOkxmUpeGyFI2dZgC5" target="_blank" rel="noopener noreferrer">
-                  <img 
+                  <Image 
                     src="/images/podcast/Spotify-Logo.webp" 
                     alt="Spotify logo" 
-                    style={{ height: '75px', cursor: 'pointer' }}
+                    width={75}
+                    height={75}
+                    style={{ height: '75px', width: 'auto', cursor: 'pointer' }}
                   />
                 </a>
               </div>

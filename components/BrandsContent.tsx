@@ -11,6 +11,7 @@ import { brandFAQs } from "@/utils/faqData";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
 import { getTopFeaturedTalents } from "@/utils/featuredTalentsData";
+import Image from 'next/image';
 
 interface BrandsContentProps {
   badge: string;
@@ -68,7 +69,7 @@ export default function BrandsContent({
                     overflow: 'hidden',
                     boxShadow: '0 2px 8px rgba(0,0,0,0.06)'
                   }}>
-                    <img src={talent.image} alt={talent.name} style={{ width: '100%', height: '120px', objectFit: 'cover' }} />
+                    <Image src={talent.image} alt={talent.name} width={200} height={120} style={{ width: '100%', height: '120px', objectFit: 'cover' }} />
                     <div style={{ padding: '0.75rem' }}>
                       <p style={{ fontSize: '0.85rem', fontWeight: '600', margin: '0 0 0.5rem 0' }}>{talent.name}</p>
                       <p style={{ fontSize: '0.75rem', color: '#666', margin: '0' }}>{talent.sport}</p>
@@ -88,7 +89,7 @@ export default function BrandsContent({
                   padding: '1rem',
                   transition: 'background 0.2s ease'
                 }}>
-                  <img src="/images/whiteSportEndorseLogo.webp" alt="Sport Endorse logo" style={{ maxWidth: '80px', marginBottom: '0.5rem' }} />
+                  <Image src="/images/whiteSportEndorseLogo.webp" alt="Sport Endorse logo" width={80} height={27} style={{ maxWidth: '80px', marginBottom: '0.5rem' }} />
                   <p style={{ fontSize: '0.85rem', fontWeight: '600', margin: '0', textTransform: 'uppercase' }}>
                     {viewAll}
                   </p>

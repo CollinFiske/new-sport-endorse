@@ -3,6 +3,7 @@ import "../styles/featuredTalents.css";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
 import { getAllFeaturedTalents } from "../utils/featuredTalentsData";
+import Image from 'next/image';
 
 export default function FeaturedTalents() {
   const { language } = useLanguage();
@@ -21,26 +22,26 @@ export default function FeaturedTalents() {
       <div className="scrollTalents">
         {talents.map((talent, i) => (
           <div className="talent-card" key={i}>
-            <img src={talent.image} alt={`${talent.name} profile`}></img>
+            <Image src={talent.image} alt={`${talent.name} profile`} width={200} height={200} />
             <div className="talent-info">
               <p className="talent-name">{talent.name}</p>
               <div className="all-social-logos">
                 {talent.followingInstagram && (
                   <div className="social-platform">
-                    <img src="/images/instagramLogo.webp" alt="instagram logo" className="social-logo" />
+                    <Image src="/images/instagramLogo.webp" alt="instagram logo" width={24} height={24} className="social-logo" />
                     <p className="follower-count">{talent.followingInstagram}</p>
                   </div>
                 )}
                 {talent.followingTiktok && (
                   <div className="social-platform">
-                    <img src="/images/tiktokLogo.webp" alt="tiktok logo" className="social-logo" />
+                    <Image src="/images/tiktokLogo.webp" alt="tiktok logo" width={24} height={24} className="social-logo" />
                     <p className="follower-count">{talent.followingTiktok}</p>
                   </div>
                 )}
               </div>
               <div className="tags">
-                <span><img src="/images/trophy.png" className="tag-icon"/>{talent.sport}</span>
-                <span><img src="/images/location.png" className="tag-icon"/>{talent.location}</span>
+                <span><Image src="/images/trophy.png" alt="trophy icon" width={16} height={16} className="tag-icon"/>{talent.sport}</span>
+                <span><Image src="/images/location.png" alt="location icon" width={16} height={16} className="tag-icon"/>{talent.location}</span>
               </div>
             </div>
           </div>
@@ -48,7 +49,7 @@ export default function FeaturedTalents() {
         
         {/* CTA Card */}
         <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="cta-card">
-          <img src="/images/whiteSportEndorseLogo.webp" alt="Sport Endorse logo" />
+          <Image src="/images/whiteSportEndorseLogo.webp" alt="Sport Endorse logo" width={120} height={40} />
           <h3>{t.viewAll}</h3>
         </a>
       </div>
