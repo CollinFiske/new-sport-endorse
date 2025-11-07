@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 
 export default function ContactUsPage() {
   const { language, changeLanguage } = useLanguage();
-  const t = translations.de.components.contactUs;
+  const t = translations[language].components.contactUs;
 
   useEffect(() => {
     changeLanguage('de');
