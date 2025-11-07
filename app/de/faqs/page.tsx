@@ -4,12 +4,23 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Häufig Gestellte Fragen | Sport Endorse",
   description: "Finden Sie Antworten auf häufige Fragen zur Athleten-Sponsoring-Plattform von Sport Endorse. Erfahren Sie über Preise, Zahlungsbedingungen und wie Sie sich mit Elite-Athleten verbinden.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/de/faqs",
+    languages: {
+      'en-gb': 'https://www.sportendorse.com/faqs',
+      'es-es': 'https://www.sportendorse.com/es/faqs',
+      'de-de': 'https://www.sportendorse.com/de/faqs',
+      'x-default': 'https://www.sportendorse.com/faqs'
+    }
+  },
   openGraph: {
     title: "Häufig Gestellte Fragen | Sport Endorse",
     description: "Finden Sie Antworten auf häufige Fragen zur Athleten-Sponsoring-Plattform von Sport Endorse. Erfahren Sie über Preise, Zahlungsbedingungen und wie Sie sich mit Elite-Athleten verbinden.",
     type: "website",
     locale: "de_DE",
-    siteName: "Sport Endorse"
+    url: "https://www.sportendorse.com/de/faqs",
+    siteName: "Sport Endorse",
+    alternateLocale: ['en_US', 'es_ES']
   },
 };
 

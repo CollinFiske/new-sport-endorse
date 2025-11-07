@@ -63,10 +63,11 @@ export default function HomePage() {
       <Head>
         <title>{homeMetadata[language].title}</title>
         <meta name="description" content={homeMetadata[language].description} />
-        <link rel="alternate" hrefLang="en" href="https://www.sportendorse.com/" />
-        <link rel="alternate" hrefLang="es" href="https://www.sportendorse.com/es" />
-        <link rel="alternate" hrefLang="de" href="https://www.sportendorse.com/de" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.sportendorse.com/" />
+        <link rel="alternate" href="https://www.sportendorse.com/home" hrefLang="en-gb" />
+        <link rel="alternate" href="https://www.sportendorse.com/es/home" hrefLang="es-es" />
+        <link rel="alternate" href="https://www.sportendorse.com/de/home" hrefLang="de-de" />
+        <link rel="alternate" href="https://www.sportendorse.com/home" hrefLang="x-default" />
+        <link rel="canonical" href="https://www.sportendorse.com/home" />
         <meta property="og:title" content={homeMetadata[language].title} />
         <meta property="og:description" content={homeMetadata[language].description} />
         <meta property="og:type" content="website" />

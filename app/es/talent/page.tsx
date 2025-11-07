@@ -25,10 +25,11 @@ export default function TalentPageES() {
       <Head>
         <title>{t.talent.metadata.title}</title>
         <meta name="description" content={t.talent.metadata.description} />
-        <link rel="alternate" hrefLang="en" href="https://www.sportendorse.com/talent" />
-        <link rel="alternate" hrefLang="es" href="https://www.sportendorse.com/es/talent" />
-        <link rel="alternate" hrefLang="de" href="https://www.sportendorse.com/de/talent" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.sportendorse.com/talent" />
+        <link rel="alternate" href="https://www.sportendorse.com/talent" hrefLang="en-gb" />
+        <link rel="alternate" href="https://www.sportendorse.com/es/talent" hrefLang="es-es" />
+        <link rel="alternate" href="https://www.sportendorse.com/de/talent" hrefLang="de-de" />
+        <link rel="alternate" href="https://www.sportendorse.com/talent" hrefLang="x-default" />
+        <link rel="canonical" href="https://www.sportendorse.com/es/talent" />
         <meta property="og:title" content={t.talent.metadata.title} />
         <meta property="og:description" content={t.talent.metadata.description} />
         <meta property="og:type" content="website" />

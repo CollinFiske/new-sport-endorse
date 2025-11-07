@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import translations from "../../utils/translations";
 import "../../styles/contactUs.css";
+import Head from 'next/head';
 
 export default function ContactUsPage() {
   const { language } = useLanguage();
@@ -55,6 +56,23 @@ ${t.emailBody.closing}`;
   };
 
   return (
+    <>
+      <Head>
+        <title>Contact Sport Endorse | Get in Touch with Our Sports Marketing Team</title>
+        <meta name="description" content="Get in touch with Sport Endorse for sports marketing partnerships, athlete sponsorships, and influencer collaborations. Contact our team in Dublin, Ireland." />
+        <link rel="alternate" href="https://www.sportendorse.com/contact-us" hrefLang="en-gb" />
+        <link rel="alternate" href="https://www.sportendorse.com/es/contact-us" hrefLang="es-es" />
+        <link rel="alternate" href="https://www.sportendorse.com/de/contact-us" hrefLang="de-de" />
+        <link rel="alternate" href="https://www.sportendorse.com/contact-us" hrefLang="x-default" />
+        <link rel="canonical" href="https://www.sportendorse.com/contact-us" />
+        <meta property="og:title" content="Contact Sport Endorse | Get in Touch with Our Sports Marketing Team" />
+        <meta property="og:description" content="Get in touch with Sport Endorse for sports marketing partnerships, athlete sponsorships, and influencer collaborations. Contact our team in Dublin, Ireland." />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={language === 'es' ? 'es_ES' : language === 'de' ? 'de_DE' : 'en_US'} />
+        <meta property="og:site_name" content="Sport Endorse" />
+        <html lang={language} />
+      </Head>
+
     <div className="contact-us-container">
       <div className="contact-us-content">
         <div className="contact-us-left">
@@ -150,5 +168,6 @@ ${t.emailBody.closing}`;
         </div>
       </div>
     </div>
+    </>
   );
 }

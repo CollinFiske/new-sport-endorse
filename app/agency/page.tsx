@@ -21,10 +21,11 @@ export default function AgencyPage() {
       <Head>
         <title>{t.agency.metadata.title}</title>
         <meta name="description" content={t.agency.metadata.description} />
-        <link rel="alternate" hrefLang="en" href="https://www.sportendorse.com/agency" />
-        <link rel="alternate" hrefLang="es" href="https://www.sportendorse.com/es/agency" />
-        <link rel="alternate" hrefLang="de" href="https://www.sportendorse.com/de/agency" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.sportendorse.com/agency" />
+        <link rel="alternate" href="https://www.sportendorse.com/agency" hrefLang="en-gb" />
+        <link rel="alternate" href="https://www.sportendorse.com/es/agency" hrefLang="es-es" />
+        <link rel="alternate" href="https://www.sportendorse.com/de/agency" hrefLang="de-de" />
+        <link rel="alternate" href="https://www.sportendorse.com/agency" hrefLang="x-default" />
+        <link rel="canonical" href="https://www.sportendorse.com/agency" />
         <meta property="og:title" content={t.agency.metadata.title} />
         <meta property="og:description" content={t.agency.metadata.description} />
         <meta property="og:type" content="website" />

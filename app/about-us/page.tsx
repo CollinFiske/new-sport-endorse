@@ -95,10 +95,11 @@ export default function AboutUs() {
       <Head>
         <title>{t.metadata.title}</title>
         <meta name="description" content={t.metadata.description} />
-        <link rel="alternate" hrefLang="en" href="https://www.sportendorse.com/aboutUs" />
-        <link rel="alternate" hrefLang="es" href="https://www.sportendorse.com/es/aboutUs" />
-        <link rel="alternate" hrefLang="de" href="https://www.sportendorse.com/de/aboutUs" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.sportendorse.com/aboutUs" />
+        <link rel="alternate" href="https://www.sportendorse.com/about-us" hrefLang="en-gb" />
+        <link rel="alternate" href="https://www.sportendorse.com/es/about-us" hrefLang="es-es" />
+        <link rel="alternate" href="https://www.sportendorse.com/de/about-us" hrefLang="de-de" />
+        <link rel="alternate" href="https://www.sportendorse.com/about-us" hrefLang="x-default" />
+        <link rel="canonical" href="https://www.sportendorse.com/about-us" />
         <meta property="og:title" content={t.metadata.title} />
         <meta property="og:description" content={t.metadata.description} />
         <meta property="og:type" content="website" />

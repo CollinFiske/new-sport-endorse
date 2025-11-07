@@ -4,10 +4,16 @@ import { useLanguage } from "../../../context/LanguageContext";
 import translations from "../../../utils/translations";
 import "../../../styles/contactUs.css";
 import Image from 'next/image';
+import Head from 'next/head';
+import { useEffect } from 'react';
 
 export default function ContactUsPage() {
-  const { language } = useLanguage();
-  const t = translations[language].components.contactUs;
+  const { language, changeLanguage } = useLanguage();
+  const t = translations.es.components.contactUs;
+
+  useEffect(() => {
+    changeLanguage('es');
+  }, [changeLanguage]);
   
   const [formData, setFormData] = useState({
     name: "",
@@ -56,6 +62,23 @@ ${t.emailBody.closing}`;
   };
 
   return (
+    <>
+      <Head>
+        <title>Contacta con Sport Endorse | Ponte en Contacto con Nuestro Equipo de Marketing Deportivo</title>
+        <meta name="description" content="Ponte en contacto con Sport Endorse para asociaciones de marketing deportivo, patrocinios de atletas y colaboraciones con influencers. Contacta con nuestro equipo en Dublín, Irlanda." />
+        <link rel="alternate" href="https://www.sportendorse.com/contact-us" hrefLang="en-gb" />
+        <link rel="alternate" href="https://www.sportendorse.com/es/contact-us" hrefLang="es-es" />
+        <link rel="alternate" href="https://www.sportendorse.com/de/contact-us" hrefLang="de-de" />
+        <link rel="alternate" href="https://www.sportendorse.com/contact-us" hrefLang="x-default" />
+        <link rel="canonical" href="https://www.sportendorse.com/es/contact-us" />
+        <meta property="og:title" content="Contacta con Sport Endorse | Ponte en Contacto con Nuestro Equipo de Marketing Deportivo" />
+        <meta property="og:description" content="Ponte en contacto con Sport Endorse para asociaciones de marketing deportivo, patrocinios de atletas y colaboraciones con influencers. Contacta con nuestro equipo en Dublín, Irlanda." />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_ES" />
+        <meta property="og:site_name" content="Sport Endorse" />
+        <html lang="es" />
+      </Head>
+
     <div className="contact-us-container">
       <div className="contact-us-content">
         <div className="contact-us-left">
@@ -151,5 +174,6 @@ ${t.emailBody.closing}`;
         </div>
       </div>
     </div>
+    </>
   );
 }

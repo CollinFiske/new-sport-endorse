@@ -37,10 +37,11 @@ export default function HomePageES() {
       <Head>
         <title>Sport Endorse | Conecta Marcas con Atletas de Élite e Influencers Deportivos</title>
         <meta name="description" content="Sport Endorse es la plataforma que une marcas y atletas para asociaciones auténticas e impactantes. Facilitamos que las marcas encuentren y colaboren con el talento adecuado, y que los atletas se conecten directamente con marcas y aseguren acuerdos pagados." />
-        <link rel="alternate" hrefLang="en" href="https://www.sportendorse.com/" />
-        <link rel="alternate" hrefLang="es" href="https://www.sportendorse.com/es" />
-        <link rel="alternate" hrefLang="de" href="https://www.sportendorse.com/de" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.sportendorse.com/" />
+        <link rel="alternate" href="https://www.sportendorse.com/" hrefLang="en-gb" />
+        <link rel="alternate" href="https://www.sportendorse.com/es/" hrefLang="es-es" />
+        <link rel="alternate" href="https://www.sportendorse.com/de/" hrefLang="de-de" />
+        <link rel="alternate" href="https://www.sportendorse.com/" hrefLang="x-default" />
+        <link rel="canonical" href="https://www.sportendorse.com/es/" />
         <meta property="og:title" content="Sport Endorse | Conecta Marcas con Atletas de Élite e Influencers Deportivos" />
         <meta property="og:description" content="Sport Endorse es la plataforma que une marcas y atletas para asociaciones auténticas e impactantes. Facilitamos que las marcas encuentren y colaboren con el talento adecuado, y que los atletas se conecten directamente con marcas y aseguren acuerdos pagados." />
         <meta property="og:type" content="website" />
