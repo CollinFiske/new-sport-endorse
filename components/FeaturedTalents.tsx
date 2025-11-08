@@ -4,11 +4,20 @@ import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
 import { getAllFeaturedTalents } from "../utils/featuredTalentsData";
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function FeaturedTalents() {
   const { language } = useLanguage();
   const t = translations[language].components.featuredTalents;
   const talents = getAllFeaturedTalents(language as 'en' | 'es' | 'de');
+
+  const getSubscriptionLink = () => {
+    if (language === 'en') {
+      return '/subscription';
+    } else {
+      return `/${language}/subscription`;
+    }
+  };
 
   return (
     <section className="featured-talents">
@@ -48,10 +57,16 @@ export default function FeaturedTalents() {
         ))}
         
         {/* CTA Card */}
-        <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="cta-card">
-          <Image src="/images/whiteSportEndorseLogo.webp" alt="Sport Endorse logo" width={120} height={40} />
+        <Link href={getSubscriptionLink()} className="cta-card">
+          <Image 
+            src="/images/whiteSportEndorseLogo.webp" 
+            alt="Sport Endorse logo" 
+            width={120} 
+            height={40}
+            style={{ objectFit: 'contain' }}
+          />
           <h3>{t.viewAll}</h3>
-        </a>
+        </Link>
       </div>
     </section>
   );

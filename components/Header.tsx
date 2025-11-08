@@ -190,9 +190,9 @@ export default function Header() {
             {t.signUpBtn} {signUpDropdownOpen ? "▴" : "▾"}
           </button>
           <div className="signup-dropdown-content">
-            <a target="_blank" href="https://platform.sportendorse.com/signup/brand">
+            <Link href={getNavLink("/subscription")}>
               {t.signUpBrand}
-            </a>
+            </Link>
             <a target="_blank" href="https://platform.sportendorse.com/signup/talent">
               {t.signUpTalent}
             </a>

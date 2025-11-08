@@ -8,8 +8,8 @@ main{
   display: flex;
   align-items: center;
   position: relative;
-  min-height: 70vh;
-  min-height: 570px;
+  min-height: 80vh;
+  min-height: 600px;
   overflow: hidden;
 }
 
@@ -20,13 +20,14 @@ main{
   width: 100%;
   height: 100%;
   z-index: -1;
+  overflow: hidden;
 }
 
 .home-backgroundVideo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
 }
 
 .home-container {

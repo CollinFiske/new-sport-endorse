@@ -192,6 +192,10 @@ const translations = {
         subtitle: "We collaborate with industry leaders to deliver exceptional results"
       }
     },
+    common: {
+      learnMore: "LEARN MORE",
+      bookDemo: "BOOK A DEMO"
+    },
     components: {
       agencyHowItWorks: {
         title: "Why Agents Choose Sport Endorse",
@@ -320,7 +324,7 @@ const translations = {
       },
       featuredTalents: {
         title: "Discover Our Talent at Sport Endorse",
-        subtitle: "We work with a diverse selection of more than 6,500 global athletes from more than 150 sporting disciplines.",
+        subtitle: "We work with a diverse selection of 7000+ global athletes and 280 sporting disciplines.",
         viewAll: "Sign up to view more!",
         location: "Location"
       },
@@ -697,6 +701,10 @@ const translations = {
         subtitle: "Colaboramos con líderes de la industria para entregar resultados excepcionales"
       }
     },
+    common: {
+      learnMore: "SABER MÁS",
+      bookDemo: "RESERVAR DEMO"
+    },
     components: {
       agencyHowItWorks: {
         title: "Por Qué las Agencias Eligen Sport Endorse",
@@ -825,7 +833,7 @@ const translations = {
       },
       featuredTalents: {
         title: "Descubre Nuestro Talento en Sport Endorse",
-        subtitle: "Trabajamos con una selección diversa de más de 6,500 atletas globales de más de 150 disciplinas deportivas.",
+        subtitle: "Trabajamos con una selección diversa de 7000+ atletas globales y 280 disciplinas deportivas.",
         viewAll: "¡Regístrate para ver más!",
         location: "Ubicación"
       },
@@ -1193,6 +1201,10 @@ const translations = {
         subtitle: "Wir arbeiten mit Branchenführern zusammen, um außergewöhnliche Ergebnisse zu liefern"
       }
     },
+    common: {
+      learnMore: "MEHR ERFAHREN",
+      bookDemo: "DEMO BUCHEN"
+    },
     components: {
       agencyHowItWorks: {
         title: "Warum Agenturen Sport Endorse Wählen",
@@ -1321,7 +1333,7 @@ const translations = {
       },
       featuredTalents: {
         title: "Entdecken Sie Unser Talent bei Sport Endorse",
-        subtitle: "Wir arbeiten mit einer vielfältigen Auswahl von mehr als 6.500 globalen Athleten aus über 150 Sportdisziplinen.",
+        subtitle: "Wir arbeiten mit einer vielfältigen Auswahl von 7000+ globalen Athleten und 280 Sportdisziplinen.",
         viewAll: "Registrieren Sie sich, um mehr zu sehen!",
         location: "Standort"
       },

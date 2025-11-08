@@ -1,5 +1,7 @@
 "use client"
 import React from "react";
+import { useRouter } from "next/navigation";
+import { useLanguage } from "../context/LanguageContext";
 import styles from "../styles/brandsGrid.module.css";
 
 interface BrandsGridProps {
@@ -45,9 +47,23 @@ const brands = [
 ];
 
 export default function BrandsGrid({ variant = "8x4", label }: BrandsGridProps) {
+  const { language } = useLanguage();
+  const router = useRouter();
   const columns = variant === "8x4" ? 8 : 5;
   const rows = 4;
   const gridBrands = brands.slice(0, columns * rows);
+
+  const getSubscriptionLink = () => {
+    if (language === 'en') {
+      return '/subscription';
+    } else {
+      return `/${language}/subscription`;
+    }
+  };
+
+  const handleSubscriptionClick = () => {
+    router.push(getSubscriptionLink());
+  };
 
   return (
     <div className={styles.brandsGridWrapper}>
@@ -61,7 +77,7 @@ export default function BrandsGrid({ variant = "8x4", label }: BrandsGridProps) 
                   {brand.isButton ? (
                     <button
                       className={styles.ctaButton}
-                      onClick={() => { window.location.href = 'https://platform.sportendorse.com/signup/brand'; }}
+                      onClick={handleSubscriptionClick}
                     >
                       <img src={brand.src} alt={brand.alt} />
                     </button>

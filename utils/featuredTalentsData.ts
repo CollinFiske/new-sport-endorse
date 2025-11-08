@@ -42,13 +42,6 @@ export const featuredTalentsData = {
       location: "Barcelona"
     },
     {
-      name: "Jordi Garcia",
-      image: "/images/featuredTalent/jordi garcia.png",
-      followingInstagram: "10.5k",
-      sport: "Triathlon",
-      location: "Barcelona"
-    },
-    {
       name: "Amir Abedzadeh",
       image: "/images/featuredTalent/amir abedzadeh.png",
       followingInstagram: "874k",
@@ -62,13 +55,6 @@ export const featuredTalentsData = {
       followingTiktok: "294.4k",
       sport: "Lacrosse",
       location: "New Jersey, USA"
-    },
-    {
-      name: "John Dawe",
-      image: "/images/featuredTalent/john dawe.png",
-      followingInstagram: "1.4k",
-      sport: "Rugby 7s",
-      location: "Heidelberg"
     },
     {
       name: "Kayden McDonald",
@@ -122,47 +108,11 @@ export const featuredTalentsData = {
       location: "New York, USA"
     },
     {
-      name: "Alex Adams",
-      image: "/images/featuredTalent/alex adams.webp",
-      followingInstagram: "9.3k",
-      sport: "Football",
-      location: "Ohio, USA"
-    },
-    {
-      name: "Jose Manuel Ruiz",
-      image: "/images/featuredTalent/jose manuel ruiz.png",
-      followingInstagram: "10.1k",
-      sport: "Sailing",
-      location: "Murcia"
-    },
-    {
-      name: "Martí Ruiz García",
-      image: "/images/featuredTalent/marti ruiz garcia.png",
-      followingInstagram: "12.5k",
-      followingTiktok: "1.5k",
-      sport: "Event Host",
-      location: "Barcelona"
-    },
-    {
-      name: "Akeem Dent",
-      image: "/images/featuredTalent/akeem dent.webp",
-      followingInstagram: "10.4k",
-      sport: "Football",
-      location: "Florida, USA"
-    },
-    {
       name: "Amaya Gainer",
       image: "/images/featuredTalent/amaya gainer.png",
       followingInstagram: "9.4k",
       sport: "Softball",
       location: "Florida, USA"
-    },
-    {
-      name: "Javier Mira",
-      image: "/images/featuredTalent/javier mira.png",
-      followingInstagram: "12.7k",
-      sport: "Triathlon",
-      location: "Valencia"
     }
   ],
   es: [
@@ -331,13 +281,6 @@ export const featuredTalentsData = {
       location: "Augsburg"
     },
     {
-      name: "John Dawe",
-      image: "/images/featuredTalent/john dawe.png",
-      followingInstagram: "1.4k",
-      sport: "Rugby 7s",
-      location: "Heidelberg"
-    },
-    {
       name: "Peter Plavec",
       image: "/images/featuredTalent/peter plavec.png",
       followingInstagram: "102k",
@@ -379,28 +322,6 @@ export const featuredTalentsData = {
       followingInstagram: "18.4k",
       sport: "Fußball",
       location: "Barcelona"
-    },
-    {
-      name: "Jose Manuel Ruiz",
-      image: "/images/featuredTalent/jose manuel ruiz.png",
-      followingInstagram: "10.1k",
-      sport: "Segeln",
-      location: "Murcia"
-    },
-    {
-      name: "Martí Ruiz García",
-      image: "/images/featuredTalent/marti ruiz garcia.png",
-      followingInstagram: "12.5k",
-      followingTiktok: "1.5k",
-      sport: "Event-Moderator",
-      location: "Barcelona"
-    },
-    {
-      name: "Javier Mira",
-      image: "/images/featuredTalent/javier mira.png",
-      followingInstagram: "12.7k",
-      sport: "Triathlon",
-      location: "Valencia"
     },
     {
       name: "Abby Berner",
@@ -455,20 +376,6 @@ export const featuredTalentsData = {
       followingTiktok: "8.5k",
       sport: "Lacrosse",
       location: "New York, USA"
-    },
-    {
-      name: "Alex Adams",
-      image: "/images/featuredTalent/alex adams.webp",
-      followingInstagram: "9.3k",
-      sport: "American Football",
-      location: "Ohio, USA"
-    },
-    {
-      name: "Akeem Dent",
-      image: "/images/featuredTalent/akeem dent.webp",
-      followingInstagram: "10.4k",
-      sport: "American Football",
-      location: "Florida, USA"
     },
     {
       name: "Amaya Gainer",

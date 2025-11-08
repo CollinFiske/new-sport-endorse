@@ -2,6 +2,9 @@
 import "../styles/benefitSection.css";
 import AppStores from "./AppStores";
 import Image from 'next/image';
+import Link from 'next/link';
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 interface BenefitProps {
   title: string;
@@ -17,6 +20,27 @@ interface BenefitProps {
 }
 
 export default function BenefitSection({ title, subtitle, image, label, background = "#e8f2fd", item1="item1", item2="item2", item3="item3", color="#009ee3", learnMoreLink = "/talent" }: BenefitProps) {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const getPageLink = () => {
+    // Determine which page to link to based on the image or other identifiers
+    if (image === "/images/agency_dashboard.png" || label === t.home.benefitSection.agency.label) {
+      // Agency section
+      if (language === 'en') {
+        return '/agency';
+      } else {
+        return `/${language}/agency`;
+      }
+    } else {
+      // Default to brands page
+      if (language === 'en') {
+        return '/brands';
+      } else {
+        return `/${language}/brands`;
+      }
+    }
+  };
   return (
     <section className="benefit-section" style={{ background, paddingBottom:  "2rem !important"}}>
       <div className="benefit-left">
@@ -36,9 +60,9 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
         <div className="button-group">
           {image && (image !== "/images/talentBenefitPic.png" && image !== "images/agencyBenefitPic.jpg") ? (
             <>
-              <a target="_blank" href="https://platform.sportendorse.com/signup/brand?subscription=trial"><button className="benefit-button">START FREE TRIAL</button></a>
+              <Link href={getPageLink()}><button className="benefit-button">{t.common.learnMore}</button></Link>
               <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
-              <button className="demo-button">DEMO FOR BUSINESS</button>
+              <button className="demo-button">{t.common.bookDemo}</button>
               </a>
             </>
           ) : (
