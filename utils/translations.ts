@@ -80,7 +80,7 @@ const translations = {
       }
     },
     agency: {
-      badge: "FOR AGENCIES",
+      badge: "FOR SPORTS AGENCIES",
       title: "Book Sports <span class='agency-gradientText'>Celebrities</span>",
       description: "The all-in-one platform for your sports agency to secure and manage paid collaborations at scale. Connect your entire roster with brands seeking authentic partnerships that align with their profiles and passions.",
       imageAlt: "Agency Dashboard - Sport Endorse Platform",
@@ -277,9 +277,10 @@ const translations = {
       },
       calendlyDemo: {
         title: "See Sport Endorse in Action",
-        description: "Select a time that suits to learn more about our innovative solution and revolutionary platform, set up your account, and use athletes to endorse products and services.",
-        buttonText: "Demo for Business",
-        agencyButtonText: "Demo for Agencies"
+        description: "Book a short demo to see how the Sport Endorse platform connects brands with elite athletes and creators. Select a time that suits you to discover how easy it is to set up, connect, and drive results through authentic athlete partnerships.",
+        agencyDescription: "Join us for a brief demo to see how Sport Endorse can be your sport agency's most powerful tool for securing commercial deals for your talent.",
+        buttonText: "Book A Call",
+        agencyButtonText: "Book A Call"
       },
       community: {
         liveBadge: "Live",
@@ -414,6 +415,25 @@ const translations = {
             other: "Other",
             preferNotToSay: "Prefer not to say",
             submitButton: "Submit Request"
+          }
+        }
+      },
+      partnerAgencies: {
+        title: "Become a Partner Agency",
+        description: "Interested in expanding your client roster? Join our trusted network. You can request to become a Partner Agency with Sport Endorse for a specific sport or region. If any athlete on our platform without an agent needs support with contracts or legal issues, we will refer them to you.",
+        buttonText: "Partner with Us",
+        popup: {
+          title: "Partner Agency Application",
+          subtitle: "Please fill out the form below to apply to become a Partner Agency with Sport Endorse.",
+          form: {
+            firstName: "First Name",
+            surname: "Surname",
+            mobileNumber: "Mobile Number",
+            professionalEmail: "Professional Email",
+            agencyName: "Name of Sports Agency",
+            region: "Region",
+            sport: "Sport",
+            submitButton: "Submit Application"
           }
         }
       },
@@ -589,7 +609,7 @@ const translations = {
       }
     },
     agency: {
-      badge: "PARA AGENCIAS",
+      badge: "PARA AGENCIAS DEPORTIVAS",
       title: "Reserva <span class='agency-gradientText'>celebridades</span> deportivas",
       description: "La plataforma todo-en-uno para que tu agencia deportiva asegure y gestione colaboraciones pagadas a escala. Conecta toda tu lista de talentos con marcas que buscan asociaciones auténticas que se alineen con sus perfiles y pasiones.",
       imageAlt: "Panel de Agencia - Plataforma Sport Endorse",
@@ -786,9 +806,10 @@ const translations = {
       },
       calendlyDemo: {
         title: "Ve Sport Endorse en Acción",
-        description: "Selecciona un horario que te convenga para aprender más sobre nuestra solución innovadora y plataforma revolucionaria, configura tu cuenta y usa atletas para promocionar productos y servicios.",
-        buttonText: "Demo para Empresas",
-        agencyButtonText: "Demo para Agencias"
+        description: "Reserva una demostración breve para ver cómo la plataforma Sport Endorse conecta marcas con atletas y creadores de élite. Selecciona un horario que te convenga para descubrir lo fácil que es configurar, conectar y obtener resultados a través de asociaciones auténticas con atletas.",
+        agencyDescription: "Únete a nosotros para una demostración breve para ver cómo Sport Endorse puede ser la herramienta más poderosa de tu agencia deportiva para asegurar acuerdos comerciales para tu talento.",
+        buttonText: "Reservar una Llamada",
+        agencyButtonText: "Reservar una Llamada"
       },
       community: {
         liveBadge: "En Vivo",
@@ -923,6 +944,25 @@ const translations = {
             other: "Otro",
             preferNotToSay: "Prefiero no decir",
             submitButton: "Enviar Solicitud"
+          }
+        }
+      },
+      partnerAgencies: {
+        title: "Conviértete en Agencia Socia",
+        description: "¿Interesado en expandir tu lista de clientes? Únete a nuestra red de confianza. Puedes solicitar convertirte en una Agencia Socia con Sport Endorse para un deporte específico o región. Si algún atleta en nuestra plataforma sin agente necesita apoyo con contratos o asuntos legales, los referiremos contigo.",
+        buttonText: "Asóciate con Nosotros",
+        popup: {
+          title: "Aplicación de Agencia Socia",
+          subtitle: "Por favor completa el formulario a continuación para aplicar a convertirte en una Agencia Socia con Sport Endorse.",
+          form: {
+            firstName: "Nombre",
+            surname: "Apellido",
+            mobileNumber: "Número Móvil",
+            professionalEmail: "Correo Electrónico Profesional",
+            agencyName: "Nombre de la Agencia Deportiva",
+            region: "Región",
+            sport: "Deporte",
+            submitButton: "Enviar Aplicación"
           }
         }
       },
@@ -1089,7 +1129,7 @@ const translations = {
       }
     },
     agency: {
-      badge: "FÜR AGENTUREN",
+      badge: "FÜR SPORTAGENTUREN",
       title: "Buchen Sie Sport-<span class='agency-gradientText'>Prominente</span>",
       description: "Die All-in-One-Plattform für Ihre Sportagentur, um bezahlte Kooperationen im großen Stil zu sichern und zu verwalten. Verbinden Sie Ihre gesamte Liste mit Marken, die authentische Partnerschaften suchen, die mit ihren Profilen und Leidenschaften übereinstimmen.",
       imageAlt: "Agentur-Dashboard - Sport Endorse Plattform",
@@ -1286,9 +1326,10 @@ const translations = {
       },
       calendlyDemo: {
         title: "Sehen Sie Sport Endorse in Aktion",
-        description: "Wählen Sie eine passende Zeit, um mehr über unsere innovative Lösung und revolutionäre Plattform zu erfahren, richten Sie Ihr Konto ein und nutzen Sie Athleten zur Bewerbung von Produkten und Dienstleistungen.",
-        buttonText: "Demo für Unternehmen",
-        agencyButtonText: "Demo für Agenturen"
+        description: "Buchen Sie eine kurze Demo, um zu sehen, wie die Sport Endorse Plattform Marken mit Elite-Athleten und Kreativen verbindet. Wählen Sie eine passende Zeit, um zu entdecken, wie einfach es ist, sich zu verbinden und durch authentische Athleten-Partnerschaften Ergebnisse zu erzielen.",
+        agencyDescription: "Begleiten Sie uns zu einer kurzen Demo, um zu sehen, wie Sport Endorse das mächtigste Werkzeug Ihrer Sportagentur für die Sicherung kommerzieller Deals für Ihr Talent sein kann.",
+        buttonText: "Anruf Buchen",
+        agencyButtonText: "Anruf Buchen"
       },
       community: {
         liveBadge: "Live",
@@ -1423,6 +1464,25 @@ const translations = {
             other: "Andere",
             preferNotToSay: "Möchte nicht sagen",
             submitButton: "Anfrage Senden"
+          }
+        }
+      },
+      partnerAgencies: {
+        title: "Partner-Agentur werden",
+        description: "Interessiert daran, Ihr Kundenstamm zu erweitern? Treten Sie unserem vertrauenswürdigen Netzwerk bei. Sie können beantragen, Partner-Agentur mit Sport Endorse für eine bestimmte Sportart oder Region zu werden. Wenn ein Athlet auf unserer Plattform ohne Agenten Unterstützung bei Verträgen oder rechtlichen Fragen benötigt, werden wir sie an Sie verweisen.",
+        buttonText: "Partner werden",
+        popup: {
+          title: "Partner-Agentur Bewerbung",
+          subtitle: "Bitte füllen Sie das untenstehende Formular aus, um sich als Partner-Agentur bei Sport Endorse zu bewerben.",
+          form: {
+            firstName: "Vorname",
+            surname: "Nachname",
+            mobileNumber: "Mobilnummer",
+            professionalEmail: "Berufliche E-Mail",
+            agencyName: "Name der Sportagentur",
+            region: "Region",
+            sport: "Sportart",
+            submitButton: "Bewerbung senden"
           }
         }
       },

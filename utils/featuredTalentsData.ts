@@ -10,20 +10,32 @@ export interface FeaturedTalent {
 export const featuredTalentsData = {
   en: [
     {
-      name: "Fabian Pecher",
-      image: "/images/featuredTalent/fabian pecher.png",
-      followingInstagram: "257k",
-      followingTiktok: "643k",
-      sport: "Freestyle Football",
-      location: "Augsburg"
+      name: "Marquis Dendy",
+      image: "/images/Marquis-Dendy-Featured.jpeg",
+      followingInstagram: "25k",
+      sport: "Track and Field",
+      location: "Florida, USA"
     },
     {
-      name: "Abby Berner",
-      image: "/images/featuredTalent/abby berner.png",
-      followingInstagram: "2.6M",
-      followingTiktok: "6M",
-      sport: "Fitness",
-      location: "Kansas, USA"
+      name: "James Lowe",
+      image: "/images/featuredTalent/james lowe.png",
+      followingInstagram: "95k",
+      sport: "Rugby",
+      location: "Dublin, Ireland"
+    },
+    {
+      name: "Kira Toussaint",
+      image: "/images/featuredTalent/kira toussaint.png",
+      followingInstagram: "42k",
+      sport: "Swimming",
+      location: "Netherlands"
+    },
+    {
+      name: "Danny Simpson",
+      image: "/images/featuredTalent/danny simpson.png",
+      followingInstagram: "78k",
+      sport: "Football",
+      location: "Leicester, UK"
     },
     {
       name: "Emily Cole",
@@ -32,21 +44,6 @@ export const featuredTalentsData = {
       followingTiktok: "328k",
       sport: "Athletics",
       location: "North Carolina, USA"
-    },
-    {
-      name: "Sergio Sanchez",
-      image: "/images/featuredTalent/sergio sanchez.png",
-      followingInstagram: "137k",
-      followingTiktok: "146.2k",
-      sport: "Football",
-      location: "Barcelona"
-    },
-    {
-      name: "Amir Abedzadeh",
-      image: "/images/featuredTalent/amir abedzadeh.png",
-      followingInstagram: "874k",
-      sport: "Football",
-      location: "Valencia"
     },
     {
       name: "Tyler Sandoval",

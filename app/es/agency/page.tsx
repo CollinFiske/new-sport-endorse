@@ -1,10 +1,11 @@
 "use client";
 import Community from "@/components/Community";
 import "../../../styles/agency.css";
-import Image from 'next/image';
+import BrandsGrid from "@/components/BrandsGrid";
 import AgencyHowItWorks from "@/components/AgencyHowItWorks";
 import SuccessStories from "@/components/SuccessStories";
 import CalendlyDemo from "@/components/CalendlyDemo";
+import PartnerAgencies from "@/components/PartnerAgencies";
 import CategoryDropdownFAQ from "@/components/CategoryDropdownFAQ";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
@@ -57,16 +58,7 @@ export default function AgencyPageES() {
           </div>
           
           <div className="agency-imageContainer">
-            <div className="agency-dashboard-wrapper">
-              <Image 
-                src="/images/agency_dashboard.png" 
-                alt={t.agency.imageAlt}
-                width={800} 
-                height={600}
-                className="agency-dashboard-image"
-                priority
-              />
-            </div>
+            <BrandsGrid variant="5x4" label="" />
           </div>
         </div>
       </section>
@@ -78,6 +70,8 @@ export default function AgencyPageES() {
       <CalendlyDemo agencies={true} />
 
       <SuccessStories />
+
+      <PartnerAgencies />
 
       <CategoryDropdownFAQ 
         title={t.components.faqs.categories.agency}

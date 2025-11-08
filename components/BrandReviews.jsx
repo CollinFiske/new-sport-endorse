@@ -64,7 +64,40 @@ export default function BrandReviews() {
       text: "Sport Endorse provides brands a user-friendly channel to connect with influencers of various sports. Through this platform, I can create different contents with influencers to enhance our brand awareness!",
       name: "Mavis Leung",
       position: "Brand manager"
+    },
+    {
+      id: 8,
+      image: "/images/homePageTable/Specsaver.png",
+      alt: "Specsavers logo",
+      text: "We've been working with Sport Endorse for over two seasons now around activation of the Specsavers, and simply put, they get things done when others may say it isn't possible.",
+      name: "Filsan Yusuf",
+      position: "Senior Digital Account Director"
+    },
+    {
+      id: 9,
+      image: "/images/homePageTable/shokz.png",
+      alt: "Shokz logo",
+      text: "The collaboration with Dan Tai for the Shokz OpenFit 2+ campaign went really well. It was a pleasure working with him and Sport Endorse. Dan's professionalism and the authenticity of his content truly resonated with our audience, and we saw great engagement from his posts.",
+      name: "Victoria Liu",
+      position: "UK Influencer Marketing Manager, International Sales Department"
+    },
+    {
+      id: 10,
+      image: "/images/homePageTable/affidea.jpg",
+      alt: "Affidea logo",
+      text: "Working with Declan and the team at Sport Endorse has been an absolute pleasure. They have a clear understanding of our business and how to match a suitable Ambassador to fit our brand. They are forthcoming with advice and suggestions to help you maximise your agreement with your chosen athlete. I would highly recommend them!",
+      name: "Muireann Feirteir",
+      position: "Head of Business Development & Marketing"
+    },
+    {
+      id: 11,
+      image: "/images/homePageTable/active-iron.png",
+      alt: "Active Iron logo",
+      text: "Sport Endorse were instrumental in sourcing the right talent to communicate our message across multiple channels. They made the process easy, professional, and cost-effective.",
+      name: "Claire Lynch",
+      position: "Head of Marketing"
     }
+
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

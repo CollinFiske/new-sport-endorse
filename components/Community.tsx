@@ -13,11 +13,11 @@ export default function Community({ showAgencies = false }: CommunityProps) {
   const t = translations[language].components.community;
   
   // Hard-coded values
-  const athletes = "6500+";
+  const athletes = "7000+";
   const brands = "650+";
   const agencies = "20+";
-  const sports = "150+";
-  const nationalities = "100+";
+  const sports = "280+";
+  const nationalities = "85+";
 
   return (
     <section className="statistics-section">

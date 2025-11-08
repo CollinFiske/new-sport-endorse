@@ -76,7 +76,7 @@ export default function BrandsContent({
                     </div>
                   </div>
                 ))}
-                <a href="https://platform.sportendorse.com/signup/brand" target="_blank" className="brands-cta-card" style={{ 
+                <a href={language === 'en' ? '/subscription' : `/${language}/subscription`} className="brands-cta-card" style={{ 
                   background: '#0078c1', 
                   borderRadius: '0.75rem',
                   display: 'flex',

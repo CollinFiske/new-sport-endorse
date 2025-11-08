@@ -76,6 +76,16 @@
   object-fit: cover;
 }
 
+/* Specific styling for logos that need to be smaller */
+.review-image img[src*="Specsaver"],
+.review-image img[src*="affidea"],
+.review-image img[src*="shuzgroup_logo"] {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  margin: 15% auto;
+}
+
 .review-text {
   margin-bottom: 30px;
 }

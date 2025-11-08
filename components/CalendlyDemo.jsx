@@ -13,6 +13,7 @@ export default function CalendlyDemo({ agencies = false }) {
     : "https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07";
     
   const buttonText = agencies ? tDemo.agencyButtonText : tDemo.buttonText;
+  const description = agencies ? tDemo.agencyDescription : tDemo.description;
 
   return (
     <div className="calendly-demo-section">
@@ -28,7 +29,7 @@ export default function CalendlyDemo({ agencies = false }) {
 
           <div className="calendly-demo-right">
             <p className="calendly-demo-description">
-              {tDemo.description}
+              {description}
             </p>
             <div className="calendly-demo-button">
               <a target="_blank" href={demoUrl}>

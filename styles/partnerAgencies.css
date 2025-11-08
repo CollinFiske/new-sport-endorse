@@ -1,0 +1,295 @@
+.partner-agencies-section {
+  background: #F8FAFC;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 50px auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.partner-agencies-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.partner-agencies-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1f2937;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.partner-agencies-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partner-button {
+  background: #0078c1;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.partner-button:hover {
+  background: #005a8c;
+  transform: translateY(-2px);
+}
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.close-button:hover {
+  background: #f3f4f6;
+}
+
+.popup-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.popup-subtitle {
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.partner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #0078c1;
+  box-shadow: 0 0 0 3px rgba(0, 120, 193, 0.1);
+}
+
+.submit-button {
+  background: #0078c1;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background: #005a8c;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .partner-agencies-section {
+    padding: 2.5rem 1.5rem;
+    margin: 40px auto;
+  }
+
+  .partner-agencies-title {
+    font-size: 2.2rem;
+  }
+
+  .partner-agencies-description {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+  .partner-agencies-section {
+    padding: 2rem 1.5rem;
+    margin: 30px auto;
+    border-radius: 15px;
+  }
+
+  .partner-agencies-title {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .partner-agencies-description {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .popup-content {
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .popup-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .partner-agencies-section {
+    padding: 1.5rem 1rem;
+    margin: 20px 0.5rem;
+    border-radius: 12px;
+  }
+
+  .partner-agencies-title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .partner-agencies-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .partner-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .popup-content {
+    padding: 1.25rem;
+    margin: 0.25rem;
+    border-radius: 12px;
+  }
+
+  .form-group input {
+    padding: 0.65rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 360px) {
+  .partner-agencies-section {
+    padding: 1.25rem 0.75rem;
+    margin: 15px 0.25rem;
+  }
+
+  .partner-agencies-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .partner-agencies-description {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .popup-content {
+    padding: 1rem;
+  }
+
+  .popup-title {
+    font-size: 1.125rem;
+  }
+
+  .form-group input {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+}

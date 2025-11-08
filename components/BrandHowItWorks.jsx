@@ -59,7 +59,7 @@ export default function BrandHowItWorks() {
                     </div>
                 ))}
                 </div>
-                <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="brand-how-start-link">
+                <a href={language === 'en' ? '/subscription' : `/${language}/subscription`} className="brand-how-start-link">
                     <button className="brand-how-start-button">{t.buttonText}</button>
                 </a>
             </div>
