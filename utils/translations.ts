@@ -81,7 +81,7 @@ const translations = {
     },
     agency: {
       badge: "FOR AGENCIES",
-      title: "Book sports <span class='agency-gradientText'>celebrities</span>",
+      title: "Book Sports <span class='agency-gradientText'>Celebrities</span>",
       description: "The all-in-one platform for your sports agency to secure and manage paid collaborations at scale. Connect your entire roster with brands seeking authentic partnerships that align with their profiles and passions.",
       imageAlt: "Agency Dashboard - Sport Endorse Platform",
       metadata: {
