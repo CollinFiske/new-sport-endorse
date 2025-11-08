@@ -139,7 +139,7 @@ export default function HomePage() {
     <BenefitSection
       title={t.home.benefitSection.athlete.title}
       subtitle={t.home.benefitSection.athlete.subtitle}
-      image="/images/talentBenefitPic.png"
+      image="/images/talentBenefitPicA.png"
       label={t.home.benefitSection.athlete.label}
       background="#E5F1FF"
       item1={t.home.benefitSection.athlete.bullet1}

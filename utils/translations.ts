@@ -42,7 +42,7 @@ const translations = {
     header:{
       talent:"For Talent",
       brand:"For Brands",
-      agencies:"For Agencies",
+      agencies:"For Sports Agencies",
       subscription:"Subscription",
       resources:"Resources",
       blog:"Blog",
@@ -551,7 +551,7 @@ const translations = {
     header: {
       talent: "Por el Talento",
       brand: "Para Marcas",
-      agencies: "Para Agencias",
+      agencies: "Para Agencias Deportivas",
       subscription: "Suscripción",
       resources: "Recursos",
       blog: "Blog",
@@ -1051,7 +1051,7 @@ const translations = {
     header: {
       talent: "Für Talent",
       brand: "Für Marken",
-      agencies: "Für Agenturen",
+      agencies: "Für Sportagenturen",
       subscription: "Abonnement",
       resources: "Ressourcen",
       blog: "Blog",

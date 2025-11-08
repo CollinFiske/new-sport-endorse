@@ -95,19 +95,19 @@ export default function Footer() {
 
           <div className="footer-links">
             <div>
-              <h5><span className="footer-number">01]</span><Link target="_blank" href="https://platform.sportendorse.com/signup/brand" >{t.links.signUpBrand}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
-              <h5><span className="footer-number">02]</span><Link target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">{t.links.bookDemo}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
-              <h5><span className="footer-number">03]</span><Link href={getNavLink("/podcasts")}>{t.links.podcasts}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
-              <h5><span className="footer-number">04]</span><Link href={getNavLink("/about-us#careers")}>{t.links.careers}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
-              <h5><span className="footer-number">05]</span><Link href={getNavLink("/about-us")}>{t.links.aboutUs}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
+              {/*<h5>{/* <span className="footer-number">01]</span> }<Link target="_blank" href="https://platform.sportendorse.com/signup/brand" >{t.links.signUpBrand}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>*/}
+              <h5>{/* <span className="footer-number">06]</span> */}<Link target="_blank" href="https://platform.sportendorse.com/signup/talent">{t.links.signUpTalent}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
+              <h5>{/* <span className="footer-number">02]</span> */}<Link target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">{t.links.bookDemo}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
+              <h5>{/* <span className="footer-number">03]</span> */}<Link href={getNavLink("/podcasts")}>{t.links.podcasts}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
+              <h5>{/* <span className="footer-number">04]</span> */}<Link href={getNavLink("/about-us#careers")}>{t.links.careers}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
+              <h5>{/* <span className="footer-number">05]</span> */}<Link href={getNavLink("/about-us")}>{t.links.aboutUs}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
             </div>
             <div>
-              <h5><span className="footer-number">06]</span><Link target="_blank" href="https://platform.sportendorse.com/signup/talent">{t.links.signUpTalent}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
-              <h5><span className="footer-number">07]</span><Link href={getNavLink("/success-stories")}>{t.links.successStories}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
-              <h5><span className="footer-number">08]</span><Link href={getNavLink("/faqs")}>{t.links.faqs}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
-              <h5><span className="footer-number">09]</span><Link href={getNavLink("/blog")}>{t.links.blog}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>              
-              <h5><span className="footer-number">10]</span><Link href={getNavLink("/contact-us")}>{t.links.contactUs}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
-              <h5><span className="footer-number">11]</span><Link href={getNavLink("/news")}>{t.links.news}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
+              <h5>{/* <span className="footer-number">09]</span> */}<Link href={getNavLink("/blog")}>{t.links.blog}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>     
+              <h5>{/* <span className="footer-number">07]</span> */}<Link href={getNavLink("/success-stories")}>{t.links.successStories}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
+              <h5>{/* <span className="footer-number">08]</span> */}<Link href={getNavLink("/faqs")}>{t.links.faqs}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>      
+              <h5>{/* <span className="footer-number">10]</span> */}<Link href={getNavLink("/contact-us")}>{t.links.contactUs}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
+              <h5>{/* <span className="footer-number">11]</span> */}<Link href={getNavLink("/news")}>{t.links.news}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
             </div>
 
             <span className="footer-app-store-logos">
@@ -126,10 +126,10 @@ export default function Footer() {
           <div className="footer-bottom-right">
             <div className="logoContainer">
               <p>{t.supportedBy}</p>
-              <div className="logo"><Image src="/images/image-129.png" alt="Support Logos" width={60} height={40} /></div>
-              <div className="logo"><Image src="/images/image-128.png" alt="Support Logos" width={60} height={40} /></div>
-              <div className="logo"><Image src="/images/image-127.png" alt="Support Logos" width={60} height={40} /></div>
-              <div className="logo" style={{width:"90px"}}><Image src="/images/image-126.png" alt="Support Logos" width={90} height={40} /></div>
+              <div className="logo" style={{width:"100px"}}><Image src="/images/image-129.png" alt="Support Logos" width={100} height={60} /></div>
+              <div className="logo"><Image src="/images/image-128.png" alt="Support Logos" width={90} height={60} /></div>
+              <div className="logo" style={{width:"95px"}}><Image src="/images/image-127.png" alt="Support Logos" width={95} height={60} /></div>
+              <div className="logo" style={{width:"135px"}}><Image src="/images/image-126.png" alt="Support Logos" width={135} height={60} /></div>
             </div>
           </div>
 
