@@ -2,6 +2,7 @@
 import { usePathname } from 'next/navigation';
 import Header from './Header';
 import Footer from './Footer';
+import '../styles/conditionalLayout.css';
 
 export default function ConditionalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -20,7 +21,7 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
   return (
     <>
       <Header />
-      <main style={{ padding: "70px 20px 0 20px" }}>{children}</main>
+      <main className="conditional-layout-main">{children}</main>
       <Footer />
     </>
   );

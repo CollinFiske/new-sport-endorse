@@ -90,7 +90,7 @@ const translations = {
       }
     },
     talent: {
-      badge: "FOR ATHLETES",
+      badge: "FOR TALENT",
       title: "How to Get Sponsored as an Athlete",
       description: "Welcome to the leading athlete endorsement marketplace. Sport Endorse is the all-in-one platform connecting you directly with brands for sponsorships for athletes and paid collaborations that align with your profile and passions. It's the easiest way to find and manage sponsorships for athletes",
       sponsorshipSection: {

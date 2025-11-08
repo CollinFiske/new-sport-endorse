@@ -12,7 +12,7 @@ interface BrandsGridProps {
 const brands = [
   // Brands from target list with available logos
   { src: "/images/homePageTable/alpro.png", alt: "Alpro logo" },
-  { src: "/images/homePageTable/GrantThornton.webp", alt: "Grant Thornton logo" },
+  { src: "/images/homePageTable/isdin.png", alt: "ISDIN logo" },
   { src: "/images/homePageTable/Kelloggs_Logo_Slider.webp", alt: "Kellogg's logo" },
   { src: "/images/homePageTable/Lovable.webp", alt: "Lovable logo" },
   { src: "/images/homePageTable/Optimum_Nutrition_Logo.png", alt: "Optimum Nutrition logo" },
@@ -33,7 +33,7 @@ const brands = [
   { src: "/images/homePageTable/solestar.gif", alt: "Solestar logo" },
   { src: "/images/homePageTable/uniphar.png", alt: "AYA/Uniphar logo" },
   { src: "/images/homePageTable/movember.png", alt: "Movember logo" },
-  { src: "/images/homePageTable/isdin.png", alt: "ISDIN logo" },
+  { src: "/images/homePageTable/GrantThornton.webp", alt: "Grant Thornton logo" },
   { src: "/images/homePageTable/Glanbia.png", alt: "Avonmore/Tirlán/Glanbia logo" },
   { src: "/images/homePageTable/uriage.png", alt: "Uriage logo" },
   { src: "/images/homePageTable/sons-hair-loss-uk.png", alt: "Sons logo" },
