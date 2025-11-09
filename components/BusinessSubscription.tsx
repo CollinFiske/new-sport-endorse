@@ -4,7 +4,6 @@ import "../styles/businessSubscription.css";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 interface BusinessSubscriptionProps {
   titleLevel?: 'h1' | 'h2';
@@ -13,7 +12,6 @@ interface BusinessSubscriptionProps {
 export default function BusinessSubscription({ titleLevel = 'h2' }: BusinessSubscriptionProps) {
   const { language } = useLanguage();
   const t = translations[language].components.businessSubscription;
-  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
