@@ -330,31 +330,49 @@ const translations = {
         location: "Location"
       },
       businessSubscription: {
-        title: "Business Subscription",
-        subtitle: "Get started and harness the power of collaboration with elite athletes that are all about performance. Pay easily and automatically either every quarterly, or annually. Subscribe below!",
-        seeMoreButton: "See More",
-        consultation: {
-          title: "ANY QUESTIONS LEFT?",
-          subtitle: "Schedule a 15-min Call with Our Expert Team of Sports Marketing!",
-          buttonText: "SCHEDULE"
+        mainTitle: "Discover a Subscription that Fits Your Marketing Goals",
+        mainSubtitle: "Choose the right plan to find and connect with the perfect talent for your brand.",
+        sectionTitle: "Our Subscription Packages",
+        categories: {
+          talentDiscovery: "Talent Discovery",
+          communication: "Communication",
+          campaignManagement: "Campaign Management",
+          growthScale: "Growth & Scale",
+          supportSuccess: "Support & Success"
+        },
+        features: {
+          accessToPlatform: "Access to Platform",
+          advancedSearchTools: "Advanced Search Tools",
+          verifiedTalentProfiles: "Verified Talent Profiles",
+          directMessaging: "Direct Messaging with Talent",
+          postOpportunities: "Post Opportunities to all Talent",
+          unlimitedProfiles: "Access Unlimited Profiles",
+          targetUnlimitedMarkets: "Target Unlimited Markets",
+          dedicatedOnboarding: "Dedicated Onboarding",
+          customerSuccessManager: "Dedicated Customer Success Manager"
         },
         plans: {
-          trial: "FREE TRIAL",
-          quarterly: "QUARTERLY",
-          annual: "ANNUAL"
+          freeTrial: "Free Trial",
+          quarterlyRate: "Quarterly Rate", 
+          annualRate: "Annual Rate"
         },
-        features: [
-          "Access to Sport Endorse platform",
-          "Suite of tools and filters to support your search",
-          "Talent ID verification included",
-          "Built-in instant messaging feature",
-          "Dedicated onboarding support",
-          "Target unlimited countries",
-          "Access unlimited athletes' profiles",
-          "Share opportunities with all talent in any market",
-          "Full access to advanced tools and search filters",
-          "Monthly check-ins with Dedicated Customer Success Manager"
-        ]
+        billing: {
+          freeTrialInfo: "1 month free trial",
+          quarterlyInfo: "*Paid every 3 months, +VAT",
+          annualInfo: "*Paid every 12 months, +VAT"
+        },
+        buttons: {
+          startFreeTrial: "START FREE TRIAL",
+          subscribeNow: "SUBSCRIBE NOW",
+          save35: "SAVE 35%",
+          getStarted: "Get Started",
+          talkToSales: "Talk to Sales"
+        },
+        customPackage: {
+          title: "Custom Package",
+          description: "Need all of this and more? Looking for full campaign management?",
+          subtitle: "Talk to our sales team today."
+        }
       },
       faqs: {
         title: "Frequently Asked Questions",
@@ -859,31 +877,49 @@ const translations = {
         location: "Ubicación"
       },
       businessSubscription: {
-        title: "Suscripción Empresarial",
-        subtitle: "Comienza y aprovecha el poder de la colaboración con atletas de élite que se enfocan en el rendimiento. Paga fácil y automáticamente trimestral o anualmente. ¡Suscríbete a continuación!",
-        seeMoreButton: "Ver Más",
-        consultation: {
-          title: "¿ALGUNA PREGUNTA?",
-          subtitle: "¡Programa una llamada de 15 minutos con nuestro equipo experto en marketing deportivo!",
-          buttonText: "PROGRAMAR"
+        mainTitle: "Descubre una Suscripción que se Adapte a tus Objetivos de Marketing",
+        mainSubtitle: "Elige el plan correcto para encontrar y conectar con el talento perfecto para tu marca.",
+        sectionTitle: "Nuestros Paquetes de Suscripción",
+        categories: {
+          talentDiscovery: "Descubrimiento de Talento",
+          communication: "Comunicación",
+          campaignManagement: "Gestión de Campañas",
+          growthScale: "Crecimiento y Escala",
+          supportSuccess: "Soporte y Éxito"
+        },
+        features: {
+          accessToPlatform: "Acceso a la Plataforma",
+          advancedSearchTools: "Herramientas de Búsqueda Avanzada",
+          verifiedTalentProfiles: "Perfiles de Talento Verificados",
+          directMessaging: "Mensajería Directa con Talento",
+          postOpportunities: "Publicar Oportunidades a todo el Talento",
+          unlimitedProfiles: "Acceso a Perfiles Ilimitados",
+          targetUnlimitedMarkets: "Dirigirse a Mercados Ilimitados",
+          dedicatedOnboarding: "Incorporación Dedicada",
+          customerSuccessManager: "Gerente de Éxito del Cliente Dedicado"
         },
         plans: {
-          trial: "PRUEBA GRATUITA",
-          quarterly: "TRIMESTRAL",
-          annual: "ANUAL"
+          freeTrial: "Prueba Gratuita",
+          quarterlyRate: "Tarifa Trimestral",
+          annualRate: "Tarifa Anual"
         },
-        features: [
-          "Acceso a la plataforma Sport Endorse",
-          "Suite de herramientas y filtros para apoyar tu búsqueda",
-          "Verificación de ID de talento incluida",
-          "Función de mensajería instantánea integrada",
-          "Soporte de incorporación dedicado",
-          "Dirigirse a países ilimitados",
-          "Acceder a perfiles de atletas ilimitados",
-          "Compartir oportunidades con todo el talento en cualquier mercado",
-          "Acceso completo a herramientas avanzadas y filtros de búsqueda",
-          "Revisiones mensuales con Gerente de Éxito del Cliente Dedicado"
-        ]
+        billing: {
+          freeTrialInfo: "1 mes de prueba gratuita",
+          quarterlyInfo: "*Pagado cada 3 meses, +IVA",
+          annualInfo: "*Pagado cada 12 meses, +IVA"
+        },
+        buttons: {
+          startFreeTrial: "INICIAR PRUEBA GRATUITA",
+          subscribeNow: "SUSCRIBIRSE AHORA",
+          save35: "AHORRA 35%",
+          getStarted: "Empezar",
+          talkToSales: "Hablar con Ventas"
+        },
+        customPackage: {
+          title: "Paquete Personalizado",
+          description: "¿Necesitas todo esto y más? ¿Buscas gestión completa de campañas?",
+          subtitle: "Habla con nuestro equipo de ventas hoy."
+        }
       },
       faqs: {
         title: "Preguntas Frecuentes",
@@ -1379,31 +1415,49 @@ const translations = {
         location: "Standort"
       },
       businessSubscription: {
-        title: "Business-Abonnement",
-        subtitle: "Beginnen Sie und nutzen Sie die Kraft der Zusammenarbeit mit Elite-Athleten, die sich auf Leistung konzentrieren. Zahlen Sie einfach und automatisch vierteljährlich oder jährlich. Abonnieren Sie unten!",
-        seeMoreButton: "Mehr Sehen",
-        consultation: {
-          title: "NOCH FRAGEN?",
-          subtitle: "Planen Sie einen 15-minütigen Anruf mit unserem Expertenteam für Sportmarketing!",
-          buttonText: "TERMIN PLANEN"
+        mainTitle: "Entdecken Sie ein Abonnement, das zu Ihren Marketing-Zielen Passt",
+        mainSubtitle: "Wählen Sie den richtigen Plan, um das perfekte Talent für Ihre Marke zu finden und zu verbinden.",
+        sectionTitle: "Unsere Abonnement-Pakete",
+        categories: {
+          talentDiscovery: "Talent-Entdeckung",
+          communication: "Kommunikation",
+          campaignManagement: "Kampagnen-Management",
+          growthScale: "Wachstum & Skalierung",
+          supportSuccess: "Support & Erfolg"
+        },
+        features: {
+          accessToPlatform: "Zugang zur Plattform",
+          advancedSearchTools: "Erweiterte Such-Tools",
+          verifiedTalentProfiles: "Verifizierte Talent-Profile",
+          directMessaging: "Direkte Nachrichten mit Talenten",
+          postOpportunities: "Gelegenheiten an alle Talente posten",
+          unlimitedProfiles: "Zugang zu unbegrenzten Profilen",
+          targetUnlimitedMarkets: "Unbegrenzte Märkte ansprechen",
+          dedicatedOnboarding: "Dediziertes Onboarding",
+          customerSuccessManager: "Dedizierter Customer Success Manager"
         },
         plans: {
-          trial: "KOSTENLOSE TESTVERSION",
-          quarterly: "VIERTELJÄHRLICH",
-          annual: "JÄHRLICH"
+          freeTrial: "Kostenlose Testversion",
+          quarterlyRate: "Vierteljährlicher Tarif",
+          annualRate: "Jahrestarif"
         },
-        features: [
-          "Zugang zur Sport Endorse Plattform",
-          "Suite von Tools und Filtern zur Unterstützung Ihrer Suche",
-          "Talent-ID-Verifizierung inklusive",
-          "Eingebaute Instant-Messaging-Funktion",
-          "Dedizierte Onboarding-Unterstützung",
-          "Unbegrenzte Länder ansprechen",
-          "Zugang zu unbegrenzten Athletenprofilen",
-          "Gelegenheiten mit allen Talenten in jedem Markt teilen",
-          "Vollzugang zu erweiterten Tools und Suchfiltern",
-          "Monatliche Check-ins mit dediciertem Customer Success Manager"
-        ]
+        billing: {
+          freeTrialInfo: "1 Monat kostenlose Testversion",
+          quarterlyInfo: "*Zahlung alle 3 Monate, +MwSt",
+          annualInfo: "*Zahlung alle 12 Monate, +MwSt"
+        },
+        buttons: {
+          startFreeTrial: "KOSTENLOSE TESTVERSION STARTEN",
+          subscribeNow: "JETZT ABONNIEREN", 
+          save35: "35% SPAREN",
+          getStarted: "Loslegen",
+          talkToSales: "Mit Vertrieb sprechen"
+        },
+        customPackage: {
+          title: "Individuelles Paket",
+          description: "Brauchen Sie all das und mehr? Suchen Sie nach vollständigem Kampagnen-Management?",
+          subtitle: "Sprechen Sie heute mit unserem Vertriebsteam."
+        }
       },
       faqs: {
         title: "Häufig Gestellte Fragen",

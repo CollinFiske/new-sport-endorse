@@ -1,11 +1,16 @@
 "use client";
+import React from "react";
 import "../styles/businessSubscription.css";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function BusinessSubscription() {
+interface BusinessSubscriptionProps {
+  titleLevel?: 'h1' | 'h2';
+}
+
+export default function BusinessSubscription({ titleLevel = 'h2' }: BusinessSubscriptionProps) {
   const { language } = useLanguage();
   const t = translations[language].components.businessSubscription;
   const router = useRouter();
@@ -22,17 +27,41 @@ export default function BusinessSubscription() {
     note: ''
   });
 
-  const features = [
-    { name: t.features[0], trial: true, quarterly: true, annual: true },
-    { name: t.features[1], trial: true, quarterly: true, annual: true },
-    { name: t.features[2], trial: true, quarterly: true, annual: true },
-    { name: t.features[3], trial: true, quarterly: true, annual: true },
-    { name: t.features[4], trial: true, quarterly: true, annual: true },
-    { name: t.features[5], trial: false, quarterly: true, annual: true },
-    { name: t.features[6], trial: false, quarterly: true, annual: true },
-    { name: t.features[7], trial: false, quarterly: true, annual: true },
-    { name: t.features[8], trial: false, quarterly: true, annual: true },
-    { name: t.features[9], trial: false, quarterly: false, annual: true }
+  const featureCategories = [
+    {
+      category: t.categories.talentDiscovery,
+      features: [
+        { name: t.features.accessToPlatform, trial: true, quarterly: true, annual: true },
+        { name: t.features.advancedSearchTools, trial: true, quarterly: true, annual: true },
+        { name: t.features.verifiedTalentProfiles, trial: true, quarterly: true, annual: true }
+      ]
+    },
+    {
+      category: t.categories.communication,
+      features: [
+        { name: t.features.directMessaging, trial: true, quarterly: true, annual: true }
+      ]
+    },
+    {
+      category: t.categories.campaignManagement,
+      features: [
+        { name: t.features.postOpportunities, trial: false, quarterly: true, annual: true }
+      ]
+    },
+    {
+      category: t.categories.growthScale,
+      features: [
+        { name: t.features.unlimitedProfiles, trial: false, quarterly: true, annual: true },
+        { name: t.features.targetUnlimitedMarkets, trial: false, quarterly: true, annual: true }
+      ]
+    },
+    {
+      category: t.categories.supportSuccess,
+      features: [
+        { name: t.features.dedicatedOnboarding, trial: true, quarterly: true, annual: true },
+        { name: t.features.customerSuccessManager, trial: false, quarterly: false, annual: true }
+      ]
+    }
   ];
 
   const openModal = () => setIsModalOpen(true);
@@ -85,130 +114,119 @@ Thank you!`;
     <>
       <section className="subscription-container">
         <div className="subscription-header">
-          <h2 className="subscription-title">{t.title}</h2>
-          <p className="subscription-subtitle">{t.subtitle}</p>
+          {titleLevel === 'h1' ? (
+            <h1 className="subscription-title">{t.mainTitle}</h1>
+          ) : (
+            <h2 className="subscription-title">{t.mainTitle}</h2>
+          )}
+          <p className="subscription-subtitle">{t.mainSubtitle}</p>
         </div>
 
-        <div className="subscription-pricing-grid">
-          {/* Free Trial Card */}
-          <div className="subscription-pricing-card subscription-trial-card">
-            <div className="subscription-card-header subscription-trial-header">
-              <div className="subscription-plan-badge subscription-trial-badge">Free!</div>
-              <h3 className="subscription-plan-name">FREE TRIAL</h3>
-              <div className="subscription-price-section">
-                <span className="subscription-price-amount subscription-trial-price">€/£/$0</span>
-                <span className="subscription-price-period">/month</span>
-              </div>
-              <p className="subscription-billing-info">1 month free trial</p>
-            </div>
-            <div className="subscription-card-body">
-              <ul className="subscription-features-list">
-                {features.slice(0, 5).map((feature, index) => (
-                  <li key={index} className="subscription-feature-item">
-                    <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {feature.name}
-                  </li>
-                ))}
-              </ul>
-              <a href="https://platform.sportendorse.com/signup/brand?subscription=trial" target="_blank" rel="noopener noreferrer">
-                <button className="subscription-cta-button subscription-trial-button">START FREE TRIAL</button>
-              </a>
-            </div>
-          </div>
-
-          {/* Quarterly Card */}
-          <div className="subscription-pricing-card subscription-quarterly-card">
-            <div className="subscription-card-header subscription-quarterly-header">
-              <h3 className="subscription-plan-name">QUARTERLY</h3>
-              <div className="subscription-price-section">
-                <span className="subscription-price-amount">€/£/$700</span>
-                <span className="subscription-price-period">/quarter</span>
-              </div>
-              <p className="subscription-billing-info">Paid every 3 months, +VAT</p>
-            </div>
-            <div className="subscription-card-body">
-              <ul className="subscription-features-list">
-                {features.slice(0, 9).map((feature, index) => (
-                  <li key={index} className="subscription-feature-item">
-                    <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {feature.name}
-                  </li>
-                ))}
-              </ul>
-              <a href="https://platform.sportendorse.com/signup/brand?subscription=quarterly" target="_blank" rel="noopener noreferrer">
-                <button className="subscription-cta-button subscription-quarterly-button">START SUBSCRIPTION</button>
-              </a>
-            </div>
-          </div>
-
-          {/* Annual Card */}
-          <div className="subscription-pricing-card subscription-annual-card subscription-featured">
-            <div className="subscription-card-header subscription-annual-header">
-              <div className="subscription-plan-badge subscription-annual-badge">Save 35%</div>
-              <h3 className="subscription-plan-name">ANNUAL</h3>
-              <div className="subscription-price-section">
-                <span className="subscription-price-amount">€/£/$1,799</span>
-                <span className="subscription-price-period">/year</span>
-              </div>
-              <p className="subscription-billing-info">Paid every 12 months, +VAT</p>
-            </div>
-            <div className="subscription-card-body">
-              <ul className="subscription-features-list">
-                {features.map((feature, index) => (
-                  <li key={index} className="subscription-feature-item">
-                    <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {feature.name}
-                  </li>
-                ))}
-              </ul>
-              <a href="https://platform.sportendorse.com/signup/brand?subscription=annual" target="_blank" rel="noopener noreferrer">
-                <button className="subscription-cta-button subscription-annual-button">START SUBSCRIPTION</button>
-              </a>
-            </div>
-          </div>
-
-          {/* Custom Package Card */}
-          <div className="subscription-pricing-card subscription-custom-card">
-            <div className="subscription-card-header subscription-custom-header">
-              <h3 className="subscription-plan-name">CUSTOM PACKAGE</h3>
-              <div className="subscription-price-section">
-                <span className="subscription-price-amount subscription-custom-price">Custom</span>
-              </div>
-              <p className="subscription-billing-info">Tailored to your needs</p>
-            </div>
-            <div className="subscription-card-body">
-              <div className="subscription-custom-description">
-                <p style={{paddingTop:".75rem"}}>Need all of this and more? Looking for full campaign management? Talk to our sales team today.</p>
-                <ul className="subscription-custom-features">
-                  <li>Personalized onboarding</li>
-                  <li>Dedicated account manager</li>
-                  <li>Custom integrations</li>
-                  <li>Volume discounts available</li>
-                </ul>
-              </div>
-              <button onClick={openModal} className="subscription-cta-button subscription-custom-button">TALK TO SALES</button>
-            </div>
-          </div>
+        {/* Pivot Table for Standard Subscriptions */}
+        <div className="subscription-table-wrapper">
+          <table className="subscription-table">
+            <thead>
+              <tr>
+                <th className="subscription-table-title-cell">{t.sectionTitle}</th>
+                <th className="subscription-plan-header trial-plan">
+                  <div className="subscription-plan-name">{t.plans.freeTrial}</div>
+                  <div className="subscription-plan-price">
+                    <span className="currency">€/£/$</span>0<span className="period">/month</span>
+                  </div>
+                  <div className="subscription-billing-info">{t.billing.freeTrialInfo}</div>
+                </th>
+                <th className="subscription-plan-header quarterly-plan">
+                  <div className="subscription-plan-name">{t.plans.quarterlyRate}</div>
+                  <div className="subscription-plan-price">
+                    <span className="currency">€/£/$</span>700<span className="period">/quarter</span>
+                  </div>
+                  <div className="subscription-billing-info">{t.billing.quarterlyInfo}</div>
+                </th>
+                <th className="subscription-plan-header annual-plan">
+                  <div className="subscription-plan-name">{t.plans.annualRate}</div>
+                  <div className="subscription-plan-price">
+                    <span className="currency">€/£/$</span>1,799<span className="period">/year</span>
+                  </div>
+                  <div className="subscription-billing-info">{t.billing.annualInfo}</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {featureCategories.map((category, categoryIndex) => (
+                <React.Fragment key={categoryIndex}>
+                  <tr className="subscription-category-row">
+                    <td className="subscription-category-header" colSpan={4}>
+                      {category.category}
+                    </td>
+                  </tr>
+                  {category.features.map((feature, featureIndex) => (
+                    <tr key={featureIndex} className="subscription-feature-row">
+                      <td>{feature.name}</td>
+                      <td>
+                        {feature.trial ? (
+                          <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        ) : (
+                          <svg className="subscription-x-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                          </svg>
+                        )}
+                      </td>
+                      <td>
+                        {feature.quarterly ? (
+                          <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        ) : (
+                          <svg className="subscription-x-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                          </svg>
+                        )}
+                      </td>
+                      <td>
+                        {feature.annual ? (
+                          <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        ) : (
+                          <svg className="subscription-x-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                          </svg>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </React.Fragment>
+              ))}
+              <tr className="subscription-cta-row">
+                <td><strong>{t.buttons.getStarted}</strong></td>
+                <td>
+                  <a href="https://platform.sportendorse.com/signup/brand?subscription=trial" target="_blank" rel="noopener noreferrer" className="subscription-cta-button subscription-trial-button">
+                    {t.buttons.startFreeTrial}
+                  </a>
+                </td>
+                <td>
+                  <a href="https://platform.sportendorse.com/signup/brand?subscription=quarterly" target="_blank" rel="noopener noreferrer" className="subscription-cta-button subscription-quarterly-button">
+                    {t.buttons.subscribeNow}
+                  </a>
+                </td>
+                <td>
+                  <a href="https://platform.sportendorse.com/signup/brand?subscription=annual" target="_blank" rel="noopener noreferrer" className="subscription-cta-button subscription-annual-button">
+                    {t.buttons.save35}
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        {/* See More Button */}
-        <div className="subscription-see-more-container">
-          <button 
-            onClick={() => {
-              const subscriptionRoute = language === 'es' ? '/es/subscription' : 
-                                      language === 'de' ? '/de/subscription' : '/subscription';
-              router.push(subscriptionRoute);
-            }}
-            className="subscription-see-more-button"
-          >
-            {t.seeMoreButton}
-          </button>
+        {/* Custom Package Section */}
+        <div className="subscription-custom-section">
+          <h3 className="subscription-custom-title">{t.customPackage.title}</h3>
+          <p className="subscription-custom-description">{t.customPackage.description}</p>
+          <p className="subscription-custom-subtitle">{t.customPackage.subtitle}</p>
+          <button onClick={openModal} className="subscription-cta-button subscription-custom-button">{t.buttons.talkToSales}</button>
         </div>
                 {/*
         <div className="subscription-consultation-section">

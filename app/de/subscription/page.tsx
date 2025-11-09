@@ -7,10 +7,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   //metadataBase: new URL("put the home url here later"),
-  title: "Subscribe to Sport Endorse's Athlete Sponsorship Platform | Sport Endorse",
-  description: "Explore how Sport Endorse's platform simplifies sponsorship management. Request a demo to connect with elite athletes, brand ambassadors, and sports influencers.",
+  title: "Abonnieren Sie Sport Endorses Athleten-Sponsoring-Plattform | Sport Endorse",
+  description: "Entdecken Sie, wie Sport Endorses Plattform das Sponsoring-Management vereinfacht. Fordern Sie eine Demo an, um sich mit Elite-Athleten, Markenbotschaftern und Sport-Influencern zu verbinden.",
   alternates: {
-    canonical: "https://www.sportendorse.com/subscription",
+    canonical: "https://www.sportendorse.com/de/subscription",
     languages: {
       'en': 'https://www.sportendorse.com/subscription',
       'es': 'https://www.sportendorse.com/es/subscription',
@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     }
   },
   openGraph:{ // og:title and so on
-    title: "Subscribe to Sport Endorse's Athlete Sponsorship Platform | Sport Endorse",
-    description: "Explore how Sport Endorse's platform simplifies sponsorship management. Request a demo to connect with elite athletes, brand ambassadors, and sports influencers.",
+    title: "Abonnieren Sie Sport Endorses Athleten-Sponsoring-Plattform | Sport Endorse",
+    description: "Entdecken Sie, wie Sport Endorses Plattform das Sponsoring-Management vereinfacht. Fordern Sie eine Demo an, um sich mit Elite-Athleten, Markenbotschaftern und Sport-Influencern zu verbinden.",
     type:"website",
-    locale:"en_US",
-    url: "https://www.sportendorse.com/subscription",
+    locale:"de_DE",
+    url: "https://www.sportendorse.com/de/subscription",
     siteName:"Sport Endorse"
   },
 };
 
 
-export default function Subscription(){
+export default function SubscriptionDE(){
     return (
         <main style={{maxWidth:"1200px", margin:"0 auto"}}>
             <br/>

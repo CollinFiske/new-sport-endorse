@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 export type Language = "en" | "es" | "de";
 
@@ -10,8 +10,22 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+function detectLanguageFromPath(): Language {
+  if (typeof window !== "undefined") {
+    const path = window.location.pathname;
+    if (path.startsWith("/es")) return "es";
+    if (path.startsWith("/de")) return "de";
+  }
+  return "en";
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("en");
+
+  useEffect(() => {
+    const detectedLanguage = detectLanguageFromPath();
+    setLanguage(detectedLanguage);
+  }, []);
 
   const changeLanguage = (lang: Language) => {
     setLanguage(lang);

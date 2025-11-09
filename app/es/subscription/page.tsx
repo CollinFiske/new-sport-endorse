@@ -7,10 +7,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   //metadataBase: new URL("put the home url here later"),
-  title: "Subscribe to Sport Endorse's Athlete Sponsorship Platform | Sport Endorse",
-  description: "Explore how Sport Endorse's platform simplifies sponsorship management. Request a demo to connect with elite athletes, brand ambassadors, and sports influencers.",
+  title: "Suscríbete a la Plataforma de Patrocinio de Atletas de Sport Endorse | Sport Endorse",
+  description: "Explora cómo la plataforma de Sport Endorse simplifica la gestión de patrocinios. Solicita una demostración para conectar con atletas de élite, embajadores de marca e influencers deportivos.",
   alternates: {
-    canonical: "https://www.sportendorse.com/subscription",
+    canonical: "https://www.sportendorse.com/es/subscription",
     languages: {
       'en': 'https://www.sportendorse.com/subscription',
       'es': 'https://www.sportendorse.com/es/subscription',
@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     }
   },
   openGraph:{ // og:title and so on
-    title: "Subscribe to Sport Endorse's Athlete Sponsorship Platform | Sport Endorse",
-    description: "Explore how Sport Endorse's platform simplifies sponsorship management. Request a demo to connect with elite athletes, brand ambassadors, and sports influencers.",
+    title: "Suscríbete a la Plataforma de Patrocinio de Atletas de Sport Endorse | Sport Endorse",
+    description: "Explora cómo la plataforma de Sport Endorse simplifica la gestión de patrocinios. Solicita una demostración para conectar con atletas de élite, embajadores de marca e influencers deportivos.",
     type:"website",
-    locale:"en_US",
-    url: "https://www.sportendorse.com/subscription",
+    locale:"es_ES",
+    url: "https://www.sportendorse.com/es/subscription",
     siteName:"Sport Endorse"
   },
 };
 
 
-export default function Subscription(){
+export default function SubscriptionES(){
     return (
         <main style={{maxWidth:"1200px", margin:"0 auto"}}>
             <br/>
