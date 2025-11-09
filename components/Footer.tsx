@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
 import "../styles/footer.css";

@@ -4,7 +4,6 @@ import { fetchPodcasts, stripHtml, formatDate, createExcerpt } from './wordpress
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import Head from 'next/head';
 import "../../styles/blog.css";
 import "../../styles/podcasts.css";
 
