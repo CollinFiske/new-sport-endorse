@@ -1,0 +1,391 @@
+/* Podcasts Page Styles */
+
+/* Loading State */
+.podcasts-loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.podcasts-loading-content {
+  text-align: center;
+}
+
+.podcasts-loading-text {
+  color: #6b7280;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Error State */
+.podcasts-error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.podcasts-error-content {
+  text-align: center;
+}
+
+.podcasts-error-icon {
+  color: #ef4444;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.podcasts-error-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.podcasts-error-message {
+  color: #6b7280;
+}
+
+/* Header Styles */
+.podcasts-header {
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.podcasts-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.podcasts-header-content {
+  text-align: center;
+}
+
+.podcasts-header-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1.25rem;
+}
+
+.podcasts-header-description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 512px;
+  margin: 0 auto;
+}
+
+/* Platform Logos */
+.podcasts-platforms-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5px;
+}
+
+.podcasts-platform-logo-apple {
+  height: 32px;
+  width: auto;
+  cursor: pointer;
+}
+
+.podcasts-platform-logo-amazon {
+  height: 45px;
+  width: auto;
+  cursor: pointer;
+  margin: 0 5px 0 20px;
+}
+
+.podcasts-platform-logo-spotify {
+  height: 75px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Info Container */
+.podcasts-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  flex-wrap: wrap;
+}
+
+.podcasts-info-episodes {
+  display: flex;
+  align-items: center;
+}
+
+.podcasts-info-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+.podcasts-info-separator {
+  color: inherit;
+}
+
+/* Feature Me Button */
+.podcasts-feature-button {
+  background-color: #0078c1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(24, 160, 251, 0.3);
+  white-space: nowrap;
+}
+
+.podcasts-feature-button:hover {
+  background-color: #005a8c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 160, 251, 0.4);
+}
+
+/* Empty State */
+.podcasts-empty-container {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.podcasts-empty-icon {
+  color: #9ca3af;
+  font-size: 3.75rem;
+  margin-bottom: 1rem;
+}
+
+.podcasts-empty-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.podcasts-empty-message {
+  color: #6b7280;
+}
+
+/* Podcast Card Styles */
+.podcasts-card {
+  /* Will inherit styles from blog-post-card or can be styled independently */
+  display: block;
+}
+
+.podcasts-card-content {
+  padding: 1.5rem;
+}
+
+.podcasts-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.podcasts-card-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.podcasts-card-badge {
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.625rem;
+  border-radius: 4px;
+}
+
+.podcasts-card-iframe {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.podcasts-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.podcasts-card-share {
+  color: #9ca3af;
+  padding: 0.25rem;
+}
+
+.podcasts-card-share-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.podcasts-card-read-more {
+  background-color: #0078c1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.podcasts-card-read-more:hover {
+  background-color: #005a8c;
+  transform: translateY(-1px);
+}
+
+/* Modal Styles */
+.podcasts-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.podcasts-modal-content {
+  background-color: white;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.podcasts-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.podcasts-modal-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+}
+
+.podcasts-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.podcasts-modal-close:hover {
+  background-color: #f3f4f6;
+}
+
+.podcasts-modal-close-icon {
+  width: 24px;
+  height: 24px;
+  color: #6b7280;
+}
+
+.podcasts-modal-form-container {
+  padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .podcasts-header-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .podcasts-header-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .podcasts-header-description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .podcasts-platforms-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .podcasts-platform-logo-amazon {
+    margin: 0;
+  }
+  
+  .podcasts-info-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .podcasts-modal-overlay {
+    padding: 1rem;
+  }
+  
+  .podcasts-modal-header {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+  
+  .podcasts-modal-title {
+    font-size: 1.25rem;
+  }
+  
+  .podcasts-modal-form-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .podcasts-header-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .podcasts-header-title {
+    font-size: 1.75rem;
+  }
+  
+  .podcasts-header-description {
+    font-size: 0.95rem;
+  }
+  
+  .podcasts-feature-button {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+  
+  .podcasts-modal-content {
+    border-radius: 12px;
+    max-height: 85vh;
+  }
+  
+  .podcasts-modal-header {
+    padding: 1rem;
+  }
+  
+  .podcasts-modal-form-container {
+    padding: 1rem;
+  }
+}

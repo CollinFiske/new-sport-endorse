@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/businessSubscription.css";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface BusinessSubscriptionProps {
   titleLevel?: 'h1' | 'h2';
@@ -13,17 +13,16 @@ export default function BusinessSubscription({ titleLevel = 'h2' }: BusinessSubs
   const { language } = useLanguage();
   const t = translations[language].components.businessSubscription;
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    country: '',
-    mobileNumber: '',
-    typeOfCampaign: '',
-    campaignTiming: '',
-    note: ''
-  });
+
+  useEffect(() => {
+    // Load HubSpot script when component mounts
+    if (!document.querySelector('script[src="https://js.hsforms.net/forms/embed/4025606.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://js.hsforms.net/forms/embed/4025606.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  }, []);
 
   const featureCategories = [
     {
@@ -64,49 +63,6 @@ export default function BusinessSubscription({ titleLevel = 'h2' }: BusinessSubs
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = "Custom Package Inquiry";
-    const body = `Hello,
-
-I would like to learn more about your custom package options.
-
-First Name: ${formData.firstName}
-Last Name: ${formData.lastName}
-Professional Email: ${formData.email}
-Company: ${formData.company}
-Country: ${formData.country}
-Mobile Number: ${formData.mobileNumber}
-Type of Campaign: ${formData.typeOfCampaign}
-Campaign Timing: ${formData.campaignTiming}
-
-Note / How Can We Help:
-${formData.note}
-
-Thank you!`;
-    
-    const mailtoLink = `mailto:hello@sportendorse.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    
-    setFormData({ 
-      firstName: '',
-      lastName: '',
-      email: '',
-      company: '',
-      country: '',
-      mobileNumber: '',
-      typeOfCampaign: '',
-      campaignTiming: '',
-      note: ''
-    });
-    closeModal();
-  };
 
   return (
     <>
@@ -255,120 +211,9 @@ Thank you!`;
                 </svg>
               </button>
             </div>
-            <form onSubmit={handleSubmit} className="subscription-modal-form">
-              <div className="subscription-form-group">
-                <label htmlFor="firstName">First Name *</label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="Enter your first name"
-                />
-              </div>
-              <div className="subscription-form-group">
-                <label htmlFor="lastName">Last Name *</label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="Enter your last name"
-                />
-              </div>
-              <div className="subscription-form-group">
-                <label htmlFor="email">Professional Email *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="Enter your professional email address"
-                />
-              </div>
-              <div className="subscription-form-group">
-                <label htmlFor="company">Company *</label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="Enter your company name"
-                />
-              </div>
-              <div className="subscription-form-group">
-                <label htmlFor="country">Country</label>
-                <input
-                  type="text"
-                  id="country"
-                  name="country"
-                  value={formData.country}
-                  onChange={handleInputChange}
-                  placeholder="Enter your country"
-                />
-              </div>
-              <div className="subscription-form-group">
-                <label htmlFor="mobileNumber">Mobile Number</label>
-                <input
-                  type="tel"
-                  id="mobileNumber"
-                  name="mobileNumber"
-                  value={formData.mobileNumber}
-                  onChange={handleInputChange}
-                  placeholder="Enter your mobile number"
-                />
-              </div>
-              <div className="subscription-form-group">
-                <label htmlFor="typeOfCampaign">Type of Campaign</label>
-                <input
-                  type="text"
-                  id="typeOfCampaign"
-                  name="typeOfCampaign"
-                  value={formData.typeOfCampaign}
-                  onChange={handleInputChange}
-                  placeholder="e.g., Brand ambassador, Social media, Event sponsorship"
-                />
-              </div>
-              <div className="subscription-form-group">
-                <label htmlFor="campaignTiming">Campaign Timing</label>
-                <select
-                  id="campaignTiming"
-                  name="campaignTiming"
-                  value={formData.campaignTiming}
-                  onChange={handleInputChange}
-                  className="subscription-form-select"
-                >
-                  <option value="">Select timing</option>
-                  <option value="Within 3 months">Within 3 months</option>
-                  <option value="Within 6 - 12 months">Within 6 - 12 months</option>
-                  <option value="In 12+ months">In 12+ months</option>
-                  <option value="TBC">TBC</option>
-                </select>
-              </div>
-              <div className="subscription-form-group">
-                <label htmlFor="note">Note (Please leave any additional information) / How Can We Help?</label>
-                <textarea
-                  id="note"
-                  name="note"
-                  value={formData.note}
-                  onChange={handleInputChange}
-                  rows={4}
-                  placeholder="Tell us about your specific requirements and how we can help..."
-                />
-              </div>
-              <div className="subscription-form-actions">
-                <button type="button" onClick={closeModal} className="subscription-cancel-button">Cancel</button>
-                <button type="submit" className="subscription-submit-button">Send Inquiry</button>
-              </div>
-            </form>
+            <div className="subscription-modal-form">
+              <div className="hs-form-frame" data-region="na1" data-form-id="cf360f72-9c40-4604-a526-84ce0a32f4b9" data-portal-id="4025606"></div>
+            </div>
           </div>
         </div>
       )}

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations";
 import "../styles/footer.css";
@@ -10,8 +10,16 @@ import AppStores from "./AppStores";
 export default function Footer() {
   const { language } = useLanguage();
   const t = translations[language].footer;
-  const [email, setEmail] = useState("");
-  const [isChecked, setIsChecked] = useState(true);
+
+  useEffect(() => {
+    // Load HubSpot script
+    if (!document.querySelector('script[src="https://js.hsforms.net/forms/embed/4025606.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://js.hsforms.net/forms/embed/4025606.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  }, []);
 
   const getNavLink = (path: string) => {
     // Ensure path starts with /
@@ -21,29 +29,6 @@ export default function Footer() {
       return cleanPath;
     }
     return `/${language}${cleanPath}`;
-  };
-
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    
-    if (!email) {
-      alert(t.alerts.emailRequired);
-      return;
-    }
-
-    if (!isChecked) {
-      alert(t.alerts.termsRequired);
-      return;
-    }
-
-    const subject = t.newsletter.subject;
-    const body = `${t.newsletter.bodyIntro}\n\n${t.newsletter.bodyEmail} ${email}\n\n${t.newsletter.bodyRequest}\n\n${t.newsletter.bodyClosing}`;
-
-    const mailtoLink = `mailto:hello@sportendorse.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink);
-    
-    // Clear the form after sending
-    setEmail("");
   };
 
   return (
@@ -56,30 +41,7 @@ export default function Footer() {
           <div className="newsletter">
             <h4>{t.newsletterTitle}</h4>
             <p>{t.newsletterDescription}</p>
-            <form onSubmit={handleSubmit} style={{ paddingBottom: "5px" }}>
-              <input
-                style={{ maxWidth: "250px", backgroundColor:"white" }}
-                type="email"
-                placeholder={t.emailPlaceholder}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <button type="submit">{t.subscribeButton}</button>
-            </form>
-            <label className="terms" style={{ display: "flex", alignItems: "flex-start", gap: "8px", flexWrap: "nowrap", width: "100%" }}>
-              <input 
-                type="checkbox" 
-                checked={isChecked} 
-                onChange={(e) => setIsChecked(e.target.checked)}
-                style={{ flex: "0 0 auto", marginTop: "2px" }}
-              />
-              <span style={{ flex: "1 1 0", minWidth: 0 }}>
-                {t.termsText} {" "}
-                <a target="_blank" href={getNavLink("/privacy-policy")}>{t.privacyPolicy}</a> {" "}
-                and <a target="_blank" href={getNavLink("/terms-and-conditions")}>{t.termsConditions}</a>
-              </span>
-            </label>
+            <div className="hs-form-frame" data-region="na1" data-form-id="055eacf1-693f-4dc9-b3fe-d89bc73e48b2" data-portal-id="4025606"></div>
 
             <div className="all-social-logos">
               <span><a target="_blank" href="https://www.facebook.com/SportEndorseLtd/"><Image src="/images/facebookLogo.jpg" alt="facebook logo" width={32} height={32} className="social-logo" /></a></span>

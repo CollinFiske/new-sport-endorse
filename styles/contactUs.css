@@ -100,6 +100,76 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* HubSpot Form Wrapper Styles */
+.hubspot-form-wrapper {
+  background: white;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hubspot-form-wrapper .hs-form-frame {
+  min-height: 400px;
+}
+
+/* Style HubSpot form elements to match your design */
+.hubspot-form-wrapper .hs-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hubspot-form-wrapper .hs-form .hs-form-field {
+  margin-bottom: 1.5rem;
+}
+
+.hubspot-form-wrapper .hs-form .hs-form-field label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.hubspot-form-wrapper .hs-form .hs-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: white;
+}
+
+.hubspot-form-wrapper .hs-form .hs-input:focus {
+  outline: none;
+  border-color: #0078c1;
+  box-shadow: 0 0 0 3px rgba(0, 120, 193, 0.1);
+}
+
+.hubspot-form-wrapper .hs-form .hs-button {
+  width: 100%;
+  background: #0078c1;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.hubspot-form-wrapper .hs-form .hs-button:hover {
+  background: #005a8c;
+  transform: translateY(-2px);
+}
+
+.hubspot-form-wrapper .hs-form .hs-button:active {
+  transform: translateY(0);
+}
+
 .contact-us-form-group {
   margin-bottom: 1.5rem;
 }
@@ -230,7 +300,8 @@
     text-align: center;
   }
   
-  .contact-us-form {
+  .contact-us-form,
+  .hubspot-form-wrapper {
     padding: 2rem;
   }
   
@@ -279,7 +350,8 @@
     font-size: 0.95rem;
   }
   
-  .contact-us-form {
+  .contact-us-form,
+  .hubspot-form-wrapper {
     padding: 1.5rem;
   }
   
@@ -337,7 +409,8 @@
     font-size: 0.9rem;
   }
   
-  .contact-us-form {
+  .contact-us-form,
+  .hubspot-form-wrapper {
     padding: 1rem;
   }
   
@@ -386,7 +459,8 @@
     font-size: 0.9rem;
   }
   
-  .contact-us-form {
+  .contact-us-form,
+  .hubspot-form-wrapper {
     padding: 0.75rem;
   }
   

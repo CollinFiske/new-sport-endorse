@@ -1,22 +1,12 @@
 // page.js - Main podcasts page component
+'use client';
 import { fetchPodcasts, stripHtml, formatDate, createExcerpt } from './wordpress.js';
 import Link from 'next/link';
 import Image from 'next/image';
-import "../../styles/blog.css"
-
-export const metadata = {
-  //metadataBase: new URL("put the home url here later"),
-  title: "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights | Sport Endorse",
-  description: "Listen to the Sport Endorse podcast for insights on athlete sponsorship, sports influencers, and sports marketing strategies. Hear from athletes and industry experts.",
-  openGraph:{ // og:title and so on
-    title: "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights | Sport Endorse",
-    description: "Listen to the Sport Endorse podcast for insights on athlete sponsorship, sports influencers, and sports marketing strategies. Hear from athletes and industry experts.",
-    type:"website",
-    locale:"en_US",
-    //url:"" to be added later
-    siteName:"Sport Endorse"
-  },
-};
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+import "../../styles/blog.css";
+import "../../styles/podcasts.css";
 
 // function to decode HTML entities
 function decodeHtmlEntities(text) {
@@ -88,13 +78,13 @@ function PodcastCard({ podcast, index }) {
   const iframeUrl = podcastIframes[index] || podcastIframes[0]; // Fallback to first iframe if index exceeds array 
   
   return (
-    <article className="blog-post-card">
-      <div style={{ padding: '1.5rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
-          <time style={{ fontSize: '0.875rem', color: '#6b7280', fontWeight: '500' }}>
+    <article className="blog-post-card podcasts-card">
+      <div className="podcasts-card-content">
+        <div className="podcasts-card-header">
+          <time className="podcasts-card-date">
             {date}
           </time>
-          <span style={{ backgroundColor: '#dbeafe', color: '#1e40af', fontSize: '0.75rem', fontWeight: '600', padding: '0.25rem 0.625rem', borderRadius: '4px' }}>
+          <span className="podcasts-card-badge">
             Podcast
           </span>
         </div>
@@ -118,33 +108,19 @@ function PodcastCard({ podcast, index }) {
           scrolling='no' 
           loading='lazy'
           allowFullScreen
-          style={{ marginBottom: '1rem', borderRadius: '8px' }}
+          className="podcasts-card-iframe"
         ></iframe>
         
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          {/* Share button removed since server components can't have onClick handlers */}
-          <div style={{ color: '#9ca3af', padding: '0.25rem' }}>
-            <svg style={{ width: '1.25rem', height: '1.25rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="podcasts-card-footer">
+          <div className="podcasts-card-share">
+            <svg className="podcasts-card-share-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <a href={`/podcasts/${podcast.slug}`}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
               </a>
             </svg>
           </div>
           <Link href={`/podcasts/${podcast.slug}`}>
-            <button 
-              style={{
-                backgroundColor: '#0078c1',
-                color: 'white',
-                border: 'none',
-                borderRadius: '6px',
-                padding: '8px 16px',
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                cursor: 'pointer',
-                textTransform: 'uppercase',
-                letterSpacing: '0.5px'
-              }}
-            >
+            <button className="podcasts-card-read-more">
               Read More
             </button>
           </Link>
@@ -155,31 +131,95 @@ function PodcastCard({ podcast, index }) {
 }
 
 // Main podcasts page component
-export default async function PodcastsPage() {
+export default function PodcastsPage() {
+  const [podcasts, setPodcasts] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Set document title and meta description
+    document.title = "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights | Sport Endorse";
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Listen to the Sport Endorse podcast for insights on athlete sponsorship, sports influencers, and sports marketing strategies. Hear from athletes and industry experts.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Listen to the Sport Endorse podcast for insights on athlete sponsorship, sports influencers, and sports marketing strategies. Hear from athletes and industry experts.';
+      document.head.appendChild(meta);
+    }
+
+    // Load HubSpot script
+    if (!document.querySelector('script[src="https://js.hsforms.net/forms/embed/4025606.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://js.hsforms.net/forms/embed/4025606.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+
+    // Fetch podcasts
+    fetchPodcasts()
+      .then(data => {
+        setPodcasts(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err);
+        setLoading(false);
+      });
+  }, []);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  if (loading) {
+    return (
+      <div className="podcasts-loading-container">
+        <div className="podcasts-loading-content">
+          <div className="podcasts-loading-text">Loading...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="podcasts-error-container">
+        <div className="podcasts-error-content">
+          <div className="podcasts-error-icon">⚠️</div>
+          <h2 className="podcasts-error-title">Something went wrong</h2>
+          <p className="podcasts-error-message">{error.message}</p>
+        </div>
+      </div>
+    );
+  }
+
   try {
-    const podcasts = await fetchPodcasts();
 
     return (
       <div className="blog-container">
         {/* Header */}
-        <header style={{ backgroundColor: 'white', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)', position: 'relative' }}>
-          <div className="podcast-header-container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem' }}>
-            <div style={{ textAlign: 'center' }}>
-              <h1 className="podcast-header-title" style={{ fontSize: '2.5rem', fontWeight:'800', color: '#111827', marginBottom: '1.25rem' }}>
+        <header className="podcasts-header">
+          <div className="podcasts-header-container">
+            <div className="podcasts-header-content">
+              <h1 className="podcasts-header-title">
                 The Athlete Sitdown
               </h1>
-              <p className="podcast-header-description" style={{ fontSize: '1.125rem', color: '#6b7280', maxWidth: '512px', margin: '0 auto' }}>
+              <p className="podcasts-header-description">
                 Discover inspiring stories and insights from world-class athletes and sports professionals
               </p>
               
-              <div className="podcast-platforms-container" style={{ display: 'flex', justifyContent: 'center', margin:"0 0 5px" }}>
+              <div className="podcasts-platforms-container">
                 <a href="https://podcasts.apple.com/ie/podcast/the-athlete-sitdown/id1550095395" target="_blank" rel="noopener noreferrer">
                   <Image 
                     src="/images/podcast/apple-podcasts-logo.webp" 
                     alt="Apple Podcasts logo" 
                     width={96}
                     height={32}
-                    style={{ height: '32px', width: 'auto', cursor: 'pointer' }}
+                    className="podcasts-platform-logo-apple"
                   />
                 </a>
                 <a href="https://music.amazon.com/podcasts/47a22b01-42ad-447a-b137-1866a49890a1/the-athlete-sitdown" target="_blank" rel="noopener noreferrer">
@@ -188,7 +228,7 @@ export default async function PodcastsPage() {
                     alt="Amazon Music logo" 
                     width={90}
                     height={45}
-                    style={{ height: '45px', width: 'auto', cursor: 'pointer', margin:" 0 5px 0 20px" }}
+                    className="podcasts-platform-logo-amazon"
                   />
                 </a>
                 <a href="https://open.spotify.com/show/2c2mWOkxmUpeGyFI2dZgC5" target="_blank" rel="noopener noreferrer">
@@ -197,40 +237,26 @@ export default async function PodcastsPage() {
                     alt="Spotify logo" 
                     width={75}
                     height={75}
-                    style={{ height: '75px', width: 'auto', cursor: 'pointer' }}
+                    className="podcasts-platform-logo-spotify"
                   />
                 </a>
               </div>
               
-              <div className="podcast-info-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', fontSize: '0.875rem', color: '#6b7280', flexWrap: 'wrap' }}>
-                <span style={{ display: 'flex', alignItems: 'center' }}>
-                  <svg style={{ width: '1rem', height: '1rem', marginRight: '0.25rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="podcasts-info-container">
+                <span className="podcasts-info-episodes">
+                  <svg className="podcasts-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                   </svg>
                   {podcasts.length} Episodes
                 </span>
-                <span className="podcast-info-separator">•</span>
+                <span className="podcasts-info-separator">•</span>
                 <span>Discover Sport Endorse Podcasts</span>
-                <span className="podcast-info-separator">•</span>
-                <a href="mailto:hello@sportendorse.com?subject=Feature%20me%20on%20a%20podcast!&body=Feature%20me%20on%20a%20podcast!">
-                  <button 
-                    className="feature-me-button"
-                    style={{
-                      backgroundColor: '#0078c1',
-                      color: 'white',
-                      border: 'none',
-                      borderRadius: '6px',
-                      padding: '6px 12px',
-                      fontSize: '0.75rem',
-                      fontWeight: '600',
-                      cursor: 'pointer',
-                      transition: 'all 0.3s ease',
-                      boxShadow: '0 2px 8px rgba(24, 160, 251, 0.3)',
-                      whiteSpace: 'nowrap'
-                    }}>
-                    Feature Me!
-                  </button>
-                </a>
+                <span className="podcasts-info-separator">•</span>
+                <button 
+                  onClick={openModal}
+                  className="podcasts-feature-button">
+                  Feature Me!
+                </button>
               </div>
             </div>
           </div>
@@ -239,10 +265,10 @@ export default async function PodcastsPage() {
         {/* Main Content */}
         <main className="blog-main">
           {podcasts.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '3rem 0' }}>
-              <div style={{ color: '#9ca3af', fontSize: '3.75rem', marginBottom: '1rem' }}>🎙️</div>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.5rem' }}>No podcasts found</h2>
-              <p style={{ color: '#6b7280' }}>Check back later for new episodes!</p>
+            <div className="podcasts-empty-container">
+              <div className="podcasts-empty-icon">🎙️</div>
+              <h2 className="podcasts-empty-title">No podcasts found</h2>
+              <p className="podcasts-empty-message">Check back later for new episodes!</p>
             </div>
           ) : (
             <div className="blog-posts-container">
@@ -254,6 +280,36 @@ export default async function PodcastsPage() {
             </div>
           )}
         </main>
+
+        {/* HubSpot Form Modal */}
+        {isModalOpen && (
+          <div 
+            className="podcasts-modal-overlay"
+            onClick={closeModal}
+          >
+            <div 
+              className="podcasts-modal-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="podcasts-modal-header">
+                <h3 className="podcasts-modal-title">
+                  Feature Me on a Podcast!
+                </h3>
+                <button 
+                  onClick={closeModal}
+                  className="podcasts-modal-close"
+                >
+                  <svg className="podcasts-modal-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div className="podcasts-form-container">
+                <div className="hs-form-frame" data-region="na1" data-form-id="13276a4b-b32c-41b1-b32b-bbd02c12e8dc" data-portal-id="4025606"></div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   } catch (error) {
