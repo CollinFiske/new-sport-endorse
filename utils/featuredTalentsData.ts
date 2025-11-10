@@ -18,21 +18,21 @@ export const featuredTalentsData = {
     },
     {
       name: "James Lowe",
-      image: "/images/featuredTalent/james lowe.png",
+      image: "/images/featuredTalent/James-Lowe.jpg",
       followingInstagram: "95k",
       sport: "Rugby",
       location: "Dublin, Ireland"
     },
     {
       name: "Kira Toussaint",
-      image: "/images/featuredTalent/kira toussaint.png",
+      image: "/images/featuredTalent/Kira_Toussaint.png",
       followingInstagram: "42k",
       sport: "Swimming",
       location: "Netherlands"
     },
     {
       name: "Danny Simpson",
-      image: "/images/featuredTalent/danny simpson.png",
+      image: "/images/featuredTalent/Danny-Simpson.png",
       followingInstagram: "78k",
       sport: "Football",
       location: "Leicester, UK"
