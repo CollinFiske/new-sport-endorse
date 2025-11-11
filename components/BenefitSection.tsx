@@ -61,7 +61,11 @@ export default function BenefitSection({ title, subtitle, image, label, backgrou
           {image && (image !== "/images/talentBenefitPic.png" && image !== "images/agencyBenefitPic.jpg") ? (
             <>
               <Link href={getPageLink()}><button className="benefit-button">{t.common.learnMore}</button></Link>
-              <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
+              <a target="_blank" href={
+                (image === "/images/agency_dashboard.png" || label === t.home.benefitSection.agency.label) 
+                  ? "https://calendly.com/d/cwcj-xx7-2xn/sport-endorse-demo-agency"
+                  : "https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07"
+              }>
               <button className="demo-button">{t.common.bookDemo}</button>
               </a>
             </>
