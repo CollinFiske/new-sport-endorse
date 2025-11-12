@@ -7,7 +7,6 @@ import ConditionalLayout from "../components/ConditionalLayout";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Metadata } from "next";
-import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 
 
@@ -26,8 +25,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-  
   return (
     <html lang="en"> 
       <head>
@@ -49,17 +46,42 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           strategy="afterInteractive" // This ensures Dataships can intercept it
         />
         {/*<!-- End of HubSpot Embed Code -->*/}
+
+        {/* Google Tag Manager */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-TK4NZ6T');
+            `,
+          }}
+        />
+        {/* End Google Tag Manager */}
       </head>
 
-      {/* Dataships Cookie Script - outside head */}
-      <Script
-        src="https://core-api.dataships.io/v1/code-snippets/cookie-script?apikey=YDf7ngeS_q4cFkPgNcinQ_IqQ2rJBKT1"
-        strategy="afterInteractive"
-      />
-
-      {gtmId && <GoogleTagManager gtmId={gtmId} />}
-      
       <body style={{background:"white"}}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TK4NZ6T"
+            height="0" 
+            width="0" 
+            style={{display:"none", visibility:"hidden"}}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+        
+        {/* Dataships Cookie Script */}
+        <Script
+          src="https://core-api.dataships.io/v1/code-snippets/cookie-script?apikey=YDf7ngeS_q4cFkPgNcinQ_IqQ2rJBKT1"
+          strategy="afterInteractive"
+        />
+        
         <noscript>
           <div style={{margin:"70px 20px", backgroundColor:"white"}}>
             <h1>JavaScript Required</h1>
