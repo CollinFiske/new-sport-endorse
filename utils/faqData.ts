@@ -50,7 +50,7 @@ export const brandFAQs = {
     },
     {
       question: "What are Sport Endorse's payment terms?",
-      answer: "When a client and athlete agree to work together, Sport Endorse requires a 50% deposit to confirm the booking. If you book within 14 days of your event, we require the full payment within 7 days and prior to the event to confirm the booking. Marketing agencies and approved clients may qualify for customized payment terms; contact us to discuss your athlete sponsorship schedule."
+      answer: "Subscription payments are required immediately and in accordance to the specific subscription type selected. Payments required for any collaborations via our platform are required immediately after the deliverables have been completed by the talent. For any other payment issues please contact accounts@sportendorse.com."
     },
     {
       question: "Does Multi-Currency Support cost extra?",
@@ -144,7 +144,7 @@ export const brandFAQs = {
     },
     {
       question: "¿Cuáles son los términos de pago de Sport Endorse?",
-      answer: "Cuando un cliente y un atleta acuerdan trabajar juntos, Sport Endorse requiere un depósito del 50% para confirmar la reserva. Si reservas dentro de 14 días de tu evento, requerimos el pago completo dentro de 7 días y antes del evento para confirmar la reserva. Las agencias de marketing y clientes aprobados pueden calificar para términos de pago personalizados; contáctanos para discutir tu cronograma de patrocinio de atletas."
+      answer: "Los pagos de suscripción son requeridos inmediatamente y de acuerdo con el tipo de suscripción específico seleccionado. Los pagos requeridos para cualquier colaboración a través de nuestra plataforma son requeridos inmediatamente después de que los entregables hayan sido completados por el talento. Para cualquier otro problema de pago, por favor contacte accounts@sportendorse.com."
     },
     {
       question: "¿El soporte de múltiples monedas cuesta extra?",
@@ -238,7 +238,7 @@ export const brandFAQs = {
     },
     {
       question: "Was sind Sport Endorses Zahlungsbedingungen?",
-      answer: "Wenn ein Kunde und ein Athlet vereinbaren, zusammenzuarbeiten, verlangt Sport Endorse eine 50%ige Anzahlung zur Bestätigung der Buchung. Wenn Sie innerhalb von 14 Tagen vor Ihrem Event buchen, verlangen wir die volle Zahlung innerhalb von 7 Tagen und vor dem Event zur Bestätigung der Buchung. Marketingagenturen und genehmigte Kunden können für angepasste Zahlungsbedingungen qualifiziert sein; kontaktieren Sie uns, um Ihren Athleten-Sponsoring-Zeitplan zu besprechen."
+      answer: "Abonnement-Zahlungen sind sofort und in Übereinstimmung mit dem ausgewählten spezifischen Abonnement-Typ erforderlich. Zahlungen, die für jede Zusammenarbeit über unsere Plattform erforderlich sind, sind sofort nach Abschluss der Leistungen durch das Talent erforderlich. Für alle anderen Zahlungsprobleme wenden Sie sich bitte an accounts@sportendorse.com."
     },
     {
       question: "Kostet Multi-Currency-Support extra?",
