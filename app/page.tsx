@@ -10,7 +10,6 @@ import AppStores from "@/components/AppStores";
 import BrandsGrid from "@/components/BrandsGrid";
 import { useState, useEffect } from "react";
 import Head from 'next/head';
-import Image from 'next/image';
 
 export default function HomePage() {
   const { language } = useLanguage();
