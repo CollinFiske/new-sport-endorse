@@ -58,7 +58,7 @@ export default function Footer() {
           <div className="footer-links">
             <div>
               {/*<h5>{/* <span className="footer-number">01]</span> }<Link target="_blank" href="https://platform.sportendorse.com/signup/brand" >{t.links.signUpBrand}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>*/}
-              <h5>{/* <span className="footer-number">06]</span> */}<Link target="_blank" href="https://platform.sportendorse.com/signup/talent">{t.links.signUpTalent}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
+              {/*<h5>{/* <span className="footer-number">06]</span> <Link target="_blank" href="https://platform.sportendorse.com/signup/talent">{t.links.signUpTalent}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>*/}
               <h5>{/* <span className="footer-number">02]</span> */}<Link target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">{t.links.bookDemo}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
               <h5>{/* <span className="footer-number">03]</span> */}<Link href={getNavLink("/podcasts")}>{t.links.podcasts}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>
               <h5>{/* <span className="footer-number">04]</span> */}<Link href={getNavLink("/about-us#careers")}>{t.links.careers}<Image src="/images/yellowArrow.svg" alt="yellow arrow svg" width={16} height={16} /></Link></h5>

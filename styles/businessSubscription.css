@@ -3,6 +3,17 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 0;
+  overflow: visible !important;
+  background: white;
+}
+
+/* Ensure badges are never clipped */
+.subscription-container * {
+  overflow: visible !important;
+}
+
+.subscription-table thead th {
+  overflow: visible !important;
 }
 
 .subscription-header {
@@ -42,17 +53,18 @@
   background: transparent;
   border-radius: 20px;
   box-shadow: none;
-  overflow: visible;
+  overflow: visible !important;
   margin-bottom: 3rem;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 3rem !important;
   position: relative;
+  min-height: fit-content;
 }
 
 .subscription-table-wrapper::before {
   content: '';
   position: absolute;
-  top: 1.5rem;
+  top: 3rem !important;
   left: 0;
   right: 0;
   bottom: 0;
@@ -66,6 +78,8 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
+  overflow: visible !important;
+  margin-top: 0 !important;
 }
 
 .subscription-table th,
@@ -108,6 +122,8 @@
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   position: relative;
+  overflow: visible !important;
+  margin-top: 0 !important;
 }
 
 .subscription-plan-header.trial-plan {
@@ -128,10 +144,10 @@
 
 .subscription-plan-header.quarterly-plan::before {
   content: "MOST POPULAR";
-  position: absolute;
-  top: -18px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute !important;
+  top: -25px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: white;
   padding: 0.4rem 1.2rem;
@@ -141,7 +157,9 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-  z-index: 10;
+  z-index: 100 !important;
+  white-space: nowrap;
+  overflow: visible !important;
 }
 
 .subscription-plan-header.annual-plan {
@@ -156,10 +174,10 @@
 
 .subscription-plan-header.annual-plan::before {
   content: "BEST VALUE";
-  position: absolute;
-  top: -18px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute !important;
+  top: -25px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white;
   padding: 0.4rem 1.2rem;
@@ -169,7 +187,9 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-  z-index: 10;
+  z-index: 100 !important;
+  white-space: nowrap;
+  overflow: visible !important;
 }
 
 .subscription-plan-name {
@@ -639,13 +659,14 @@
   
   .subscription-table-wrapper {
     overflow-x: auto;
+    overflow-y: visible !important;
     border-radius: 16px;
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 3rem !important;
   }
   
   .subscription-table-wrapper::before {
-    top: 1.5rem;
+    top: 3rem !important;
     border-radius: 16px;
   }
   
@@ -769,12 +790,13 @@
   }
   
   .subscription-table-wrapper {
-    padding-top: 1.75rem;
-    margin-top: 2rem;
+    padding-top: 3rem !important;
+    margin-top: 1.5rem;
+    overflow: visible !important;
   }
   
   .subscription-table-wrapper::before {
-    top: 1.75rem;
+    top: 3rem !important;
   }
   
   .subscription-cta-button {
@@ -806,6 +828,171 @@
   .subscription-custom-subtitle {
     font-size: 0.9rem;
     margin-bottom: 1rem;
+  }
+}
+
+/* Shortened Version - Cards Layout Styles */
+.subscription-cards-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.subscription-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.subscription-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.subscription-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.subscription-card.quarterly-card {
+  border-color: #3b82f6;
+  transform: scale(1.05);
+}
+
+.subscription-card.annual-card {
+  border-color: #10b981;
+}
+
+.subscription-card-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 10 !important;
+}
+
+.subscription-card-badge.best-value {
+  background: #10b981;
+}
+
+.subscription-card-header {
+  margin-bottom: 2rem;
+}
+
+.subscription-card .subscription-plan-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.subscription-card .subscription-plan-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.subscription-card .subscription-plan-price .currency {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.subscription-card .subscription-plan-price .period {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.subscription-card .subscription-billing-info {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.subscription-card-cta {
+  margin-top: auto;
+}
+
+.subscription-card .subscription-cta-button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.subscription-card .subscription-trial-button {
+  background: #f8fafc;
+  color: #1e293b;
+  border: 2px solid #e2e8f0;
+}
+
+.subscription-card .subscription-trial-button:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+.subscription-card .subscription-quarterly-button {
+  background: #3b82f6;
+  color: white;
+}
+
+.subscription-card .subscription-quarterly-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.subscription-card .subscription-annual-button {
+  background: #10b981;
+  color: white;
+}
+
+.subscription-card .subscription-annual-button:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments for cards */
+@media (max-width: 768px) {
+  .subscription-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .subscription-card.quarterly-card {
+    transform: scale(1);
+  }
+  
+  .subscription-card .subscription-plan-price {
+    font-size: 2rem;
+  }
+  
+  .subscription-cards-wrapper {
+    padding: 1rem 0.5rem;
   }
 }
 

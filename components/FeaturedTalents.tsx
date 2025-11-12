@@ -59,10 +59,10 @@ export default function FeaturedTalents() {
         {/* CTA Card */}
         <Link href={getSubscriptionLink()} className="cta-card">
           <Image 
-            src="/images/whiteSportEndorseLogo.webp" 
+            src="/images/SE_logo_lockup_wht.png" 
             alt="Sport Endorse logo" 
             width={120} 
-            height={40}
+            height={160}
             style={{ objectFit: 'contain' }}
           />
           <h3>{t.viewAll}</h3>

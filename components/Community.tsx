@@ -57,7 +57,7 @@ export default function Community({ showAgencies = false }: CommunityProps) {
         </div>
         <div className="stat-box">
           <div className="stat-content">
-            <Image src="/images/statistics/languages.png" alt="Nationalities icon" width={60} height={60} style={{backgroundColor:"#FF5151"}}/>
+            <Image src="/images/statistics/worldwide.png" alt="Nationalities icon" width={60} height={60} style={{backgroundColor:"#FF5151"}}/>
             <h3>{nationalities.toLocaleString()}</h3>
           </div>
           <hr className="stats-bar"/>

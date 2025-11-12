@@ -45,7 +45,7 @@ export default function WhyAthletesChooseUs() {
 
             <div className="why-athletes-feature-item">
               <div className="why-athletes-feature-icon-container">
-                <img src="/images/location.png" alt="phone" className="why-athletes-feature-icon" />
+                <img src="/images/smartphone.png" alt="phone" className="why-athletes-feature-icon" /> {/* <a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Freepik - Flaticon</a> */}
               </div>
               <div className="why-athletes-feature-text">
                 <h3 className="why-athletes-feature-title">

@@ -92,23 +92,12 @@ export default function HomePage() {
             {t.home.description}
           </p>
         </div>
-        
-        <div className="home-appStoresContainer" style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "10px"}}>
-          <AppStores />
-          <div style={{display:"flex", alignItems: "center", justifyContent: "center", gap: "20px", marginLeft:"20px"}}>
-            <div className="home-rating" style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
-              <Image src="/images/star_icon.png" alt="star" width={20} height={20} className="home-star-icon" /> 
-              <Image src="/images/star_icon.png" alt="star" width={20} height={20} className="home-star-icon" />
-              <Image src="/images/star_icon.png" alt="star" width={20} height={20} className="home-star-icon" />
-              <Image src="/images/star_icon.png" alt="star" width={20} height={20} className="home-star-icon" />
-              <Image src="/images/star_icon.png" alt="star" width={20} height={20} className="home-star-icon" />
-              <span className="home-rating-text">5.0</span>
-            </div>
-            <Image className="home-app-for-athletes-img" style={{width:"200px", height:"auto"}} src="/images/appforathletes.png" alt="app for athletes text" width={200} height={60} />
-          </div>
-        </div>
       </div>
     </section>
+
+    <div className="home-appStoresContainer" style={{display: "flex", justifyContent: "center", padding: "2rem 0"}}>
+      <AppStores />
+    </div>
 
     <BrandsGrid variant={isMobile ? "5x4" : "8x4"} label={t.home.tableHeader} />
 

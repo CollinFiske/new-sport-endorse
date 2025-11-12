@@ -53,9 +53,9 @@ export default function AgencyHowItWorks() {
                     </div>
                 ))}
                 </div>
-                <a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="start-link">
+                {/*<a target="_blank" href="https://platform.sportendorse.com/signup/brand" className="start-link">
                     <button className="start-button">{t.buttonText}</button>
-                </a>
+                </a>*/}
             </div>
         </div>
     </section>

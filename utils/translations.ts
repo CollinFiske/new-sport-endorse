@@ -284,7 +284,7 @@ const translations = {
       },
       community: {
         liveBadge: "Live",
-        title: "Our Growing Community",
+        title: "Our Community",
         labels: {
           athletes: "Athletes",
           brands: "Brands",
@@ -507,6 +507,15 @@ const translations = {
             quote: "It's been a delight to work with Sports Endorse on social media campaigns. I've successfully had 1 paid promotion and 1 product promotion exchange. I look forward to working with more brands with the support of Sports Endorses influential network.",
             image: "/images/nicola_barke.png",
             alt: "Nicola Barke, Boxing"
+          },
+          {
+            id: 6,
+            talentName: "Viktor Thorup",
+            sport: "Speed Skating",
+            region: "Denmark",
+            quote: "Had the chance to work with Sport Endorse and it was a really pleasant journey and experience! They're good at what they do and you can really tell that they understand how it's like to be an athlete and they're just super skilled at matching people and brands 👌",
+            image: "/images/viktor-thorup.jpg",
+            alt: "Viktor Thorup, Speed Skating"
           }
         ]
       },
@@ -1045,6 +1054,15 @@ const translations = {
             quote: "Plataforma para creadores de contenido muy recomendada.",
             image: "/images/adan_ramirez.png",
             alt: "Adan Ramírez, Artist"
+          },
+          {
+            id: 5,
+            talentName: "Viktor Thorup",
+            sport: "Patinaje de Velocidad",
+            region: "Dinamarca",
+            quote: "¡Tuve la oportunidad de trabajar con Sport Endorse y fue un viaje y experiencia realmente agradable! Son buenos en lo que hacen y realmente puedes notar que entienden cómo es ser un atleta y son súper hábiles emparejando personas y marcas 👌",
+            image: "/images/viktor-thorup.jpg",
+            alt: "Viktor Thorup, Patinaje de Velocidad"
           }
         ]
       },
@@ -1592,6 +1610,15 @@ const translations = {
             quote: "Es war eine Freude, mit Sports Endorse an Social Media Kampagnen zu arbeiten. Ich hatte erfolgreich 1 bezahlte Promotion und 1 Produktpromotion-Austausch. Ich freue mich darauf, mit mehr Marken mit der Unterstützung von Sports Endorses einflussreichem Netzwerk zu arbeiten.",
             image: "/images/nicola_barke.png",
             alt: "Nicola Barke, Boxen"
+          },
+          {
+            id: 6,
+            talentName: "Viktor Thorup",
+            sport: "Eisschnelllauf",
+            region: "Dänemark",
+            quote: "Hatte die Chance, mit Sport Endorse zu arbeiten und es war eine wirklich angenehme Reise und Erfahrung! Sie sind gut in dem, was sie tun, und man kann wirklich spüren, dass sie verstehen, wie es ist, ein Athlet zu sein, und sie sind einfach super geschickt darin, Menschen und Marken zusammenzubringen 👌",
+            image: "/images/viktor-thorup.jpg",
+            alt: "Viktor Thorup, Eisschnelllauf"
           }
         ]
       },

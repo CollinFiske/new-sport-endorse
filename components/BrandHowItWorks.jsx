@@ -38,9 +38,9 @@ export default function BrandHowItWorks() {
     <section className='brand-how-bgGrid'>
         <div className="brand-how-it-works">
             <h2>{t.title}</h2>
-            <p className="brand-how-subtitle">
+            {/*<p className="brand-how-subtitle">
                 {t.subtitle}
-            </p>
+            </p>*/}
             <div className="brand-how-it-works-content">
                 <div className="brand-how-steps-container">
                 {steps.map((step, index) => (

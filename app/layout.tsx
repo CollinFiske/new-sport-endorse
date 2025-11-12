@@ -59,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       {gtmId && <GoogleTagManager gtmId={gtmId} />}
       
-      <body>
+      <body style={{background:"white"}}>
         <noscript>
           <div style={{margin:"70px 20px", backgroundColor:"white"}}>
             <h1>JavaScript Required</h1>

@@ -89,7 +89,7 @@ export default function BrandsContent({
                   padding: '1rem',
                   transition: 'background 0.2s ease'
                 }}>
-                  <Image src="/images/whiteSportEndorseLogo.webp" alt="Sport Endorse logo" width={120} height={50} style={{ maxWidth: '80px', marginBottom: '0.5rem' }} />
+                  <Image src="/images/SE_logo_lockup_wht.png" alt="Sport Endorse logo" width={120} height={100} style={{ maxWidth: '80px', marginBottom: '0.0' }} />
                   <p style={{ fontSize: '0.85rem', fontWeight: '600', margin: '0', textTransform: 'uppercase' }}>
                     {viewAll}
                   </p>
@@ -103,7 +103,7 @@ export default function BrandsContent({
       <BrandHowItWorks />
       <BrandKeyFeatures />
       <SuccessStories />
-      <BusinessSubscription />
+      <BusinessSubscription shortened={true}/>
       <CalendlyDemo />
       <BrandReviews />
       

@@ -7,9 +7,10 @@ import { useState, useEffect } from "react";
 
 interface BusinessSubscriptionProps {
   titleLevel?: 'h1' | 'h2';
+  shortened?: boolean;
 }
 
-export default function BusinessSubscription({ titleLevel = 'h2' }: BusinessSubscriptionProps) {
+export default function BusinessSubscription({ titleLevel = 'h2', shortened = false }: BusinessSubscriptionProps) {
   const { language } = useLanguage();
   const t = translations[language].components.businessSubscription;
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -76,104 +77,158 @@ export default function BusinessSubscription({ titleLevel = 'h2' }: BusinessSubs
           <p className="subscription-subtitle">{t.mainSubtitle}</p>
         </div>
 
-        {/* Pivot Table for Standard Subscriptions */}
-        <div className="subscription-table-wrapper">
-          <table className="subscription-table">
-            <thead>
-              <tr>
-                <th className="subscription-table-title-cell">{t.sectionTitle}</th>
-                <th className="subscription-plan-header trial-plan">
-                  <div className="subscription-plan-name">{t.plans.freeTrial}</div>
-                  <div className="subscription-plan-price">
-                    <span className="currency">€/£/$</span>0<span className="period">/month</span>
-                  </div>
-                  <div className="subscription-billing-info">{t.billing.freeTrialInfo}</div>
-                </th>
-                <th className="subscription-plan-header quarterly-plan">
-                  <div className="subscription-plan-name">{t.plans.quarterlyRate}</div>
-                  <div className="subscription-plan-price">
-                    <span className="currency">€/£/$</span>700<span className="period">/quarter</span>
-                  </div>
-                  <div className="subscription-billing-info">{t.billing.quarterlyInfo}</div>
-                </th>
-                <th className="subscription-plan-header annual-plan">
-                  <div className="subscription-plan-name">{t.plans.annualRate}</div>
-                  <div className="subscription-plan-price">
-                    <span className="currency">€/£/$</span>1,799<span className="period">/year</span>
-                  </div>
-                  <div className="subscription-billing-info">{t.billing.annualInfo}</div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {featureCategories.map((category, categoryIndex) => (
-                <React.Fragment key={categoryIndex}>
-                  <tr className="subscription-category-row">
-                    <td className="subscription-category-header" colSpan={4}>
-                      {category.category}
-                    </td>
-                  </tr>
-                  {category.features.map((feature, featureIndex) => (
-                    <tr key={featureIndex} className="subscription-feature-row">
-                      <td>{feature.name}</td>
-                      <td>
-                        {feature.trial ? (
-                          <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        ) : (
-                          <svg className="subscription-x-icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                          </svg>
-                        )}
-                      </td>
-                      <td>
-                        {feature.quarterly ? (
-                          <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        ) : (
-                          <svg className="subscription-x-icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                          </svg>
-                        )}
-                      </td>
-                      <td>
-                        {feature.annual ? (
-                          <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        ) : (
-                          <svg className="subscription-x-icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                          </svg>
-                        )}
+{shortened ? (
+          /* Shortened Version - Table Layout without Features */
+          <div className="subscription-table-wrapper">
+            <table className="subscription-table">
+              <thead>
+                <tr>
+                  <th className="subscription-table-title-cell">{t.sectionTitle}</th>
+                  <th className="subscription-plan-header trial-plan">
+                    <div className="subscription-plan-name">{t.plans.freeTrial}</div>
+                    <div className="subscription-plan-price">
+                      <span className="currency">€/£/$</span>0<span className="period">/month</span>
+                    </div>
+                    <div className="subscription-billing-info">{t.billing.freeTrialInfo}</div>
+                  </th>
+                  <th className="subscription-plan-header quarterly-plan">
+                    <div className="subscription-plan-name">{t.plans.quarterlyRate}</div>
+                    <div className="subscription-plan-price">
+                      <span className="currency">€/£/$</span>700<span className="period">/quarter</span>
+                    </div>
+                    <div className="subscription-billing-info">{t.billing.quarterlyInfo}</div>
+                  </th>
+                  <th className="subscription-plan-header annual-plan">
+                    <div className="subscription-plan-name">{t.plans.annualRate}</div>
+                    <div className="subscription-plan-price">
+                      <span className="currency">€/£/$</span>1,799<span className="period">/year</span>
+                    </div>
+                    <div className="subscription-billing-info">{t.billing.annualInfo}</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="subscription-cta-row">
+                  <td><strong>{t.buttons.getStarted}</strong></td>
+                  <td>
+                    <a href={`${language === 'en' ? '' : `/${language}`}/subscription`} className="subscription-cta-button subscription-trial-button">
+                      {t.buttons.startFreeTrial}
+                    </a>
+                  </td>
+                  <td>
+                    <a href={`${language === 'en' ? '' : `/${language}`}/subscription`} className="subscription-cta-button subscription-quarterly-button">
+                      {t.buttons.subscribeNow}
+                    </a>
+                  </td>
+                  <td>
+                    <a href={`${language === 'en' ? '' : `/${language}`}/subscription`} className="subscription-cta-button subscription-annual-button">
+                      {t.buttons.save35}
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          /* Full Version - Pivot Table for Standard Subscriptions */
+          <div className="subscription-table-wrapper">
+            <table className="subscription-table">
+              <thead>
+                <tr>
+                  <th className="subscription-table-title-cell">{t.sectionTitle}</th>
+                  <th className="subscription-plan-header trial-plan">
+                    <div className="subscription-plan-name">{t.plans.freeTrial}</div>
+                    <div className="subscription-plan-price">
+                      <span className="currency">€/£/$</span>0<span className="period">/month</span>
+                    </div>
+                    <div className="subscription-billing-info">{t.billing.freeTrialInfo}</div>
+                  </th>
+                  <th className="subscription-plan-header quarterly-plan">
+                    <div className="subscription-plan-name">{t.plans.quarterlyRate}</div>
+                    <div className="subscription-plan-price">
+                      <span className="currency">€/£/$</span>700<span className="period">/quarter</span>
+                    </div>
+                    <div className="subscription-billing-info">{t.billing.quarterlyInfo}</div>
+                  </th>
+                  <th className="subscription-plan-header annual-plan">
+                    <div className="subscription-plan-name">{t.plans.annualRate}</div>
+                    <div className="subscription-plan-price">
+                      <span className="currency">€/£/$</span>1,799<span className="period">/year</span>
+                    </div>
+                    <div className="subscription-billing-info">{t.billing.annualInfo}</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {featureCategories.map((category, categoryIndex) => (
+                  <React.Fragment key={categoryIndex}>
+                    <tr className="subscription-category-row">
+                      <td className="subscription-category-header" colSpan={4}>
+                        {category.category}
                       </td>
                     </tr>
-                  ))}
-                </React.Fragment>
-              ))}
-              <tr className="subscription-cta-row">
-                <td><strong>{t.buttons.getStarted}</strong></td>
-                <td>
-                  <a href="https://platform.sportendorse.com/signup/brand?subscription=trial" target="_blank" rel="noopener noreferrer" className="subscription-cta-button subscription-trial-button">
-                    {t.buttons.startFreeTrial}
-                  </a>
-                </td>
-                <td>
-                  <a href="https://platform.sportendorse.com/signup/brand?subscription=quarterly" target="_blank" rel="noopener noreferrer" className="subscription-cta-button subscription-quarterly-button">
-                    {t.buttons.subscribeNow}
-                  </a>
-                </td>
-                <td>
-                  <a href="https://platform.sportendorse.com/signup/brand?subscription=annual" target="_blank" rel="noopener noreferrer" className="subscription-cta-button subscription-annual-button">
-                    {t.buttons.save35}
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                    {category.features.map((feature, featureIndex) => (
+                      <tr key={featureIndex} className="subscription-feature-row">
+                        <td>{feature.name}</td>
+                        <td>
+                          {feature.trial ? (
+                            <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          ) : (
+                            <svg className="subscription-x-icon" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          )}
+                        </td>
+                        <td>
+                          {feature.quarterly ? (
+                            <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          ) : (
+                            <svg className="subscription-x-icon" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          )}
+                        </td>
+                        <td>
+                          {feature.annual ? (
+                            <svg className="subscription-check-icon" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          ) : (
+                            <svg className="subscription-x-icon" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+                  </React.Fragment>
+                ))}
+                <tr className="subscription-cta-row">
+                  <td><strong>{t.buttons.getStarted}</strong></td>
+                  <td>
+                    <a href="https://platform.sportendorse.com/signup/brand?subscription=trial" target="_blank" rel="noopener noreferrer" className="subscription-cta-button subscription-trial-button">
+                      {t.buttons.startFreeTrial}
+                    </a>
+                  </td>
+                  <td>
+                    <a href="https://platform.sportendorse.com/signup/brand?subscription=quarterly" target="_blank" rel="noopener noreferrer" className="subscription-cta-button subscription-quarterly-button">
+                      {t.buttons.subscribeNow}
+                    </a>
+                  </td>
+                  <td>
+                    <a href="https://platform.sportendorse.com/signup/brand?subscription=annual" target="_blank" rel="noopener noreferrer" className="subscription-cta-button subscription-annual-button">
+                      {t.buttons.save35}
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        )}
 
         {/* Custom Package Section */}
         <div className="subscription-custom-section">
