@@ -82,6 +82,15 @@ export default function Header() {
   };
 
   const getLocalizedPath = (newLanguage: Language, currentPath: string) => {
+    // Handle root pages (/, /es, /de) - these should map to language roots, not /home
+    if (currentPath === '/' || currentPath === '/es' || currentPath === '/de') {
+      if (newLanguage === 'en') {
+        return '/';
+      } else {
+        return `/${newLanguage}`;
+      }
+    }
+    
     // Remove any existing language prefix
     let cleanPath = currentPath;
     
@@ -92,22 +101,17 @@ export default function Header() {
       cleanPath = cleanPath.substring(3);
     }
     
-    // Handle the case where we're on a language-specific root (like /es or /de)
-    if (cleanPath === '/es' || cleanPath === '/de') {
-      cleanPath = '';
-    }
-    
     // Ensure cleanPath starts with / if it's not empty
     if (cleanPath && !cleanPath.startsWith('/')) {
       cleanPath = '/' + cleanPath;
     }
     
-    // Special handling for home page
-    if (!cleanPath || cleanPath === '/' || cleanPath === '/home') {
+    // Special handling for home page (/home, /es/home, /de/home) - redirect to root
+    if (cleanPath === '/home') {
       if (newLanguage === 'en') {
-        return '/home';
+        return '/';
       } else {
-        return `/${newLanguage}/home`;
+        return `/${newLanguage}`;
       }
     }
     
@@ -140,7 +144,7 @@ export default function Header() {
     <header className="modern-header" ref={headerRef}>
       {/* Logo/Home Button - Far left */}
       <div className="logo-area">
-        <Link href={getNavLink("/home")}>
+        <Link href={language === 'en' ? '/' : `/${language}`}>
           <Image src="/images/sportEndorseLogo.png" alt="sport endorse logo" width={40} height={40} />
           <p>SPORT ENDORSE</p>
         </Link>

@@ -34,7 +34,7 @@ export default function Footer() {
   return (
     <footer className={`modern-footer ${language === 'es' ? 'footer-spanish' : ''}`}>
       <div className="maxWidth">
-        <Link href={getNavLink("/home")}>
+        <Link href={language === 'en' ? '/' : `/${language}`}>
           <Image src="/images/sport endorse logo white.png" alt="Sport Endorse Logo" width={200} height={96} style={{ height: '6rem', width: 'auto', marginBottom: '0' }} />
         </Link>
         <div className="footer-top">
