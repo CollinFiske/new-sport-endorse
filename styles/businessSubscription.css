@@ -3,17 +3,18 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 0;
-  overflow: visible !important;
   background: white;
 }
 
-/* Ensure badges are never clipped */
-.subscription-container * {
-  overflow: visible !important;
-}
+/* Ensure badges are visible on desktop but don't interfere with mobile scrolling */
+@media (min-width: 901px) {
+  .subscription-container * {
+    overflow: visible !important;
+  }
 
-.subscription-table thead th {
-  overflow: visible !important;
+  .subscription-table thead th {
+    overflow: visible !important;
+  }
 }
 
 .subscription-header {
@@ -53,7 +54,7 @@
   background: transparent;
   border-radius: 20px;
   box-shadow: none;
-  overflow: visible !important;
+  overflow: visible;
   margin-bottom: 3rem;
   margin-top: 2rem;
   padding-top: 3rem !important;
@@ -78,7 +79,7 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
-  overflow: visible !important;
+  overflow: visible;
   margin-top: 0 !important;
 }
 
@@ -112,6 +113,7 @@
   letter-spacing: 0.5px;
   padding: 1.5rem 1.5rem !important;
   max-width: 200px;
+  border-top-left-radius: 20px;
 }
 
 /* Plan Header Styles */
@@ -122,8 +124,14 @@
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   position: relative;
-  overflow: visible !important;
   margin-top: 0 !important;
+}
+
+/* Only allow overflow on desktop for badges */
+@media (min-width: 901px) {
+  .subscription-plan-header {
+    overflow: visible !important;
+  }
 }
 
 .subscription-plan-header.trial-plan {
@@ -166,10 +174,10 @@
   background: linear-gradient(135deg, #009ee3 0%, #0078c1 100%);
   color: white;
   border-left: 3px solid #0078c1;
-  border-right: 3px solid #0078c1;
   box-shadow: 0 4px 20px rgba(0, 158, 227, 0.2);
   transform: scale(1.02);
   z-index: 2;
+  border-top-right-radius: 20px;
 }
 
 .subscription-plan-header.annual-plan::before {
@@ -659,10 +667,35 @@
   
   .subscription-table-wrapper {
     overflow-x: auto;
-    overflow-y: visible !important;
+    overflow-y: hidden;
     border-radius: 16px;
     margin-top: 1.5rem;
     padding-top: 3rem !important;
+    /* Enable touch scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Show scrollbar on mobile devices */
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+    position: relative;
+  }
+  
+  /* Custom webkit scrollbar for better visibility */
+  .subscription-table-wrapper::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .subscription-table-wrapper::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+  }
+  
+  .subscription-table-wrapper::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+  
+  .subscription-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
   }
   
   .subscription-table-wrapper::before {
@@ -792,7 +825,32 @@
   .subscription-table-wrapper {
     padding-top: 3rem !important;
     margin-top: 1.5rem;
-    overflow: visible !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* Ensure scrolling works on mobile */
+    -webkit-overflow-scrolling: touch;
+    /* Make scrollbar always visible on mobile */
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+  }
+  
+  /* Enhanced scrollbar visibility for mobile */
+  .subscription-table-wrapper::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  .subscription-table-wrapper::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 5px;
+  }
+  
+  .subscription-table-wrapper::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 5px;
+  }
+  
+  .subscription-table-wrapper::-webkit-scrollbar-thumb:active {
+    background: #64748b;
   }
   
   .subscription-table-wrapper::before {
