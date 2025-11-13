@@ -109,7 +109,7 @@ h1.blog-main-title {
 .blog-posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 1200px;
   width: 100%;
 }
@@ -134,7 +134,7 @@ h1.blog-main-title {
 }
 
 .blog-post-content {
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
 .blog-post-title {

@@ -1,3 +1,4 @@
+import CalendlyDemo from "@/components/CalendlyDemo";
 import FAQs from "@/components/FAQs";
 import { Metadata } from "next";
 
@@ -28,6 +29,8 @@ export default function FAQsPage() {
   return (
     <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1rem" }}>
       <FAQs />
+
+      <CalendlyDemo />
     </main>
   );
 }

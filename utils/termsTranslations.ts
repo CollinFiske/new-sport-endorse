@@ -2,33 +2,33 @@ const termsTranslations = {
   en: {
     metadata: {
       title: "Terms & Conditions | Sport Endorse",
-      description: "Sport Endorse Limited Terms And Conditions Updated: August 2023"
+      description: "Sport Endorse Limited Terms And Conditions Updated: November 2024"
     },
     content: {
       title: "Sport Endorse Limited Terms And Conditions",
-      updated: "Updated: August 2023"
+      updated: "Updated: November 2024"
     }
   },
   
   de: {
     metadata: {
       title: "Allgemeine Geschäftsbedingungen | Sport Endorse",
-      description: "Sport Endorse Limited Allgemeine Geschäftsbedingungen Aktualisiert: August 2023"
+      description: "Sport Endorse Limited Allgemeine Geschäftsbedingungen Aktualisiert: November 2024"
     },
     content: {
       title: "Sport Endorse Limited Allgemeine Geschäftsbedingungen",
-      updated: "Aktualisiert: August 2023"
+      updated: "Aktualisiert: November 2024"
     }
   },
   
   es: {
     metadata: {
       title: "Términos y Condiciones | Sport Endorse",
-      description: "Términos y Condiciones de Sport Endorse Limited Actualizado: Agosto 2023"
+      description: "Términos y Condiciones de Sport Endorse Limited Actualizado: Noviembre 2024"
     },
     content: {
       title: "Términos y Condiciones de Sport Endorse Limited",
-      updated: "Actualizado: Agosto 2023"
+      updated: "Actualizado: Noviembre 2024"
     }
   }
 };

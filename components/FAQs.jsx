@@ -53,14 +53,14 @@ export default function FAQs(){
             {t.leftSection.description}
           </p>
           
-          <a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
+          {/*<a target="_blank" href="https://calendly.com/d/dzw-nc4-57b/sport-endorse-demo?month=2025-07">
             <button className="faq-schedule-button">
               {t.leftSection.scheduleButton}
               {/*<svg className="faq-schedule-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7l10 10M7 17l10-10" />
-              </svg>*/}
+              </svg>*}
             </button>
-          </a>
+          </a>*/}
         </div>
         
         <div className="faq-right-section">

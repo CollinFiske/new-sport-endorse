@@ -1,22 +1,3 @@
-/* Animations */
-@keyframes float {
-0%, 100% { 
-    transform: translateY(0px); 
-}
-50% { 
-    transform: translateY(-20px); 
-}
-}
-
-@keyframes pulse {
-0%, 100% { 
-    opacity: 0.1; 
-}
-50% { 
-    opacity: 0.2; 
-}
-}
-
 /* Base Container */
 .about-us-container {
 background-color: white;
@@ -53,7 +34,6 @@ background-color: #009ee3;
 border-radius: 50%;
 opacity: 0.1;
 filter: blur(48px);
-animation: pulse 4s ease-in-out infinite;
 }
 
 .about-us-hero-bg-element-2 {
@@ -66,7 +46,6 @@ background-color: #a855f7;
 border-radius: 50%;
 opacity: 0.1;
 filter: blur(48px);
-animation: pulse 4s ease-in-out infinite;
 }
 
 .about-us-hero-container {
@@ -220,13 +199,7 @@ background-color: white;
 border-radius: 16px;
 padding: 1rem;
 box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-transition: all 0.3s ease;
 border: 1px solid #f3f4f6;
-}
-
-.about-us-value-card:hover {
-transform: translateY(-8px);
-box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .about-us-value-card-content {
@@ -272,7 +245,7 @@ background-color: white;
 .about-us-team-grid {
 display: grid;
 grid-template-columns: 1fr;
-gap: 32px;
+gap: 1.5rem;
 max-width: 1280px;
 margin: 0 auto;
 padding: 0;
@@ -287,11 +260,6 @@ padding: 0;
 
 .about-us-team-card {
 position: relative;
-transition: all 0.3s ease;
-}
-
-.about-us-team-card:hover {
-transform: translateY(-4px);
 }
 
 .about-us-team-photo-container {
@@ -309,11 +277,6 @@ transform: translateY(-4px);
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.about-us-team-card:hover .about-us-team-photo {
-  transform: scale(1.05);
 }
 
 .about-us-team-video-container {
@@ -383,13 +346,6 @@ align-items: center;
 justify-content: center;
 box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 cursor: pointer;
-transition: all 0.3s ease;
-}
-
-.about-us-play-button:hover,
-.about-us-team-card:hover .about-us-play-button {
-transform: scale(1.1);
-background-color: #0078c1;
 }
 
 .about-us-play-icon {
@@ -400,7 +356,7 @@ margin-left: 4px;
 }
 
 .about-us-team-info {
-  padding: 24px 0;
+  padding: 1.25rem 0;
   text-align: center;
 }
 
@@ -468,15 +424,8 @@ margin-left: 4px;
   font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
   box-shadow: 0 10px 15px -3px rgba(24, 160, 251, 0.3);
   display: inline-block;
-}
-
-.about-us-careers-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 25px -5px rgba(24, 160, 251, 0.4);
-  background: linear-gradient(135deg, #0074c2, #2563eb);
 }
 
 /* Partners Section */
@@ -500,7 +449,7 @@ margin-left: 4px;
   background-color: white;
   border-radius: 16px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  padding: 48px;
+  padding: 2rem;
   margin-bottom: 32px;
   border: 1px solid #f3f4f6;
 }
