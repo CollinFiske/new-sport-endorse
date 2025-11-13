@@ -91,7 +91,7 @@ export default function CategoryDropdownFAQ({ title, faqs, color = '#0078c1' }: 
                   onClick={() => toggleItem(index)}
                   className="faq-item-button"
                 >
-                  <span className="faq-item-text">{item.question}</span>
+                  <h3 className="faq-item-text">{item.question}</h3>
                   <div className="faq-item-icon">
                     {openItems[index] ? (
                       <Minus className="faq-icon" />

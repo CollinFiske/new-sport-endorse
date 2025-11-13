@@ -142,7 +142,7 @@ export default function Header() {
       <div className="logo-area">
         <Link href={getNavLink("/home")}>
           <Image src="/images/sportEndorseLogo.png" alt="sport endorse logo" width={40} height={40} />
-          <h3>SPORT ENDORSE</h3>
+          <p>SPORT ENDORSE</p>
         </Link>
       </div>
 

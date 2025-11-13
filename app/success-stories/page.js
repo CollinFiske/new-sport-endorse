@@ -8,6 +8,9 @@ export const metadata = {
   //metadataBase: new URL("put the home url here later"),
   title: "Athlete Sponsorship Success Stories | Sport Endorse",
   description: "Read success stories of athlete sponsorships, sports influencers, and brand partnerships. Learn how elite athletes have powered impactful sports marketing campaigns.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/success-stories"
+  },
   openGraph:{ // og:title and so on
     title: "Athlete Sponsorship Success Stories | Sport Endorse",
     description: "Read success stories of athlete sponsorships, sports influencers, and brand partnerships. Learn how elite athletes have powered impactful sports marketing campaigns.",

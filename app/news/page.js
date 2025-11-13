@@ -5,6 +5,9 @@ import "../../styles/blog.css";
 export const metadata = {
   title: "Latest Sports News & Press Releases | Sport Endorse",
   description: "Stay updated with the latest news and press releases from Sport Endorse, covering athlete sponsorships, sports marketing, and brand partnerships.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/news"
+  },
   openGraph: {
     title: "Latest Sports News & Press Releases | Sport Endorse",
     description: "Stay updated with the latest news and press releases from Sport Endorse, covering athlete sponsorships, sports marketing, and brand partnerships.",

@@ -5,6 +5,9 @@ import "../../../styles/blog.css";
 export const metadata = {
   title: "Neueste Sportnachrichten und Pressemitteilungen | Sport Endorse",
   description: "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten und Pressemitteilungen von Sport Endorse über Athletensponsoring, Sportmarketing und Markenpartnerschaften.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/de/news"
+  },
   openGraph: {
     title: "Neueste Sportnachrichten und Pressemitteilungen | Sport Endorse",
     description: "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten und Pressemitteilungen von Sport Endorse über Athletensponsoring, Sportmarketing und Markenpartnerschaften.",

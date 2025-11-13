@@ -79,6 +79,9 @@ export async function generateMetadata({ params }) {
   return {
     title: decodeHtmlEntities(podcast.title.rendered),
     description: podcast.excerpt.rendered.replace(/<[^>]*>/g, ''), // Strip HTML
+    alternates: {
+      canonical: `https://www.sportendorse.com/es/podcasts/${resolvedParams.slug}`
+    },
     openGraph: {
       title: decodeHtmlEntities(podcast.title.rendered),
       description: podcast.excerpt.rendered.replace(/<[^>]*>/g, ''),

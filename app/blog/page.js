@@ -6,6 +6,9 @@ import '../../styles/blog.css'
 export const metadata = {
   title: "Blogs on Athlete Sponsorship & Sports Marketing | Sport Endorse",
   description: "Explore expert blogs on athlete sponsorship, sports influencers, and brand ambassadors. Learn how to elevate your sports marketing campaigns with elite athletes.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/blog"
+  },
   openGraph:{ // og:title and so on
     title: "Blogs on Athlete Sponsorship & Sports Marketing | Sport Endorse",
     description: "Explore expert blogs on athlete sponsorship, sports influencers, and brand ambassadors. Learn how to elevate your sports marketing campaigns with elite athletes.",

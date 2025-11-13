@@ -4,11 +4,14 @@ import '../../../styles/blog.css'
 
 
 export const metadata = {
-  title: "Blogs über Athleten-Sponsoring & Sport-Marketing | Sport Endorse",
-  description: "Entdecken Sie Experten-Blogs über Athleten-Sponsoring, Sport-Influencer und Markenbotschafter. Erfahren Sie, wie Sie Ihre Sport-Marketing-Kampagnen mit Elite-Athleten verbessern.",
+  title: "Blogs über Athletensponsoring und Sportmarketing | Sport Endorse",
+  description: "Entdecken Sie Experten-Blogs über Athletensponsoring, Sport-Influencer und Markenbotschafter. Lernen Sie, wie Sie Ihre Sportmarketing-Kampagnen mit Elite-Athleten verbessern.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/de/blog"
+  },
   openGraph:{ // og:title and so on
-    title: "Blogs über Athleten-Sponsoring & Sport-Marketing | Sport Endorse",
-    description: "Entdecken Sie Experten-Blogs über Athleten-Sponsoring, Sport-Influencer und Markenbotschafter. Erfahren Sie, wie Sie Ihre Sport-Marketing-Kampagnen mit Elite-Athleten verbessern.",
+    title: "Blogs über Athletensponsoring und Sportmarketing | Sport Endorse",
+    description: "Entdecken Sie Experten-Blogs über Athletensponsoring, Sport-Influencer und Markenbotschafter. Lernen Sie, wie Sie Ihre Sportmarketing-Kampagnen mit Elite-Athleten verbessern.",
     type:"website",
     locale:"de_DE",
     //url:"" to be added later

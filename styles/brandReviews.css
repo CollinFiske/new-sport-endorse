@@ -26,7 +26,7 @@
   font-family: serif;
 }
 
-.reviews-header h2 {
+.reviews-header h3 {
   font-size: 2.2rem;
   font-weight: 800;
   color: #333;
@@ -190,7 +190,7 @@
     padding: 60px 15px;
   }
 
-  .reviews-header h2 {
+  .reviews-header h3 {
     font-size: 2rem;
   }
 
@@ -240,7 +240,7 @@
     font-size: 3rem;
   }
 
-  .reviews-header h2 {
+  .reviews-header h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
   }

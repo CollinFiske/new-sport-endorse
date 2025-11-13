@@ -8,6 +8,9 @@ export const metadata = {
   //metadataBase: new URL("put the home url here later"),
   title: "Athleten-Sponsoring Erfolgsgeschichten | Sport Endorse",
   description: "Lesen Sie Erfolgsgeschichten von Athleten-Sponsoring, Sport-Influencern und Markenpartnerschaften. Erfahren Sie, wie Elite-Athleten wirkungsvolle Sportmarketing-Kampagnen vorangetrieben haben.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/de/success-stories"
+  },
   openGraph:{ // og:title and so on
     title: "Athleten-Sponsoring Erfolgsgeschichten | Sport Endorse",
     description: "Lesen Sie Erfolgsgeschichten von Athleten-Sponsoring, Sport-Influencern und Markenpartnerschaften. Erfahren Sie, wie Elite-Athleten wirkungsvolle Sportmarketing-Kampagnen vorangetrieben haben.",

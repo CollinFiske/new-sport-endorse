@@ -26,7 +26,7 @@
   font-family: serif;
 }
 
-.talent-reviews-header h2 {
+.talent-reviews-header h3 {
   font-size: 2.2rem;
   font-weight: 800;
   color: #333;
@@ -180,7 +180,7 @@
     padding: 60px 15px;
   }
 
-  .talent-reviews-header h2 {
+  .talent-reviews-header h3 {
     font-size: 2rem;
   }
 
@@ -230,7 +230,7 @@
     font-size: 3rem;
   }
 
-  .talent-reviews-header h2 {
+  .talent-reviews-header h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
   }

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   //metadataBase: new URL("put the home url here later"),
   title: "Terms & Conditions | Sport Endorse",
   description: "Sport Endorse Limited Terms And Conditions Updated: November 2024",
+  alternates: {
+    canonical: "https://www.sportendorse.com/terms-and-conditions"
+  },
   openGraph:{ // og:title and so on
     title: "Terms & Conditions | Sport Endorse",
     description: "Sport Endorse Limited Terms And Conditions Updated: November 2024",
@@ -23,7 +26,7 @@ export default function TermsAndConditions() {
     <h2>Sport Endorse Limited Terms And Conditions<br/>Updated: November 2024</h2>
 
     <p>
-    These terms and conditions of use (including all parts and schedules to them) together with our privacy policy (https://www.sportendorse.com/privacy-policy/) (collectively, these “Terms”) are a contract (referred to in these Terms as an &apos;Agreement&apos;) entered into by and between you and Sport Endorse Limited (company registration number 593768) with registered office address at 2 Seapoint Avenue, Blackrock, County Dublin (“Sport Endorse”, &apos;the Company&apos; “we”, or “us” or “our”). The Terms describe your rights and responsibilities with regard to the use of all Sport Endorse websites and applications, and all content and services contained therein.
+    These terms and conditions of use (including all parts and schedules to them) together with our privacy policy (https://www.sportendorse.com/privacy-centre/) (collectively, these “Terms”) are a contract (referred to in these Terms as an &apos;Agreement&apos;) entered into by and between you and Sport Endorse Limited (company registration number 593768) with registered office address at 2 Seapoint Avenue, Blackrock, County Dublin (“Sport Endorse”, &apos;the Company&apos; “we”, or “us” or “our”). The Terms describe your rights and responsibilities with regard to the use of all Sport Endorse websites and applications, and all content and services contained therein.
     <br/><br/>These Terms apply to all Brands, visitors, users, and others who access any of the Service. The additional terms contained in Part B also apply to Brands/Agencies and the additional terms contained in Part C also apply to Talent. By using, accessing, or registering with the Service, you agree to be bound and abide by these Terms and all applicable laws and regulations.
 
     <br/><br/>PART A: GENERAL TERMS

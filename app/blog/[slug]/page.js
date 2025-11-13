@@ -18,6 +18,9 @@ export async function generateMetadata({ params }) {
   return {
     title: post.title.rendered,
     description: post.excerpt.rendered.replace(/<[^>]*>/g, ''), // Strip HTML
+    alternates: {
+      canonical: `https://www.sportendorse.com/blog/${resolvedParams.slug}`
+    },
     openGraph: {
       title: post.title.rendered,
       description: post.excerpt.rendered.replace(/<[^>]*>/g, ''),

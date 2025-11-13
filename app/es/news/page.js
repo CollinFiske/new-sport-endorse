@@ -5,6 +5,9 @@ import "../../../styles/blog.css";
 export const metadata = {
   title: "Últimas Noticias Deportivas y Comunicados de Prensa | Sport Endorse",
   description: "Mantente actualizado con las últimas noticias y comunicados de prensa de Sport Endorse, cubriendo patrocinios de atletas, marketing deportivo y asociaciones de marca.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/es/news"
+  },
   openGraph: {
     title: "Últimas Noticias Deportivas y Comunicados de Prensa | Sport Endorse",
     description: "Mantente actualizado con las últimas noticias y comunicados de prensa de Sport Endorse, cubriendo patrocinios de atletas, marketing deportivo y asociaciones de marca.",

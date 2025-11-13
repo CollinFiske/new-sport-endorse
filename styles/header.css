@@ -92,7 +92,7 @@
   text-decoration: none;
 }
 
-.logo-area h3 {
+.logo-area p {
   font-weight: bold;
   color: #002244;
   margin: 0;
@@ -275,7 +275,7 @@
 
 
 @media (max-width: 480px) {
-  .logo-area h3 {
+  .logo-area p {
     display: none;
   }
   .modern-header {

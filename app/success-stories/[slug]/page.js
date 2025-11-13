@@ -49,6 +49,9 @@ export async function generateMetadata({ params }) {
     return {
       title: `${title} | Sport Endorse`,
       description,
+      alternates: {
+        canonical: `https://www.sportendorse.com/success-stories/${resolvedParams.slug}`
+      },
       openGraph: {
         title,
         description,

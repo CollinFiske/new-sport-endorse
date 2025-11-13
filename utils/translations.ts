@@ -82,7 +82,7 @@ const translations = {
     agency: {
       badge: "FOR SPORTS AGENCIES",
       title: "Partner with Athletes",
-      description: "The all-in-one platform for your sports agency to secure and manage paid collaborations at scale. Connect your entire roster with brands seeking authentic partnerships that align with their profiles and passions.",
+      description: "Sport Endorse is the all-in-one sports agent platform designed for agencies to manage athlete endorsement deals, secure paid collaborations, and streamline operations at scale. Connect your entire roster with verified brands seeking authentic sponsorships that align with each athlete's profile and passions.",
       imageAlt: "Agency Dashboard - Sport Endorse Platform",
       metadata: {
         title: "Book sports celebrities | Sport Endorse",
@@ -198,20 +198,20 @@ const translations = {
     },
     components: {
       agencyHowItWorks: {
-        title: "Why Agents Choose Sport Endorse",
-        subtitle: "We're more than just a platform—we're a dedicated partner.",
+        title: "Why Sports Agents Choose Sport Endorse",
+        subtitle: "We're more than just an endorsement management platform — we're your long-term partner in success.",
         steps: [
           {
             title: "Expand Your Earning Potential",
-            description: "A pipeline of opportunities to help you secure more paid deals."
+            description: "Access a continuous pipeline of athlete endorsement opportunities and commercial collaborations to help your clients secure more paid deals and grow your agency's revenue."
           },
           {
             title: "A Partner, Not a Competitor",
-            description: "We're transparent about our commission split on every paid deal."
+            description: "Sport Endorse operates as a trusted partner for sports agencies, never a rival. We maintain complete transparency on every commission split, ensuring agents retain full visibility and control over their athletes' commercial activities."
           },
           {
             title: "Streamlined Management & Support",
-            description: "A secure platform and dedicated team to help you manage your roster and find more deals."
+            description: "Our platform and dedicated success team help you easily manage your roster, discover new endorsement opportunities, and handle secure contracts and payments — all within one integrated athlete management system."
           }
         ],
         buttonText: "START NOW"
@@ -638,7 +638,7 @@ const translations = {
     agency: {
       badge: "PARA AGENCIAS DEPORTIVAS",
       title: "Asóciate con Atletas",
-      description: "La plataforma todo-en-uno para que tu agencia deportiva asegure y gestione colaboraciones pagadas a escala. Conecta toda tu lista de talentos con marcas que buscan asociaciones auténticas que se alineen con sus perfiles y pasiones.",
+      description: "Sport Endorse es la plataforma todo-en-uno de agentes deportivos diseñada para que las agencias gestionen acuerdos de endorsement de atletas, aseguren colaboraciones pagadas y optimicen las operaciones a escala. Conecta toda tu lista de talentos con marcas verificadas que buscan patrocinios auténticos que se alineen con el perfil y las pasiones de cada atleta.",
       imageAlt: "Panel de Agencia - Plataforma Sport Endorse",
       metadata: {
         title: "Reserva celebridades deportivas | Sport Endorse",
@@ -754,20 +754,20 @@ const translations = {
     },
     components: {
       agencyHowItWorks: {
-        title: "Por Qué las Agencias Eligen Sport Endorse",
-        subtitle: "Somos más que una plataforma: somos un socio dedicado.",
+        title: "Por Qué los Agentes Deportivos Eligen Sport Endorse",
+        subtitle: "Somos más que una plataforma de gestión de endorsements — somos tu socio a largo plazo en el éxito.",
         steps: [
           {
             title: "Expande Tu Potencial de Ganancias",
-            description: "Una fuente de oportunidades para ayudarte a asegurar más acuerdos pagados."
+            description: "Accede a una fuente continua de oportunidades de endorsement de atletas y colaboraciones comerciales para ayudar a tus clientes a asegurar más acuerdos pagados y hacer crecer los ingresos de tu agencia."
           },
           {
             title: "Un Socio, No un Competidor",
-            description: "Somos transparentes sobre nuestra división de comisiones en cada acuerdo pagado."
+            description: "Sport Endorse opera como un socio de confianza para las agencias deportivas, nunca como un rival. Mantenemos completa transparencia en cada división de comisiones, asegurando que los agentes mantengan visibilidad total y control sobre las actividades comerciales de sus atletas."
           },
           {
             title: "Gestión y Soporte Simplificados",
-            description: "Una plataforma segura y un equipo dedicado para ayudarte a gestionar tu lista y encontrar más acuerdos."
+            description: "Nuestra plataforma y equipo de éxito dedicado te ayudan a gestionar fácilmente tu lista de atletas, descubrir nuevas oportunidades de endorsement y manejar contratos seguros y pagos — todo dentro de un sistema integrado de gestión de atletas."
           }
         ],
         buttonText: "COMENZAR AHORA"
@@ -1034,7 +1034,7 @@ const translations = {
             sport: "Mountain Running",
             region: "España",
             quote: "Buena plataforma para entablar relación con marcas y colaborar",
-            image: "/images/marcos_pascual.png",
+            image: "/images/Marcos-Pascual.jpg",
             alt: "Marcos Pascual, Mountain Running"
           },
           {
@@ -1043,7 +1043,7 @@ const translations = {
             sport: "Fotógrafo",
             region: "España",
             quote: "Una plataforma muy bien pensada para deportistas y con seguimiento real con personas reales, muy importante. Hacen un gran trabajo de seguimiento.",
-            image: "/images/alvaro_postigo.png",
+            image: "/images/Alvaro-Postigo.jpg",
             alt: "Alvaro Postigo Armendariz, Fotógrafo"
           },
           {
@@ -1052,7 +1052,7 @@ const translations = {
             sport: "Artist",
             region: "España",
             quote: "Plataforma para creadores de contenido muy recomendada.",
-            image: "/images/adan_ramirez.png",
+            image: "/images/Adan.jpg",
             alt: "Adan Ramírez, Artist"
           },
           {
@@ -1185,7 +1185,7 @@ const translations = {
     agency: {
       badge: "FÜR SPORTAGENTUREN",
       title: "Partner mit Athleten",
-      description: "Die All-in-One-Plattform für Ihre Sportagentur, um bezahlte Kooperationen im großen Stil zu sichern und zu verwalten. Verbinden Sie Ihre gesamte Liste mit Marken, die authentische Partnerschaften suchen, die mit ihren Profilen und Leidenschaften übereinstimmen.",
+      description: "Sport Endorse ist die All-in-One-Sportagenten-Plattform, die für Agenturen entwickelt wurde, um Athleten-Endorsement-Deals zu verwalten, bezahlte Kooperationen zu sichern und den Betrieb im großen Stil zu optimieren. Verbinden Sie Ihre gesamte Liste mit verifizierten Marken, die authentische Sponsorings suchen, die mit dem Profil und den Leidenschaften jedes Athleten übereinstimmen.",
       imageAlt: "Agentur-Dashboard - Sport Endorse Plattform",
       metadata: {
         title: "Buchen Sie Sport-Prominente | Sport Endorse",
@@ -1301,20 +1301,20 @@ const translations = {
     },
     components: {
       agencyHowItWorks: {
-        title: "Warum Agenturen Sport Endorse Wählen",
-        subtitle: "Wir sind mehr als nur eine Plattform – wir sind ein engagierter Partner.",
+        title: "Warum Sportagenten Sport Endorse Wählen",
+        subtitle: "Wir sind mehr als nur eine Endorsement-Management-Plattform — wir sind Ihr langfristiger Partner für den Erfolg.",
         steps: [
           {
             title: "Erweitern Sie Ihr Verdienstpotenzial",
-            description: "Eine Pipeline von Möglichkeiten, die Ihnen hilft, mehr bezahlte Deals zu sichern."
+            description: "Zugang zu einer kontinuierlichen Pipeline von Athleten-Endorsement-Möglichkeiten und kommerziellen Kooperationen, um Ihren Kunden zu helfen, mehr bezahlte Deals zu sichern und die Einnahmen Ihrer Agentur zu steigern."
           },
           {
             title: "Ein Partner, Kein Konkurrent",
-            description: "Wir sind transparent über unsere Provisionsaufteilung bei jedem bezahlten Deal."
+            description: "Sport Endorse agiert als vertrauensvoller Partner für Sportagenturen, niemals als Rivale. Wir wahren vollständige Transparenz bei jeder Provisionsaufteilung und stellen sicher, dass Agenten die volle Sichtbarkeit und Kontrolle über die kommerziellen Aktivitäten ihrer Athleten behalten."
           },
           {
             title: "Optimierte Verwaltung & Support",
-            description: "Eine sichere Plattform und ein engagiertes Team, das Ihnen hilft, Ihre Liste zu verwalten und mehr Deals zu finden."
+            description: "Unsere Plattform und unser engagiertes Erfolgs-Team helfen Ihnen dabei, Ihre Liste einfach zu verwalten, neue Endorsement-Möglichkeiten zu entdecken und sichere Verträge und Zahlungen abzuwickeln — alles innerhalb eines integrierten Athleten-Management-Systems."
           }
         ],
         buttonText: "JETZT STARTEN"

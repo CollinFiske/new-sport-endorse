@@ -117,7 +117,7 @@ export default function BrandReviews() {
       <div className="reviews-container">
         <div className="reviews-header">
           {/*<div className="quote-icon">"</div>*/}
-          <h2>{t.title}</h2>
+          <h3>{t.title}</h3>
           <p>
             {t.subtitle}
           </p>

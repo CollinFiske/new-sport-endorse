@@ -1,4 +1,20 @@
 import Script from 'next/script'
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Center | Sport Endorse",
+  description: "Manage your privacy preferences and data settings with Sport Endorse. Control how your information is collected and used on our athlete sponsorship platform.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/privacy-center"
+  },
+  openGraph: {
+    title: "Privacy Center | Sport Endorse",
+    description: "Manage your privacy preferences and data settings with Sport Endorse. Control how your information is collected and used on our athlete sponsorship platform.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Sport Endorse"
+  },
+};
 
 export default function PrivacyCenter() {
   return (

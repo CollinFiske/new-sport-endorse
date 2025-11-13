@@ -6,6 +6,9 @@ import '../../../styles/blog.css'
 export const metadata = {
   title: "Blogs sobre Patrocinio de Atletas y Marketing Deportivo | Sport Endorse",
   description: "Explora blogs de expertos sobre patrocinio de atletas, influencers deportivos y embajadores de marca. Aprende cómo elevar tus campañas de marketing deportivo con atletas de élite.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/es/blog"
+  },
   openGraph:{ // og:title and so on
     title: "Blogs sobre Patrocinio de Atletas y Marketing Deportivo | Sport Endorse",
     description: "Explora blogs de expertos sobre patrocinio de atletas, influencers deportivos y embajadores de marca. Aprende cómo elevar tus campañas de marketing deportivo con atletas de élite.",
