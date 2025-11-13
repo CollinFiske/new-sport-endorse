@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "../../../styles/policies.css"
 import { Metadata } from "next";
 
