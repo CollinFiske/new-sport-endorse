@@ -43,7 +43,7 @@ const brands = [
   { src: "/images/homePageTable/BBC-news.png", alt: "BBC logo" },
   { src: "/images/homePageTable/popeyes-supplements.png", alt: "Popeyes Supplements logo"},
   
-  { src: "/images/sport-endorse-white-logo.png", alt: "sport endorse logo", isButton: true }
+  { src: "/images/SE_logo_lockup_wht1.png", alt: "sport endorse logo", isButton: true }
 ];
 
 export default function BrandsGrid({ variant = "8x4", label }: BrandsGridProps) {

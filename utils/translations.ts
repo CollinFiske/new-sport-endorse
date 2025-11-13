@@ -81,7 +81,7 @@ const translations = {
     },
     agency: {
       badge: "FOR SPORTS AGENCIES",
-      title: "Book Sports <span class='agency-gradientText'>Celebrities</span>",
+      title: "Partner with Athletes",
       description: "The all-in-one platform for your sports agency to secure and manage paid collaborations at scale. Connect your entire roster with brands seeking authentic partnerships that align with their profiles and passions.",
       imageAlt: "Agency Dashboard - Sport Endorse Platform",
       metadata: {
@@ -637,7 +637,7 @@ const translations = {
     },
     agency: {
       badge: "PARA AGENCIAS DEPORTIVAS",
-      title: "Reserva <span class='agency-gradientText'>celebridades</span> deportivas",
+      title: "Asóciate con Atletas",
       description: "La plataforma todo-en-uno para que tu agencia deportiva asegure y gestione colaboraciones pagadas a escala. Conecta toda tu lista de talentos con marcas que buscan asociaciones auténticas que se alineen con sus perfiles y pasiones.",
       imageAlt: "Panel de Agencia - Plataforma Sport Endorse",
       metadata: {
@@ -1184,7 +1184,7 @@ const translations = {
     },
     agency: {
       badge: "FÜR SPORTAGENTUREN",
-      title: "Buchen Sie Sport-<span class='agency-gradientText'>Prominente</span>",
+      title: "Partner mit Athleten",
       description: "Die All-in-One-Plattform für Ihre Sportagentur, um bezahlte Kooperationen im großen Stil zu sichern und zu verwalten. Verbinden Sie Ihre gesamte Liste mit Marken, die authentische Partnerschaften suchen, die mit ihren Profilen und Leidenschaften übereinstimmen.",
       imageAlt: "Agentur-Dashboard - Sport Endorse Plattform",
       metadata: {

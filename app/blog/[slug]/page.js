@@ -2,6 +2,7 @@ import { getAllPosts, getPostBySlug } from '../wordpress'
 import { notFound } from 'next/navigation'
 import '../../../styles/blog.css'
 import MainLogo from '@/components/MainLogo'
+import BlogBackButton from '@/components/BlogBackButton'
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
@@ -49,6 +50,10 @@ export default async function BlogPost({ params }) {
   
   return (
     <div className="blog-container">
+      {/* Back Button at top of page */}
+      <div style={{ padding: '1rem 1rem 0 1rem', maxWidth: '1200px', margin: '0 auto' }}>
+        <BlogBackButton />
+      </div>
 
       {/* Main Content - Centered */}
       <main className="blog-main">

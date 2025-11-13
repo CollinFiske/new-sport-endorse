@@ -21,9 +21,9 @@ export default function Community({ showAgencies = false }: CommunityProps) {
 
   return (
     <section className="statistics-section">
-      <div className="live-badge">
+      {/*<div className="live-badge">
         <span className="dot"></span> {t.liveBadge}
-      </div>
+      </div>*/}
       <div className="statistics-header">
         <p className="statistics-title">{t.title}</p>
         {/*<p style={{width:"50%"}}>

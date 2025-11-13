@@ -174,111 +174,103 @@ export default function PodcastsPage() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  if (loading) {
-    return (
-      <div className="podcasts-loading-container">
-        <div className="podcasts-loading-content">
-          <div className="podcasts-loading-text">Loading...</div>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="podcasts-error-container">
-        <div className="podcasts-error-content">
-          <div className="podcasts-error-icon">⚠️</div>
-          <h2 className="podcasts-error-title">Something went wrong</h2>
-          <p className="podcasts-error-message">{error.message}</p>
-        </div>
-      </div>
-    );
-  }
-
-  try {
-
-    return (
-      <div className="blog-container">
-        {/* Header */}
-        <header className="podcasts-header">
-          <div className="podcasts-header-container">
-            <div className="podcasts-header-content">
-              <h1 className="podcasts-header-title">
-                The Athlete Sitdown
-              </h1>
-              <p className="podcasts-header-description">
-                Discover inspiring stories and insights from world-class athletes and sports professionals
-              </p>
-              
-              <div className="podcasts-platforms-container">
-                <a href="https://podcasts.apple.com/ie/podcast/the-athlete-sitdown/id1550095395" target="_blank" rel="noopener noreferrer">
-                  <Image 
-                    src="/images/podcast/apple-podcasts-logo.webp" 
-                    alt="Apple Podcasts logo" 
-                    width={96}
-                    height={32}
-                    className="podcasts-platform-logo-apple"
-                  />
-                </a>
-                <a href="https://music.amazon.com/podcasts/47a22b01-42ad-447a-b137-1866a49890a1/the-athlete-sitdown" target="_blank" rel="noopener noreferrer">
-                  <Image 
-                    src="/images/podcast/amazon-music-logo.webp" 
-                    alt="Amazon Music logo" 
-                    width={90}
-                    height={45}
-                    className="podcasts-platform-logo-amazon"
-                  />
-                </a>
-                <a href="https://open.spotify.com/show/2c2mWOkxmUpeGyFI2dZgC5" target="_blank" rel="noopener noreferrer">
-                  <Image 
-                    src="/images/podcast/Spotify-Logo.webp" 
-                    alt="Spotify logo" 
-                    width={75}
-                    height={75}
-                    className="podcasts-platform-logo-spotify"
-                  />
-                </a>
-              </div>
-              
-              <div className="podcasts-info-container">
-                <span className="podcasts-info-episodes">
-                  <svg className="podcasts-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                  </svg>
-                  {podcasts.length} Episodes
-                </span>
-                <span className="podcasts-info-separator">•</span>
-                <span>Discover Sport Endorse Podcasts</span>
-                <span className="podcasts-info-separator">•</span>
-                <button 
-                  onClick={openModal}
-                  className="podcasts-feature-button">
-                  Feature Me!
-                </button>
-              </div>
+  return (
+    <div className="blog-container">
+      {/* Header - Always visible */}
+      <header className="podcasts-header">
+        <div className="podcasts-header-container">
+          <div className="podcasts-header-content">
+            <h1 className="podcasts-header-title">
+              The Athlete Sitdown
+            </h1>
+            <p className="podcasts-header-description">
+              Discover inspiring stories and insights from world-class athletes and sports professionals
+            </p>
+            
+            <div className="podcasts-platforms-container">
+              <a href="https://podcasts.apple.com/ie/podcast/the-athlete-sitdown/id1550095395" target="_blank" rel="noopener noreferrer">
+                <Image 
+                  src="/images/podcast/apple-podcasts-logo.webp" 
+                  alt="Apple Podcasts logo" 
+                  width={96}
+                  height={32}
+                  className="podcasts-platform-logo-apple"
+                />
+              </a>
+              <a href="https://music.amazon.com/podcasts/47a22b01-42ad-447a-b137-1866a49890a1/the-athlete-sitdown" target="_blank" rel="noopener noreferrer">
+                <Image 
+                  src="/images/podcast/amazon-music-logo.webp" 
+                  alt="Amazon Music logo" 
+                  width={90}
+                  height={45}
+                  className="podcasts-platform-logo-amazon"
+                />
+              </a>
+              <a href="https://open.spotify.com/show/2c2mWOkxmUpeGyFI2dZgC5" target="_blank" rel="noopener noreferrer">
+                <Image 
+                  src="/images/podcast/Spotify-Logo.webp" 
+                  alt="Spotify logo" 
+                  width={75}
+                  height={75}
+                  className="podcasts-platform-logo-spotify"
+                />
+              </a>
+            </div>
+            
+            <div className="podcasts-info-container">
+              <span className="podcasts-info-episodes">
+                <svg className="podcasts-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+                {loading ? '...' : `${podcasts.length}`} Episodes
+              </span>
+              <span className="podcasts-info-separator">•</span>
+              <span>Discover Sport Endorse Podcasts</span>
+              <span className="podcasts-info-separator">•</span>
+              <button 
+                onClick={openModal}
+                className="podcasts-feature-button">
+                Feature Me!
+              </button>
             </div>
           </div>
-        </header>
+        </div>
+      </header>
 
-        {/* Main Content */}
-        <main className="blog-main">
-          {podcasts.length === 0 ? (
-            <div className="podcasts-empty-container">
-              <div className="podcasts-empty-icon">🎙️</div>
-              <h2 className="podcasts-empty-title">No podcasts found</h2>
-              <p className="podcasts-empty-message">Check back later for new episodes!</p>
+      {/* Main Content */}
+      <main className="blog-main">
+        {loading ? (
+          <div className="blog-posts-container">
+            <div className="podcasts-loading-content">
+              <br/>
+              <br/>
+              <div className="podcasts-loading-text">Loading...</div>
             </div>
-          ) : (
-            <div className="blog-posts-container">
-              <div className="blog-posts-grid">
-                {podcasts.map((podcast, index) => (
-                  <PodcastCard key={podcast.id} podcast={podcast} index={index} />
-                ))}
-              </div>
+          </div>
+        ) : error ? (
+          <div className="podcasts-error-container">
+            <div className="podcasts-error-content">
+              <div className="podcasts-error-icon">⚠️</div>
+              <h2 className="podcasts-error-title">Something went wrong</h2>
+              <p className="podcasts-error-message">{error.message}</p>
             </div>
-          )}
-        </main>
+          </div>
+        ) : podcasts.length === 0 ? (
+          <div className="podcasts-empty-container">
+            <div className="podcasts-empty-icon">🎙️</div>
+            <h2 className="podcasts-empty-title">No podcasts found</h2>
+            <p className="podcasts-empty-message">Check back later for new episodes!</p>
+          </div>
+        ) : (
+          <div className="blog-posts-container">
+            <div className="blog-posts-grid">
+              {podcasts.map((podcast, index) => (
+                <PodcastCard key={podcast.id} podcast={podcast} index={index} />
+              ))}
+            </div>
+          </div>
+        )}
+      </main>
 
         {/* HubSpot Form Modal */}
         {isModalOpen && (
@@ -311,15 +303,4 @@ export default function PodcastsPage() {
         )}
       </div>
     );
-  } catch (error) {
-    return (
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ color: '#ef4444', fontSize: '1.25rem', marginBottom: '1rem' }}>⚠️</div>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.5rem' }}>Something went wrong</h2>
-          <p style={{ color: '#6b7280' }}>{error.message}</p>
-        </div>
-      </div>
-    );
-  }
 }

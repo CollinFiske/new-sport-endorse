@@ -26,7 +26,7 @@ export default function TalentReviews() {
     <section className="talent-reviews">
       <div className="talent-reviews-container">
         <div className="talent-reviews-header">
-          <div className="talent-quote-icon">"</div>
+          {/*<div className="talent-quote-icon">"</div>*/}
           <h2>{t.title}</h2>
           <p>
             {t.subtitle}

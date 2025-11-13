@@ -148,10 +148,10 @@ export default function Header() {
 
       {/* Main Navigation */}
       <nav className="main-nav">
-        <Link href={getNavLink("/talent")}>{t.talent}</Link>
-        <Link href={getNavLink("/brands")}>{t.brand}</Link>
-        <Link href={getNavLink("/agency")}>{t.agencies}</Link>
-        <Link href={getNavLink("/subscription")}>{t.subscription}</Link>
+        <Link href={getNavLink("/talent")} style={{textAlign:"center"}}>{t.talent}</Link>
+        <Link href={getNavLink("/brands")} style={{textAlign:"center"}}>{t.brand}</Link>
+        <Link href={getNavLink("/agency")} style={{textAlign:"center"}}>{t.agencies}</Link>
+        <Link href={getNavLink("/subscription")} style={{textAlign:"center"}}>{t.subscription}</Link>
       </nav>
 
       {/* Actions */}
