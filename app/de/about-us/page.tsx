@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import '../../styles/aboutUs.css';
+import '../../../styles/aboutUs.css';
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
 import Head from 'next/head';
