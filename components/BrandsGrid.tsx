@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
 import styles from "../styles/brandsGrid.module.css";
@@ -79,10 +80,22 @@ export default function BrandsGrid({ variant = "8x4", label }: BrandsGridProps) 
                       className={styles.ctaButton}
                       onClick={handleSubscriptionClick}
                     >
-                      <img src={brand.src} alt={brand.alt} />
+                      <Image 
+                        src={brand.src} 
+                        alt={brand.alt}
+                        width={120}
+                        height={60}
+                        style={{ objectFit: 'contain' }}
+                      />
                     </button>
                   ) : (
-                    <img src={brand.src} alt={brand.alt} />
+                    <Image 
+                      src={brand.src} 
+                      alt={brand.alt}
+                      width={120}
+                      height={60}
+                      style={{ objectFit: 'contain' }}
+                    />
                   )}
                 </td>
               ))}

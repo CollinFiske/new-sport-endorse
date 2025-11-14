@@ -1,10 +1,10 @@
 "use client";
-import "../../../styles/aboutUs.css";
+import { useState, useEffect } from 'react';
+import '../../styles/aboutUs.css';
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
 import Head from 'next/head';
 import Image from 'next/image';
-import { useEffect } from 'react';
 
 interface ValueItem {
   icon: string;
@@ -15,10 +15,40 @@ interface ValueItem {
 export default function AboutUsES() {
   const { changeLanguage } = useLanguage();
   const t = translations.es.aboutUs;
+  const [showCareerForm, setShowCareerForm] = useState(false);
+  const [hubspotLoaded, setHubspotLoaded] = useState(false);
 
   useEffect(() => {
     changeLanguage('es');
   }, [changeLanguage]);
+
+  useEffect(() => {
+    // Load HubSpot script when component mounts
+    const existingScript = document.querySelector('script[src="https://js.hsforms.net/forms/embed/4025606.js"]');
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = 'https://js.hsforms.net/forms/embed/4025606.js';
+      script.defer = true;
+      script.onload = () => {
+        setHubspotLoaded(true);
+      };
+      document.body.appendChild(script);
+    } else {
+      setHubspotLoaded(true);
+    }
+
+    return () => {
+      // Cleanup script on unmount
+      const scriptToRemove = document.querySelector('script[src="https://js.hsforms.net/forms/embed/4025606.js"]');
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+    };
+  }, []);
+
+  const closeCareerForm = () => {
+    setShowCareerForm(false);
+  };
 
   const teamMembers = [
     {
@@ -224,11 +254,12 @@ export default function AboutUsES() {
                 <p className="about-us-careers-description">
                   {t.careers.cardDescription}
                 </p>
-                <a href="mailto:hello@sportendorse.com?subject=Career Inquiry&body=Hi Sport Endorse team,%0D%0A%0D%0AI'm interested in exploring career opportunities with your company. Please let me know about any current or upcoming positions that might be a good fit.%0D%0A%0D%0AThank you!">
-                  <button className="about-us-careers-button">
-                    {t.careers.buttonText}
-                  </button>
-                </a>
+                <button 
+                  className="about-us-careers-button"
+                  onClick={() => setShowCareerForm(true)}
+                >
+                  {t.careers.buttonText}
+                </button>
               </div>
             </div>
           </div>
@@ -316,6 +347,35 @@ export default function AboutUsES() {
       
       <br/>
     </div>
+
+    {/* Career Form Popup */}
+    {showCareerForm && (
+      <div className="popup-overlay" onClick={closeCareerForm}>
+        <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+          <button className="close-button" onClick={closeCareerForm}>
+            ×
+          </button>
+          
+          <h3 className="popup-title">Join Our Team</h3>
+          <p className="popup-subtitle">
+            We&apos;re always looking for talented individuals to join our growing team.
+          </p>
+
+          <div className="hubspot-form-container">
+            {hubspotLoaded ? (
+              <div 
+                className="hs-form-frame" 
+                data-region="na1" 
+                data-form-id="84e3acc5-80c1-44c9-9870-e179cc5cdfed" 
+                data-portal-id="4025606"
+              ></div>
+            ) : (
+              <div className="loading-message">Loading form...</div>
+            )}
+          </div>
+        </div>
+      </div>
+    )}
     </>
   );
 }
