@@ -661,9 +661,9 @@ const translations = {
       }
     },
     home:{
-      welcome: "La Plataforma de Patrocinio Deportivo Definitiva",
-      description: "Sport Endorse es la plataforma líder de patrocinio deportivo que conecta marcas, atletas e influencers deportivos para asociaciones auténticas, basadas en datos e impactantes. Simplificamos cada etapa de la gestión de patrocinio deportivo — facilitando que las marcas descubran a los atletas correctos y que los atletas se conecten directamente con marcas para colaboraciones verificadas y remuneradas. Con la confianza de organizaciones globales, Sport Endorse es el mercado de patrocinio deportivo más confiable de la industria.",
-      tableHeader: "Marcas Que Confían en Nuestra Plataforma de Marketing Deportivo",
+      welcome: "La plataforma de colaboraciones deportivas definitiva",
+      description: "Sport Endorse es la plataforma líder de colaboraciones deportivas que conecta marcas, atletas e influencers deportivos para colaboraciones auténticas, basadas en datos reales. Simplificamos cada etapa de la gestión del patrocinio deportivo — facilitando que las marcas descubran a los atletas correctos y que los atletas se conecten directamente con marcas para colaboraciones verificadas y remuneradas. Con la confianza de organizaciones globales, Sport Endorse es el marketplace de colaboraciones deportivas más confiable de la industria.",
+      tableHeader: "Marcas que confían en nuestra plataforma",
       benefitSection: {
         athlete: {
           label: "Para Talento",
