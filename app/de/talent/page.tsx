@@ -1,97 +1,29 @@
-"use client";
-import "../../../styles/talent.css";
-import AppStores from "@/components/AppStores";
-import SuccessStories from "@/components/SuccessStories";
-import BrandsGrid from "@/components/BrandsGrid";
-import TalentHowItWorks from "@/components/TalentHowItWorks";
-import WhyAthletesChooseUs from "@/components/WhyAthletesChooseUs";
-import TalentReviews from "@/components/TalentReviews";
-import TrustedSportAgencyPartners from "@/components/TrustedSportAgencyPartners";
-import { useLanguage } from "@/context/LanguageContext";
-import translations from "@/utils/translations";
-import Head from 'next/head';
-import { useEffect } from 'react';
+import TalentContent from "../../../components/TalentContent";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Athleten & Sport-Influencer - Bezahlte Deals mit Marken erhalten | Sport Endorse",
+  description: "Tritt Sport Endorse bei und verbinde dich mit Marken, die deinen Werten entsprechen. Kollaboriere authentisch, sichere bezahlte Deals und lass deine Sportkarriere wachsen.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/de/talent/",
+    languages: {
+      'en-gb': 'https://www.sportendorse.com/talent/',
+      'es-es': 'https://www.sportendorse.com/es/talent/',
+      'de-de': 'https://www.sportendorse.com/de/talent/',
+      'x-default': 'https://www.sportendorse.com/talent/'
+    }
+  },
+  openGraph: {
+    title: "Athleten & Sport-Influencer - Bezahlte Deals mit Marken erhalten | Sport Endorse",
+    description: "Tritt Sport Endorse bei und verbinde dich mit Marken, die deinen Werten entsprechen. Kollaboriere authentisch, sichere bezahlte Deals und lass deine Sportkarriere wachsen.",
+    type: "website",
+    locale: "de_DE",
+    url: "https://www.sportendorse.com/de/talent/",
+    siteName: "Sport Endorse",
+    alternateLocale: ['en_US', 'es_ES']
+  },
+};
 
 export default function TalentPageDE() {
-  const { changeLanguage } = useLanguage();
-  const t = translations.de;
-
-  useEffect(() => {
-    changeLanguage('de');
-  }, [changeLanguage]);
-
-  return (
-    <>
-      <Head>
-        <title>{t.talent.metadata.title}</title>
-        <meta name="description" content={t.talent.metadata.description} />
-        <link rel="alternate" href="https://www.sportendorse.com/talent" hrefLang="en-gb" />
-        <link rel="alternate" href="https://www.sportendorse.com/es/talent" hrefLang="es-es" />
-        <link rel="alternate" href="https://www.sportendorse.com/de/talent" hrefLang="de-de" />
-        <link rel="alternate" href="https://www.sportendorse.com/talent" hrefLang="x-default" />
-        <link rel="canonical" href="https://www.sportendorse.com/de/talent" />
-        <meta property="og:title" content={t.talent.metadata.title} />
-        <meta property="og:description" content={t.talent.metadata.description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="de_DE" />
-        <meta property="og:site_name" content="Sport Endorse" />
-        <html lang="de" />
-      </Head>
-
-      <section className="talent-heroSection">
-        <div className="talent-container">
-          <div className="talent-content">
-            <span className="talent-badge">
-              ⦿ {t.talent.badge}
-            </span>
-            
-            <h1 
-              className="talent-title"
-              dangerouslySetInnerHTML={{ __html: t.talent.title }}
-            />
-            
-            <p className="talent-description">
-              {t.talent.description}
-            </p>
-            
-            <div className="talent-apps">
-              <AppStores />
-            </div>
-          </div>
-             
-          <div className="talent-imageContainer">
-            <BrandsGrid variant="5x4" label="" />
-          </div>
-        </div>
-      </section>
-
-      <section className="talent-sponsorship-section">
-        <div className="talent-sponsorship-container">
-          <h2>{t.talent.sponsorshipSection.title}</h2>
-          <p className="talent-sponsorship-lead">
-            {t.talent.sponsorshipSection.lead}
-          </p>
-          <p className="talent-sponsorship-description">
-            {t.talent.sponsorshipSection.description}
-          </p>
-          <p className="talent-sponsorship-benefits">
-            {t.talent.sponsorshipSection.benefits}
-          </p>
-        </div>
-      </section>
-
-      <TalentHowItWorks />
-
-      <WhyAthletesChooseUs />
-
-      <SuccessStories />
-
-      <TalentReviews />
-
-      <TrustedSportAgencyPartners />
-
-      <br/>
-      <br/>
-    </>
-  );
+  return <TalentContent />;
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import BrandHowItWorks from "@/components/BrandHowItWorks";
-import BrandKeyFeatures from "@/components/BrandKeyFeatures";
+import BrandKeyFeatures from "@/components/BrandKeyFeatures";  
 import SuccessStories from "@/components/SuccessStories";
 import BusinessSubscription from "@/components/BusinessSubscription";
 import CalendlyDemo from "@/components/CalendlyDemo";
@@ -12,6 +12,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/utils/translations";
 import { getTopFeaturedTalents } from "@/utils/featuredTalentsData";
 import Image from 'next/image';
+import "../styles/brands.css";
 
 interface BrandsContentProps {
   badge: string;

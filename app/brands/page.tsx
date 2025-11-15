@@ -1,6 +1,5 @@
 import BrandsContent from "@/components/BrandsContent";
 import translations from "@/utils/translations";
-import "../../styles/brands.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

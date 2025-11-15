@@ -1,192 +1,26 @@
-"use client";
-import { useLanguage } from "../../context/LanguageContext";
-import translations from "../../utils/translations";
-import "../../styles/contactUs.css";
-import Head from 'next/head';
-import Image from 'next/image';
-import { useEffect } from 'react';
+import { Metadata } from 'next'
+import ContactUsContent from '@/components/ContactUsContent'
 
-// Declare HubSpot global for TypeScript
-declare global {
-  interface Window {
-    hbspt: {
-      forms: {
-        create: (options: {
-          region: string;
-          portalId: string;
-          formId: string;
-          target: string;
-        }) => void;
-      };
-    };
+export const metadata: Metadata = {
+  title: 'Contact Sport Endorse | Get in Touch with Our Team',
+  description: 'Contact Sport Endorse to learn how our sports sponsorship platform connects brands with elite athletes. Get in touch with our team for partnerships and opportunities.',
+  alternates: {
+    canonical: "https://www.sportendorse.com/contact-us",
+    languages: {
+      'en': '/contact-us',
+      'es': '/es/contact-us',
+      'de': '/de/contact-us'
+    }
+  },
+  openGraph: {
+    title: 'Contact Sport Endorse | Get in Touch with Our Team',
+    description: 'Contact Sport Endorse to learn how our sports sponsorship platform connects brands with elite athletes. Get in touch with our team for partnerships and opportunities.',
+    type: "website",
+    locale: "en_US",
+    siteName: "Sport Endorse"
   }
 }
 
 export default function ContactUsPage() {
-  const { language } = useLanguage();
-  const t = translations[language].components.contactUs;
-  
-  useEffect(() => {
-    // Method 1: Try the embedded div approach first
-    let timeoutId: NodeJS.Timeout;
-    
-    // Check if HubSpot script is already loaded
-    const existingScript = document.querySelector('script[src="https://js.hsforms.net/forms/embed/4025606.js"]');
-    
-    if (!existingScript) {
-      // Load HubSpot forms script
-      const script = document.createElement('script');
-      script.src = 'https://js.hsforms.net/forms/embed/4025606.js';
-      script.defer = true;
-      
-      script.onload = () => {
-        console.log('HubSpot forms script loaded successfully');
-        
-        // Method 2: Try programmatic form creation as backup
-        timeoutId = setTimeout(() => {
-          const formContainer = document.getElementById('hubspot-form-container');
-          const loadingEl = document.getElementById('form-loading');
-          
-          // Check if the embedded form loaded
-          if (formContainer && formContainer.children.length === 0) {
-            console.log('Embedded form failed, trying programmatic approach...');
-            
-            // Try programmatic form creation
-            if (window.hbspt && window.hbspt.forms) {
-              window.hbspt.forms.create({
-                region: "na1",
-                portalId: "4025606",
-                formId: "dffd74b7-26ac-40df-86f9-d0365a0778d5",
-                target: "#hubspot-form-container"
-              });
-              
-              if (loadingEl) {
-                loadingEl.style.display = 'none';
-              }
-            } else {
-              // Show error if both methods fail
-              const errorEl = document.getElementById('form-error');
-              if (errorEl) {
-                errorEl.style.display = 'block';
-              }
-              if (loadingEl) {
-                loadingEl.style.display = 'none';
-              }
-            }
-          } else {
-            // Embedded form worked
-            if (loadingEl) {
-              loadingEl.style.display = 'none';
-            }
-          }
-        }, 3000);
-      };
-      
-      script.onerror = (error) => {
-        console.error('Failed to load HubSpot forms script:', error);
-        const loadingEl = document.getElementById('form-loading');
-        const errorEl = document.getElementById('form-error');
-        
-        if (loadingEl) loadingEl.style.display = 'none';
-        if (errorEl) errorEl.style.display = 'block';
-      };
-      
-      document.head.appendChild(script);
-    } else {
-      // Script already exists, just hide loading after a delay
-      timeoutId = setTimeout(() => {
-        const loadingEl = document.getElementById('form-loading');
-        if (loadingEl) {
-          loadingEl.style.display = 'none';
-        }
-      }, 2000);
-    }
-
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-    };
-  }, []);
-
-  return (
-    <>
-      <Head>
-        <title>Contact Sport Endorse | Get in Touch with Our Sports Marketing Team</title>
-        <meta name="description" content="Get in touch with Sport Endorse for sports marketing partnerships, athlete sponsorships, and influencer collaborations. Contact our team in Dublin, Ireland." />
-        <link rel="alternate" href="https://www.sportendorse.com/contact-us" hrefLang="en-gb" />
-        <link rel="alternate" href="https://www.sportendorse.com/es/contact-us" hrefLang="es-es" />
-        <link rel="alternate" href="https://www.sportendorse.com/de/contact-us" hrefLang="de-de" />
-        <link rel="alternate" href="https://www.sportendorse.com/contact-us" hrefLang="x-default" />
-        <link rel="canonical" href="https://www.sportendorse.com/contact-us" />
-        <meta property="og:title" content="Contact Sport Endorse | Get in Touch with Our Sports Marketing Team" />
-        <meta property="og:description" content="Get in touch with Sport Endorse for sports marketing partnerships, athlete sponsorships, and influencer collaborations. Contact our team in Dublin, Ireland." />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content={language === 'es' ? 'es_ES' : language === 'de' ? 'de_DE' : 'en_US'} />
-        <meta property="og:site_name" content="Sport Endorse" />
-        <html lang={language} />
-      </Head>
-
-    <div className="contact-us-container">
-      <div className="contact-us-content">
-        <div className="contact-us-left">
-          <h1 className="contact-us-title">{t.title}</h1>
-          <p className="contact-us-description">
-            {t.description}
-          </p>
-
-          <div className="contact-us-info">
-            <div className="contact-us-info-section">
-              <h3>{t.contactInfo.telephone}</h3>
-              <p>+353 1 546 1103</p>
-            </div>
-
-            <div className="contact-us-info-section">
-              <h3>{t.contactInfo.email}</h3>
-              <p>hello@sportendorse.com</p>
-            </div>
-
-            <div className="contact-us-info-section">
-              <h3>{t.contactInfo.address}</h3>
-              <p>
-                10 Fitzwilliam Street Upper,<br />
-                Dublin 2, D02 T024, Ireland
-              </p>
-            </div>
-          </div>
-
-          <div className="contact-us-socials">
-            <h3>{t.followUs}</h3>
-            <div className="contact-us-social-logos">
-              <span><a target="_blank" href="https://www.facebook.com/SportEndorseLtd/"><Image src="/images/facebookLogo.jpg" alt="facebook logo" width={32} height={32} className="contact-us-social-logo" /></a></span>
-              <span><a target="_blank" href="https://www.instagram.com/sport_endorse/"><Image src="/images/instagramLogo.webp" alt="instagram logo" width={32} height={32} className="contact-us-social-logo" /></a></span>
-              <span><a target="_blank" href="https://www.linkedin.com/company/sportendorse/"><Image src="/images/linkedinLogo.webp" alt="linkedin logo" width={32} height={32} className="contact-us-social-logo" /></a></span>
-              <span><a target="_blank" href="https://www.tiktok.com/@sportendorse"><Image src="/images/tiktokLogo.webp" alt="tiktok logo" width={32} height={32} className="contact-us-social-logo" /></a></span>
-              <span><a target="_blank" href="https://open.spotify.com/show/2c2mWOkxmUpeGyFI2dZgC5"><Image src="/images/spotify.png" alt="spotify logo" width={32} height={32} className="contact-us-social-logo" /></a></span>
-              <span><a target="_blank" href="https://www.youtube.com/channel/UCwHt-_eNBHav6TSihoirZIA"><Image src="/images/youtube icon.png" alt="youtube logo" width={32} height={32} className="contact-us-social-logo" /></a></span>
-            </div>
-          </div>
-        </div>
-
-        <div className="contact-us-right">
-          <div className="hubspot-form-wrapper">
-            <div 
-              id="hubspot-form-container"
-              className="hs-form-frame" 
-              data-region="na1" 
-              data-form-id="dffd74b7-26ac-40df-86f9-d0365a0778d5" 
-              data-portal-id="4025606"
-            ></div>
-            <div id="form-loading" style={{display: 'block', textAlign: 'center', padding: '2rem'}}>
-              Loading form...
-            </div>
-            <div id="form-error" style={{display: 'none', textAlign: 'center', padding: '2rem', color: '#dc2626'}}>
-              Form failed to load. Please contact us directly at <a href="mailto:hello@sportendorse.com">hello@sportendorse.com</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </>
-  );
+  return <ContactUsContent />
 }

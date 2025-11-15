@@ -19,6 +19,15 @@ const config: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     // Disable static imports for better production handling
     unoptimized: false,
+    // Allow external images from WordPress
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.sportendorse.com',
+        port: '',
+        pathname: '/wp-content/uploads/**',
+      },
+    ],
   },
   
   // Add these to help with your chunk loading issues:

@@ -1,86 +1,29 @@
-"use client";
-import Community from "@/components/Community";
-import "../../../styles/agency.css";
-import BrandsGrid from "@/components/BrandsGrid";
-import AgencyHowItWorks from "@/components/AgencyHowItWorks";
-import SuccessStories from "@/components/SuccessStories";
-import CalendlyDemo from "@/components/CalendlyDemo";
-import PartnerAgencies from "@/components/PartnerAgencies";
-import CategoryDropdownFAQ from "@/components/CategoryDropdownFAQ";
-import { useLanguage } from "@/context/LanguageContext";
-import translations from "@/utils/translations";
-import { agencyFAQs } from "@/utils/faqData";
-import Head from 'next/head';
-import { useEffect } from 'react';
+import AgencyContent from "../../../components/AgencyContent";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sportagenturen - Lass dein Athletenportfolio wachsen | Sport Endorse",
+  description: "Treibe das Wachstum deiner Sportagentur mit Sport Endorse voran. Verbinde deine Athleten mit Premium-Marken und generiere zusätzliche Einnahmen durch authentische Kollaborationen.",
+  alternates: {
+    canonical: "https://www.sportendorse.com/de/agency/",
+    languages: {
+      'en-gb': 'https://www.sportendorse.com/agency/',
+      'es-es': 'https://www.sportendorse.com/es/agency/',
+      'de-de': 'https://www.sportendorse.com/de/agency/',
+      'x-default': 'https://www.sportendorse.com/agency/'
+    }
+  },
+  openGraph: {
+    title: "Sportagenturen - Lass dein Athletenportfolio wachsen | Sport Endorse",
+    description: "Treibe das Wachstum deiner Sportagentur mit Sport Endorse voran. Verbinde deine Athleten mit Premium-Marken und generiere zusätzliche Einnahmen durch authentische Kollaborationen.",
+    type: "website",
+    locale: "de_DE",
+    url: "https://www.sportendorse.com/de/agency/",
+    siteName: "Sport Endorse",
+    alternateLocale: ['en_US', 'es_ES']
+  },
+};
 
 export default function AgencyPageDE() {
-  const { changeLanguage } = useLanguage();
-  const t = translations.de;
-  const currentAgencyFAQs = agencyFAQs.de || agencyFAQs.en;
-
-  useEffect(() => {
-    changeLanguage('de');
-  }, [changeLanguage]);
-
-  return (
-    <>
-      <Head>
-        <title>{t.agency.metadata.title}</title>
-        <meta name="description" content={t.agency.metadata.description} />
-        <link rel="alternate" href="https://www.sportendorse.com/agency" hrefLang="en-gb" />
-        <link rel="alternate" href="https://www.sportendorse.com/es/agency" hrefLang="es-es" />
-        <link rel="alternate" href="https://www.sportendorse.com/de/agency" hrefLang="de-de" />
-        <link rel="alternate" href="https://www.sportendorse.com/agency" hrefLang="x-default" />
-        <link rel="canonical" href="https://www.sportendorse.com/de/agency" />
-        <meta property="og:title" content={t.agency.metadata.title} />
-        <meta property="og:description" content={t.agency.metadata.description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="de_DE" />
-        <meta property="og:site_name" content="Sport Endorse" />
-        <html lang="de" />
-      </Head>
-
-      <section className="agency-heroSection">
-        <div className="agency-container">
-          <div className="agency-content">
-            <div className="agency-badge">
-              ⦿ {t.agency.badge}
-            </div>
-            
-            <h1 
-              className="agency-title"
-              dangerouslySetInnerHTML={{ __html: t.agency.title }}
-            />
-            
-            <p className="agency-description">
-              {t.agency.description}
-            </p>
-          </div>
-          
-          <div className="agency-imageContainer">
-            <BrandsGrid variant="5x4" label="" />
-          </div>
-        </div>
-      </section>
-
-      <Community showAgencies={true} />
-
-      <AgencyHowItWorks />
-
-      <CalendlyDemo agencies={true} />
-
-      <SuccessStories />
-
-      <PartnerAgencies />
-
-      <CategoryDropdownFAQ 
-        title={t.components.faqs.categories.agency}
-        faqs={currentAgencyFAQs}
-        color="#f59e0b"
-      />
-
-      <br/>
-      <br/>
-    </>
-  );
+  return <AgencyContent />;
 }

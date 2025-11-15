@@ -43,7 +43,7 @@ export default function CategoryDropdownFAQ({ title, faqs, color = '#0078c1' }: 
             className="faq-category-button"
             style={{ borderLeft: `4px solid ${color}` }}
           >
-            <span className="faq-category-text" style={{ color: color }}>{title}</span>
+            <h2 className="faq-category-text" style={{ color: color }}>{title}</h2>
             <div className="faq-category-icon">
               {categoryOpen ? (
                 <ChevronUp className="faq-icon" style={{ color: color }} />
@@ -73,7 +73,7 @@ export default function CategoryDropdownFAQ({ title, faqs, color = '#0078c1' }: 
           className="faq-category-button"
           style={{ borderLeft: `4px solid ${color}` }}
         >
-          <span className="faq-category-text" style={{ color: color }}>{title}</span>
+          <h2 className="faq-category-text" style={{ color: color }}>{title}</h2>
           <div className="faq-category-icon">
             {categoryOpen ? (
               <ChevronUp className="faq-icon" style={{ color: color }} />
