@@ -4,8 +4,8 @@ import "../styles/footer.css";
 import { LanguageProvider } from "../context/LanguageContext";
 import ConditionalLayout from "../components/ConditionalLayout";
 
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+{/*import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from "@vercel/speed-insights/next"*/}
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -101,8 +101,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </ConditionalLayout>
         </LanguageProvider>
         
-        <Analytics />
-        <SpeedInsights />
+        {/*<Analytics />
+        <SpeedInsights />*/}
       </body>
     </html>
   );
