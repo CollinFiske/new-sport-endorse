@@ -2,6 +2,7 @@ import { getAllSuccessStories, getSuccessStoryBySlug } from '../../../success-st
 import { notFound } from 'next/navigation'
 import '../../../../styles/blog.css'
 import MainLogo from '@/components/MainLogo'
+import BackButton from '@/components/BackButton'
 
 // Function to decode HTML entities
 function decodeHtmlEntities(text) {
@@ -151,6 +152,11 @@ export default async function SuccessStoryPost({ params }) {
     
     return (
       <div className="blog-container">
+        {/* Back Button at top of page */}
+        <div style={{ padding: '1rem 1rem 0 1rem', maxWidth: '1200px', margin: '0 auto' }}>
+          <BackButton />
+        </div>
+
         {/* Main Content - Centered */}
         <main className="blog-main">
           <div className="blog-post-main-container">

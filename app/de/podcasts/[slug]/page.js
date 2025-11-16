@@ -2,6 +2,7 @@ import { fetchPodcasts, getPodcastBySlug } from '../../../podcasts/wordpress.js'
 import { notFound } from 'next/navigation'
 import '../../../../styles/blog.css'
 import MainLogo from '@/components/MainLogo'
+import PodcastBackButton from '@/components/PodcastBackButton'
 
 // podcast iframe URLs list (same as main page)
 const podcastIframes = [
@@ -114,6 +115,11 @@ export default async function PodcastPost({ params }) {
   
   return (
     <div className="blog-container">
+      {/* Back Button at top of page */}
+      <div style={{ padding: '1rem 1rem 0 1rem', maxWidth: '1200px', margin: '0 auto' }}>
+        <PodcastBackButton />
+      </div>
+
       {/* Main Content - Centered */}
       <main className="blog-main">
         <div className="blog-post-main-container">

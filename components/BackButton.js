@@ -1,18 +1,20 @@
 "use client"
 
+import { useLanguage } from "@/context/LanguageContext";
+import translations from "@/utils/translations";
+
 export default function BackButton() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const handleBack = () => {
-    if (document.referrer && document.referrer.includes('success-stories')) {
-      window.history.back();
+    const path = window.location.pathname;
+    if (path.startsWith('/es')) {
+      window.location.href = '/es/success-stories';
+    } else if (path.startsWith('/de')) {
+      window.location.href = '/de/success-stories';
     } else {
-      const path = window.location.pathname;
-      if (path.startsWith('/es')) {
-        window.location.href = '/es/success-stories';
-      } else if (path.startsWith('/de')) {
-        window.location.href = '/de/success-stories';
-      } else {
-        window.location.href = '/success-stories';
-      }
+      window.location.href = '/success-stories';
     }
   };
 
@@ -22,7 +24,7 @@ export default function BackButton() {
       onClick={handleBack}
     >
       <span className="back-button-icon">←</span>
-      Back
+      {t.common.back}
     </button>
   );
 }

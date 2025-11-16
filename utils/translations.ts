@@ -194,7 +194,8 @@ const translations = {
     },
     common: {
       learnMore: "LEARN MORE",
-      bookDemo: "BOOK A DEMO"
+      bookDemo: "BOOK A DEMO",
+      back: "Back"
     },
     components: {
       agencyHowItWorks: {
@@ -553,6 +554,35 @@ const translations = {
           messageField: "Message:",
           closing: "Thank you!"
         }
+      },
+      blog: {
+        title: "Latest Blog Posts",
+        description: "Articles from Sport Endorse team members on what is impacting the sports, marketing and sponsorship world",
+        readMore: "Read More →",
+        loading: "Loading posts..."
+      },
+      podcasts: {
+        title: "The Athlete Sitdown",
+        description: "Discover inspiring stories and insights from world-class athletes and sports professionals",
+        episodes: "Episodes",
+        discoverText: "Discover Sport Endorse Podcasts",
+        featureMe: "Feature Me!",
+        featureMeTitle: "Feature Me on a Podcast!",
+        readMore: "Read More →",
+        loading: "Loading..."
+      },
+      news: {
+        title: "News",
+        description: "The latest news on athletes, brands, companies, and all things Sport Endorse!",
+        readMore: "Read More →",
+        loading: "Loading news..."
+      },
+      successStories: {
+        title: "Sport Endorse Success Stories",
+        description: "Discover how our athletes and brands have achieved remarkable success through strategic partnerships",
+        readMore: "Read Story →",
+        loading: "Loading success stories...",
+        noSummary: "No summary available."
       }
     }
   },
@@ -750,7 +780,8 @@ const translations = {
     },
     common: {
       learnMore: "SABER MÁS",
-      bookDemo: "RESERVAR DEMO"
+      bookDemo: "RESERVAR DEMO",
+      back: "Atrás"
     },
     components: {
       agencyHowItWorks: {
@@ -1100,6 +1131,35 @@ const translations = {
           messageField: "Mensaje:",
           closing: "¡Gracias!"
         }
+      },
+      blog: {
+        title: "Últimas Publicaciones del Blog",
+        description: "Artículos de los miembros del equipo de Sport Endorse sobre lo que está impactando el mundo del deporte, marketing y patrocinio",
+        readMore: "Leer Más →",
+        loading: "Cargando publicaciones..."
+      },
+      podcasts: {
+        title: "The Athlete Sitdown",
+        description: "Descubre historias inspiradoras e insights de atletas y profesionales del deporte de clase mundial",
+        episodes: "Episodios",
+        discoverText: "Descubre los Podcasts de Sport Endorse",
+        featureMe: "¡Destacarme!",
+        featureMeTitle: "¡Destacarme en un Podcast!",
+        readMore: "Leer Más →",
+        loading: "Cargando..."
+      },
+      news: {
+        title: "Noticias",
+        description: "¡Las últimas noticias sobre atletas, marcas, empresas y todo lo relacionado con Sport Endorse!",
+        readMore: "Leer Más →",
+        loading: "Cargando noticias..."
+      },
+      successStories: {
+        title: "Historias de Éxito de Sport Endorse",
+        description: "Descubre cómo nuestros atletas y marcas han logrado un éxito notable a través de asociaciones estratégicas",
+        readMore: "Leer Historia →",
+        loading: "Cargando historias de éxito...",
+        noSummary: "No hay resumen disponible."
       }
     }
   },
@@ -1297,7 +1357,8 @@ const translations = {
     },
     common: {
       learnMore: "MEHR ERFAHREN",
-      bookDemo: "DEMO BUCHEN"
+      bookDemo: "DEMO BUCHEN",
+      back: "Zurück"
     },
     components: {
       agencyHowItWorks: {
@@ -1656,6 +1717,35 @@ const translations = {
           messageField: "Nachricht:",
           closing: "Vielen Dank!"
         }
+      },
+      blog: {
+        title: "Neueste Blog-Beiträge",
+        description: "Artikel von Sport Endorse Team-Mitgliedern über das, was die Sport-, Marketing- und Sponsoring-Welt beeinflusst",
+        readMore: "Mehr Lesen →",
+        loading: "Lade Beiträge..."
+      },
+      podcasts: {
+        title: "The Athlete Sitdown",
+        description: "Entdecken Sie inspirierende Geschichten und Einblicke von Weltklasse-Athleten und Sportprofis",
+        episodes: "Episoden",
+        discoverText: "Entdecken Sie Sport Endorse Podcasts",
+        featureMe: "Mich Vorstellen!",
+        featureMeTitle: "Mich in einem Podcast Vorstellen!",
+        readMore: "Mehr Lesen →",
+        loading: "Laden..."
+      },
+      news: {
+        title: "Nachrichten",
+        description: "Die neuesten Nachrichten über Athleten, Marken, Unternehmen und alles rund um Sport Endorse!",
+        readMore: "Mehr Lesen →",
+        loading: "Lade Nachrichten..."
+      },
+      successStories: {
+        title: "Sport Endorse Erfolgsgeschichten",
+        description: "Entdecken Sie, wie unsere Athleten und Marken durch strategische Partnerschaften bemerkenswerten Erfolg erzielt haben",
+        readMore: "Geschichte Lesen →",
+        loading: "Lade Erfolgsgeschichten...",
+        noSummary: "Keine Zusammenfassung verfügbar."
       }
     }
   },

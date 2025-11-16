@@ -1,29 +1,18 @@
-import { getAllPosts } from '../../blog/wordpress.js'
-import Link from 'next/link'
-import '../../../styles/blog.css'
+"use client";
 
-
-export const metadata = {
-  title: "Blogs über Athletensponsoring und Sportmarketing | Sport Endorse",
-  description: "Entdecken Sie Experten-Blogs über Athletensponsoring, Sport-Influencer und Markenbotschafter. Lernen Sie, wie Sie Ihre Sportmarketing-Kampagnen mit Elite-Athleten verbessern.",
-  alternates: {
-    canonical: "https://www.sportendorse.com/de/blog"
-  },
-  openGraph:{ // og:title and so on
-    title: "Blogs über Athletensponsoring und Sportmarketing | Sport Endorse",
-    description: "Entdecken Sie Experten-Blogs über Athletensponsoring, Sport-Influencer und Markenbotschafter. Lernen Sie, wie Sie Ihre Sportmarketing-Kampagnen mit Elite-Athleten verbessern.",
-    type:"website",
-    locale:"de_DE",
-    //url:"" to be added later
-    siteName:"Sport Endorse"
-  },
-}
+import { getAllPosts } from "../app/blog/wordpress.js";
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import translations from "@/utils/translations";
+import "../styles/blog.css";
 
 // Function to decode HTML entities
-function decodeHtmlEntities(text) {
+function decodeHtmlEntities(text: string): string {
   if (!text) return text;
   
-  const entities = {
+  const entities: Record<string, string> = {
     '&#038;': '&',
     '&#8217;': "'",
     '&#8216;': "'",
@@ -43,24 +32,62 @@ function decodeHtmlEntities(text) {
   for (const [entity, replacement] of Object.entries(entities)) {
     decodedText = decodedText.replace(new RegExp(entity, 'g'), replacement);
   }
-  
   return decodedText;
 }
 
-export default async function BlogPage() {
-  const posts = await getAllPosts()
-  
-  console.log('Posts data:', posts.map(p => ({ id: p.id, slug: p.slug, title: p.title.rendered })));
-    
+interface BlogPost {
+  id: number;
+  title: { rendered: string };
+  excerpt: { rendered: string };
+  date: string;
+  slug: string;
+  _embedded?: {
+    'wp:featuredmedia'?: Array<{
+      source_url: string;
+    }>;
+  };
+}
+
+export default function BlogContent() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const fetchedPosts = await getAllPosts();
+        setPosts(fetchedPosts);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchPosts();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="blog-container">
+        <main className="blog-main">
+          <div className="blog-posts-container">
+            <div className="blog-loading">{t.components.blog.loading}</div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
   return (
     <div className="blog-container">
-
       {/* Main Content */}
       <main className="blog-main">
         <div className="blog-main-header">
-          <h1 className="blog-main-title">Neueste Blog-Beiträge</h1>
+          <h1 className="blog-main-title">{t.components.blog.title}</h1>
           <p className="blog-main-description">
-            Artikel von Sport Endorse Teammitgliedern über aktuelle Entwicklungen in der Sport-, Marketing- und Sponsoring-Welt
+            {t.components.blog.description}
           </p>
         </div>
         
@@ -69,10 +96,12 @@ export default async function BlogPage() {
           <div className="blog-posts-grid">
             {posts.map(post => (
               <article key={post.id} className="blog-post-card">
-                {post._embedded?.['wp:featuredmedia']?.[0] && (
-                  <img
+                {post._embedded?.['wp:featuredmedia']?.[0]?.source_url && (
+                  <Image
                     src={post._embedded['wp:featuredmedia'][0].source_url}
                     alt={post.title.rendered}
+                    width={400}
+                    height={250}
                     className="blog-post-image"
                   />
                 )}
@@ -80,7 +109,7 @@ export default async function BlogPage() {
                 <div className="blog-post-content">
                   <h2 className="blog-post-title">
                     <Link
-                      href={`/de/blog/${post.slug}`}
+                      href={language === 'en' ? `/blog/${post.slug}` : `/${language}/blog/${post.slug}`}
                       className="blog-post-link"
                     >
                       {decodeHtmlEntities(post.title.rendered)}
@@ -95,7 +124,7 @@ export default async function BlogPage() {
                   />
                             
                   <time className="blog-post-date">
-                    {new Date(post.date).toLocaleDateString('de-DE')}
+                    {new Date(post.date).toLocaleDateString()}
                   </time>
                 </div>
               </article>
@@ -104,5 +133,5 @@ export default async function BlogPage() {
         </div>
       </main>
     </div>
-  )
+  );
 }

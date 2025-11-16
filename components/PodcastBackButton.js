@@ -1,18 +1,20 @@
 "use client"
 
+import { useLanguage } from "@/context/LanguageContext";
+import translations from "@/utils/translations";
+
 export default function PodcastBackButton() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const handleBack = () => {
-    if (document.referrer && document.referrer.includes('/podcasts')) {
-      window.history.back();
+    const path = window.location.pathname;
+    if (path.startsWith('/es')) {
+      window.location.href = '/es/podcasts';
+    } else if (path.startsWith('/de')) {
+      window.location.href = '/de/podcasts';
     } else {
-      const path = window.location.pathname;
-      if (path.startsWith('/es')) {
-        window.location.href = '/es/podcasts';
-      } else if (path.startsWith('/de')) {
-        window.location.href = '/de/podcasts';
-      } else {
-        window.location.href = '/podcasts';
-      }
+      window.location.href = '/podcasts';
     }
   };
 
@@ -22,7 +24,7 @@ export default function PodcastBackButton() {
       onClick={handleBack}
     >
       <span className="back-button-icon">←</span>
-      Back
+      {t.common.back}
     </button>
   );
 }

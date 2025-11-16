@@ -1,31 +1,18 @@
-//page.js
+"use client";
 
-import { getAllSuccessStories } from './wordpress.js';
-import Link from 'next/link';
-import "../../styles/blog.css"
-
-export const metadata = {
-  //metadataBase: new URL("put the home url here later"),
-  title: "Athlete Sponsorship Success Stories | Sport Endorse",
-  description: "Read success stories of athlete sponsorships, sports influencers, and brand partnerships. Learn how elite athletes have powered impactful sports marketing campaigns.",
-  alternates: {
-    canonical: "https://www.sportendorse.com/success-stories"
-  },
-  openGraph:{ // og:title and so on
-    title: "Athlete Sponsorship Success Stories | Sport Endorse",
-    description: "Read success stories of athlete sponsorships, sports influencers, and brand partnerships. Learn how elite athletes have powered impactful sports marketing campaigns.",
-    type:"website",
-    locale:"en_US",
-    //url:"" to be added later
-    siteName:"Sport Endorse"
-  },
-};
+import { getAllSuccessStories } from "../app/success-stories/wordpress.js";
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import translations from "@/utils/translations";
+import "../styles/blog.css";
 
 // Function to decode HTML entities
-function decodeHtmlEntities(text) {
+function decodeHtmlEntities(text: string): string {
   if (!text) return text;
   
-  const entities = {
+  const entities: Record<string, string> = {
     '&#038;': '&',
     '&#8217;': "'",
     '&#8216;': "'",
@@ -45,44 +32,63 @@ function decodeHtmlEntities(text) {
   for (const [entity, replacement] of Object.entries(entities)) {
     decodedText = decodedText.replace(new RegExp(entity, 'g'), replacement);
   }
-  
   return decodedText;
 }
 
-export default async function SuccessStoriesPage() {
-  console.log('🔍 Starting to fetch success stories...');
-  
-  // Let's also test if we can fetch any posts at all from WordPress
-  try {
-    console.log('🧪 Testing basic WordPress API connection...');
-    const testRes = await fetch('https://www.sportendorse.com/wp-json/wp/v2/posts?per_page=1');
-    console.log('🔗 Basic API test status:', testRes.status);
-    if (testRes.ok) {
-      const testData = await testRes.json();
-      console.log('✅ WordPress API is working. Sample post:', testData[0]?.title?.rendered || 'No title');
+interface SuccessStory {
+  id: number;
+  title: { rendered: string };
+  excerpt: { rendered: string };
+  date: string;
+  slug: string;
+  featured_media_url?: string;
+  yoast_head_json?: {
+    og_image?: Array<{
+      url: string;
+    }>;
+    description?: string;
+  };
+}
+
+export default function SuccessStoriesContent() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const [stories, setStories] = useState<SuccessStory[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchStories() {
+      try {
+        const fetchedStories = await getAllSuccessStories();
+        setStories(fetchedStories);
+      } catch (error) {
+        console.error('Error fetching success stories:', error);
+      } finally {
+        setLoading(false);
+      }
     }
-  } catch (error) {
-    console.log('❌ WordPress API test failed:', error);
+    fetchStories();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="blog-container">
+        <main className="blog-main">
+          <div className="blog-posts-container">
+            <div className="blog-loading">{t.components.successStories.loading}</div>
+          </div>
+        </main>
+      </div>
+    );
   }
-  
-  const stories = await getAllSuccessStories();
-  console.log('📊 Stories fetched:', stories?.length || 0);
-  console.log('📋 Stories data:', stories?.map(story => ({
-    id: story?.id,
-    title: story?.title?.rendered,
-    slug: story?.slug,
-    hasImage: !!story?.yoast_head_json?.og_image?.[0]?.url,
-    hasDescription: !!story?.yoast_head_json?.description
-  })));
 
   return (
     <div className="blog-container">
-
       <main className="blog-main">
         <div className="blog-main-header">
-          <h1 className="blog-main-title">Sport Endorse Success Stories</h1>
+          <h1 className="blog-main-title">{t.components.successStories.title}</h1>
           <p className="blog-main-description">
-            Discover how our athletes and brands have achieved remarkable success through strategic partnerships
+            {t.components.successStories.description}
           </p>
         </div>
 
@@ -92,9 +98,11 @@ export default async function SuccessStoriesPage() {
               stories.map((story) => (
                 <article key={story.id} className="blog-post-card">
                   {story.yoast_head_json?.og_image?.[0]?.url && (
-                    <img
+                    <Image
                       src={story.yoast_head_json.og_image[0].url}
                       alt={story.title.rendered}
+                      width={400}
+                      height={250}
                       className="blog-post-image"
                     />
                   )}
@@ -102,7 +110,7 @@ export default async function SuccessStoriesPage() {
                   <div className="blog-post-content">
                     <h2 className="blog-post-title">
                       <Link
-                        href={`/success-stories/${story.slug}`}
+                        href={language === 'en' ? `/success-stories/${story.slug}` : `/${language}/success-stories/${story.slug}`}
                         className="blog-post-link"
                       >
                         {decodeHtmlEntities(story.title.rendered)}
@@ -115,7 +123,7 @@ export default async function SuccessStoriesPage() {
                       style={{ textDecoration: 'none' }}
                     >
                       <p className="blog-post-excerpt">
-                        {decodeHtmlEntities(story.yoast_head_json?.description) || 'No summary available.'}
+                        {decodeHtmlEntities(story.yoast_head_json?.description) || t.components.successStories.noSummary}
                       </p>
                     </Link>
 

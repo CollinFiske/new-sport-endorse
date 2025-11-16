@@ -1,18 +1,20 @@
 "use client"
 
+import { useLanguage } from "@/context/LanguageContext";
+import translations from "@/utils/translations";
+
 export default function BlogBackButton() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const handleBack = () => {
-    if (document.referrer && document.referrer.includes('/blog')) {
-      window.history.back();
+    const path = window.location.pathname;
+    if (path.startsWith('/es')) {
+      window.location.href = '/es/blog';
+    } else if (path.startsWith('/de')) {
+      window.location.href = '/de/blog';
     } else {
-      const path = window.location.pathname;
-      if (path.startsWith('/es')) {
-        window.location.href = '/es/blog';
-      } else if (path.startsWith('/de')) {
-        window.location.href = '/de/blog';
-      } else {
-        window.location.href = '/blog';
-      }
+      window.location.href = '/blog';
     }
   };
 
@@ -22,7 +24,7 @@ export default function BlogBackButton() {
       onClick={handleBack}
     >
       <span className="back-button-icon">←</span>
-      Back
+      {t.common.back}
     </button>
   );
 }

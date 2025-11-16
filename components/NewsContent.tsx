@@ -1,27 +1,18 @@
-import { getNewsStories } from './wordpress.js';
-import Link from 'next/link';
-import "../../styles/blog.css";
+"use client";
 
-export const metadata = {
-  title: "Latest Sports News & Press Releases | Sport Endorse",
-  description: "Stay updated with the latest news and press releases from Sport Endorse, covering athlete sponsorships, sports marketing, and brand partnerships.",
-  alternates: {
-    canonical: "https://www.sportendorse.com/news"
-  },
-  openGraph: {
-    title: "Latest Sports News & Press Releases | Sport Endorse",
-    description: "Stay updated with the latest news and press releases from Sport Endorse, covering athlete sponsorships, sports marketing, and brand partnerships.",
-    type: "website",
-    locale: "en_US",
-    siteName: "Sport Endorse"
-  },
-};
+import { getNewsStories } from "../app/news/wordpress.js";
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import translations from "@/utils/translations";
+import "../styles/blog.css";
 
 // Function to decode HTML entities
-function decodeHtmlEntities(text) {
+function decodeHtmlEntities(text: string): string {
   if (!text) return text;
   
-  const entities = {
+  const entities: Record<string, string> = {
     '&#038;': '&',
     '&#8217;': "'",
     '&#8216;': "'",
@@ -41,24 +32,63 @@ function decodeHtmlEntities(text) {
   for (const [entity, replacement] of Object.entries(entities)) {
     decodedText = decodedText.replace(new RegExp(entity, 'g'), replacement);
   }
-  
   return decodedText;
 }
 
-export default async function NewsPage() {
-  const newsStories = await getNewsStories();
-  
-  console.log('News stories data:', newsStories.map(story => ({ id: story.id, slug: story.slug, title: story.title.rendered })));
-    
+interface NewsStory {
+  id: number;
+  title: { rendered: string };
+  excerpt: { rendered: string };
+  date: string;
+  slug: string;
+  featured_media_url?: string;
+  yoast_head_json?: {
+    og_image?: Array<{
+      url: string;
+    }>;
+  };
+}
+
+export default function NewsContent() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const [newsStories, setNewsStories] = useState<NewsStory[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchNews() {
+      try {
+        const fetchedNews = await getNewsStories();
+        setNewsStories(fetchedNews);
+      } catch (error) {
+        console.error('Error fetching news:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchNews();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="blog-container">
+        <main className="blog-main">
+          <div className="blog-posts-container">
+            <div className="blog-loading">{t.components.news.loading}</div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
   return (
     <div className="blog-container">
-
       {/* Main Content */}
       <main className="blog-main">
         <div className="blog-main-header">
-          <h1 className="blog-main-title">News</h1>
+          <h1 className="blog-main-title">{t.components.news.title}</h1>
           <p className="blog-main-description">
-            The latest news on athletes, brands, companies, and all things Sport Endorse!
+            {t.components.news.description}
           </p>
         </div>
         
@@ -67,10 +97,12 @@ export default async function NewsPage() {
           <div className="blog-posts-grid">
             {newsStories.map(story => (
               <article key={story.id} className="blog-post-card">
-                {story.yoast_head_json?.og_image?.[0]?.url && (
-                  <img
-                    src={story.yoast_head_json.og_image[0].url}
+                {story.featured_media_url && (
+                  <Image
+                    src={story.featured_media_url}
                     alt={story.title.rendered}
+                    width={400}
+                    height={250}
                     className="blog-post-image"
                   />
                 )}
@@ -78,7 +110,7 @@ export default async function NewsPage() {
                 <div className="blog-post-content">
                   <h2 className="blog-post-title">
                     <Link
-                      href={`/news/${story.slug}`}
+                      href={language === 'en' ? `/news/${story.slug}` : `/${language}/news/${story.slug}`}
                       className="blog-post-link"
                     >
                       {decodeHtmlEntities(story.title.rendered)}
@@ -102,5 +134,5 @@ export default async function NewsPage() {
         </div>
       </main>
     </div>
-  )
+  );
 }

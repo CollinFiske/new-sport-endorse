@@ -1,16 +1,18 @@
-// page.js - Main podcasts page component
-'use client';
-import { fetchPodcasts, stripHtml, formatDate, createExcerpt } from './wordpress.js';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import "../../styles/blog.css";
-import "../../styles/podcasts.css";
+"use client";
 
-// function to decode HTML entities
-function decodeHtmlEntities(text) {
+import { fetchPodcasts, stripHtml, formatDate, createExcerpt } from "../app/podcasts/wordpress.js";
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import translations from "@/utils/translations";
+import "../styles/blog.css";
+import "../styles/podcasts.css";
+
+// Function to decode HTML entities
+function decodeHtmlEntities(text: string): string {
   if (!text) return text;
-  const entities = {
+  const entities: Record<string, string> = {
     "&#038;": "&",
     "&#8217;": "'",
     "&#8216;": "'",
@@ -32,7 +34,16 @@ function decodeHtmlEntities(text) {
   return decodedText;
 }
 
-// podcast iframe URLs list
+interface Podcast {
+  id: number;
+  title: { rendered: string };
+  excerpt: { rendered: string };
+  date: string;
+  slug: string;
+  featured_media_url?: string;
+}
+
+// Podcast iframe URLs list
 const podcastIframes = [
   'https://podomatic.com/embed/html5/podcast/6266614',
   'https://podomatic.com/embed/html5/episode/10791101',
@@ -70,11 +81,11 @@ const podcastIframes = [
 ];
 
 // Individual podcast card component
-function PodcastCard({ podcast, index }) {
+function PodcastCard({ podcast, index, language, t }: { podcast: Podcast; index: number; language: string; t: typeof translations.en }) {
   const title = decodeHtmlEntities(stripHtml(podcast.title.rendered));
-  const excerpt = decodeHtmlEntities(createExcerpt(podcast.excerpt.rendered, 250)); // Increased from default 150 to 300 characters
+  const excerpt = decodeHtmlEntities(createExcerpt(podcast.excerpt.rendered, 250));
   const date = formatDate(podcast.date);
-  const iframeUrl = podcastIframes[index] || podcastIframes[0]; // Fallback to first iframe if index exceeds array 
+  const iframeUrl = podcastIframes[index] || podcastIframes[0];
   
   return (
     <article className="blog-post-card podcasts-card">
@@ -113,14 +124,14 @@ function PodcastCard({ podcast, index }) {
         <div className="podcasts-card-footer">
           <div className="podcasts-card-share">
             <svg className="podcasts-card-share-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <a href={`/podcasts/${podcast.slug}`}>
+              <a href={language === 'en' ? `/podcasts/${podcast.slug}` : `/${language}/podcasts/${podcast.slug}`}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
               </a>
             </svg>
           </div>
-          <Link href={`/podcasts/${podcast.slug}`}>
+          <Link href={language === 'en' ? `/podcasts/${podcast.slug}` : `/${language}/podcasts/${podcast.slug}`}>
             <button className="podcasts-card-read-more">
-              Read More
+              {t.components.podcasts.readMore}
             </button>
           </Link>
         </div>
@@ -129,28 +140,15 @@ function PodcastCard({ podcast, index }) {
   );
 }
 
-// Main podcasts page component
-export default function PodcastsPage() {
-  const [podcasts, setPodcasts] = useState([]);
+export default function PodcastsContent() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const [podcasts, setPodcasts] = useState<Podcast[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    // Set document title and meta description
-    document.title = "Sport Endorse Podcast: Athlete Sponsorship & Influencer Marketing Insights | Sport Endorse";
-    
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Listen to the Sport Endorse podcast for insights on athlete sponsorship, sports influencers, and sports marketing strategies. Hear from athletes and industry experts.');
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = 'Listen to the Sport Endorse podcast for insights on athlete sponsorship, sports influencers, and sports marketing strategies. Hear from athletes and industry experts.';
-      document.head.appendChild(meta);
-    }
-
     // Load HubSpot script
     if (!document.querySelector('script[src="https://js.hsforms.net/forms/embed/4025606.js"]')) {
       const script = document.createElement('script');
@@ -181,10 +179,10 @@ export default function PodcastsPage() {
         <div className="podcasts-header-container">
           <div className="podcasts-header-content">
             <h1 className="podcasts-header-title">
-              The Athlete Sitdown
+              {t.components.podcasts.title}
             </h1>
             <p className="podcasts-header-description">
-              Discover inspiring stories and insights from world-class athletes and sports professionals
+              {t.components.podcasts.description}
             </p>
             
             <div className="podcasts-platforms-container">
@@ -222,15 +220,15 @@ export default function PodcastsPage() {
                 <svg className="podcasts-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                 </svg>
-                {loading ? '...' : `${podcasts.length}`} Episodes
+                {loading ? '...' : `${podcasts.length}`} {t.components.podcasts.episodes}
               </span>
               <span className="podcasts-info-separator">•</span>
-              <span>Discover Sport Endorse Podcasts</span>
+              <span>{t.components.podcasts.discoverText}</span>
               <span className="podcasts-info-separator">•</span>
               <button 
                 onClick={openModal}
                 className="podcasts-feature-button">
-                Feature Me!
+                {t.components.podcasts.featureMe}
               </button>
             </div>
           </div>
@@ -244,7 +242,7 @@ export default function PodcastsPage() {
             <div className="podcasts-loading-content">
               <br/>
               <br/>
-              <div className="podcasts-loading-text">Loading...</div>
+              <div className="podcasts-loading-text">{t.components.podcasts.loading}</div>
             </div>
           </div>
         ) : error ? (
@@ -265,42 +263,42 @@ export default function PodcastsPage() {
           <div className="blog-posts-container">
             <div className="blog-posts-grid">
               {podcasts.map((podcast, index) => (
-                <PodcastCard key={podcast.id} podcast={podcast} index={index} />
+                <PodcastCard key={podcast.id} podcast={podcast} index={index} language={language} t={t} />
               ))}
             </div>
           </div>
         )}
       </main>
 
-        {/* HubSpot Form Modal */}
-        {isModalOpen && (
+      {/* HubSpot Form Modal */}
+      {isModalOpen && (
+        <div 
+          className="podcasts-modal-overlay"
+          onClick={closeModal}
+        >
           <div 
-            className="podcasts-modal-overlay"
-            onClick={closeModal}
+            className="podcasts-modal-content"
+            onClick={(e) => e.stopPropagation()}
           >
-            <div 
-              className="podcasts-modal-content"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="podcasts-modal-header">
-                <h3 className="podcasts-modal-title">
-                  Feature Me on a Podcast!
-                </h3>
-                <button 
-                  onClick={closeModal}
-                  className="podcasts-modal-close"
-                >
-                  <svg className="podcasts-modal-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <div className="podcasts-form-container">
-                <div className="hs-form-frame" data-region="na1" data-form-id="13276a4b-b32c-41b1-b32b-bbd02c12e8dc" data-portal-id="4025606"></div>
-              </div>
+            <div className="podcasts-modal-header">
+              <h3 className="podcasts-modal-title">
+                {t.components.podcasts.featureMeTitle}
+              </h3>
+              <button 
+                onClick={closeModal}
+                className="podcasts-modal-close"
+              >
+                <svg className="podcasts-modal-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="podcasts-form-container">
+              <div className="hs-form-frame" data-region="na1" data-form-id="13276a4b-b32c-41b1-b32b-bbd02c12e8dc" data-portal-id="4025606"></div>
             </div>
           </div>
-        )}
-      </div>
-    );
+        </div>
+      )}
+    </div>
+  );
 }
