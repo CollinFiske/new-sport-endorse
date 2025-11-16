@@ -101,7 +101,7 @@ export default function PodcastContent({ slug }: PodcastContentProps) {
           notFound();
           return;
         }
-        setPodcast(fetchedPodcast);
+        setPodcast(fetchedPodcast as Podcast);
       } catch (err) {
         setError(err as Error);
       } finally {
@@ -197,8 +197,8 @@ export default function PodcastContent({ slug }: PodcastContentProps) {
                   height='208' 
                   width='100%' 
                   frameBorder='0' 
-                  marginHeight='0' 
-                  marginWidth='0' 
+                  marginHeight={0} 
+                  marginWidth={0} 
                   scrolling='no' 
                   loading='lazy'
                   allowFullScreen

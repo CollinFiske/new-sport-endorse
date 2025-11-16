@@ -74,16 +74,16 @@ export default function SuccessStoriesContent() {
     <div className="blog-container">
       <main className="blog-main">
         <div className="blog-main-header">
-          <h1 className="blog-main-title">{t.components.successStories.title}</h1>
+          <h1 className="blog-main-title">{t.components.successStoriesContent.title}</h1>
           <p className="blog-main-description">
-            {t.components.successStories.description}
+            {t.components.successStoriesContent.description}
           </p>
         </div>
 
         <div className="blog-posts-container">
           {loading ? (
             <div className="blog-loading" style={{ textAlign: 'center', padding: '2rem' }}>
-              {t.components.successStories.loading}
+              {t.components.successStoriesContent.loading}
             </div>
           ) : (
             <div className="blog-posts-grid">
@@ -116,7 +116,7 @@ export default function SuccessStoriesContent() {
                         style={{ textDecoration: 'none' }}
                       >
                         <p className="blog-post-excerpt">
-                          {decodeHtmlEntities(story.yoast_head_json?.description) || t.components.successStories.noSummary}
+                          {story.yoast_head_json?.description ? decodeHtmlEntities(story.yoast_head_json.description) : t.components.successStoriesContent.noSummary}
                         </p>
                       </Link>
 

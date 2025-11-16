@@ -577,12 +577,14 @@ const translations = {
         readMore: "Read More →",
         loading: "Loading news..."
       },
-      successStories: {
+      successStoriesContent: {
         title: "Sport Endorse Success Stories",
+        subtitle: "Discover how our athletes and brands have achieved remarkable success through strategic partnerships",
         description: "Discover how our athletes and brands have achieved remarkable success through strategic partnerships",
         readMore: "Read Story →",
         loading: "Loading success stories...",
-        noSummary: "No summary available."
+        noSummary: "No summary available.",
+        noStories: "No stories found."
       }
     }
   },
@@ -1154,12 +1156,14 @@ const translations = {
         readMore: "Leer Más →",
         loading: "Cargando noticias..."
       },
-      successStories: {
+      successStoriesContent: {
         title: "Historias de Éxito de Sport Endorse",
+        subtitle: "Descubre cómo nuestros atletas y marcas han logrado un éxito notable a través de asociaciones estratégicas",
         description: "Descubre cómo nuestros atletas y marcas han logrado un éxito notable a través de asociaciones estratégicas",
         readMore: "Leer Historia →",
         loading: "Cargando historias de éxito...",
-        noSummary: "No hay resumen disponible."
+        noSummary: "No hay resumen disponible.",
+        noStories: "No se encontraron historias."
       }
     }
   },
@@ -1740,12 +1744,14 @@ const translations = {
         readMore: "Mehr Lesen →",
         loading: "Lade Nachrichten..."
       },
-      successStories: {
+      successStoriesContent: {
         title: "Sport Endorse Erfolgsgeschichten",
+        subtitle: "Entdecken Sie, wie unsere Athleten und Marken durch strategische Partnerschaften bemerkenswerten Erfolg erzielt haben",
         description: "Entdecken Sie, wie unsere Athleten und Marken durch strategische Partnerschaften bemerkenswerten Erfolg erzielt haben",
         readMore: "Geschichte Lesen →",
         loading: "Lade Erfolgsgeschichten...",
-        noSummary: "Keine Zusammenfassung verfügbar."
+        noSummary: "Keine Zusammenfassung verfügbar.",
+        noStories: "Keine Geschichten gefunden."
       }
     }
   },

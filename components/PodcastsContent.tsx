@@ -113,8 +113,8 @@ function PodcastCard({ podcast, index, language, t }: { podcast: Podcast; index:
           height='208' 
           width='100%' 
           frameBorder='0' 
-          marginHeight='0' 
-          marginWidth='0' 
+          marginHeight={0} 
+          marginWidth={0} 
           scrolling='no' 
           loading='lazy'
           allowFullScreen
