@@ -1,6 +1,8 @@
 import HomeContent from "../../components/HomeContent";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: "Sport Endorse | Verbinde Marken mit Elite-Athleten & Sport-Influencern",
   description: "Sport Endorse ist die Plattform, die Marken und Athleten für authentische und wirkungsvolle Partnerschaften zusammenbringt. Wir machen es einfach für Marken, das richtige Talent zu finden und mit ihm zu kollaborieren, und für Athleten, sich direkt mit Marken zu verbinden und bezahlte Deals zu sichern.",

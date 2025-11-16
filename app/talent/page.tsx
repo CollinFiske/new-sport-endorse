@@ -1,6 +1,8 @@
 import TalentContent from "@/components/TalentContent";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: "Athletes & Influencers: Monetize Your Sports Career | Sport Endorse",
   description: "Join thousands of athletes earning through brand partnerships. Sport Endorse connects sports talent with premium brands for authentic sponsorship deals.",

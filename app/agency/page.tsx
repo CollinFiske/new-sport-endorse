@@ -1,6 +1,8 @@
 import AgencyContent from "@/components/AgencyContent";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: "Partner with Sport Endorse | Sports Agency Solutions",
   description: "Join Sport Endorse as a sports agency partner. Connect your athletes with premium brands and unlock new revenue opportunities through our platform.",

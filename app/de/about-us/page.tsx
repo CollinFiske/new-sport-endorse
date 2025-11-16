@@ -1,6 +1,8 @@
 import AboutUsContent from "../../../components/AboutUsContent";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: "Über Sport Endorse | Athleten mit Marken weltweit verbinden",
   description: "Erfahren Sie mehr über Sport Endorses Mission, Elite-Athleten durch authentische Partnerschaften und innovative Technologie mit Premium-Marken zu verbinden.",

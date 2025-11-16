@@ -1,6 +1,8 @@
 import AgencyContent from "../../../components/AgencyContent";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: "Agencias Deportivas - Haz Crecer tu Cartera de Atletas | Sport Endorse",
   description: "Impulsa el crecimiento de tu agencia deportiva con Sport Endorse. Conecta a tus atletas con marcas premium y genera ingresos adicionales a través de colaboraciones auténticas.",

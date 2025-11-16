@@ -1,6 +1,8 @@
 import TermsAndConditionsContent from "@/components/TermsAndConditionsContent";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: "Términos y Condiciones | Sport Endorse",
   description: "Sport Endorse Limited Terms And Conditions Updated: November 2024",

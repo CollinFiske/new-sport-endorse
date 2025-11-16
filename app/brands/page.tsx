@@ -38,3 +38,6 @@ export default function BrandsPage() {
     />
   );
 }
+
+// Force static generation
+export const dynamic = 'force-static';

@@ -63,3 +63,6 @@ export default function PrivacyCenter() {
     </>
   )
 }
+
+// Force static generation
+export const dynamic = 'force-static';

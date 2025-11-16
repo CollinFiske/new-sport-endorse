@@ -2,6 +2,8 @@ import CalendlyDemo from "@/components/CalendlyDemo";
 import FAQs from "@/components/FAQs";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: "Preguntas Frecuentes | Sport Endorse",
   description: "Encuentra respuestas a preguntas comunes sobre la plataforma de patrocinio de atletas de Sport Endorse. Aprende sobre precios, términos de pago y cómo conectar con atletas de élite.",

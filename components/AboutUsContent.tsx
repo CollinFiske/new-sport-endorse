@@ -58,22 +58,64 @@ export default function AboutUsContent() {
 
   const teamMembers = [
     {
-      name: "Liam McHale",
-      role: "Founder & CEO",
+      name: "Trevor Twamley",
+      role: "Founder and CEO",
       country: "Ireland",
-      imageUrl: "/images/teamPhotos/liam-mchale.jpeg"
+      imageUrl: "/images/teamPhotos/trevor-twamley.png"
+    },
+    {
+      name: "Declan Bourke",
+      role: "Founder and COO",
+      country: "Ireland",
+      imageUrl: "/images/teamPhotos/declan-bourke.png"
+    },
+    {
+      name: "Manav Bhatia",
+      role: "Global Marketing Manager",
+      country: "Dubai",
+      imageUrl: "/images/teamPhotos/manav-bhatia.jpg"
+    },
+    {
+      name: "Martin Nutty",
+      role: "CDO",
+      country: "USA",
+      imageUrl: "/images/teamPhotos/martin-nutty.jpeg"
+    },
+    {
+      name: "Seán Armadá",
+      role: "Markets Development Manager",
+      country: "Spain",
+      imageUrl: "/images/teamPhotos/sean-armada.jpg"
+    },
+    {
+      name: "Taisa Gwaj",
+      role: "Bookkeeper",
+      country: "Ireland",
+      imageUrl: "/images/teamPhotos/taisa-gwaj.jpg"
+    },
+    {
+      name: "Liam Forster",
+      role: "Lead Generation Manager",
+      country: "Ireland",
+      imageUrl: "/images/teamPhotos/liam-forster.jpeg"
     },
     {
       name: "Collin Fiske",
-      role: "Co-Founder",
+      role: "Full Stack Developer",
       country: "USA",
-      imageUrl: "/images/teamPhotos/collin-fiske.jpeg"
+      imageUrl: "/images/teamPhotos/collin-fiske.jpg"
     },
     {
-      name: "Caoimhe Byrnes",
-      role: "Head of Marketing",
-      country: "Ireland",
-      imageUrl: "/images/teamPhotos/caoimhe-byrnes.jpeg"
+      name: "Jack Sampson",
+      role: "Data Analyst",
+      country: "USA",
+      imageUrl: "/images/teamPhotos/jack-sampson.jpeg"
+    },
+    {
+      name: "Allison Melting",
+      role: "Content Marketing Manager",
+      country: "USA",
+      imageUrl: "/images/teamPhotos/allison-melting.jpeg"
     },
     {
       name: "Karl Napper",
@@ -82,7 +124,7 @@ export default function AboutUsContent() {
       imageUrl: "/images/teamPhotos/karl-napper.jpeg"
     },
     {
-      name: "Oscar Quinn Hunt",
+      name: "Oscar Hunt Quinn",
       role: "Customer Success Manager",
       country: "Ireland",
       imageUrl: "/images/teamPhotos/oscar-quinn-hunt.jpeg"
@@ -170,6 +212,10 @@ export default function AboutUsContent() {
                       width={200}
                       height={200}
                       className="about-us-team-photo"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/images/placeholder.png";
+                      }}
                     />
                   </div>
                   <div className="about-us-team-info">

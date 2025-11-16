@@ -4,6 +4,7 @@ import FAQs from "@/components/FAQs";
 import SuccessStories from "@/components/SuccessStories";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   //metadataBase: new URL("put the home url here later"),

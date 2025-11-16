@@ -2,6 +2,8 @@ import BrandsContent from "@/components/BrandsContent";
 import translations from "@/utils/translations";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: "Finden Sie Elite-Athleten & Sport-Influencer für Ihre Marke | Sport Endorse",
   description: "Entdecken Sie Elite-Athleten und Sport-Influencer zur Steigerung der Sichtbarkeit Ihrer Marke. Sport Endorse hilft Ihnen bei der Verwaltung von Athleten-Sponsoring und Sport-Marketing-Kampagnen.",

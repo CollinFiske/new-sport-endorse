@@ -27,3 +27,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return <HomeContent />;
 }
+
+// Force static generation
+export const dynamic = 'force-static';

@@ -1,6 +1,8 @@
 import TalentContent from "../../../components/TalentContent";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: "Athleten & Sport-Influencer - Bezahlte Deals mit Marken erhalten | Sport Endorse",
   description: "Tritt Sport Endorse bei und verbinde dich mit Marken, die deinen Werten entsprechen. Kollaboriere authentisch, sichere bezahlte Deals und lass deine Sportkarriere wachsen.",
