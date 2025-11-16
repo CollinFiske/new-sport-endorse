@@ -1,8 +1,5 @@
 import { getAllSuccessStories, getSuccessStoryBySlug } from '../../../success-stories/wordpress.js'
-import { notFound } from 'next/navigation'
-import '../../../../styles/blog.css'
-import MainLogo from '@/components/MainLogo'
-import BackButton from '@/components/BackButton'
+import SuccessStoryContent from '@/components/SuccessStoryContent'
 
 // Function to decode HTML entities
 function decodeHtmlEntities(text) {
@@ -48,19 +45,35 @@ export async function generateMetadata({ params }) {
     
     return {
       title: `${title} | Sport Endorse`,
-      description,
+      description: decodeHtmlEntities(description),
       alternates: {
-        canonical: `https://www.sportendorse.com/de/success-stories/${resolvedParams.slug}`
+        canonical: `https://www.sportendorse.com/de/success-stories/${resolvedParams.slug}`,
+        languages: {
+          'en': `/success-stories/${resolvedParams.slug}`,
+          'es': `/es/success-stories/${resolvedParams.slug}`,
+          'de': `/de/success-stories/${resolvedParams.slug}`
+        }
       },
       openGraph: {
         title,
-        description,
+        description: decodeHtmlEntities(description),
+        type: 'article',
+        locale: 'de_DE',
+        publishedTime: story.date,
         images: story.yoast_head_json?.og_image?.[0]?.url ? [
           {
             url: story.yoast_head_json.og_image[0].url,
-            alt: title
+            alt: title,
+            width: story.yoast_head_json.og_image[0].width || 1200,
+            height: story.yoast_head_json.og_image[0].height || 630
           }
         ] : []
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description: decodeHtmlEntities(description),
+        images: story.yoast_head_json?.og_image?.[0]?.url ? [story.yoast_head_json.og_image[0].url] : []
       }
     }
   } catch (error) {
@@ -121,165 +134,7 @@ export async function generateStaticParams() {
 }
 
 export default async function SuccessStoryPost({ params }) {
-  try {
-    const resolvedParams = await params
-    const story = await getSuccessStoryBySlug(resolvedParams.slug)
-    
-    if (!story) {
-      notFound()
-    }
-    
-    // Additional validation to ensure we have the required content
-    if (!story.title?.rendered) {
-      console.warn(`Success story "${resolvedParams.slug}" missing essential title`)
-      notFound()
-    }
-    
-    // Log what content we have available
-    console.log(`Story content analysis for "${resolvedParams.slug}":`, {
-      hasTitle: !!story.title?.rendered,
-      hasContent: !!story.content?.rendered,
-      contentLength: story.content?.rendered?.length || 0,
-      hasYoastTitle: !!story.yoast_head_json?.og_title,
-      hasYoastDescription: !!story.yoast_head_json?.description,
-      hasImage: !!story.yoast_head_json?.og_image?.[0]?.url,
-      hasBottomDescription: !!story.success_stories_bottom_description,
-      bottomDescriptionLength: story.success_stories_bottom_description?.length || 0
-    });
-    
-    const title = decodeHtmlEntities(story.title.rendered)
-    const publishDate = story.date ? new Date(story.date) : null
-    
-    return (
-      <div className="blog-container">
-        {/* Back Button at top of page */}
-        <div style={{ padding: '1rem 1rem 0 1rem', maxWidth: '1200px', margin: '0 auto' }}>
-          <BackButton />
-        </div>
-
-        {/* Main Content - Centered */}
-        <main className="blog-main">
-          <div className="blog-post-main-container">
-            <article className="blog-post-article">
-              <header className="blog-post-article-header">
-                <h1 className="blog-post-article-title">{title}</h1>
-                
-                <div className="blog-post-article-meta">
-                  <time>{publishDate ? publishDate.toLocaleDateString('de-DE') : 'Datum nicht verfügbar'}</time>
-                  <span>Erfolgsgeschichte</span>
-                </div>
-                
-                {story.yoast_head_json?.og_image?.[0]?.url && (
-                  <img 
-                    src={story.yoast_head_json.og_image[0].url} 
-                    alt={title}
-                    className="blog-post-article-image"
-                    style={{width:"auto", maxWidth:"1200px"}}
-                  />
-                )}
-              </header>
-              
-              <div className="blog-post-article-content">
-                <div className="blog-post-prose">
-                  {/* Show description if available */}
-                  {story.yoast_head_json?.description && (
-                    <div style={{ marginBottom: '2rem', padding: '1.5rem', backgroundColor: '#f8f9fa', borderRadius: '0.5rem', borderLeft: '4px solid #0078c1' }}>
-                      <p style={{ margin: '0', fontSize: '1.125rem', fontStyle: 'italic', color: '#374151' }}>
-                        {decodeHtmlEntities(story.yoast_head_json.description)}
-                      </p>
-                    </div>
-                  )}
-                  
-                  {/* Show content if available, otherwise show a message */}
-                  {story.content?.rendered ? (
-                    <div 
-                      dangerouslySetInnerHTML={{ 
-                        __html: story.content.rendered 
-                      }} 
-                    />
-                  ) : (
-                    <div>
-                      {/* Bottom Description from the story's success_stories_bottom_description field */}
-                      {story.success_stories_bottom_description && (
-                        <div style={{ 
-                          padding: '2rem', 
-                          backgroundColor: '#f8f9fa', 
-                          borderRadius: '0.5rem',
-                          border: '1px solid #e9ecef',
-                          marginBottom: '2rem'
-                        }}>
-                          <div className="blog-post-prose">
-                            <div 
-                              dangerouslySetInnerHTML={{ 
-                                __html: story.success_stories_bottom_description 
-                              }} 
-                            />
-                          </div>
-                        </div>
-                      )}
-                      
-                      <div style={{ 
-                        padding: '2rem', 
-                        textAlign: 'center', 
-                        backgroundColor: '#f8f9fa', 
-                        borderRadius: '0.5rem',
-                        border: '1px solid #e9ecef'
-                      }}>
-                        <h3 style={{ color: '#6c757d', marginBottom: '1rem' }}>Details der Erfolgsgeschichte</h3>
-                        <p style={{ color: '#6c757d' }}>
-                          Diese Erfolgsgeschichte zeigt eine von Sport Endorse vermittelte Partnerschaft. 
-                          Für weitere Details zu dieser Zusammenarbeit kontaktieren Sie uns bitte.
-                        </p>
-                        {story.yoast_head_json?.og_image?.[0]?.url && (
-                          <div style={{ marginTop: '1.5rem' }}>
-                            <img 
-                              src={story.yoast_head_json.og_image[0].url} 
-                              alt={title}
-                              style={{
-                                maxWidth: '100%',
-                                height: 'auto',
-                                borderRadius: '0.5rem',
-                                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-                              }}
-                            />
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                  
-                  {/* Bottom Description for stories WITH content */}
-                  {story.content?.rendered && story.success_stories_bottom_description && (
-                    <div style={{ 
-                      padding: '2rem', 
-                      backgroundColor: '#f8f9fa', 
-                      borderRadius: '0.5rem',
-                      border: '1px solid #e9ecef',
-                      marginTop: '2rem'
-                    }}>
-                      <div className="blog-post-prose">
-                        <div 
-                          dangerouslySetInnerHTML={{ 
-                            __html: story.success_stories_bottom_description 
-                          }} 
-                        />
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </article>
-          </div>
-          
-          {/* Main Logo at bottom */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem', paddingBottom: '2rem' }}>
-            <MainLogo />
-          </div>
-        </main>
-      </div>
-    )
-  } catch (error) {
-    console.warn(`Error rendering success story:`, error)
-    notFound()
-  }
+  const resolvedParams = await params
+  
+  return <SuccessStoryContent slug={resolvedParams.slug} />
 }

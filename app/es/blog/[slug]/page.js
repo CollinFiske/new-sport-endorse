@@ -1,35 +1,79 @@
 import { getAllPosts, getPostBySlug } from '../../../blog/wordpress.js'
-import { notFound } from 'next/navigation'
-import '../../../../styles/blog.css'
-import MainLogo from '@/components/MainLogo'
-import BlogBackButton from '@/components/BlogBackButton'
+import BlogPostContent from '@/components/BlogPostContent'
+
+// Function to decode HTML entities
+function decodeHtmlEntities(text) {
+  if (!text) return text;
+  const entities = {
+    '&#038;': '&',
+    '&#8217;': "'",
+    '&#8216;': "'",
+    '&#8220;': '"',
+    '&#8221;': '"',
+    '&#8211;': '–',
+    '&#8212;': '—',
+    '&amp;': '&',
+    '&quot;': '"',
+    '&apos;': "'",
+    '&lt;': '<',
+    '&gt;': '>',
+    '&nbsp;': ' '
+  };
+  let decodedText = text;
+  for (const [entity, replacement] of Object.entries(entities)) {
+    decodedText = decodedText.replace(new RegExp(entity, 'g'), replacement);
+  }
+  return decodedText;
+}
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
-  const resolvedParams = await params // Await params first
+  const resolvedParams = await params
   const post = await getPostBySlug(resolvedParams.slug)
   
   if (!post) {
     return {
-      title: 'Publicación No Encontrada'
+      title: 'Publicación No Encontrada | Sport Endorse',
+      description: 'La publicación solicitada no se pudo encontrar.'
     }
   }
   
+  const title = decodeHtmlEntities(post.title?.rendered || 'Publicación del Blog')
+  const description = post.yoast_head_json?.description || 
+    (post.excerpt?.rendered ? post.excerpt.rendered.replace(/<[^>]*>/g, '').substring(0, 160) : 'Lee esta publicación del blog en Sport Endorse.')
+  
   return {
-    title: post.title.rendered,
-    description: post.excerpt.rendered.replace(/<[^>]*>/g, ''), // Strip HTML
+    title: `${title} | Sport Endorse`,
+    description: decodeHtmlEntities(description),
     alternates: {
-      canonical: `https://www.sportendorse.com/es/blog/${resolvedParams.slug}`
+      canonical: `https://www.sportendorse.com/es/blog/${resolvedParams.slug}`,
+      languages: {
+        'en': `/blog/${resolvedParams.slug}`,
+        'es': `/es/blog/${resolvedParams.slug}`,
+        'de': `/de/blog/${resolvedParams.slug}`
+      }
     },
     openGraph: {
-      title: post.title.rendered,
-      description: post.excerpt.rendered.replace(/<[^>]*>/g, ''),
+      title,
+      description: decodeHtmlEntities(description),
+      type: 'article',
+      locale: 'es_ES',
+      publishedTime: post.date,
+      authors: post._embedded?.author?.[0]?.name ? [post._embedded.author[0].name] : undefined,
       images: post._embedded?.['wp:featuredmedia']?.[0]?.source_url ? [
         {
           url: post._embedded['wp:featuredmedia'][0].source_url,
-          alt: post.title.rendered
+          alt: title,
+          width: post._embedded['wp:featuredmedia'][0].media_details?.width || 1200,
+          height: post._embedded['wp:featuredmedia'][0].media_details?.height || 630
         }
       ] : []
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: decodeHtmlEntities(description),
+      images: post._embedded?.['wp:featuredmedia']?.[0]?.source_url ? [post._embedded['wp:featuredmedia'][0].source_url] : []
     }
   }
 }
@@ -44,60 +88,7 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPost({ params }) {
-  const resolvedParams = await params // Await params here too
-  const post = await getPostBySlug(resolvedParams.slug)
+  const resolvedParams = await params
   
-  if (!post) {
-    notFound()
-  }
-  
-  return (
-    <div className="blog-container">
-      {/* Back Button at top of page */}
-      <div style={{ padding: '1rem 1rem 0 1rem', maxWidth: '1200px', margin: '0 auto' }}>
-        <BlogBackButton />
-      </div>
-
-      {/* Main Content - Centered */}
-      <main className="blog-main">
-        <div className="blog-post-main-container">
-          <article className="blog-post-article">
-            <header className="blog-post-article-header">
-              <h1 className="blog-post-article-title">{post.title.rendered}</h1>
-              
-              <div className="blog-post-article-meta">
-                <time>{new Date(post.date).toLocaleDateString('es-ES')}</time>
-                {post._embedded?.author?.[0] && (
-                  <span>Por {post._embedded.author[0].name}</span>
-                )}
-              </div>
-              
-              {post._embedded?.['wp:featuredmedia']?.[0] && (
-                <img 
-                  src={post._embedded['wp:featuredmedia'][0].source_url} 
-                  alt={post.title.rendered}
-                  className="blog-post-article-image"
-                  style={{width:"auto", maxWidth:"1200px"}}
-                />
-              )}
-            </header>
-            
-            <div className="blog-post-article-content">
-              <div 
-                className="blog-post-prose"
-                dangerouslySetInnerHTML={{ 
-                  __html: post.content.rendered 
-                }} 
-              />
-            </div>
-          </article>
-        </div>
-        
-        {/* Main Logo at bottom */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem', paddingBottom: '2rem' }}>
-          <MainLogo />
-        </div>
-      </main>
-    </div>
-  )
+  return <BlogPostContent slug={resolvedParams.slug} />
 }

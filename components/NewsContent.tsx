@@ -69,18 +69,6 @@ export default function NewsContent() {
     fetchNews();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="blog-container">
-        <main className="blog-main">
-          <div className="blog-posts-container">
-            <div className="blog-loading">{t.components.news.loading}</div>
-          </div>
-        </main>
-      </div>
-    );
-  }
-
   return (
     <div className="blog-container">
       {/* Main Content */}
@@ -94,43 +82,49 @@ export default function NewsContent() {
         
         {/* Centered Posts Grid */}
         <div className="blog-posts-container">
-          <div className="blog-posts-grid">
-            {newsStories.map(story => (
-              <article key={story.id} className="blog-post-card">
-                {story.featured_media_url && (
-                  <Image
-                    src={story.featured_media_url}
-                    alt={story.title.rendered}
-                    width={400}
-                    height={250}
-                    className="blog-post-image"
-                  />
-                )}
-                        
-                <div className="blog-post-content">
-                  <h2 className="blog-post-title">
-                    <Link
-                      href={language === 'en' ? `/news/${story.slug}` : `/${language}/news/${story.slug}`}
-                      className="blog-post-link"
-                    >
-                      {decodeHtmlEntities(story.title.rendered)}
-                    </Link>
-                  </h2>
-                            
-                  <div
-                    className="blog-post-excerpt"
-                    dangerouslySetInnerHTML={{
-                      __html: decodeHtmlEntities(story.excerpt.rendered)
-                    }}
-                  />
-                            
-                  <time className="blog-post-date">
-                    {new Date(story.date).toLocaleDateString()}
-                  </time>
-                </div>
-              </article>
-            ))}
-          </div>
+          {loading ? (
+            <div className="blog-loading" style={{ textAlign: 'center', padding: '2rem' }}>
+              {t.components.news.loading}
+            </div>
+          ) : (
+            <div className="blog-posts-grid">
+              {newsStories.map(story => (
+                <article key={story.id} className="blog-post-card">
+                  {story.yoast_head_json?.og_image?.[0]?.url && (
+                    <Image
+                      src={story.yoast_head_json.og_image[0].url}
+                      alt={story.title.rendered}
+                      width={400}
+                      height={250}
+                      className="blog-post-image"
+                    />
+                  )}
+                          
+                  <div className="blog-post-content">
+                    <h2 className="blog-post-title">
+                      <Link
+                        href={language === 'en' ? `/news/${story.slug}` : `/${language}/news/${story.slug}`}
+                        className="blog-post-link"
+                      >
+                        {decodeHtmlEntities(story.title.rendered)}
+                      </Link>
+                    </h2>
+                              
+                    <div
+                      className="blog-post-excerpt"
+                      dangerouslySetInnerHTML={{
+                        __html: decodeHtmlEntities(story.excerpt.rendered)
+                      }}
+                    />
+                              
+                    <time className="blog-post-date">
+                      {new Date(story.date).toLocaleDateString()}
+                    </time>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
         </div>
       </main>
     </div>

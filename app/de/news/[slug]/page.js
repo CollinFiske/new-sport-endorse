@@ -1,8 +1,30 @@
 import { getNewsStories, getNewsStoryBySlug } from '../../../news/wordpress';
-import { notFound } from 'next/navigation';
-import '../../../../styles/blog.css';
-import MainLogo from '@/components/MainLogo';
-import NewsBackButton from '@/components/NewsBackButton';
+import NewsStoryContent from '@/components/NewsStoryContent';
+
+// Function to decode HTML entities
+function decodeHtmlEntities(text) {
+  if (!text) return text;
+  const entities = {
+    '&#038;': '&',
+    '&#8217;': "'",
+    '&#8216;': "'",
+    '&#8220;': '"',
+    '&#8221;': '"',
+    '&#8211;': '–',
+    '&#8212;': '—',
+    '&amp;': '&',
+    '&quot;': '"',
+    '&apos;': "'",
+    '&lt;': '<',
+    '&gt;': '>',
+    '&nbsp;': ' '
+  };
+  let decodedText = text;
+  for (const [entity, replacement] of Object.entries(entities)) {
+    decodedText = decodedText.replace(new RegExp(entity, 'g'), replacement);
+  }
+  return decodedText;
+}
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
@@ -11,25 +33,47 @@ export async function generateMetadata({ params }) {
   
   if (!newsStory) {
     return {
-      title: 'Nachricht Nicht Gefunden'
+      title: 'Nachricht Nicht Gefunden | Sport Endorse',
+      description: 'Die angeforderte Nachricht konnte nicht gefunden werden.'
     }
   }
   
+  const title = decodeHtmlEntities(newsStory.title?.rendered || 'Nachricht')
+  const description = newsStory.yoast_head_json?.description || 
+    (newsStory.excerpt?.rendered ? newsStory.excerpt.rendered.replace(/<[^>]*>/g, '').substring(0, 160) : 'Lesen Sie diese Nachricht auf Sport Endorse.')
+  
   return {
-    title: newsStory.title.rendered,
-    description: newsStory.excerpt.rendered.replace(/<[^>]*>/g, ''), // Strip HTML
+    title: `${title} | Sport Endorse`,
+    description: decodeHtmlEntities(description),
     alternates: {
-      canonical: `https://www.sportendorse.com/de/news/${resolvedParams.slug}`
+      canonical: `https://www.sportendorse.com/de/news/${resolvedParams.slug}`,
+      languages: {
+        'en': `/news/${resolvedParams.slug}`,
+        'es': `/es/news/${resolvedParams.slug}`,
+        'de': `/de/news/${resolvedParams.slug}`
+      }
     },
     openGraph: {
-      title: newsStory.title.rendered,
-      description: newsStory.excerpt.rendered.replace(/<[^>]*>/g, ''),
+      title,
+      description: decodeHtmlEntities(description),
+      type: 'article',
+      locale: 'de_DE',
+      publishedTime: newsStory.date,
+      authors: newsStory._embedded?.author?.[0]?.name ? [newsStory._embedded.author[0].name] : undefined,
       images: newsStory.yoast_head_json?.og_image?.[0]?.url ? [
         {
           url: newsStory.yoast_head_json.og_image[0].url,
-          alt: newsStory.title.rendered
+          alt: title,
+          width: newsStory.yoast_head_json.og_image[0].width || 1200,
+          height: newsStory.yoast_head_json.og_image[0].height || 630
         }
       ] : []
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: decodeHtmlEntities(description),
+      images: newsStory.yoast_head_json?.og_image?.[0]?.url ? [newsStory.yoast_head_json.og_image[0].url] : []
     }
   }
 }
@@ -45,59 +89,6 @@ export async function generateStaticParams() {
 
 export default async function NewsStoryPost({ params }) {
   const resolvedParams = await params;
-  const newsStory = await getNewsStoryBySlug(resolvedParams.slug);
   
-  if (!newsStory) {
-    notFound();
-  }
-  
-  return (
-    <div className="blog-container">
-      {/* Back Button at top of page */}
-      <div style={{ padding: '1rem 1rem 0 1rem', maxWidth: '1200px', margin: '0 auto' }}>
-        <NewsBackButton />
-      </div>
-
-      {/* Main Content - Centered */}
-      <main className="blog-main">
-        <div className="blog-post-main-container">
-          <article className="blog-post-article">
-            <header className="blog-post-article-header">
-              <h1 className="blog-post-article-title">{newsStory.title.rendered}</h1>
-              
-              <div className="blog-post-article-meta">
-                <time>{new Date(newsStory.date).toLocaleDateString('de-DE')}</time>
-                {newsStory._embedded?.author?.[0] && (
-                  <span>Von {newsStory._embedded.author[0].name}</span>
-                )}
-              </div>
-              
-              {newsStory.yoast_head_json?.og_image?.[0]?.url && (
-                <img 
-                  src={newsStory.yoast_head_json.og_image[0].url} 
-                  alt={newsStory.title.rendered}
-                  className="blog-post-article-image"
-                  style={{width:"auto", maxWidth:"1200px"}}
-                />
-              )}
-            </header>
-            
-            <div className="blog-post-article-content">
-              <div 
-                className="blog-post-prose"
-                dangerouslySetInnerHTML={{ 
-                  __html: newsStory.content.rendered 
-                }} 
-              />
-            </div>
-          </article>
-        </div>
-        
-        {/* Main Logo at bottom */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem', paddingBottom: '2rem' }}>
-          <MainLogo />
-        </div>
-      </main>
-    </div>
-  )
+  return <NewsStoryContent slug={resolvedParams.slug} />;
 }

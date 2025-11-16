@@ -70,18 +70,6 @@ export default function SuccessStoriesContent() {
     fetchStories();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="blog-container">
-        <main className="blog-main">
-          <div className="blog-posts-container">
-            <div className="blog-loading">{t.components.successStories.loading}</div>
-          </div>
-        </main>
-      </div>
-    );
-  }
-
   return (
     <div className="blog-container">
       <main className="blog-main">
@@ -93,78 +81,84 @@ export default function SuccessStoriesContent() {
         </div>
 
         <div className="blog-posts-container">
-          <div className="blog-posts-grid">
-            {stories && stories.length > 0 ? (
-              stories.map((story) => (
-                <article key={story.id} className="blog-post-card">
-                  {story.yoast_head_json?.og_image?.[0]?.url && (
-                    <Image
-                      src={story.yoast_head_json.og_image[0].url}
-                      alt={story.title.rendered}
-                      width={400}
-                      height={250}
-                      className="blog-post-image"
-                    />
-                  )}
+          {loading ? (
+            <div className="blog-loading" style={{ textAlign: 'center', padding: '2rem' }}>
+              {t.components.successStories.loading}
+            </div>
+          ) : (
+            <div className="blog-posts-grid">
+              {stories && stories.length > 0 ? (
+                stories.map((story) => (
+                  <article key={story.id} className="blog-post-card">
+                    {story.yoast_head_json?.og_image?.[0]?.url && (
+                      <Image
+                        src={story.yoast_head_json.og_image[0].url}
+                        alt={story.title.rendered}
+                        width={400}
+                        height={250}
+                        className="blog-post-image"
+                      />
+                    )}
 
-                  <div className="blog-post-content">
-                    <h2 className="blog-post-title">
+                    <div className="blog-post-content">
+                      <h2 className="blog-post-title">
+                        <Link
+                          href={language === 'en' ? `/success-stories/${story.slug}` : `/${language}/success-stories/${story.slug}`}
+                          className="blog-post-link"
+                        >
+                          {decodeHtmlEntities(story.title.rendered)}
+                        </Link>
+                      </h2>
+
                       <Link
-                        href={language === 'en' ? `/success-stories/${story.slug}` : `/${language}/success-stories/${story.slug}`}
+                        href={`/success-stories/${story.slug}`}
                         className="blog-post-link"
+                        style={{ textDecoration: 'none' }}
                       >
-                        {decodeHtmlEntities(story.title.rendered)}
+                        <p className="blog-post-excerpt">
+                          {decodeHtmlEntities(story.yoast_head_json?.description) || t.components.successStories.noSummary}
+                        </p>
                       </Link>
-                    </h2>
 
-                    <Link
-                      href={`/success-stories/${story.slug}`}
-                      className="blog-post-link"
-                      style={{ textDecoration: 'none' }}
-                    >
-                      <p className="blog-post-excerpt">
-                        {decodeHtmlEntities(story.yoast_head_json?.description) || t.components.successStories.noSummary}
-                      </p>
-                    </Link>
-
-                    <time className="blog-post-date">
-                      {new Date(story.date).toLocaleDateString()}
-                    </time>
-                  </div>
-                </article>
-              ))
-            ) : (
-              <div style={{ 
-                gridColumn: '1 / -1', 
-                textAlign: 'center', 
-                padding: '2rem',
-                background: '#f8f9fa',
-                borderRadius: '8px',
-                border: '1px solid #e9ecef'
-              }}>
-                <h3 style={{ color: '#dc3545', marginBottom: '1rem' }}>🐛 Debug Information</h3>
-                <p><strong>Stories Array:</strong> {stories ? `Array with ${stories.length} items` : 'null/undefined'}</p>
-                <p><strong>Is Array:</strong> {Array.isArray(stories) ? 'Yes' : 'No'}</p>
-                <p><strong>Type:</strong> {typeof stories}</p>
-                {stories && (
-                  <details style={{ marginTop: '1rem', textAlign: 'left' }}>
-                    <summary style={{ cursor: 'pointer', fontWeight: 'bold' }}>Raw Data</summary>
-                    <pre style={{ 
-                      background: '#ffffff', 
-                      padding: '1rem', 
-                      borderRadius: '4px', 
-                      overflow: 'auto',
-                      fontSize: '12px',
-                      textAlign: 'left'
-                    }}>
-                      {JSON.stringify(stories, null, 2)}
-                    </pre>
-                  </details>
-                )}
-                <p style={{ marginTop: '1rem' }}>Check the browser console for detailed API logs.</p>
-              </div>
-            )}
-          </div>
+                      <time className="blog-post-date">
+                        {new Date(story.date).toLocaleDateString()}
+                      </time>
+                    </div>
+                  </article>
+                ))
+              ) : (
+                <div style={{ 
+                  gridColumn: '1 / -1', 
+                  textAlign: 'center', 
+                  padding: '2rem',
+                  background: '#f8f9fa',
+                  borderRadius: '8px',
+                  border: '1px solid #e9ecef'
+                }}>
+                  <h3 style={{ color: '#dc3545', marginBottom: '1rem' }}>🐛 Debug Information</h3>
+                  <p><strong>Stories Array:</strong> {stories ? `Array with ${stories.length} items` : 'null/undefined'}</p>
+                  <p><strong>Is Array:</strong> {Array.isArray(stories) ? 'Yes' : 'No'}</p>
+                  <p><strong>Type:</strong> {typeof stories}</p>
+                  {stories && (
+                    <details style={{ marginTop: '1rem', textAlign: 'left' }}>
+                      <summary style={{ cursor: 'pointer', fontWeight: 'bold' }}>Raw Data</summary>
+                      <pre style={{ 
+                        background: '#ffffff', 
+                        padding: '1rem', 
+                        borderRadius: '4px', 
+                        overflow: 'auto',
+                        fontSize: '12px',
+                        textAlign: 'left'
+                      }}>
+                        {JSON.stringify(stories, null, 2)}
+                      </pre>
+                    </details>
+                  )}
+                  <p style={{ marginTop: '1rem' }}>Check the browser console for detailed API logs.</p>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </main>
     </div>

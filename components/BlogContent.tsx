@@ -68,18 +68,6 @@ export default function BlogContent() {
     fetchPosts();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="blog-container">
-        <main className="blog-main">
-          <div className="blog-posts-container">
-            <div className="blog-loading">{t.components.blog.loading}</div>
-          </div>
-        </main>
-      </div>
-    );
-  }
-
   return (
     <div className="blog-container">
       {/* Main Content */}
@@ -93,43 +81,49 @@ export default function BlogContent() {
         
         {/* Centered Posts Grid */}
         <div className="blog-posts-container">
-          <div className="blog-posts-grid">
-            {posts.map(post => (
-              <article key={post.id} className="blog-post-card">
-                {post._embedded?.['wp:featuredmedia']?.[0]?.source_url && (
-                  <Image
-                    src={post._embedded['wp:featuredmedia'][0].source_url}
-                    alt={post.title.rendered}
-                    width={400}
-                    height={250}
-                    className="blog-post-image"
-                  />
-                )}
-                        
-                <div className="blog-post-content">
-                  <h2 className="blog-post-title">
-                    <Link
-                      href={language === 'en' ? `/blog/${post.slug}` : `/${language}/blog/${post.slug}`}
-                      className="blog-post-link"
-                    >
-                      {decodeHtmlEntities(post.title.rendered)}
-                    </Link>
-                  </h2>
-                            
-                  <div
-                    className="blog-post-excerpt"
-                    dangerouslySetInnerHTML={{
-                      __html: decodeHtmlEntities(post.excerpt.rendered)
-                    }}
-                  />
-                            
-                  <time className="blog-post-date">
-                    {new Date(post.date).toLocaleDateString()}
-                  </time>
-                </div>
-              </article>
-            ))}
-          </div>
+          {loading ? (
+            <div className="blog-loading" style={{ textAlign: 'center', padding: '2rem' }}>
+              {t.components.blog.loading}
+            </div>
+          ) : (
+            <div className="blog-posts-grid">
+              {posts.map(post => (
+                <article key={post.id} className="blog-post-card">
+                  {post._embedded?.['wp:featuredmedia']?.[0]?.source_url && (
+                    <Image
+                      src={post._embedded['wp:featuredmedia'][0].source_url}
+                      alt={post.title.rendered}
+                      width={400}
+                      height={250}
+                      className="blog-post-image"
+                    />
+                  )}
+                          
+                  <div className="blog-post-content">
+                    <h2 className="blog-post-title">
+                      <Link
+                        href={language === 'en' ? `/blog/${post.slug}` : `/${language}/blog/${post.slug}`}
+                        className="blog-post-link"
+                      >
+                        {decodeHtmlEntities(post.title.rendered)}
+                      </Link>
+                    </h2>
+                              
+                    <div
+                      className="blog-post-excerpt"
+                      dangerouslySetInnerHTML={{
+                        __html: decodeHtmlEntities(post.excerpt.rendered)
+                      }}
+                    />
+                              
+                    <time className="blog-post-date">
+                      {new Date(post.date).toLocaleDateString()}
+                    </time>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
         </div>
       </main>
     </div>

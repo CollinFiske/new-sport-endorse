@@ -1,0 +1,191 @@
+"use client";
+
+import { useState, useEffect } from 'react';
+import { useLanguage } from "@/context/LanguageContext";
+import translations from "@/utils/translations";
+import MainLogo from '@/components/MainLogo';
+import BackButton from '@/components/BackButton';
+import { getSuccessStoryBySlug } from '../app/success-stories/wordpress';
+import { notFound } from 'next/navigation';
+import "../styles/blog.css";
+
+// Function to decode HTML entities
+function decodeHtmlEntities(text: string): string {
+  if (!text) return text;
+  const entities: Record<string, string> = {
+    '&#038;': '&',
+    '&#8217;': "'",
+    '&#8216;': "'",
+    '&#8220;': '"',
+    '&#8221;': '"',
+    '&#8211;': '–',
+    '&#8212;': '—',
+    '&amp;': '&',
+    '&quot;': '"',
+    '&apos;': "'",
+    '&lt;': '<',
+    '&gt;': '>',
+    '&nbsp;': ' '
+  };
+  let decodedText = text;
+  for (const [entity, replacement] of Object.entries(entities)) {
+    decodedText = decodedText.replace(new RegExp(entity, 'g'), replacement);
+  }
+  return decodedText;
+}
+
+interface SuccessStory {
+  id: number;
+  title: { rendered: string };
+  content: { rendered: string };
+  excerpt: { rendered: string };
+  date: string;
+  slug: string;
+  yoast_head_json?: {
+    og_image?: Array<{ url: string }>;
+    description?: string;
+  };
+}
+
+interface SuccessStoryContentProps {
+  slug: string;
+}
+
+export default function SuccessStoryContent({ slug }: SuccessStoryContentProps) {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const [story, setStory] = useState<SuccessStory | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    const fetchStory = async () => {
+      try {
+        setLoading(true);
+        const fetchedStory = await getSuccessStoryBySlug(slug);
+        if (!fetchedStory) {
+          notFound();
+          return;
+        }
+        setStory(fetchedStory);
+      } catch (err) {
+        setError(err as Error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStory();
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <div className="blog-container">
+        <div style={{ padding: '1rem 1rem 0 1rem', maxWidth: '1200px', margin: '0 auto' }}>
+          <BackButton />
+        </div>
+        <main className="blog-main">
+          <div className="blog-post-main-container">
+            <div style={{ textAlign: 'center', padding: '2rem' }}>
+              {t.components.successStories.loading}
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  if (error || !story) {
+    return (
+      <div className="blog-container">
+        <div style={{ padding: '1rem 1rem 0 1rem', maxWidth: '1200px', margin: '0 auto' }}>
+          <BackButton />
+        </div>
+        <main className="blog-main">
+          <div className="blog-post-main-container">
+            <div style={{ textAlign: 'center', padding: '2rem' }}>
+              Error loading success story
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  const title = decodeHtmlEntities(story.title.rendered);
+  const publishDate = story.date ? new Date(story.date) : null;
+
+  return (
+    <div className="blog-container">
+      {/* Back Button at top of page */}
+      <div style={{ padding: '1rem 1rem 0 1rem', maxWidth: '1200px', margin: '0 auto' }}>
+        <BackButton />
+      </div>
+
+      {/* Main Content - Centered */}
+      <main className="blog-main">
+        <div className="blog-post-main-container">
+          <article className="blog-post-article">
+            <header className="blog-post-article-header">
+              <h1 className="blog-post-article-title">{title}</h1>
+              
+              <div className="blog-post-article-meta">
+                <time>
+                  {publishDate ? publishDate.toLocaleDateString(
+                    language === 'es' ? 'es-ES' : language === 'de' ? 'de-DE' : 'en-US'
+                  ) : (
+                    language === 'es' ? 'Fecha no disponible' : 
+                    language === 'de' ? 'Datum nicht verfügbar' : 'Date not available'
+                  )}
+                </time>
+                <span>
+                  {language === 'es' ? 'Historia de Éxito' : 
+                   language === 'de' ? 'Erfolgsgeschichte' : 'Success Story'}
+                </span>
+              </div>
+              
+              {story.yoast_head_json?.og_image?.[0]?.url && (
+                <img 
+                  src={story.yoast_head_json.og_image[0].url} 
+                  alt={title}
+                  className="blog-post-article-image"
+                  style={{width:"auto", maxWidth:"1200px"}}
+                />
+              )}
+            </header>
+            
+            <div className="blog-post-article-content">
+              <div className="blog-post-prose">
+                {/* Show description if available */}
+                {story.yoast_head_json?.description && (
+                  <div className="success-story-description" style={{ 
+                    fontSize: '1.125rem', 
+                    fontStyle: 'italic', 
+                    marginBottom: '2rem',
+                    padding: '1rem',
+                    background: '#f8f9fa',
+                    borderLeft: '4px solid #0078c1',
+                    borderRadius: '4px'
+                  }}>
+                    {story.yoast_head_json.description}
+                  </div>
+                )}
+                
+                <div 
+                  dangerouslySetInnerHTML={{ 
+                    __html: story.content.rendered 
+                  }} 
+                />
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        {/* Main Logo at bottom */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem', paddingBottom: '2rem' }}>
+          <MainLogo />
+        </div>
+      </main>
+    </div>
+  );
+}
